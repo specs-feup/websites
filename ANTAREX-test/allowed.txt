@@ -1,7 +1,0 @@
-home
-project
-events
-media
-dissemination
-pact18
-activities

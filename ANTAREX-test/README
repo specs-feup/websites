@@ -1,1 +1,0 @@
-When a new page is created and added to the project, its name should be included in a new line inside the file 'allowed.txt'. If this is not done, any requests to the page will be redirected to the home page.
