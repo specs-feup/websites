@@ -1,13 +1,30 @@
 [
     {
-        "name": "João M. P. Cardoso",
-        "affiliation": "FEUP",
-        "position": "Professor"
+        "Name": "João M. P. Cardoso",
+        "Nationality": "Portuguese",
+        "Email": "jmpc@gmail.com",
+        "Web Page": "youtube.pt",
+        "Affiliation": "FEUP",
+        "Position": "Professor",
+        "ORCID": "ioajsdioasjdjoasd.com"        
     },
     {
-        "name": "Nuno Miguel Cardanha Paulino",
-        "affiliation": "FEUP",
-        "position": "Post-Doc",
-        "ORCID": "http://orcid.org/0000-0001-5547-0323"
+        "Name": "Ana Silva",
+        "Nationality": "Spanish",
+        "Email": "jsadnpc@gmail.com",
+        "Web Page": "youtube.pt",
+        "Affiliation": "FEUP",
+        "Position": "PhD Student",
+        "ORCID": "adzc.com"        
+    },
+    {
+        "Name": "António Maia",
+        "Nationality": "Italian",
+        "Email": "jatc@gmail.com",
+        "Web Page": "twitter.pt",
+        "Affiliation": "FEUP",
+        "Position": "PhD Student",
+        "ORCID": "lolkasd.com"        
     }
+  
 ]
