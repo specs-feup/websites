@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 require_once 'assets/php/antarex.php';
+require_once 'assets/php/specs.php';
 ?>
 <html>
     <head>
