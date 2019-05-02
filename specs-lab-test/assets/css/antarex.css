@@ -40,7 +40,7 @@ a {
         transition: background-color 0.1s ease-in, background 0.1s ease-in;*/
 }
 a:hover, a:focus {
-    color: #72c305;
+    color: #15B6D7;
     text-decoration: none;
     outline: 0;
 }
@@ -451,10 +451,10 @@ ul.social-buttons li a:active {
 
 .pagination > .active > a{
 
-    background-color: #72c305 !important;
+    background-color: #15B6D7 !important;
     color: #FFF !important;
 
-    border-color: #72c305 !important;
+    border-color: #15B6D7 !important;
 }
 
 .pagination li a:hover {
@@ -523,7 +523,7 @@ ul.social-buttons li a:active {
 
     color: #fff;
     /*background-color: #72c305;*/
-    background-color: #3a3c3b;
+    background-color: #167AC6;
 
     height: 25%;
     width: 100%;
@@ -565,7 +565,7 @@ ul.social-buttons li a:active {
 
 
 .modal-header {
-    background: #72c305;
+    background: #167AC6;
 }
 .modal-header h4 {
     color: white;
@@ -573,7 +573,7 @@ ul.social-buttons li a:active {
     letter-spacing: 1px;
 }
 .modal-footer {
-    background: #2B2B2B;
+    background: #167AC6;
 }
 
 .modal-dialog {
@@ -631,7 +631,7 @@ ul.social-buttons li a:active {
 }
 
 .dissemination li:hover {
-    border-left-color: #72c305;
+    border-left-color: #15B6D7;
 
 }
 
@@ -663,7 +663,7 @@ ul.social-buttons li a:active {
     /*background-color: #72c305;*/
     /*color: #FFF;*/
 
-    background-color: #72c305;
+    background-color: #15B6D7;
     color: #FFF;
 }
 /* hover / focus */
@@ -680,7 +680,7 @@ ul.social-buttons li a:active {
 /* active */
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a {
 
-    background-color: #72c305;
+    background-color: #15B6D7;
     color: #FFF;
 }
 /* hover / focus */
@@ -700,7 +700,7 @@ ul.social-buttons li a:active {
     /*color: #FFF;*/
 
     background-color: transparent;
-    color: #72c305;
+    color: #15B6D7;
 }
 /* hover / focus */
 .navbar-default .navbar-nav > li > a:hover,
@@ -728,11 +728,4 @@ ul.social-buttons li a:active {
     
     
 }
-
-
-
-
- 
-
-
 
