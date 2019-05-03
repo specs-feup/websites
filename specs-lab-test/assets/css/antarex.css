@@ -480,9 +480,9 @@ ul.social-buttons li a:active {
 
     margin: 0;
     position: relative;
-    border: 1px solid #ddd;
+    border: 10px solid #19689b;
 
-    height: 200px;
+    height: 400px;
 }
 
 .img-box {
@@ -491,7 +491,7 @@ ul.social-buttons li a:active {
     position: absolute;
     top: 0;
 
-    height: 75%;
+    height: 100%;
     width: 100%;
 }
 
@@ -523,9 +523,9 @@ ul.social-buttons li a:active {
 
     color: #fff;
     /*background-color: #72c305;*/
-    background-color: #167AC6;
+    background-color: #19689B;
 
-    height: 25%;
+    height: 15%;
     width: 100%;
 }
 
@@ -550,7 +550,7 @@ ul.social-buttons li a:active {
 
     text-align: left;
     display: inline-block;
-    font-size: 13px;
+    font-size: 16px;
 
     margin-right: 8px;
 

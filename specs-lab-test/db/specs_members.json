@@ -3,28 +3,82 @@
         "Name": "João M. P. Cardoso",
         "Nationality": "Portuguese",
         "Email": "jmpc@gmail.com",
-        "Web Page": "youtube.pt",
+        "WebPage": "youtube.pt",
         "Affiliation": "FEUP",
         "Position": "Professor",
-        "ORCID": "ioajsdioasjdjoasd.com"        
+        "orcid": "ioajsdioasjdjoasd.com",
+        "age": 65,
+        "active": true,
+        "Image": "assets/img/labmembers/joaocardoso.jpg",
+        "NOTE": "ALL IMAGES SHOULD BE 400X400"
     },
     {
         "Name": "Ana Silva",
         "Nationality": "Spanish",
         "Email": "jsadnpc@gmail.com",
-        "Web Page": "youtube.pt",
+        "WebPage": "youtube.pt",
         "Affiliation": "FEUP",
         "Position": "PhD Student",
-        "ORCID": "adzc.com"        
+        "orcid": "adzc.com",
+        "Image": "assets/img/labmembers/anasilva.jpg",
+        "NOTE": "ALL IMAGES SHOULD BE 400X400"
     },
     {
         "Name": "António Maia",
         "Nationality": "Italian",
         "Email": "jatc@gmail.com",
-        "Web Page": "twitter.pt",
+        "WebPage": "dkasdmasd.pt",
         "Affiliation": "FEUP",
         "Position": "PhD Student",
-        "ORCID": "lolkasd.com"        
+        "orcid": "lolkasd.com",
+        "Image": "assets/img/labmembers/antoniomaia.jpg",
+        "NOTE": "ALL IMAGES SHOULD BE 400X400"
+    },
+    {
+        "Name": "*asian name*",
+        "Nationality": "Korean",
+        "Email": "jatc@gmail.com",
+        "Position": "Post-Doc",
+        "orcid": "lolkasd.com",
+        "Image": "assets/img/labmembers/asiangirl.jpg",
+        "NOTE": "ALL IMAGES SHOULD BE 400X400"
+    },
+    {
+        "Name": "*asian name*",
+        "Nationality": "Korean",
+        "Email": "jatc@gmail.com",
+        "Position": "Post-Doc",
+        "orcid": "lolkasd.com",
+        "Image": "assets/img/labmembers/asiangirl.jpg",
+        "NOTE": "ALL IMAGES SHOULD BE 400X400"
+    },
+    {
+        "Name": "*asian name*",
+        "Nationality": "Korean",
+        "Email": "jatc@gmail.com",
+        "Position": "Post-Doc",
+        "orcid": "lolkasd.com",
+        "Image": "assets/img/labmembers/asiangirl.jpg",
+        "NOTE": "ALL IMAGES SHOULD BE 400X400"
+    },
+    {
+        "Name": "*asian name*",
+        "Nationality": "Korean",
+        "Email": "jatc@gmail.com",
+        "Position": "Post-Doc",
+        "orcid": "lolkasd.com",
+        "Image": "assets/img/labmembers/asiangirl.jpg",
+        "NOTE": "ALL IMAGES SHOULD BE 400X400"
+    },
+    {
+        "Name": "*asian name*",
+        "Nationality": "Korean",
+        "Email": "jatc@gmail.com",
+        "Position": "Post-Doc",
+        "orcid": "lolkasd.com",
+        "Image": "assets/img/labmembers/asiangirl.jpg",
+        "NOTE": "ALL IMAGES SHOULD BE 400X400"
     }
-  
+    
+
 ]
