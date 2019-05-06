@@ -1,7 +1,129 @@
-<div class="spacer"></div>
+<body data-spy="scroll" data-target="#navbar-main" data-offset="95">
+
+
+        <nav class="navbar navbar-default navbar-fixed-top navbar-antarex">
+    <div id="navbar-main" class="container">
+        <div class="navbar-header">
+            <button id="navbar-button" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand smoothScroll" href="index.php?page=home#intro">
+                <img class="logo-compact" src="assets/img/logo/logospecs/specslogomini.png">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- HOME-->
+                <li class="dropdown">
+                    <!-- data-toggle="dropdown"  -->
+
+                    <a class="dropdown-toggle" href="index.php?page=home">Home
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!--<li><a href="home#intro" class="smoothScroll">Intro</a></li>-->
+                        <li><a href="index.php?page=home#about" class="smoothScroll">About</a></li>
+                        <li><a href="index.php?page=home#consortium" class="smoothScroll">Consortium</a></li>
+                        <li><a href="index.php?page=home#contact" class="smoothScroll">Contact Us</a></li>
+                    </ul>
+                </li>
+                
+                <!-- Members -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="index.php?page=members">Members
+                        <span class="caret"></span>
+                    </a>
+                </li>
+                
+                 <!-- TestingPage -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="index.php?page=testingstuff">TestPage
+                        <span class="caret"></span>
+                    </a>
+                </li>
+                    
+                <!-- PROJECT -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="index.php?page=project">Project Description
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.php?page=project#objective" class="smoothScroll">Objective</a></li>
+                        <li><a href="index.php?page=project#description" class="smoothScroll">Description</a></li>
+                        <li><a href="index.php?page=project#partners" class="smoothScroll">Partners</a></li>
+                    </ul>
+                </li>
+
+                <!-- NEWS AND EVENTS -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="index.php?page=events">Activities and Events
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.php?page=events#events" class="smoothScroll">Events</a></li>
+                        <li><a href="index.php?page=events#tutorials" class="smoothScroll">Tutorials</a></li>
+                        <li><a href="index.php?page=events#schools" class="smoothScroll">Workshops</a></li>
+
+
+                        <!-- <li><a href="events#calendar" class="smoothScroll">Calendar</a></li> -->
+                    </ul>
+                </li>
+
+                <!-- MEDIA CENTER -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="index.php?page=media">Media Center
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.php?page=media#news" class="smoothScroll">News</a></li>
+                        <li><a href="index.php?page=media#press" class="smoothScroll">In the Press</a></li>
+                        <li><a href="index.php?page=media#releases" class="smoothScroll">Press Releases</a></li>
+                        <!--<li><a href="#photos" class="smoothScroll">Photos</a></li>-->
+                    </ul>
+                </li>
+
+                <!-- DISSEMINATION -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="index.php?page=dissemination">Dissemination
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.php?page=dissemination#journals" class="smoothScroll">Journal Publications</a></li>
+                        <li><a href="index.php?page=dissemination#conference_publications" class="smoothScroll">Conference Publications</a></li>
+                        <li><a href="index.php?page=dissemination#organization_of_events" class="smoothScroll">Organization of Events</a></li>
+                        <li><a href="index.php?page=dissemination#presentations" class="smoothScroll">Presentations</a></li>
+                        <li><a href="index.php?page=dissemination#deliverables" class="smoothScroll">Public Deliverables</a></li>
+                        <li><a href="index.php?page=dissemination#tools" class="smoothScroll">Tools</a></li>
+                        <li><a href="index.php?page=dissemination#video_tutorials" class="smoothScroll">ANTAREX YouTube Channel</a></li>
+                        <li><a href="index.php?page=dissemination#book" class="smoothScroll">Online Book</a></li>
+
+                    </ul>
+                </li>
+
+                <!-- PRIVATE PAGES -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Private Pages
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://antarex.fe.up.pt/dokuwiki/" target="_blank">Wiki</a></li>
+                        <li><a href="https://antarex.fe.up.pt/owncloud" target="_blank">Repository</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+        <div class="spacer"></div>
 
 <!--EVENTS-->
-<div id="events" class="section">
+<div id="eventsrwrk" class="section">
     <div class="container">
 
         <!-- FIRST ROW -->
@@ -9,9 +131,9 @@
             <h2  class="section-header centered">Events</h2>
 
             <!-- KICKOFF -->
-            <div class="col-md-4 events">
+            <div class="col-md-4 eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/kickoff.jpg" alt="">
                     </div>
                     <figcaption>
@@ -49,9 +171,9 @@
             </div><!-- KICKOFF -->
 
             <!-- MILANO -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/milano.JPG" alt="">
                     </div>
                     <figcaption>
@@ -90,9 +212,9 @@
 
 
             <!-- EUC/CSE -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/cse1.jpg" alt="">
                     </div>
                     <figcaption>
@@ -137,9 +259,9 @@
 
 
             <!-- HIPEAC 16 -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/parma16.JPG" alt="">
                     </div>
                     <figcaption>
@@ -193,9 +315,9 @@
 
 
             <!-- HIPEAC 16-cristina -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/hipeac16_cristina.jpeg" alt="">
                     </div>
                     <figcaption>
@@ -233,9 +355,9 @@
             </div><!-- HIPEAC 16-cristina -->
 
             <!-- PRAGUE MEETING -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/prague_meeting.jpeg" alt="">
                     </div>
                     <figcaption>
@@ -273,9 +395,9 @@
             </div><!-- PRAGUE MEETING -->
 
             <!-- DATE 2016 -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/date16-thumb.jpg" alt="">
                     </div>
                     <figcaption>
@@ -313,9 +435,9 @@
             </div><!-- DATE 2016 -->
 
             <!-- CSW PORTO 2016 -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/csw_cardoso_thumb.jpg" alt="">
                     </div>
                     <figcaption>
@@ -360,9 +482,9 @@
             </div><!-- CSW PORTO 2016 -->
 
             <!-- EXDCI Workshop 2016 -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/exdci_thumb.jpg" alt="">
                     </div>
                     <figcaption>
@@ -400,9 +522,9 @@
             </div><!-- EXDCI Workshop 2016 -->
 
             <!-- PRACE 2016 -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/prace16_thumb.jpg" alt="">
                     </div>
                     <figcaption>
@@ -440,9 +562,9 @@
             </div><!-- PRACE 2016 -->
 
             <!-- 1st Review Meeting -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/RM_photo1.jpg" alt="">
                     </div>
                     <figcaption>
@@ -495,9 +617,9 @@
             </div><!-- 1st Review Meeting -->
 
 
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/frankfurt_jun17.jpg" alt="">
                     </div>
                     <figcaption>
@@ -539,9 +661,9 @@
 
 
 
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/2018_isc_thumb.jpg" alt="">
                     </div>
                     <figcaption>
@@ -583,9 +705,9 @@
 
 
             <!-- UC2 Meeting -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/UC2_meeting_1.jpg" alt="">
                     </div>
                     <figcaption>
@@ -629,9 +751,9 @@
 
 
             <!-- DSD2018 -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/dsd2018_thumb.jpg" alt="">
                     </div>
                     <figcaption>
@@ -676,9 +798,9 @@
 
 
             <!-- PRACE 2018  -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/ostrava-2018-3.jpg" alt="">
                     </div>
                     <figcaption>
@@ -721,13 +843,13 @@
 
 
             <!-- TECHNICAL MEETING 2018  -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/ostrava-2018-1.jpg" alt="">
                     </div>
                     <figcaption>
-                        <h5>Technical Meeting 2018 at IT4I</h5>
+                        <h5>Technical Meeting 2018</h5>
                         <a data-toggle="modal" href="#Tech2018" class="btn btn-default btn-antarex">More Details</a>
                     </figcaption>
                 </figure>
@@ -768,9 +890,9 @@
 
 
             <!-- PACT 2018  -->
-            <div class="col-md-4 events events">
+            <div class="col-md-4 eventsrwrk eventsrwrk">
                 <figure>
-                    <div class="img-box">
+                    <div class="img-boxevent">
                         <img class="img-responsive" src="assets/img/events/pact18-1.jpg" alt="">
                     </div>
                     <figcaption>
@@ -825,7 +947,7 @@
         <div class="row" id="tutorials">
             <h2  class="section-header centered">Tutorials</h2>
 
-            <h3 id="tutorial-prace18"><a href="index.php?page=events#tutorial-prace18">Clava Tutorial at ANTAREX PRACE - October 23rd 2018, Ostrava, Czech Republic</a></h3>
+            <h3 id="tutorial-prace18"><a href="index.php?page=eventsrwrk#tutorial-prace18">Clava Tutorial at ANTAREX PRACE - October 23rd 2018, Ostrava, Czech Republic</a></h3>
             <p>
                 The tutorial <em>"DSL and Source to Source Compilation: hands-on-approach and the Clava+LARA approach"</em> will be presented during the school "ANTAREX: Monitoring, Compilation and Autotuning Approach for Energy-Efficient HPC Systems".
             </p>
@@ -833,13 +955,13 @@
                 Support materials available <u><a href="https://github.com/specs-feup/specs-lara/tree/master/2018-PRACE">here</a></u>.
             </p>
             <p>
-                <u><a href="https://events.it4i.cz/indico/event/14/timetable/#20181023">For more informations, follow this link.</a></u>
+                <u><a href="https://eventsrwrk.it4i.cz/indico/event/14/timetable/#20181023">For more informations, follow this link.</a></u>
 
 
                 <!-- <em>(a link to support materials will be available here soon)</em> -->
             </p>
 
-            <h3 id="tutorial-pact18"><a href="index.php?page=events#tutorial-pact18">Clava Tutorial at PACT18 - November 3rd 2018, Limassol, Cyprus</a></h3>
+            <h3 id="tutorial-pact18"><a href="index.php?page=eventsrwrk#tutorial-pact18">Clava Tutorial at PACT18 - November 3rd 2018, Limassol, Cyprus</a></h3>
             <p>
                 The tutorial <em>"The ANTAREX Approach to Adaptively Optimize and Enforce Extra-Functional Properties on HPC Applications"</em> will be presented during the afternoon, in the 27th International Conference on Parallel Architectures and Compilation Techniques (PACT18).
             </p>
@@ -855,19 +977,19 @@
         <div class="row" id="schools">
             <h2  class="section-header centered">Workshops</h2>
 
-            <h3 id="hpcafe18"><a href="index.php?page=events#hpcafe18">HPCAFE 2018 Workshop - May 19 2018, Ljubljana, Slovenia.</a></h3>
+            <h3 id="hpcafe18"><a href="index.php?page=eventsrwrk#hpcafe18">HPCAFE 2018 Workshop - May 19 2018, Ljubljana, Slovenia.</a></h3>
             <p>
                 ANTAREX co-organizes the workshop <em>"HPCAFE-2018: High-Performance Computing Approaches for Monitoring, Exploring, Optimizing and Autotuning,"</em> to occur in the 29 of May in the Faculty of Law, University of Ljubljana, Slovenia.
             </p>
             <p>
-                This workshop is part of the <a href="https://exdci.eu/events/european-hpc-summit-week-2018">European HPC Summit Week 2018</a>.
+                This workshop is part of the <a href="https://exdci.eu/eventsrwrk/european-hpc-summit-week-2018">European HPC Summit Week 2018</a>.
             </p>
             <p>
                 <u><a href="http://www.fe.up.pt/hpcafe2018">For more informations, follow this link.</a></u>
             </p>
 
 
-            <h3 id="etthpc18"><a href="index.php?page=events#etthpc18">EETHPC 2018 Workshop - June 28 2018, Frankfurt, Germany.</a></h3>
+            <h3 id="etthpc18"><a href="index.php?page=eventsrwrk#etthpc18">EETHPC 2018 Workshop - June 28 2018, Frankfurt, Germany.</a></h3>
             <p>
                 ANTAREX co-organizes the workshop on <em>"Energy Efficiency Tools for High Performance Computing (EETHPC)"</em>, co-located with the ISC High Performance 2018 (ISC'2018), in Frankfurt, June 28, 2018.
             </p>
@@ -876,20 +998,20 @@
             </p>
 
 
-            <h3 id="school-prace18"><a href="index.php?page=events#school-prace18">ANTAREX PRACE on-demand event - October 22-23 2018, Ostrava, Czech Republic</a></h3>
+            <h3 id="school-prace18"><a href="index.php?page=eventsrwrk#school-prace18">ANTAREX PRACE on-demand event - October 22-23 2018, Ostrava, Czech Republic</a></h3>
             <p>
                 ANTAREX organizes the PRACE school <em>"ANTAREX: Monitoring, Compilation and Autotuning Approach for Energy-Efficient HPC Systems"</em> to occur from 22 to 23 of October in VŠB - Technical University of Ostrava, IT4Innovations building, Ostrava, Czech Republic.
             </p>
             <p>
-                <u><a href="https://events.it4i.cz/indico/event/14/timetable/#20181023">For more informations, follow this link.</a></u>
+                <u><a href="https://eventsrwrk.it4i.cz/indico/event/14/timetable/#20181023">For more informations, follow this link.</a></u>
             </p>
 
-            <h3 id="andare18"><a href="index.php?page=events#andare18">ANDARE 2018 Workshop - November 4 2018, Limassol, Cyprus.</a></h3>
+            <h3 id="andare18"><a href="index.php?page=eventsrwrk#andare18">ANDARE 2018 Workshop - November 4 2018, Limassol, Cyprus.</a></h3>
             <p>
                 ANTAREX organizes the workshop <em>"AutotuniNg and aDaptivity AppRoaches for Energy efficient HPC Systems"</em> co-located with the 27th International Conference on Parallel Architectures and Compilation Techniques (PACT18), in Limassol, November 4, 2018.
             </p>
             <p>
-                <u><a href="https://web.fe.up.pt/~specs/events/andare2018/">For more informations, follow this link.</a></u>
+                <u><a href="https://web.fe.up.pt/~specs/eventsrwrk/andare2018/">For more informations, follow this link.</a></u>
             </p>
         </div>
     </div>
@@ -906,3 +1028,34 @@
     </div>
 </div>
 -->
+
+      
+        <!--FOOTER-->
+
+        <!-- To be able to detect responsive breakpoits -->
+        <div class="device-xs visible-xs"></div>
+        <div class="device-sm visible-sm"></div>
+        <div class="device-md visible-md"></div>
+        <div class="device-lg visible-lg"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
+
+        <script src="assets/js/antarex.js"></script>
+
+        <script src="assets/js/smoothscroll.js" ></script>
+
+        <!--PAGINATION-->
+        <script src="assets/js/bootstrap-paginator.js"></script>
+        <script src="assets/js/pager.js"></script>
+
+
+        <!--CALENDAR-->
+<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.min.js"></script>
+        <script src="assets/js/calendar.js"></script>-->
+
+
+
+    </body>
+</html>
