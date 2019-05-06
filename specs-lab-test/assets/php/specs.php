@@ -4,10 +4,6 @@
 /**
  * Tests building the HTML code for the members
  */
-
-
-
-
 function get_members_test() {
 
     $members = json_decode(file_get_contents('db/specs_members.json'), true);
@@ -43,25 +39,39 @@ function get_members_test() {
                                 <p>
                                     <b>Nationality:</b> $nationality
                                 </p>
+                                
+
+                                <p> 
+                                    <b>Birthday:</b> $birthday
+                                </p>
+                                
+
+
                                 <p>
                                     <b>Email:</b> $email
                                 </p>
                                 <p>
                                     <b>Position:</b> $position
                                 </p>
+                                
 
-                                href=$webpage
+                                 </p>
+                                
+                                  $affiliation
+                                
+                                </p>
+                                    <p>
+                                $webpage
                                 
                                 <p>
                                 
-                                     $affiliation
-                                
-                                </p>
+
                                 <p>
                                 
                                 $orcid
-                                
                                 </p>
+                                
+                                
                                 
 
 
@@ -99,53 +109,53 @@ function get_members_test() {
         $nationality = $member['Nationality'];
         $email = $member['Email'];
         $position = $member ['Position'];
+        $birthday = $member ['Birthday'];
 
         $webpage = '';
         if (array_key_exists('WebPage', $member)) {
             $webpage_val = $member['WebPage'];
-            $webpage = "<p><b>Web Page: </b>" . $webpage_val . "</p>";
+            $webpage = "<a href='$webpage_val' target='_blank'><b>WebPage</a>";
         }
-        
-         $affiliation = '';
+
+        $affiliation = '';
         if (array_key_exists('Affiliation', $member)) {
             $affiliation_val = $member['Affiliation'];
             $affiliation = "<p><b>Affiliation: </b>" . $affiliation_val . "</p>";
-            
         }
-        
-         $orcid = '';
+
+        $orcid = '';
         if (array_key_exists('orcid', $member)) {
             $orcid_val = $member['orcid'];
-            $orcid = "<p><b>ORCID: </b>" . $orcid_val . "</p>";
+            $orcid = "<a href='$orcid_val' target='_blank'><b>ORCID</a>";
         }
-       
+
 
         $sub = array(
             '$name' => $name,
-            '$image' => $image, 
+            '$image' => $image,
             '$id' => $id,
             '$nationality' => $nationality,
             '$email' => $email,
             '$affiliation' => $affiliation,
             '$position' => $position,
             '$webpage' => $webpage,
-            '$orcid' => $orcid
+            '$orcid' => $orcid,
+            '$birthday' => $birthday,
         );
 
         echo strtr($template, $sub);
-        
-      
-                          
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
 //           $html = "<div class=\"col-md-4 events\">
 //                <figure>
 //                    <div class=\"img-box\">

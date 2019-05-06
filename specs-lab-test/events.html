@@ -1,4 +1,159 @@
-<div class="spacer"></div>
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="ANTAREX H2020 Project">
+        <meta name="author" content="SPeCS Lab, FEUP, Porto">
+        <title>ANTAREX: Activities and Events</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/antarex.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.min.css">
+        <!--<link rel="stylesheet" href="assets/css/responsive-calendar.css" media="screen">-->
+
+
+
+
+        <!--favicon-->
+        <link rel="shortcut icon" type="image/png" href="assets/img/logo/favicon.png"/>
+
+        <!--GOOGLE ANALYTICS-->
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-68124709-2', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+    </head>
+    <body data-spy="scroll" data-target="#navbar-main" data-offset="95">
+
+
+        <nav class="navbar navbar-default navbar-fixed-top navbar-antarex">
+    <div id="navbar-main" class="container">
+        <div class="navbar-header">
+            <button id="navbar-button" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand smoothScroll" href="home#intro">
+                <img class="logo-compact" src="assets/img/logo/small/logo-compact.png">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+
+                <!-- HOME-->
+                <li class="dropdown">
+                    <!-- data-toggle="dropdown"  -->
+
+                    <a class="dropdown-toggle" href="home">Home
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!--<li><a href="home#intro" class="smoothScroll">Intro</a></li>-->
+                        <li><a href="home#about" class="smoothScroll">About</a></li>
+                        <li><a href="home#consortium" class="smoothScroll">Consortium</a></li>
+                        <li><a href="home#contact" class="smoothScroll">Contact Us</a></li>
+                    </ul>
+                </li>
+
+                <!-- PROJECT -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="project">Project Description
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="project#objective" class="smoothScroll">Objective</a></li>
+                        <li><a href="project#description" class="smoothScroll">Description</a></li>
+                        <li><a href="project#partners" class="smoothScroll">Partners</a></li>
+                    </ul>
+                </li>
+
+                <!-- NEWS AND EVENTS -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="events">Activities and Events
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#events" class="smoothScroll">Events</a></li>
+                        <li><a href="#tutorials" class="smoothScroll">Tutorials</a></li>
+                        <li><a href="#schools" class="smoothScroll">Workshops</a></li>
+
+
+                        <!-- <li><a href="#calendar" class="smoothScroll">Calendar</a></li> -->
+                    </ul>
+                </li>
+
+                <!-- MEDIA CENTER -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="media">Media Center
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="media#news" class="smoothScroll">News</a></li>
+                        <li><a href="media#press" class="smoothScroll">In the Press</a></li>
+                        <li><a href="media#releases" class="smoothScroll">Press Releases</a></li>
+                        <!--<li><a href="media#photos" class="smoothScroll">Photos</a></li>-->
+                    </ul>
+                </li>
+
+                <!-- DISSEMINATION -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="dissemination">Dissemination
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dissemination#journals" class="smoothScroll">Journal Publications</a></li>
+                        <li><a href="dissemination#conference_publications" class="smoothScroll">Conference Publications</a></li>
+                        <!-- <li><a href="dissemination#workshop_publications" class="smoothScroll">Workshop Publications</a></li> -->
+                        <li><a href="dissemination#organization_of_events" class="smoothScroll">Organization of Events</a></li>
+                        <!-- <li><a href="dissemination#publications" class="smoothScroll">Publications</a></li> -->
+                        <li><a href="dissemination#presentations" class="smoothScroll">Presentations</a></li>
+                        <li><a href="dissemination#deliverables" class="smoothScroll">Public Deliverables</a></li>
+                        <li><a href="dissemination#tools" class="smoothScroll">Tools</a></li>
+                        <li><a href="dissemination#video_tutorials" class="smoothScroll">ANTAREX YouTube Channel</a></li>
+                        <li><a href="dissemination#book" class="smoothScroll">Online Book</a></li>
+
+                    </ul>
+                </li>
+
+                <!-- PRIVATE PAGES -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Private Pages
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://antarex.fe.up.pt/dokuwiki/" target="_blank">Wiki</a></li>
+                        <li><a href="https://antarex.fe.up.pt/owncloud" target="_blank">Repository</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+        <div class="spacer"></div>
 
 <!--EVENTS-->
 <div id="events" class="section">
@@ -906,3 +1061,60 @@
     </div>
 </div>
 -->
+
+        <!--FOOTER-->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1 centered">
+                        <img id="eu-flag"  src="assets/img/eu_flag.svg"  alt="EU Emblem">
+                    </div>
+                    <div class="col-md-10 centered">
+                        <span class="footer">
+                            <p>
+                                This project is partially funded by the European Union’s Horizon 2020 research and innovation programme under grant agreement <a href="http://cordis.europa.eu/project/rcn/197938_en.html" rel="nofollow">No 671623</a>.
+                            </p>
+                            <p>
+                                Copyright &copy; 2015 ANTAREX. Original design by <a href="http://www.templategarden.com" rel="nofollow">TemplateGarden</a>.
+                            </p>
+                        </span>
+                    </div>
+                    <div id="social-div" class="col-md-1">
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://twitter.com/antarex_project"><i class="fa fa-twitter"></i></a> </li>
+                            <li><a href="https://www.facebook.com/Antarex-1660673857550758/timeline/"><i class="fa fa-facebook"></i></a> </li>
+                            <li><a href="https://www.linkedin.com/grp/home?gid=8409003"><i class="fa fa-linkedin"></i></a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FOOTER-->
+
+        <!-- To be able to detect responsive breakpoits -->
+        <div class="device-xs visible-xs"></div>
+        <div class="device-sm visible-sm"></div>
+        <div class="device-md visible-md"></div>
+        <div class="device-lg visible-lg"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
+
+        <script src="assets/js/antarex.js"></script>
+
+        <script src="assets/js/smoothscroll.js" ></script>
+
+        <!--PAGINATION-->
+        <script src="assets/js/bootstrap-paginator.js"></script>
+        <script src="assets/js/pager.js"></script>
+
+
+        <!--CALENDAR-->
+<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.min.js"></script>
+        <script src="assets/js/calendar.js"></script>-->
+
+
+
+    </body>
+</html>

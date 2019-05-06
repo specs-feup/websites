@@ -1,83 +1,98 @@
 [
-    {
+        {
         "Name": "João M. P. Cardoso",
-        "Nationality": "Portuguese",
-        "Email": "jmpc@gmail.com",
-        "WebPage": "https://www.youtube.com/",
-        "Affiliation": "FEUP",
-        "Position": "Professor",
-        "orcid": "ioajsdioasjdjoasd.com",
-        "age": 65,
-        "Image": "assets/img/labmembers/joaocardoso.jpg",
-        "NOTE": "ALL IMAGES SHOULD BE 400X400"
-    },
-    {
+                "Nationality": "Portuguese",
+                "Email": "jmpc@gmail.com",
+                "WebPage": "https://www.twitter.com/",
+                "Affiliation": "FEUP",
+                "Position": "Professor",
+                "orcid": "https://www.twitter.com/",
+                "Birthday": "28/08/1968",
+                "Image": "assets/img/labmembers/joaocardoso.jpg",
+                "NOTE": "ALL IMAGES SHOULD BE 400X400",
+                "NOTE": "ALL LINKS SHOULD HAVE THE RIGHT FORMAT (https://www.) "
+                },
+        {
         "Name": "Ana Silva",
-        "Nationality": "Spanish", 
-        "Email": "jsadnpc@gmail.com",
-        "WebPage": "youtube.pt",
-        "Affiliation": "FEUP",
-        "Position": "PhD Student",
-        "orcid": "adzc.com",
-        "Image": "assets/img/labmembers/anasilva.jpg",
-        "NOTE": "ALL IMAGES SHOULD BE 400X400"
-    },
-    {
+                "Nationality": "Spanish",
+                "Email": "jsadnpc@gmail.com",
+                "WebPage": "youtube.pt",
+                "Affiliation": "FEUP",
+                "Position": "PhD Student",
+                "orcid": "adzc.com",
+                "Birthday": "28/08/1981",
+                "Image": "assets/img/labmembers/anasilva.jpg",
+                "NOTE": "ALL IMAGES SHOULD BE 400X400",
+                "NOTE": "ALL LINKS SHOULD HAVE THE RIGHT FORMAT (https://www.) "
+                },
+        {
         "Name": "António Maia",
-        "Nationality": "Italian",
-        "Email": "jatc@gmail.com",
-        "WebPage": "dkasdmasd.pt",
-        "Affiliation": "FEUP",
-        "Position": "PhD Student",
-        "orcid": "lolkasd.com",
-        "Image": "assets/img/labmembers/antoniomaia.jpg",
-        "NOTE": "ALL IMAGES SHOULD BE 400X400"
-    },
-    {
+                "Nationality": "Italian",
+                "Email": "jatc@gmail.com",
+                "WebPage": "dkasdmasd.pt",
+                "Affiliation": "FEUP",
+                "Birthday": "28/08/1991",
+                "Position": "PhD Student",
+                "orcid": "lolkasd.com",
+                "Image": "assets/img/labmembers/antoniomaia.jpg",
+                "NOTE": "ALL IMAGES SHOULD BE 400X400",
+                "NOTE": "ALL LINKS SHOULD HAVE THE RIGHT FORMAT (https://www.) "
+                },
+        {
+        "Name": "*asian name*",
+                "Nationality": "Korean",
+                "Email": "jatc@gmail.com",
+                "Position": "Post-Doc",
+                "orcid": "lolkasd.com",
+                "Birthday": "18/02/1985",
+                "Image": "assets/img/labmembers/asiangirl.jpg",
+                "NOTE": "ALL LINKS SHOULD HAVE THE RIGHT FORMAT (https://www.) "
+
+                },
+        {
+        "Name": "*asian name*",
+                "Nationality": "Korean",
+                "Email": "jatc@gmail.com",
+                "Position": "Post-Doc",
+                "orcid": "lolkasd.com",
+                "Birthday": "28/08/1971",
+                "Image": "assets/img/labmembers/asiangirl.jpg",
+                "NOTE": "ALL IMAGES SHOULD BE 400X400",
+                "NOTE": "ALL LINKS SHOULD HAVE THE RIGHT FORMAT (https://www.) "
+                },
+        {
+        "Name": "*asian name*",
+                "Nationality": "Korean",
+                "Email": "jatc@gmail.com",
+                "Birthday": "28/08/1971",
+                "Position": "Post-Doc",
+                "orcid": "lolkasd.com",
+                "Image": "assets/img/labmembers/asiangirl.jpg",
+                "NOTE": "ALL IMAGES SHOULD BE 400X400",
+                "NOTE": "ALL LINKS SHOULD HAVE THE RIGHT FORMAT (https://www.) "
+                },
+        {
+        "Name": "*asian name*",
+                "Nationality": "Korean",
+                "Email": "jatc@gmail.com",
+                "Position": "Post-Doc",
+                "orcid": "lolkasd.com",
+                "Birthday": "28/08/1971",
+                "Image": "assets/img/labmembers/asiangirl.jpg",
+                "NOTE": "ALL IMAGES SHOULD BE 400X400",
+                "NOTE": "ALL LINKS SHOULD HAVE THE RIGHT FORMAT (https://www.) "
+                },
+{
         "Name": "*asian name*",
         "Nationality": "Korean",
         "Email": "jatc@gmail.com",
         "Position": "Post-Doc",
         "orcid": "lolkasd.com",
+        "Birthday": "28/08/1971",
         "Image": "assets/img/labmembers/asiangirl.jpg",
-        "NOTE": "ALL IMAGES SHOULD BE 400X400"
-    },
-    {
-        "Name": "*asian name*",
-        "Nationality": "Korean",
-        "Email": "jatc@gmail.com",
-        "Position": "Post-Doc",
-        "orcid": "lolkasd.com",
-        "Image": "assets/img/labmembers/asiangirl.jpg",
-        "NOTE": "ALL IMAGES SHOULD BE 400X400"
-    },
-    {
-        "Name": "*asian name*",
-        "Nationality": "Korean",
-        "Email": "jatc@gmail.com",
-        "Position": "Post-Doc",
-        "orcid": "lolkasd.com",
-        "Image": "assets/img/labmembers/asiangirl.jpg",
-        "NOTE": "ALL IMAGES SHOULD BE 400X400"
-    },
-    {
-        "Name": "*asian name*",
-        "Nationality": "Korean",
-        "Email": "jatc@gmail.com",
-        "Position": "Post-Doc",
-        "orcid": "lolkasd.com",
-        "Image": "assets/img/labmembers/asiangirl.jpg",
-        "NOTE": "ALL IMAGES SHOULD BE 400X400"
-    },
-    {
-        "Name": "*asian name*",
-        "Nationality": "Korean",
-        "Email": "jatc@gmail.com",
-        "Position": "Post-Doc",
-        "orcid": "lolkasd.com",
-        "Image": "assets/img/labmembers/asiangirl.jpg",
-        "NOTE": "ALL IMAGES SHOULD BE 400X400"
-    }
+        "NOTE": "ALL IMAGES SHOULD BE 400X400",
+        "NOTE": "ALL LINKS SHOULD HAVE THE RIGHT FORMAT (https://www.) "
+        }
 
 
 ]
