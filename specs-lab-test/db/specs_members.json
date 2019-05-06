@@ -3,18 +3,17 @@
         "Name": "João M. P. Cardoso",
         "Nationality": "Portuguese",
         "Email": "jmpc@gmail.com",
-        "WebPage": "youtube.pt",
+        "WebPage": "https://www.youtube.com/",
         "Affiliation": "FEUP",
         "Position": "Professor",
         "orcid": "ioajsdioasjdjoasd.com",
         "age": 65,
-        "active": true,
         "Image": "assets/img/labmembers/joaocardoso.jpg",
         "NOTE": "ALL IMAGES SHOULD BE 400X400"
     },
     {
         "Name": "Ana Silva",
-        "Nationality": "Spanish",
+        "Nationality": "Spanish", 
         "Email": "jsadnpc@gmail.com",
         "WebPage": "youtube.pt",
         "Affiliation": "FEUP",
@@ -79,6 +78,6 @@
         "Image": "assets/img/labmembers/asiangirl.jpg",
         "NOTE": "ALL IMAGES SHOULD BE 400X400"
     }
-    
+
 
 ]
