@@ -483,8 +483,8 @@ ul.social-buttons li a:active {
     position: relative;
     border: 10px solid #19689b;
 
-    height: 400px;
-    border-radius: 20px;
+    height: 300px;
+    border-radius: 10px;
 }
 
 .img-box {

@@ -12,7 +12,7 @@ function get_members_test() {
 
 
 
-    $template = ' <div class="col-md-4 events">
+    $template = ' <div class="col-md-3 events">
                 <figure>
                     <div class="img-box">
                         <img class="img-responsive" src="$image" alt="">
@@ -122,7 +122,7 @@ function get_members_test() {
             $affiliation_val = $member['Affiliation'];
             $affiliation = "<p><b>Affiliation: </b>" . $affiliation_val . "</p>";
         }
-
+        
         $orcid = '';
         if (array_key_exists('orcid', $member)) {
             $orcid_val = $member['orcid'];
