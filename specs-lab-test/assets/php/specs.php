@@ -52,7 +52,7 @@ function get_members_test() {
                                 <b>Current Status:</b> $current_status
                                 </p>
                                 
-
+                                
                                 <p>
                                 $status
                                 </p>
@@ -115,31 +115,9 @@ function get_members_test() {
                                 $webpage
                                 </p>
                                 
-                             
-
-                                
-                               
-                                
-
-
-                                
-                                
-                                
-
-
-                                
-
-                               
-
-
-
-
-
-
-
-
-
-
+                                <p>
+                                $image_path
+                                </p>
                             </div>
 
                         </div>
@@ -246,6 +224,12 @@ function get_members_test() {
         if (array_key_exists('Email', $member)) {
             $email_val = $member['Email'];
             $email = "<p><b>Email: </b>" . $email_val . "</p>";
+
+
+            $testeimagem = explode("@", $email_val)[0];
+            $image_path = "<p><b>Teste da imagem: </b>" . $testeimagem . "</p>";
+        } else {
+            $image_path = "assets/img/labmembers/generic.png";
         }
 
 
@@ -301,6 +285,8 @@ function get_members_test() {
             '$dblp' => $dblp,
             '$status' => $status,
             '$fjobphd' => $fjobphd,
+            '$image_path' => $image_path,
+            
         );
 
         echo strtr($template, $sub);
