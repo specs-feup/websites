@@ -12,7 +12,7 @@ function get_members_test() {
 
 
 
-    $template = ' <div class="col-md-3 events">
+    $template = ' <div class="col-md-4 events">
                 <figure>
                     <div class="img-box">
                         <img class="img-responsive" src="$image" alt="">
@@ -33,43 +33,95 @@ function get_members_test() {
                             <img class="img-responsive" src="$image" alt="">
                             <div class="modal-text">
                                 <p>
-                                    <b>Name:</b> $name
+                                <b>Name:</b> $name
                                 </p>
-
-                                <p>
-                                    <b>Nationality:</b> $nationality
-                                </p>
-                                
-
-                                <p> 
-                                    <b>Birthday:</b> $birthday
-                                </p>
-                                
-
-
-                                <p>
-                                    <b>Email:</b> $email
-                                </p>
-                                <p>
-                                    <b>Position:</b> $position
-                                </p>
-                                
-
-                                 </p>
-                                
-                                  $affiliation
-                                
-                                </p>
-                                    <p>
-                                $webpage
                                 
                                 <p>
+                                <b>Affiliation:</b> $affiliation
+                                </p>
+                                
+                                <p>
+                                <b>Position:</b> $position
+                                </p>
+                                
+                                <p>
+                                $context
+                                </p>
+                                
+                                <p>
+                                <b>Current Status:</b> $current_status
+                                </p>
                                 
 
                                 <p>
+                                $status
+                                </p>
+          
                                 
+                                
+                                 
+                                <p>
+                                $visit
+                                </p>
+                                
+                                <p>
+                                $fjobphd
+                                </p>
+                                
+
+                               
+                                
+                                <p>
+                                $email
+                                </p>
+                                
+                                <p>
+                                $twitter
+                                </p>
+                                
+                                <p>
+                                $fjobmsc
+                                </p>
+                                
+                                <p>
+                                $publickey
+                                </p>
+                                
+                                <p>
+                                $supervisor
+                                </p>
+                                
+                                <p>
                                 $orcid
                                 </p>
+                                
+                                <p>
+                                $dblp
+                                </p>
+                                
+                                <p>
+                                $researchg
+                                </p>
+                                
+                                <p>
+                                $schoolar
+                                </p>
+                                
+                                <p>
+                                $linkedin
+                                </p>
+                                
+                                <p>
+                                $webpage
+                                </p>
+                                
+                             
+
+                                
+                               
+                                
+
+
                                 
                                 
                                 
@@ -103,13 +155,86 @@ function get_members_test() {
     foreach ($members as $member) {
 
         $name = $member['Name'];
-        $image = $member ["Image"];
+        $affiliation = $member ["Affiliation"];
+        $position = $member ['Position'];
+        $current_status = $member ['Current Status'];
+
+        $image = $member ['Image'];
+
+
         $id = "id" . $counter;
         $counter = $counter + 1;
-        $nationality = $member['Nationality'];
-        $email = $member['Email'];
-        $position = $member ['Position'];
-        $birthday = $member ['Birthday'];
+
+
+
+        //-----------------------Optionals-----------------------//
+        $context = '';
+        if (array_key_exists('Context', $member)) {
+            $context_val = $member['Context'];
+            $context = "<p><b>Context: </b>" . $context_val . "</p>";
+        }
+
+        $visit = '';
+        if (array_key_exists('Visiting Period', $member)) {
+            $visit_val = $member['Visiting Period'];
+            $visit = "<p><b>Visiting Period: </b>" . $visit_val . "</p>";
+        }
+
+
+        $fjobphd = '';
+        if (array_key_exists('FirstJobAfterPhD', $member)) {
+            $fjobphd_val = $member['FirstJobAfterPhD'];
+            $fjobphd = "<p><b>First Job After PhD: </b>" . $fjobphd_val . "</p>";
+        }
+
+
+        $status = '';
+        if (array_key_exists('Status', $member)) {
+            $status_val = $member['Status'];
+            $status = "<p><b>Status: </b>" . $status_val . "</p>";
+        }
+
+
+        $orcid = '';
+        if (array_key_exists('ORCID', $member)) {
+            $orcid_val = $member['ORCID'];
+            $orcid = "<a href='$orcid_val' target='_blank'><b>ORCID</a>";
+        }
+
+
+
+        $dblp = '';
+        if (array_key_exists('DBLP', $member)) {
+            $dblp_val = $member['DBLP'];
+            $dblp = "<a href='$dblp_val' target='_blank'><b>DBLP</a>";
+        }
+
+
+        $researchg = '';
+        if (array_key_exists('Research Gate', $member)) {
+            $researchg_val = $member['Research Gate'];
+            $researchg = "<a href='$researchg_val' target='_blank'><b>Research Gate</a>";
+        }
+
+
+
+        $schoolar = '';
+        if (array_key_exists('Schoolar Google', $member)) {
+            $schoolar_val = $member['Schoolar Google'];
+            $schoolar = "<a href='$schoolar_val' target='_blank'><b>Schoolar Google</a>";
+        }
+
+        $linkedin = '';
+        if (array_key_exists('LinkedIn', $member)) {
+            $linkedin_val = $member['LinkedIn'];
+            $linkedin = "<a href='$linkein_val' target='_blank'><b>LinkedIn</a>";
+        }
+
+        $twitter = '';
+        if (array_key_exists('Twitter', $member)) {
+            $twitter_val = $member['Twitter'];
+            $twitter = "<p><b>Twitter@: </b>" . $twitter_val . "</p>";
+        }
 
         $webpage = '';
         if (array_key_exists('WebPage', $member)) {
@@ -117,30 +242,65 @@ function get_members_test() {
             $webpage = "<a href='$webpage_val' target='_blank'><b>WebPage</a>";
         }
 
-        $affiliation = '';
-        if (array_key_exists('Affiliation', $member)) {
-            $affiliation_val = $member['Affiliation'];
-            $affiliation = "<p><b>Affiliation: </b>" . $affiliation_val . "</p>";
+        $email = '';
+        if (array_key_exists('Email', $member)) {
+            $email_val = $member['Email'];
+            $email = "<p><b>Email: </b>" . $email_val . "</p>";
         }
-        
-        $orcid = '';
-        if (array_key_exists('orcid', $member)) {
-            $orcid_val = $member['orcid'];
-            $orcid = "<a href='$orcid_val' target='_blank'><b>ORCID</a>";
+
+
+
+        $fjobmsc = '';
+        if (array_key_exists('First Job After PhD/MSc', $member)) {
+            $fjobmsc_val = $member['First Job After PhD/MSc'];
+            $fjobmsc = "<p><b>First Job After PhD/MSc: </b>" . $fjobmsc_val . "</p>";
         }
+
+        $publickey = '';
+        if (array_key_exists('Public Key FCT', $member)) {
+            $publickey_val = $member['Public Key FCT'];
+            $fjobmsc = "<p><b>Public Key FCT: </b>" . $publickey_val . "</p>";
+        }
+
+        $supervisor = '';
+        if (array_key_exists('Supervisor', $member)) {
+            $supervisor_val = $member['Supervisor'];
+            $supervisor = "<p><b>Supervisor: </b>" . $supervisor_val . "</p>";
+        }
+
+
+
+
+
+
+
+
 
 
         $sub = array(
             '$name' => $name,
+            '$current_status' => $current_status,
+            '$context' => $context,
             '$image' => $image,
             '$id' => $id,
-            '$nationality' => $nationality,
             '$email' => $email,
             '$affiliation' => $affiliation,
             '$position' => $position,
             '$webpage' => $webpage,
             '$orcid' => $orcid,
-            '$birthday' => $birthday,
+            '$visit' => $visit,
+            '$supervisor' => $supervisor,
+            '$publickey' => $publickey,
+            '$fjobmsc' => $fjobmsc,
+            '$email' => $email,
+            '$webpage' => $webpage,
+            '$twitter' => $twitter,
+            '$linkedin' => $linkedin,
+            '$schoolar' => $schoolar,
+            '$researchg' => $researchg,
+            '$dblp' => $dblp,
+            '$status' => $status,
+            '$fjobphd' => $fjobphd,
         );
 
         echo strtr($template, $sub);
