@@ -12,13 +12,13 @@ function get_members_test() {
 
 
 
-    $template = ' <div class="col-md-4 events">
+    $template = ' <div class="col-md-2 events">
                 <figure>
                     <div class="img-box">
-                        <img class="img-responsive" src="$image" alt="">
+                        <img class="img-responsive" src="$image_path" alt="">
                     </div>
                     <figcaption>
-                        <h5>$name</h5>
+                        <h5>$firstname $secondname</h5>
                         <a data-toggle="modal" href="#$id" class="btn btn-default btn-antarex">More Details</a>
                     </figcaption>
                 </figure>
@@ -32,9 +32,7 @@ function get_members_test() {
                         <div class="modal-body">
                             <img class="img-responsive" src="$image" alt="">
                             <div class="modal-text">
-                                <p>
-                                <b>Name:</b> $name
-                                </p>
+                                
                                 
                                 <p>
                                 <b>Affiliation:</b> $affiliation
@@ -133,13 +131,14 @@ function get_members_test() {
     foreach ($members as $member) {
 
         $name = $member['Name'];
+        
+        $firstname = explode(" ", $name)[0];
+        $secondname = explode(" ", $name);
+        $secondname= end($secondname);
+
         $affiliation = $member ["Affiliation"];
         $position = $member ['Position'];
         $current_status = $member ['Current Status'];
-
-        $image = $member ['Image'];
-
-
         $id = "id" . $counter;
         $counter = $counter + 1;
 
@@ -227,7 +226,7 @@ function get_members_test() {
 
 
             $testeimagem = explode("@", $email_val)[0];
-            $image_path = "<p><b>Teste da imagem: </b>" . $testeimagem . "</p>";
+            $image_path = "<p><b>Teste da imagem: </b>" . $testeimagem .'.png' . "</p>";
         } else {
             $image_path = "assets/img/labmembers/generic.png";
         }
@@ -265,7 +264,6 @@ function get_members_test() {
             '$name' => $name,
             '$current_status' => $current_status,
             '$context' => $context,
-            '$image' => $image,
             '$id' => $id,
             '$email' => $email,
             '$affiliation' => $affiliation,
@@ -286,6 +284,8 @@ function get_members_test() {
             '$status' => $status,
             '$fjobphd' => $fjobphd,
             '$image_path' => $image_path,
+            '$firstname'=>$firstname,
+            '$secondname'=>$secondname, 
             
         );
 
