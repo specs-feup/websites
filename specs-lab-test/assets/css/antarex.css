@@ -219,7 +219,7 @@ hr {
     padding-bottom: 5px;
     margin-bottom: 50px;
     font-size: 25px;
-     border-radius: 20px;
+    border-radius: 20px;
 }
 
 h3 {
@@ -497,6 +497,45 @@ ul.social-buttons li a:active {
     width: 100%;
 }
 
+.overlayFade{
+    height: 100%;
+    width:100%;
+    top:0;
+    left:0;
+    background-color: #ff946bbd;
+}
+.overlay {
+    position: absolute;
+    opacity: 0;
+    transition:all .3s ease;
+    background-color: #008cba ;
+}
+.img-box:hover .overlay,.img-box:hover .overlayFade {
+    opacity: 0.9;
+}
+
+.blocktext {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top :100px; 
+    color: white;
+    font-size: 26px;
+
+    width: 8em
+
+
+
+}
+
+
+
+
+
+
+
+
+
 .events figure img {
 
     width: 100%;
@@ -710,39 +749,39 @@ ul.social-buttons li a:active {
 .navbar-default .navbar-nav > li > a:focus {
     /*background-color: #94e527 !important;*/
     /*color: #FFF !important;*/
-        
+
     background-color: #ddd !important;
     color: #000 !important;
 }   
 
 
 #members_intro {
-    
+
     color: white;
     background-color:#167ac6 ;
     margin-top: 200px;
     alignment-adjust: central;
     text-align: center;
-    
-    
- 
-    
-    
-    
-    
+
+
+
+
+
+
+
 }
 
 
 
 .round-button-circle {
-width: 150px;
-height:50px;
-border-radius: 10px;
-border:2px solid #cfdcec;
-overflow:hidden;
-font-weight: 15px;
-background: #4679BD; 
-box-shadow: 0 0 3px gold;
+    width: 150px;
+    height:50px;
+    border-radius: 10px;
+    border:2px solid #cfdcec;
+    overflow:hidden;
+    font-weight: 15px;
+    background: #4679BD; 
+    box-shadow: 0 0 3px gold;
 }
 .round-button-circle:hover {
     background:#30588e;
