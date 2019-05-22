@@ -1,510 +1,474 @@
 [
-    {
-        "Context": "Collaboration",
-        "Status": "Visitor",
-        "Position": "PhD student (Prof. Dirk Stroobandt)",
-        "Name": "Brahim Al Farisi",
-        "Current Status": "Past student member",
-        "Visiting Period": "5/3/2012 to 27/8/2012",
-        "Affiliation": "Ghent University"
-    },
-    {
-        "Context": "Internship",
-        "Status": "Student Visitor",
-        "Position": "BSc Student",
-        "Name": "Rémi Fradet",
-        "Current Status": "Past student member",
-        "Visiting Period": "7/5/2012 to 15/9/2012",
-        "Affiliation": "INSA, Lyon"
-
-    },
-    {
-        "Context": "REFLECT",
-        "Status": "Student Visitor",
-        "Position": "MSc Student (Prof. Eduardo Marques)",
-        "Name": "Tiago Lobo",
-        "Current Status": "Past student member",
-        "Visiting Period": "July 24, 2011 to Feb. 29, 2012",
-        "Affiliation": "ICMC/USP, Brazil"
-
-    },
-    {
-        "Context": "REFLECT",
-        "Status": "Student Visitor",
-        "Position": "MSc Student (Prof. Vanderlei Bonato)",
-        "Name": "Sérgio Durand",
-        "Current Status": "Past student member",
-        "Visiting Period": "July 24, 2011 to Feb. 29, 2012",
-        "Affiliation": "ICMC/USP, Brazil"
-
-    },
-    {
-        "Context": "Collaboration",
-        "Status": "Student Visitor",
-        "Position": "BSc Student",
-        "Name": "André Perina",
-        "Current Status": "Past student member",
-        "Visiting Period": "Sept. 2012 to Jan. 11, 2013",
-        "Affiliation": "ICMC/USP, Brazil"
-
-    },
-    {
-        "Context": "PhD, FAPESP Internship",
-        "Status": "Student Visitor",
-        "First Job After PhD/MSc": "Universidade Federal do Ceará (UFC), Professor Assistente",
-        "Position": "PhD Student (Prof. Eduardo Marques)",
-        "Name": "Cristiano Bacelar",
-        "Current Status": "Past student member",
-        "Visiting Period": "March 4, 2013 to March 3, 2014",
-        "Affiliation": "ICMC/USP, Brazil"
-
-    },
-    {
-        "Context": "PhD, FAPESP Internship",
-        "Status": "Student Visitor",
-        "Position": "PhD Student (Prof. Eduardo Marques)",
-        "Name": "Erinaldo Pereira",
-        "Current Status": "Past student member",
-        "Visiting Period": "1/9/2013 to 28/2/2014",
-        "Affiliation": "ICMC/USP, Brazil"
-
-    },
-    {
-        "Context": "PhD, CAPES Internship",
-        "Status": "Student Visitor",
-        "Position": "PhD Student (Prof. Eduardo Marques)",
-        "Name": "Luíz Gustavo",
-        "Current Status": "Past student member",
-        "Visiting Period": "July 15, 2013 to July 23, 2014",
-        "Affiliation": "ICMC/USP, Brazil"
-    },
-    {
-        "Context": "MIEIC Student",
-        "Status": "Student",
-        "Position": "MSc (MIEIC) Student",
-        "Name": "Luis Pedrosa",
-        "Current Status": "Past student member",
-        "Visiting Period": "Sept. 1, 2011 to Feb. 17, 2012",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "PhD PRODEI",
-        "Status": "Member",
-        "Email": "p.pinto@fe.up.pt",
-        "ORCID": "https://orcid.org/0000-0002-3673-9494",
-        "Position": "Researcher",
-        "Name": "Pedro Pinto",
-        "Current Status": "Member",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "PhD IST/UTL",
-        "Status": "Member",
-        "First Job After PhD/MSc": "Microsoft Language Development Center, Microsoft Portugal (Lisbon, Portugal)",
-        "Position": "PhD Student",
-        "First Job After PhD": "Microsoft, Portugal",
-        "Name": "André Santos",
-        "Current Status": "Past member",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "PhD PRODEI",
-        "Status": "Member",
-        "Position": "PhD Student",
-        "Name": "Tiago Carvalho",
-        "Public Key FCT": "J551096yFyYe",
-        "Current Status": "Member",
-        "Visiting Period": "Feb. 2011 -\\u003e",
-        "Affiliation": "University of Porto/FEUP, Portugal + INESC-TEC"
-
-    },
-    {
-        "Context": "PhD PRODEI",
-        "Status": "Member",
-        "WebPage": "https://paginas.fe.up.pt/~pro11012/",
-        "Email": "rjfn@fe.up.pt",
-        "ORCID": "https://orcid.org/0000-0003-1639-4545",
-        "Position": "PhD Student",
-        "Name": "Ricardo Nobre",
-        "LinkedIn": "https://www.linkedin.com/in/ricardo-nobre-1756b829/",
-        "Schoolar Google": "https://scholar.google.pt/citations?user\\u003drJpQQcIAAAAJ\\u0026hl\\u003dpt-PT",
-        "Current Status": "Member",
-        "Visiting Period": "Jan. 2011 -\\u003e",
-        "DBLP": "https://dblp.org/pers/hd/n/Nobre:Ricardo",
-        "Affiliation": "University of Porto/FEUP, Portugal + INESC-TEC"
-
-    },
-    {
-        "Context": "PhD PRODEI",
-        "Status": "Member",
-        "WebPage": "https://paginas.fe.up.pt/~pro10002/",
-        "Email": "azarian.ali@gmail.com",
-        "ORCID": "http://orcid.org/0000-0003-2948-6414",
-        "Position": "PhD Student",
-        "First Job After PhD": "UMinho, Critical Software",
-        "Name": "Ali Azarian",
-        "LinkedIn": "https://www.linkedin.com/in/ali-azarian-10955a22",
-        "Schoolar Google": "https://scholar.google.com/citations?user\\u003d57kFlmwAAAAJ\\u0026hl\\u003den",
-        "Current Status": "Past Member",
-        "Visiting Period": "June 2010 -\\u003e May 2016",
-        "DBLP": "https://dblp.uni-trier.de/pers/hd/a/Azarian:Ali",
-        "Affiliation": "University of Porto/FEUP, Portugal + INESC-TEC"
-
-    },
-    {
-        "Context": "Post-Doc",
-        "Status": "Member",
-        "WebPage": "http://jbispo.eu/",
-        "Email": "jbispo@fe.up.pt",
-        "ORCID": "https://orcid.org/0000-0002-3017-9449",
-        "Position": "Post-Doc",
-        "Twitter": "@jcvmbispo",
-        "Research Gate": "https://www.researchgate.net/profile/Joao_Bispo2",
-        "Name": "João Bispo",
-        "Public Key FCT": "J091806KDI5",
-        "LinkedIn": "https://www.linkedin.com/in/bispoj/",
-        "Schoolar Google": "https://scholar.google.pt/citations?user\\u003dbWpr6QQAAAAJ\\u0026hl\\u003dpt-PT",
-        "Current Status": "Member",
-        "Visiting Period": "Feb. 2013 -",
-        "DBLP": "https://dblp.uni-trier.de/pers/hd/b/Bispo:Jo\\u003datilde\\u003do",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "PhD IST/UTL",
-        "Status": "External Member",
-        "Position": "Prof. Adjunto",
-        "Name": "Rui Marcelino",
-        "Current Status": "Past Member",
-        "Visiting Period": "June 2010 -\\u003e July 2016",
-        "Affiliation": "Universidade do Algarve"
-
-    },
-    {
-        "Context": "PhD PRODEI",
-        "Status": "Member",
-        "Position": "PhD Student",
-        "Name": "Adriano Sanches",
-        "Current Status": "Past Member",
-        "Visiting Period": "June 2010 -\\u003e",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "",
-        "Status": "Member",
-        "ORCID": "https://orcid.org/0000-0002-7353-1799",
-        "Position": "Full Professor, Senior Researcher",
-        "Name": "João M.P. Cardoso",
-        "Current Status": "Member",
-        "Visiting Period": "June 2010 -\\u003e",
-        "DBLP": "https://dblp.uni-trier.de/pers/hd/c/Cardoso:Jo\\u003datilde\\u003do_M\\u003d_P\\u003d",
-        "Affiliation": "University of Porto/FEUP, Portugal + INESC-TEC"
-
-    },
-    {
-        "Context": "REFLECT Project",
-        "Status": "Member",
-        "Position": "Researcher",
-        "Name": "Elena Roxana Buhus",
-        "Current Status": "Past Member",
-        "Visiting Period": "Sept. 2010 - Dec. 2010",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "Internship",
-        "Status": "Student Visitor",
-        "Position": "BSc Student",
-        "Name": "Nitesh Jain",
-        "Current Status": "Past Visitor",
-        "Visiting Period": "May-July 2011",
-        "Affiliation": "Indian Institute of Technology (IIT), Roorkee, India"
-
-    },
-    {
-        "Context": "Internship",
-        "Status": "Student Visitor",
-        "Position": "BSc Student",
-        "Name": "Prateek Batla",
-        "Current Status": "Past Visitor",
-        "Visiting Period": "May-July 2011",
-        "Affiliation": "Indian Institute of Technology (IIT), Roorkee, India"
-
-    },
-    {
-        "Context": "MIEIC Student",
-        "Status": "Member",
-        "ORCID": "https://orcid.org/0000-0001-5962-2718",
-        "Position": "MSc (MIEIC) Student",
-        "Name": "Luís Reis",
-        "Current Status": "Member",
-        "Visiting Period": "Nov. 2013 - July 2014",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "MIEIC Student",
-        "Status": "Member",
-        "Position": "MSc (MIEIC) Student",
-        "Name": "Rui Freixedelo",
-        "Current Status": "Past Member",
-        "Visiting Period": "Nov. 2013 - July 2014",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "AMADEUS Project",
-        "Status": "Visitor",
-        "WebPage": "http://www.icmc.usp.br/pessoas/acbd/",
-        "Position": "Professor",
-        "Name": "Alexandre Delbem",
-        "Current Status": "Past Visitor",
-        "Visiting Period": "June 1 to August 20, 2011",
-        "Affiliation": "ICMC/USP, Brazil"
-
-    },
-    {
-        "Context": "PhD MAPi",
-        "Status": "Member",
-        "Position": "Map-i Phd",
-        "Name": "Luís Reis",
-        "Public Key FCT": "J630392391bz",
-        "Current Status": "Member",
-        "Visiting Period": "Sept. 2014 -",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "PEPCC",
-        "Status": "Member",
-        "Supervisor": "João Canas Ferreira",
-        "First Job After PhD/MSc": "INESC TEC",
-        "Email": "nmcp@fe.up.pt",
-        "ORCID": "http://orcid.org/0000-0001-5547-0323",
-        "Position": "Post-Doc",
-        "First Job After PhD": "Post-Doc; INESC-TEC",
-        "Research Gate": "https://www.researchgate.net/profile/Nuno_Paulino2",
-        "Name": "Nuno Paulino",
-        "Public Key FCT": "J571306cBv4j",
-        "LinkedIn": "https://www.linkedin.com/in/nuno-paulino-27312760/",
-        "Current Status": "Member",
-        "Visiting Period": "Sept. 5, 2016 -",
-        "DBLP": "https://dblp.org/pers/hd/p/Paulino:Nuno_Miguel_Cardanha",
-        "Affiliation": "INESC TEC and FEUP, University of Porto, Portugal"
-
-    },
-    {
-        "Context": "",
-        "Status": "Member",
-        "Position": "Assistant Professor, Senior Researcher",
-        "Name": "João Canas Ferreira",
-        "Current Status": "Member",
-        "Visiting Period": "Feb., 2016",
-        "Affiliation": "INESC TEC and FEUP, University of Porto, Portugal"
-
-    },
-    {
-        "Context": "ANTAREX",
-        "Status": "Member",
-        "Position": "Post-Doc",
-        "Name": "Hamid Arabnejad",
-        "Current Status": "Past Member",
-        "Visiting Period": "April, 201 -",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "CONTEXTWA Project",
-        "Status": "Member",
-        "Supervisor": "João Moreira, DEI and INESC TEC",
-        "WebPage": "http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id\\u003dK4495444D2",
-        "Position": "PhD Student",
-        "Name": "Kemilly Dearo Garcia",
-        "Current Status": "Past Member",
-        "Visiting Period": "January, 2017 - january, 2018",
-        "Affiliation": "USP/ICMC, Brazil"
-
-    },
-    {
-        "Context": "MSc Dissertation Work (ANTAREX)",
-        "Status": "Student",
-        "Email": "ei11118@fe.up.pt",
-        "Position": "MIEIC Student",
-        "Name": "João Manuel Ferreira Trindade",
-        "Current Status": "Past member",
-        "Visiting Period": "Feb. - July, 2016",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "MSc Dissertation Work (ANTAREX)",
-        "Status": "Student",
-        "Email": "ei12130@fe.up.pt",
-        "Position": "MIEIC Student",
-        "Name": "Eduardo Luís Loureiro Fernandes",
-        "Current Status": "Past member",
-        "Visiting Period": "Feb. - July, 2016",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "MSc Dissertation Work (ANTAREX)",
-        "Status": "Student",
-        "Supervisor": "Jorge Barbosa, Dei and INESC TEC",
-        "Email": "ei12040@fe.up.pt",
-        "Position": "MIEIC Student",
-        "Name": "João Alberto Trigo de Bordalo Morais",
-        "Current Status": "Past member",
-        "Visiting Period": "Nov. 2016 - July, 2017",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "MSc Dissertation Work (CONTEXTWA)",
-        "Status": "Student",
-        "Supervisor": "João Canas Ferreira, DEEC and INESC TEC",
-        "Email": "ee12076@fe.up.pt",
-        "Position": "MIEEC Student",
-        "Name": "Tiago Rafael Leite Oliveira",
-        "Current Status": "Past member",
-        "Visiting Period": "Nov. 2016 - July, 2017",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "Summer Internship",
-        "Status": "Student",
-        "Email": "m.ramalho@fe.up.pt",
-        "Position": "MIEIC Student",
-        "Name": "Miguel Ramalho",
-        "Current Status": "Past member",
-        "Visiting Period": "July-September, 2017",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "Summer Internship",
-        "Status": "Student",
-        "Email": "c.centeiojorge@outlook.pt",
-        "Position": "MIEIC Student",
-        "Name": "Carolina Centeio Jorge",
-        "Current Status": "Past member",
-        "Visiting Period": "July-September, 2017",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "Internship",
-        "Status": "Student",
-        "Email": " ei11056@fe.up.pt",
-        "Position": "MIEIC Student",
-        "Name": "Francisco Lopes",
-        "Current Status": "Member",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "Internship",
-        "Status": "Student",
-        "Email": "up201304961@fc.up.pt ",
-        "Position": "MIEIC Student",
-        "Name": "Pedro Filipe Silva",
-        "Current Status": "Member",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "MSc Dissertation Work",
-        "Status": "Student",
-        "Email": "ricardoofficiall@gmail.com ",
-        "Position": "MIEIC Student",
-        "Name": "Ricardo Ferreira da Silva",
-        "Current Status": "Member",
-        "Visiting Period": "Sept. 2018",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "MSc Dissertation Work",
-        "Status": "Student",
-        "Position": "MESW Student",
-        "Name": "Raquel Casado Dias",
-        "Current Status": "Member",
-        "Visiting Period": "Sept. 2018",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "MSc Dissertation Work",
-        "Status": "Student",
-        "WebPage": "https://paginas.fe.up.pt/~up201305617/",
-        "Email": "up201305617@fe.up.pt",
-        "ORCID": "https://orcid.org/0000-0001-6553-4220",
-        "Position": "MIEIC Student",
-        "Twitter": "@pjorge_fcp",
-        "Name": "Paulo Jorge Silva Ferreira",
-        "Current Status": "Member",
-        "Visiting Period": "Feb. 2018",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "MSc Dissertation Work",
-        "Status": "Student",
-        "Email": "up201502862@fe.up.pt",
-        "ORCID": "https://orcid.org/0000-0002-0647-4675",
-        "Position": "MIEIC Student",
-        "Twitter": "@therickix",
-        "Name": "Ricardo Manuel Correia Magalhães",
-        "LinkedIn": "https://www.linkedin.com/in/ricmagalhaes/",
-        "Current Status": "Member",
-        "Visiting Period": "Feb. 2018",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "MSc Dissertation Work",
-        "Status": "Student",
-        "Position": "MIEIC Student",
-        "Name": "Joel Alexandre Ezequiel Dinis",
-        "Current Status": "Past Member",
-        "Visiting Period": "Oct 2017-July. 2018",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-    },
-    {
-        "Context": "MSc Dissertation Work",
-        "Status": "Student",
-        "Position": "MIEEC Student",
-        "Name": "Afonso Soares Canas Ferreira",
-        "Current Status": "Past Member",
-        "Visiting Period": "Oct 2017-July. 2018",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "MSc Dissertation Work",
-        "Status": "Student",
-        "Email": "up201404264@fe.up.pt",
-        "Position": "MIEIC Student",
-        "Name": "Francisco Miguel de Lamares Martins Barbosa",
-        "Current Status": "Member",
-        "Visiting Period": "Oct. 2018",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    },
-    {
-        "Context": "MSc Dissertation Work",
-        "Status": "Student",
-        "Email": "up201406329@fe.up.pt",
-        "Position": "MIEIC Student",
-        "Name": "Daniel Alexandre Pimenta Lopes Fernandes",
-        "Current Status": "Past Member",
-        "Visiting Period": "Oct. 2018",
-        "Affiliation": "University of Porto/FEUP, Portugal"
-
-    }
+  {
+    "Context": "",
+    "Status": "Member",
+    "ORCID": "https://orcid.org/0000-0002-7353-1799",
+    "Position": "Full Professor",
+    "Name": "João M.P. Cardoso",
+    "Current Status": "Member",
+    "Visiting Period": "June 2010 -\\u003e",
+    "DBLP": "https://dblp.uni-trier.de/pers/hd/c/Cardoso:Jo\\u003datilde\\u003do_M\\u003d_P\\u003d",
+    "Affiliation": "University of Porto/FEUP, Portugal + INESC-TEC"
+  },
+  {
+    "Context": "PhD IST/UTL",
+    "Status": "External Member",
+    "Position": "Assistant Professor ",
+    "Name": "Rui Marcelino",
+    "Current Status": "Past Member",
+    "Visiting Period": "June 2010 -\\u003e July 2016",
+    "Affiliation": "Universidade do Algarve"
+  },
+  {
+    "Context": "",
+    "Status": "Member",
+    "Position": "Assistant Professor",
+    "Name": "João Canas Ferreira",
+    "Current Status": "Member",
+    "Visiting Period": "Feb., 2016",
+    "Affiliation": "INESC TEC and FEUP, University of Porto, Portugal"
+  },
+  {
+    "Context": "REFLECT Project",
+    "Status": "Member",
+    "Position": "Researcher",
+    "Name": "Elena Roxana Buhus",
+    "Current Status": "Past Member",
+    "Visiting Period": "Sept. 2010 - Dec. 2010",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "Post-Doc",
+    "Status": "Member",
+    "WebPage": "http://jbispo.eu/",
+    "Email": "jbispo@fe.up.pt",
+    "ORCID": "https://orcid.org/0000-0002-3017-9449",
+    "Position": "Post-Doc",
+    "Twitter": "@jcvmbispo",
+    "Research Gate": "https://www.researchgate.net/profile/Joao_Bispo2",
+    "Name": "João Bispo",
+    "Public Key FCT": "J091806KDI5",
+    "LinkedIn": "https://www.linkedin.com/in/bispoj/",
+    "Schoolar Google": "https://scholar.google.pt/citations?user\\u003dbWpr6QQAAAAJ\\u0026hl\\u003dpt-PT",
+    "Current Status": "Member",
+    "Visiting Period": "Feb. 2013 -",
+    "DBLP": "https://dblp.uni-trier.de/pers/hd/b/Bispo:Jo\\u003datilde\\u003do",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "PEPCC",
+    "Status": "Member",
+    "Supervisor": "João Canas Ferreira",
+    "First Job After PhD/MSc": "INESC TEC",
+    "Email": "nmcp@fe.up.pt",
+    "ORCID": "http://orcid.org/0000-0001-5547-0323",
+    "Position": "Post-Doc",
+    "First Job After PhD": "Post-Doc; INESC-TEC",
+    "Research Gate": "https://www.researchgate.net/profile/Nuno_Paulino2",
+    "Name": "Nuno Paulino",
+    "Public Key FCT": "J571306cBv4j",
+    "LinkedIn": "https://www.linkedin.com/in/nuno-paulino-27312760/",
+    "Current Status": "Member",
+    "Visiting Period": "Sept. 5, 2016 -",
+    "DBLP": "https://dblp.org/pers/hd/p/Paulino:Nuno_Miguel_Cardanha",
+    "Affiliation": "INESC TEC and FEUP, University of Porto, Portugal"
+  },
+  {
+    "Context": "ANTAREX",
+    "Status": "Member",
+    "Position": "Post-Doc",
+    "Name": "Hamid Arabnejad",
+    "Current Status": "Past Member",
+    "Visiting Period": "April, 201 -",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "PhD, FAPESP Internship",
+    "Status": "Student Visitor",
+    "Supervisor": "Prof. Eduardo Marques",
+    "First Job After PhD/MSc": "Universidade Federal do Ceará (UFC), Professor Assistente",
+    "Position": "PhD Student ",
+    "Name": "Cristiano Bacelar",
+    "Current Status": "Past student member",
+    "Visiting Period": "March 4, 2013 to March 3, 2014",
+    "Affiliation": "ICMC/USP, Brazil"
+  },
+  {
+    "Context": "PhD, FAPESP Internship",
+    "Status": "Student Visitor",
+    "Supervisor": "Prof. Eduardo Marques",
+    "Position": "PhD Student ",
+    "Name": "Erinaldo Pereira",
+    "Current Status": "Past student member",
+    "Visiting Period": "1/9/2013 to 28/2/2014",
+    "Affiliation": "ICMC/USP, Brazil"
+  },
+  {
+    "Context": "PhD, CAPES Internship",
+    "Status": "Student Visitor",
+    "Supervisor": "Prof. Eduardo Marques",
+    "Position": "PhD Student ",
+    "Name": "Luíz Gustavo",
+    "Current Status": "Past student member",
+    "Visiting Period": "July 15, 2013 to July 23, 2014",
+    "Affiliation": "ICMC/USP, Brazil"
+  },
+  {
+    "Context": "PhD PRODEI",
+    "Status": "Member",
+    "Email": "p.pinto@fe.up.pt",
+    "ORCID": "https://orcid.org/0000-0002-3673-9494",
+    "Position": "PhD Student",
+    "Name": "Pedro Pinto",
+    "Current Status": "Member",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "PhD IST/UTL",
+    "Status": "Member",
+    "First Job After PhD/MSc": "Microsoft Language Development Center, Microsoft Portugal (Lisbon, Portugal)",
+    "Position": "PhD Student",
+    "First Job After PhD": "Microsoft, Portugal",
+    "Name": "André Santos",
+    "Current Status": "Past member",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "PhD PRODEI",
+    "Status": "Member",
+    "Position": "PhD Student",
+    "Name": "Tiago Carvalho",
+    "Public Key FCT": "J551096yFyYe",
+    "Current Status": "Member",
+    "Visiting Period": "Feb. 2011 -\\u003e",
+    "Affiliation": "University of Porto/FEUP, Portugal + INESC-TEC"
+  },
+  {
+    "Context": "PhD PRODEI",
+    "Status": "Member",
+    "WebPage": "https://paginas.fe.up.pt/~pro11012/",
+    "Email": "rjfn@fe.up.pt",
+    "ORCID": "https://orcid.org/0000-0003-1639-4545",
+    "Position": "PhD Student",
+    "Name": "Ricardo Nobre",
+    "LinkedIn": "https://www.linkedin.com/in/ricardo-nobre-1756b829/",
+    "Schoolar Google": "https://scholar.google.pt/citations?user\\u003drJpQQcIAAAAJ\\u0026hl\\u003dpt-PT",
+    "Current Status": "Member",
+    "Visiting Period": "Jan. 2011 -\\u003e",
+    "DBLP": "https://dblp.org/pers/hd/n/Nobre:Ricardo",
+    "Affiliation": "University of Porto/FEUP, Portugal + INESC-TEC"
+  },
+  {
+    "Context": "PhD PRODEI",
+    "Status": "Member",
+    "WebPage": "https://paginas.fe.up.pt/~pro10002/",
+    "Email": "azarian.ali@gmail.com",
+    "ORCID": "http://orcid.org/0000-0003-2948-6414",
+    "Position": "PhD Student",
+    "First Job After PhD": "UMinho, Critical Software",
+    "Name": "Ali Azarian",
+    "LinkedIn": "https://www.linkedin.com/in/ali-azarian-10955a22",
+    "Schoolar Google": "https://scholar.google.com/citations?user\\u003d57kFlmwAAAAJ\\u0026hl\\u003den",
+    "Current Status": "Past Member",
+    "Visiting Period": "June 2010 -\\u003e May 2016",
+    "DBLP": "https://dblp.uni-trier.de/pers/hd/a/Azarian:Ali",
+    "Affiliation": "University of Porto/FEUP, Portugal + INESC-TEC"
+  },
+  {
+    "Context": "PhD PRODEI",
+    "Status": "Member",
+    "Position": "PhD Student",
+    "Name": "Adriano Sanches",
+    "Current Status": "Past Member",
+    "Visiting Period": "June 2010 -\\u003e",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "CONTEXTWA Project",
+    "Status": "Member",
+    "Supervisor": "João Moreira, DEI and INESC TEC",
+    "WebPage": "http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id\\u003dK4495444D2",
+    "Position": "PhD Student",
+    "Name": "Kemilly Dearo Garcia",
+    "Current Status": "Past Member",
+    "Visiting Period": "January, 2017 - january, 2018",
+    "Affiliation": "USP/ICMC, Brazil"
+  },
+  {
+    "Context": "REFLECT",
+    "Status": "Student Visitor",
+    "Supervisor": "Prof. Eduardo Marques",
+    "Position": "MSc Student",
+    "Name": "Tiago Lobo",
+    "Current Status": "Past student member",
+    "Visiting Period": "July 24, 2011 to Feb. 29, 2012",
+    "Affiliation": "ICMC/USP, Brazil"
+  },
+  {
+    "Context": "REFLECT",
+    "Status": "Student Visitor",
+    "Supervisor": "Prof. Vanderlei Bonato",
+    "Position": "MSc Student ",
+    "Name": "Sérgio Durand",
+    "Current Status": "Past student member",
+    "Visiting Period": "July 24, 2011 to Feb. 29, 2012",
+    "Affiliation": "ICMC/USP, Brazil"
+  },
+  {
+    "Context": "MIEIC Student",
+    "Status": "Student",
+    "Position": "MSc Student",
+    "Name": "Luis Pedrosa",
+    "Current Status": "Past student member",
+    "Visiting Period": "Sept. 1, 2011 to Feb. 17, 2012",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MIEIC Student",
+    "Status": "Member",
+    "ORCID": "https://orcid.org/0000-0001-5962-2718",
+    "Position": "MSc Student",
+    "Name": "Luís Reis",
+    "Current Status": "Member",
+    "Visiting Period": "Nov. 2013 - July 2014",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MIEIC Student",
+    "Status": "Member",
+    "Position": "MSc Student",
+    "Name": "Rui Freixedelo",
+    "Current Status": "Past Member",
+    "Visiting Period": "Nov. 2013 - July 2014",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MSc Dissertation Work (ANTAREX) (MIEIC)",
+    "Status": "Student",
+    "Email": "ei11118@fe.up.pt",
+    "Position": "MSc Student",
+    "Name": "João Manuel Ferreira Trindade",
+    "Current Status": "Past member",
+    "Visiting Period": "Feb. - July, 2016",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MSc Dissertation Work (ANTAREX) (MIEIC)",
+    "Status": "Student",
+    "Email": "ei12130@fe.up.pt",
+    "Position": "MSc Student",
+    "Name": "Eduardo Luís Loureiro Fernandes",
+    "Current Status": "Past member",
+    "Visiting Period": "Feb. - July, 2016",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MSc Dissertation Work (ANTAREX) (MIEIC)",
+    "Status": "Student",
+    "Supervisor": "Jorge Barbosa, Dei and INESC TEC",
+    "Email": "ei12040@fe.up.pt",
+    "Position": "MSc Student",
+    "Name": "João Alberto Trigo de Bordalo Morais",
+    "Current Status": "Past member",
+    "Visiting Period": "Nov. 2016 - July, 2017",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MSc Dissertation Work (CONTEXTWA) (MIEEC)",
+    "Status": "Student",
+    "Supervisor": "João Canas Ferreira, DEEC and INESC TEC",
+    "Email": "ee12076@fe.up.pt",
+    "Position": "MSc Student",
+    "Name": "Tiago Rafael Leite Oliveira",
+    "Current Status": "Past member",
+    "Visiting Period": "Nov. 2016 - July, 2017",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "Summer Internship (MIEIC)",
+    "Status": "Student",
+    "Email": "m.ramalho@fe.up.pt",
+    "Position": "MSc Student",
+    "Name": "Miguel Ramalho",
+    "Current Status": "Past member",
+    "Visiting Period": "July-September, 2017",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "Summer Internship (MIEIC)",
+    "Status": "Student",
+    "Email": "c.centeiojorge@outlook.pt",
+    "Position": "MSc Student",
+    "Name": "Carolina Centeio Jorge",
+    "Current Status": "Past member",
+    "Visiting Period": "July-September, 2017",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "Internship (MIEIC)",
+    "Status": "Student",
+    "Email": " ei11056@fe.up.pt",
+    "Position": "MSc Student",
+    "Name": "Francisco Lopes ",
+    "Current Status": "Member",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "Internship (MIEIC)",
+    "Status": "Student",
+    "Email": "up201304961@fc.up.pt ",
+    "Position": "MSc Student",
+    "Name": "Pedro Filipe Silva",
+    "Current Status": "Member",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MSc Dissertation Work (MIEIC)",
+    "Status": "Student",
+    "Email": "ricardoofficiall@gmail.com ",
+    "Position": "MSc Student",
+    "Name": "Ricardo Ferreira da Silva",
+    "Current Status": "Member",
+    "Visiting Period": "Sept. 2018",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MSc Dissertation Work (MIEIC)",
+    "Status": "Student",
+    "Position": "MSc Student",
+    "Name": "Raquel Casado Dias ",
+    "Current Status": "Member",
+    "Visiting Period": "Sept. 2018",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MSc Dissertation Work (MIEIC)",
+    "Status": "Student",
+    "WebPage": "https://paginas.fe.up.pt/~up201305617/",
+    "Email": "up201305617@fe.up.pt",
+    "ORCID": "https://orcid.org/0000-0001-6553-4220",
+    "Position": "MSc Student",
+    "Twitter": "@pjorge_fcp",
+    "Name": "Paulo Jorge Silva Ferreira",
+    "Current Status": "Member",
+    "Visiting Period": "Feb. 2018",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MSc Dissertation Work (MIEIC)",
+    "Status": "Student",
+    "Email": "up201502862@fe.up.pt",
+    "ORCID": "https://orcid.org/0000-0002-0647-4675",
+    "Position": "MSc Student",
+    "Twitter": "@therickix",
+    "Name": "Ricardo Manuel Correia Magalhães ",
+    "LinkedIn": "https://www.linkedin.com/in/ricmagalhaes/",
+    "Current Status": "Member",
+    "Visiting Period": "Feb. 2018",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MSc Dissertation Work (MIEIC)",
+    "Status": "Student",
+    "Position": "MSc Student",
+    "Name": "Joel Alexandre Ezequiel Dinis ",
+    "Current Status": "Past Member",
+    "Visiting Period": "Oct 2017-July. 2018",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MSc Dissertation Work (MIEIC)",
+    "Status": "Student",
+    "Position": "MSc Student",
+    "Name": "Afonso Soares Canas Ferreira ",
+    "Current Status": "Past Member",
+    "Visiting Period": "Oct 2017-July. 2018",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MSc Dissertation Work (MIEIC)",
+    "Status": "Student",
+    "Email": "up201404264@fe.up.pt",
+    "Position": "MSc Student",
+    "Name": "Francisco Miguel de Lamares Martins Barbosa",
+    "Current Status": "Member",
+    "Visiting Period": "Oct. 2018",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "MSc Dissertation Work (MIEIC)",
+    "Status": "Student",
+    "Email": "up201406329@fe.up.pt",
+    "Position": "MSc Student",
+    "Name": "Daniel Alexandre Pimenta Lopes Fernandes ",
+    "Current Status": "Past Member",
+    "Visiting Period": "Oct. 2018",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  },
+  {
+    "Context": "Internship",
+    "Status": "Student Visitor",
+    "Position": "BSc Student",
+    "Name": "Rémi Fradet",
+    "Current Status": "Past student member",
+    "Visiting Period": "7/5/2012 to 15/9/2012",
+    "Affiliation": "INSA, Lyon"
+  },
+  {
+    "Context": "Collaboration",
+    "Status": "Student Visitor",
+    "Position": "BSc Student",
+    "Name": "André Perina",
+    "Current Status": "Past student member",
+    "Visiting Period": "Sept. 2012 to Jan. 11, 2013",
+    "Affiliation": "ICMC/USP, Brazil"
+  },
+  {
+    "Context": "Internship",
+    "Status": "Student Visitor",
+    "Position": "BSc Student",
+    "Name": "Nitesh Jain",
+    "Current Status": "Past Visitor",
+    "Visiting Period": "May-July 2011",
+    "Affiliation": "Indian Institute of Technology (IIT), Roorkee, India"
+  },
+  {
+    "Context": "Internship",
+    "Status": "Student Visitor",
+    "Position": "BSc Student",
+    "Name": "Prateek Batla",
+    "Current Status": "Past Visitor",
+    "Visiting Period": "May-July 2011",
+    "Affiliation": "Indian Institute of Technology (IIT), Roorkee, India"
+  },
+  {
+    "Context": "Collaboration",
+    "Status": "Visitor",
+    "Supervisor": "Prof. Dirk Stroobandt",
+    "Position": "PhD student ",
+    "Name": "Brahim Al Farisi",
+    "Current Status": "Past student member",
+    "Visiting Period": "5/3/2012 to 27/8/2012",
+    "Affiliation": "Ghent University"
+  },
+  {
+    "Context": "AMADEUS Project",
+    "Status": "Visitor",
+    "WebPage": "http://www.icmc.usp.br/pessoas/acbd/",
+    "Position": "Professor",
+    "Name": "Alexandre Delbem",
+    "Current Status": "Past Visitor",
+    "Visiting Period": "June 1 to August 20, 2011",
+    "Affiliation": "ICMC/USP, Brazil"
+  },
+  {
+    "Context": "PhD MAPi",
+    "Status": "Member",
+    "Position": "Phd Student",
+    "Name": "Luís Reis",
+    "Public Key FCT": "J630392391bz",
+    "Current Status": "Member",
+    "Visiting Period": "Sept. 2014 -",
+    "Affiliation": "University of Porto/FEUP, Portugal"
+  }
 ]
