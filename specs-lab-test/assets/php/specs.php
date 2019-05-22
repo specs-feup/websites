@@ -1,6 +1,8 @@
 
 <?php
 
+$counter = 0;
+
 function get_current_members() {
 
     $all_members = json_decode(file_get_contents('db/specs_members.json'), true);
@@ -37,6 +39,8 @@ function get_past_members() {
  * Tests building the HTML code for the members
  */
 function print_members_row($members) {
+
+    global $counter;
 
     $template = ' <div class="col-md-2 events">
                 <figure>
@@ -153,10 +157,6 @@ function print_members_row($members) {
                     </div>
                 </div>
             </div>';
-
-
-
-
 
     foreach ($members as $member) {
 
