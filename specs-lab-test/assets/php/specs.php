@@ -10,10 +10,10 @@ function get_current_members() {
     $members = array_filter($current, "is_status_member");
     $visitors = array_filter($current, "is_status_visitor");
 
-    echo '<div  class="row"> <h3>Members</h3>';
+    echo '<div class="row centered division-member">  <h3><b>Members</h3>';
     print_members_row($members);
     echo '</div>';
-    echo '<div  class="row"> <h3>Visitors</h3>';
+    echo '<div  class="row centered division-member"> <h3>Visitors</h3>';
     print_members_row($visitors);
     echo '</div>';
 }
@@ -26,11 +26,11 @@ function get_past_members() {
     $visitors = array_filter($past, "is_status_visitor");
 
 
-    echo '<div  class="row"> <h3>Members</h3>';
+    echo '<div  class="row centered division-member"> <h3>Members</h3>';
     print_members_row($members);
     echo '</div>';
 
-    echo '<div  class="row">     <h3>Visitors</h3>';
+    echo '<div  class="row centered division-member">     <h3>Visitors</h3>';
     print_members_row($visitors);
     echo '</div>';
 }

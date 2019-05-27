@@ -6,3 +6,6 @@ dissemination
 pact18
 activities
 members
+publications
+tools
+contacts
