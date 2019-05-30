@@ -112,7 +112,7 @@ require_once 'assets/php/specs.php';
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.min.js"></script>
         <script src="assets/js/calendar.js"></script>-->
 
-
+        <script src="assets/js/specs.js"></script>
 
     </body>
 </html>

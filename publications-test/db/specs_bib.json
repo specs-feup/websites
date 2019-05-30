@@ -1,0 +1,2979 @@
+{
+    "conf/fpl/CardosoW02": {
+        "ee": "https://doi.org/10.1007/3-540-46117-5_89",
+        "pages": "864-874",
+        "year": "2002",
+        "author": [
+            "João M. P. Cardoso",
+            "Markus Weinhardt"
+        ],
+        "id": "conf/fpl/CardosoW02",
+        "type": "inproceedings",
+        "title": "XPP-VC: A C Compiler with Temporal Partitioning for the PACT-XPP Architecture.",
+        "crossref": "conf/fpl/2002",
+        "booktitle": "FPL",
+        "url": "db/conf/fpl/fpl2002.html#CardosoW02"
+    },
+    "conf/fpl/LeongAABCDGHLLL15": {
+        "ee": "https://doi.org/10.1109/FPL.2015.7293747",
+        "pages": "1-3",
+        "year": "2015",
+        "author": [
+            "Philip Heng Wai Leong",
+            "Hideharu Amano",
+            "Jason Anderson",
+            "Koen Bertels",
+            "João M. P. Cardoso",
+            "Oliver Diessel",
+            "Guy Gogniat",
+            "Mike Hutton",
+            "JunKyu Lee",
+            "Wayne Luk",
+            "Patrick Lysaght",
+            "Marco Platzner",
+            "Viktor K. Prasanna",
+            "Tero Rissa",
+            "Cristina Silvano",
+            "Hayden Kwok-Hay So",
+            "Yu Wang"
+        ],
+        "id": "conf/fpl/LeongAABCDGHLLL15",
+        "type": "inproceedings",
+        "title": "Significant papers from the first 25 years of the FPL conference.",
+        "booktitle": "FPL",
+        "crossref": "conf/fpl/2015",
+        "url": "db/conf/fpl/fpl2015.html#LeongAABCDGHLLL15"
+    },
+    "conf/ipps/OliveiraCM14": {
+        "ee": [
+            "https://doi.org/10.1109/IPDPSW.2014.34",
+            "http://doi.ieeecomputersociety.org/10.1109/IPDPSW.2014.34"
+        ],
+        "pages": "257-262",
+        "year": "2014",
+        "author": [
+            "Cristiano Bacelar de Oliveira",
+            "João M. P. Cardoso",
+            "Eduardo Marques"
+        ],
+        "id": "conf/ipps/OliveiraCM14",
+        "type": "inproceedings",
+        "title": "High-Level Synthesis from C vs. a DSL-Based Approach.",
+        "booktitle": "IPDPS Workshops",
+        "crossref": "conf/ipps/2014w",
+        "url": "db/conf/ipps/ipdps2014w.html#OliveiraCM14"
+    },
+    "journals/trets/LeongAABCDGHLLL17": {
+        "volume": "10",
+        "ee": "https://doi.org/10.1145/2996468",
+        "number": "2",
+        "pages": "15:1-15:17",
+        "journal": "TRETS",
+        "year": "2017",
+        "author": [
+            "Philip Heng Wai Leong",
+            "Hideharu Amano",
+            "Jason Helge Anderson",
+            "Koen Bertels",
+            "João M. P. Cardoso",
+            "Oliver Diessel",
+            "Guy Gogniat",
+            "Mike Hutton",
+            "JunKyu Lee",
+            "Wayne Luk",
+            "Patrick Lysaght",
+            "Marco Platzner",
+            "Viktor K. Prasanna",
+            "Tero Rissa",
+            "Cristina Silvano",
+            "Hayden Kwok-Hay So",
+            "Yu Wang"
+        ],
+        "id": "journals/trets/LeongAABCDGHLLL17",
+        "type": "article",
+        "title": "The First 25 Years of the FPL Conference: Significant Papers.",
+        "url": "db/journals/trets/trets10.html#LeongAABCDGHLLL17"
+    },
+    "conf/euc/SantosDCF11": {
+        "ee": [
+            "https://doi.org/10.1109/EUC.2011.4",
+            "http://doi.ieeecomputersociety.org/10.1109/EUC.2011.4"
+        ],
+        "pages": "268-273",
+        "year": "2011",
+        "author": [
+            "André C. Santos",
+            "Pedro C. Diniz",
+            "João M. P. Cardoso",
+            "Diogo R. Ferreira"
+        ],
+        "id": "conf/euc/SantosDCF11",
+        "type": "inproceedings",
+        "title": "A Domain-Specific Language for the Specification of Adaptable Context Inference.",
+        "booktitle": "EUC",
+        "crossref": "conf/euc/2011",
+        "url": "db/conf/euc/euc2011.html#SantosDCF11"
+    },
+    "conf/icinco/BonatoSFCSM04": {
+        "pages": "207-214",
+        "year": "2004",
+        "author": [
+            "Vanderlei Bonato",
+            "Adriano K. Sanches",
+            "Marcio Merino Fernandes",
+            "João M. P. Cardoso",
+            "Eduardo do Valle Simões",
+            "Eduardo Marques"
+        ],
+        "id": "conf/icinco/BonatoSFCSM04",
+        "type": "inproceedings",
+        "title": "A Real Time Gesture Recognition System for Mobile Robots.",
+        "crossref": "conf/icinco/2004",
+        "booktitle": "ICINCO (2)",
+        "url": "db/conf/icinco/icinco2004.html#BonatoSFCSM04"
+    },
+    "journals/spe/CardosoCCDPLG16": {
+        "volume": "46",
+        "ee": "https://doi.org/10.1002/spe.2301",
+        "number": "2",
+        "pages": "251-287",
+        "journal": "Softw., Pract. Exper.",
+        "year": "2016",
+        "author": [
+            "João M. P. Cardoso",
+            "José Gabriel F. Coutinho",
+            "Tiago Carvalho",
+            "Pedro C. Diniz",
+            "Zlatko Petrov",
+            "Wayne Luk",
+            "Fernando M. Gonçalves"
+        ],
+        "id": "journals/spe/CardosoCCDPLG16",
+        "type": "article",
+        "title": "Performance-driven instrumentation and mapping strategies using the LARA aspect-oriented programming approach.",
+        "url": "db/journals/spe/spe46.html#CardosoCCDPLG16"
+    },
+    "conf/europar/AzarianC14": {
+        "ee": "https://doi.org/10.1007/978-3-319-14313-2_23",
+        "pages": "266-278",
+        "year": "2014",
+        "author": [
+            "Ali Azarian",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/europar/AzarianC14",
+        "type": "inproceedings",
+        "title": "Coarse/Fine-grained Approaches for Pipelining Computing Stages in FPGA-Based Multicore Architectures.",
+        "booktitle": "Euro-Par Workshops (2)",
+        "crossref": "conf/europar/2014w2",
+        "url": "db/conf/europar/europar2014w2.html#AzarianC14"
+    },
+    "conf/date/FarisiBCS13": {
+        "ee": [
+            "https://doi.org/10.7873/DATE.2013.174",
+            "http://dl.acm.org/citation.cfm?id\u003d2485487"
+        ],
+        "pages": "821-826",
+        "year": "2013",
+        "author": [
+            "Brahim Al Farisi",
+            "Karel Bruneel",
+            "João M. P. Cardoso",
+            "Dirk Stroobandt"
+        ],
+        "id": "conf/date/FarisiBCS13",
+        "type": "inproceedings",
+        "title": "An automatic tool flow for the combined implementation of multi-mode circuits.",
+        "booktitle": "DATE",
+        "crossref": "conf/date/2013",
+        "url": "db/conf/date/date2013.html#FarisiBCS13"
+    },
+    "conf/arcs/2016": {
+        "volume": "9637",
+        "ee": "https://doi.org/10.1007/978-3-319-30695-7",
+        "editor": [
+            "Frank Hannig",
+            "João M. P. Cardoso",
+            "Thilo Pionteck",
+            "Dietmar Fey",
+            "Wolfgang Schröder-Preikschat",
+            "Jürgen Teich"
+        ],
+        "year": "2016",
+        "series": "Lecture Notes in Computer Science",
+        "isbn": "978-3-319-30694-0",
+        "publisher": "Springer",
+        "id": "conf/arcs/2016",
+        "type": "proceedings",
+        "title": "Architecture of Computing Systems - ARCS 2016 - 29th International Conference, Nuremberg, Germany, April 4-7, 2016, Proceedings",
+        "booktitle": "ARCS",
+        "url": "db/conf/arcs/arcs2016.html"
+    },
+    "conf/fpt/BispoC10": {
+        "ee": "https://doi.org/10.1109/FPT.2010.5681454",
+        "pages": "437-440",
+        "year": "2010",
+        "author": [
+            "João Bispo",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/fpt/BispoC10",
+        "type": "inproceedings",
+        "title": "On identifying and optimizing instruction sequences for dynamic compilation.",
+        "booktitle": "FPT",
+        "crossref": "conf/fpt/2010",
+        "url": "db/conf/fpt/fpt2010.html#BispoC10"
+    },
+    "conf/gttse/DinizC09": {
+        "ee": "https://doi.org/10.1007/978-3-642-18023-1_8",
+        "pages": "322-344",
+        "year": "2009",
+        "author": [
+            "Pedro C. Diniz",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/gttse/DinizC09",
+        "type": "inproceedings",
+        "title": "Code Transformations for Embedded Reconfigurable Computing Architectures.",
+        "booktitle": "GTTSE",
+        "crossref": "conf/gttse/2009",
+        "url": "db/conf/gttse/gttse2009.html#DinizC09"
+    },
+    "conf/reconfig/SanchesCD11": {
+        "ee": [
+            "https://doi.org/10.1109/ReConFig.2011.51",
+            "http://doi.ieeecomputersociety.org/10.1109/ReConFig.2011.51"
+        ],
+        "pages": "74-79",
+        "year": "2011",
+        "author": [
+            "Adriano K. Sanches",
+            "João M. P. Cardoso",
+            "Alexandre C. B. Delbem"
+        ],
+        "id": "conf/reconfig/SanchesCD11",
+        "type": "inproceedings",
+        "title": "Identifying Merge-Beneficial Software Kernels for Hardware Implementation.",
+        "booktitle": "ReConFig",
+        "crossref": "conf/reconfig/2011",
+        "url": "db/conf/reconfig/reconfig2011.html#SanchesCD11"
+    },
+    "journals/tvlsi/PaulinoFC17": {
+        "volume": "25",
+        "ee": "https://doi.org/10.1109/TVLSI.2016.2573640",
+        "number": "1",
+        "pages": "21-34",
+        "journal": "IEEE Trans. VLSI Syst.",
+        "year": "2017",
+        "author": [
+            "Nuno Miguel Cardanha Paulino",
+            "João Canas Ferreira",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/tvlsi/PaulinoFC17",
+        "type": "article",
+        "title": "Generation of Customized Accelerators for Loop Pipelining of Binary Instruction Traces.",
+        "url": "db/journals/tvlsi/tvlsi25.html#PaulinoFC17"
+    },
+    "conf/cse/2015": {
+        "ee": [
+            "http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber\u003d7371334",
+            "https://www.computer.org/csdl/proceedings/cse/2015/8297/00/index.html"
+        ],
+        "editor": [
+            "Christian Plessl",
+            "Didier El Baz",
+            "Guojing Cong",
+            "João M. P. Cardoso",
+            "Luís Veiga",
+            "Thomas Rauber"
+        ],
+        "year": "2015",
+        "isbn": "978-1-4673-8297-7",
+        "publisher": "IEEE Computer Society",
+        "id": "conf/cse/2015",
+        "type": "proceedings",
+        "title": "18th IEEE International Conference on Computational Science and Engineering, CSE 2015, Porto, Portugal, October 21-23, 2015",
+        "booktitle": "CSE",
+        "url": "db/conf/cse/cse2015.html"
+    },
+    "conf/fccm/CardosoN99": {
+        "ee": [
+            "https://doi.org/10.1109/FPGA.1999.803662",
+            "http://doi.ieeecomputersociety.org/10.1109/FPGA.1999.803662"
+        ],
+        "pages": "2-11",
+        "year": "1999",
+        "author": [
+            "João M. P. Cardoso",
+            "Horácio C. Neto"
+        ],
+        "id": "conf/fccm/CardosoN99",
+        "type": "inproceedings",
+        "title": "Macro-Based Hardware Compilation of Java(tm) Bytecodes into a Dynamic Reconfigurable Computing System.",
+        "crossref": "conf/fccm/1999",
+        "booktitle": "FCCM",
+        "url": "db/conf/fccm/fccm1999.html#CardosoN99"
+    },
+    "journals/tvlsi/PaulinoFC19": {
+        "volume": "27",
+        "ee": "https://doi.org/10.1109/TVLSI.2018.2874079",
+        "number": "1",
+        "pages": "116-125",
+        "journal": "IEEE Trans. VLSI Syst.",
+        "year": "2019",
+        "author": [
+            "Nuno Miguel Cardanha Paulino",
+            "João Canas Ferreira",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/tvlsi/PaulinoFC19",
+        "type": "article",
+        "title": "Dynamic Partial Reconfiguration of Customized Single-Row Accelerators.",
+        "url": "db/journals/tvlsi/tvlsi27.html#PaulinoFC19"
+    },
+    "conf/dasip/HolandaCM16": {
+        "ee": "https://doi.org/10.1109/DASIP.2016.7853811",
+        "pages": "146-153",
+        "year": "2016",
+        "author": [
+            "José Arnaldo Mascagni de Holanda",
+            "João Manuel Paiva Cardoso",
+            "Eduardo Marques"
+        ],
+        "id": "conf/dasip/HolandaCM16",
+        "type": "inproceedings",
+        "title": "A pipelined multi-softcore approach for the HOG algorithm.",
+        "booktitle": "DASIP",
+        "crossref": "conf/dasip/2016",
+        "url": "db/conf/dasip/dasip2016.html#HolandaCM16"
+    },
+    "conf/date/GadioliNPVAPCS18": {
+        "ee": "https://doi.org/10.23919/DATE.2018.8342183",
+        "pages": "1143-1146",
+        "year": "2018",
+        "author": [
+            "Davide Gadioli",
+            "Ricardo Nobre",
+            "Pedro Pinto",
+            "Emanuele Vitali",
+            "Amir H. Ashouri",
+            "Gianluca Palermo",
+            "João M. P. Cardoso",
+            "Cristina Silvano"
+        ],
+        "id": "conf/date/GadioliNPVAPCS18",
+        "type": "inproceedings",
+        "title": "SOCRATES - A seamless online compiler and system runtime autotuning framework for energy-aware applications.",
+        "booktitle": "DATE",
+        "crossref": "conf/date/2018",
+        "url": "db/conf/date/date2018.html#GadioliNPVAPCS18"
+    },
+    "journals/percom/SantosCFDC10": {
+        "volume": "6",
+        "ee": "https://doi.org/10.1016/j.pmcj.2010.01.001",
+        "number": "3",
+        "pages": "324-341",
+        "journal": "Pervasive and Mobile Computing",
+        "year": "2010",
+        "author": [
+            "André C. Santos",
+            "João M. P. Cardoso",
+            "Diogo R. Ferreira",
+            "Pedro C. Diniz",
+            "Paulo Chainho"
+        ],
+        "id": "journals/percom/SantosCFDC10",
+        "type": "article",
+        "title": "Providing user context for mobile and social networking applications.",
+        "url": "db/journals/percom/percom6.html#SantosCFDC10"
+    },
+    "journals/dt/CardosoN03": {
+        "volume": "20",
+        "ee": [
+            "https://doi.org/10.1109/MDT.2003.1188264",
+            "http://doi.ieeecomputersociety.org/10.1109/MDT.2003.1188264"
+        ],
+        "number": "2",
+        "pages": "65-75",
+        "journal": "IEEE Design \u0026 Test of Computers",
+        "year": "2003",
+        "author": [
+            "João M. P. Cardoso",
+            "Horácio C. Neto"
+        ],
+        "id": "journals/dt/CardosoN03",
+        "type": "article",
+        "title": "Compilation for FPGA-Based Reconfigurable Hardware.",
+        "url": "db/journals/dt/dt20.html#CardosoN03"
+    },
+    "conf/ipps/BeckerBCD10": {
+        "ee": [
+            "https://doi.org/10.1109/IPDPSW.2010.5470681",
+            "http://doi.ieeecomputersociety.org/10.1109/IPDPSW.2010.5470681"
+        ],
+        "pages": "1-2",
+        "year": "2010",
+        "author": [
+            "Jürgen Becker",
+            "Eli Bozorgzadeh",
+            "João M. P. Cardoso",
+            "Aravind Dasu"
+        ],
+        "id": "conf/ipps/BeckerBCD10",
+        "type": "inproceedings",
+        "title": "Welcome message.",
+        "booktitle": "IPDPS Workshops",
+        "crossref": "conf/ipps/2010w",
+        "url": "db/conf/ipps/ipdps2010w.html#BeckerBCD10"
+    },
+    "conf/dsd/CardosoCCDPL12": {
+        "ee": [
+            "https://doi.org/10.1109/DSD.2012.33",
+            "http://doi.ieeecomputersociety.org/10.1109/DSD.2012.33"
+        ],
+        "pages": "226-233",
+        "year": "2012",
+        "author": [
+            "João M. P. Cardoso",
+            "Tiago Carvalho",
+            "José Gabriel F. Coutinho",
+            "Pedro C. Diniz",
+            "Zlatko Petrov",
+            "Wayne Luk"
+        ],
+        "id": "conf/dsd/CardosoCCDPL12",
+        "type": "inproceedings",
+        "title": "Controlling Hardware Synthesis with Aspects.",
+        "booktitle": "DSD",
+        "crossref": "conf/dsd/2012",
+        "url": "db/conf/dsd/dsd2012.html#CardosoCCDPL12"
+    },
+    "conf/iccsa/MartinsLFSC12": {
+        "ee": "https://doi.org/10.1007/978-3-642-31128-4_16",
+        "pages": "217-233",
+        "year": "2012",
+        "author": [
+            "Pedro Martins 0001",
+            "Paulo Lopes",
+            "João Paulo Fernandes",
+            "João Saraiva",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/iccsa/MartinsLFSC12",
+        "type": "inproceedings",
+        "title": "Program and Aspect Metrics for MATLAB.",
+        "booktitle": "ICCSA (4)",
+        "crossref": "conf/iccsa/2012-4",
+        "url": "db/conf/iccsa/iccsa2012-4.html#MartinsLFSC12"
+    },
+    "conf/date/SilvanoABBBBCCC16": {
+        "ee": "http://ieeexplore.ieee.org/document/7459400/",
+        "pages": "708-713",
+        "year": "2016",
+        "author": [
+            "Cristina Silvano",
+            "Giovanni Agosta",
+            "Andrea Bartolini",
+            "Andrea R. Beccari",
+            "Luca Benini",
+            "João Bispo",
+            "Radim Cmar",
+            "João M. P. Cardoso",
+            "Carlo Cavazzoni",
+            "Jan Martinovic",
+            "Gianluca Palermo",
+            "Martin Palkovic",
+            "Pedro Pinto",
+            "Erven Rohou",
+            "Nico Sanna",
+            "Katerina Slaninová"
+        ],
+        "id": "conf/date/SilvanoABBBBCCC16",
+        "type": "inproceedings",
+        "title": "Autotuning and adaptivity approach for energy efficient Exascale HPC systems: The ANTAREX approach.",
+        "booktitle": "DATE",
+        "crossref": "conf/date/2016",
+        "url": "db/conf/date/date2016.html#SilvanoABBBBCCC16"
+    },
+    "conf/ifip10-5/CardosoN99": {
+        "pages": "485-496",
+        "year": "1999",
+        "author": [
+            "João M. P. Cardoso",
+            "Horácio C. Neto"
+        ],
+        "id": "conf/ifip10-5/CardosoN99",
+        "type": "inproceedings",
+        "title": "An Enhanced Static-List Scheduling Algorithm for Temporal Partitioning onto RPUs.",
+        "crossref": "conf/ifip10-5/1999",
+        "booktitle": "VLSI",
+        "url": "db/conf/ifip10-5/ifip10-5-1999.html#CardosoN99"
+    },
+    "conf/icecsys/MarcelinoNC09": {
+        "ee": "https://doi.org/10.1109/ICECS.2009.5410898",
+        "pages": "431-434",
+        "year": "2009",
+        "author": [
+            "Rui Marcelino",
+            "Horácio C. Neto",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/icecsys/MarcelinoNC09",
+        "type": "inproceedings",
+        "title": "Unbalanced FIFO sorting for FPGA-based systems.",
+        "booktitle": "ICECS",
+        "crossref": "conf/icecsys/2009",
+        "url": "db/conf/icecsys/icecsys2009.html#MarcelinoNC09"
+    },
+    "conf/dsd/SilvanoABBBBBCC18": {
+        "ee": [
+            "https://doi.org/10.1109/DSD.2018.00105",
+            "http://doi.ieeecomputersociety.org/10.1109/DSD.2018.00105"
+        ],
+        "pages": "600-607",
+        "year": "2018",
+        "author": [
+            "Cristina Silvano",
+            "Giovanni Agosta",
+            "Andrea Bartolini",
+            "Andrea R. Beccari",
+            "Luca Benini",
+            "Loïc Besnard",
+            "João Bispo",
+            "Radim Cmar",
+            "João M. P. Cardoso",
+            "Carlo Cavazzoni",
+            "Stefano Cherubin",
+            "Davide Gadioli",
+            "Martin Golasowski",
+            "Imane Lasri",
+            "Jan Martinovic",
+            "Gianluca Palermo",
+            "Pedro Pinto",
+            "Erven Rohou",
+            "Nico Sanna",
+            "Katerina Slaninová",
+            "Emanuele Vitali"
+        ],
+        "id": "conf/dsd/SilvanoABBBBBCC18",
+        "type": "inproceedings",
+        "title": "ANTAREX: A DSL-Based Approach to Adaptively Optimizing and Enforcing Extra-Functional Properties in High Performance Computing.",
+        "booktitle": "DSD",
+        "crossref": "conf/dsd/2018",
+        "url": "db/conf/dsd/dsd2018.html#SilvanoABBBBBCC18"
+    },
+    "conf/fccm/CardosoTANDCL12": {
+        "ee": [
+            "https://doi.org/10.1109/FCCM.2012.41",
+            "http://doi.ieeecomputersociety.org/10.1109/FCCM.2012.41"
+        ],
+        "pages": "192-199",
+        "year": "2012",
+        "author": [
+            "João M. P. Cardoso",
+            "João Teixeira",
+            "José C. Alves",
+            "Ricardo Nobre",
+            "Pedro C. Diniz",
+            "José Gabriel F. Coutinho",
+            "Wayne Luk"
+        ],
+        "id": "conf/fccm/CardosoTANDCL12",
+        "type": "inproceedings",
+        "title": "Specifying Compiler Strategies for FPGA-based Systems.",
+        "booktitle": "FCCM",
+        "crossref": "conf/fccm/2012",
+        "url": "db/conf/fccm/fccm2012.html#CardosoTANDCL12"
+    },
+    "conf/samos/CardosoCTDGP12": {
+        "ee": "https://doi.org/10.1109/SAMOS.2012.6404183",
+        "pages": "260-267",
+        "year": "2012",
+        "author": [
+            "João M. P. Cardoso",
+            "Tiago Carvalho",
+            "João Teixeira",
+            "Pedro C. Diniz",
+            "Fernando M. Gonçalves",
+            "Zlatko Petrov"
+        ],
+        "id": "conf/samos/CardosoCTDGP12",
+        "type": "inproceedings",
+        "title": "Hardware/software specialization through aspects: The LARA approach.",
+        "booktitle": "ICSAMOS",
+        "crossref": "conf/samos/2012ic",
+        "url": "db/conf/samos/samos2012ic.html#CardosoCTDGP12"
+    },
+    "conf/fpl/SanchesC10": {
+        "ee": [
+            "https://doi.org/10.1109/FPL.2010.62",
+            "http://doi.ieeecomputersociety.org/10.1109/FPL.2010.62"
+        ],
+        "pages": "267-270",
+        "year": "2010",
+        "author": [
+            "Adriano K. Sanches",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/fpl/SanchesC10",
+        "type": "inproceedings",
+        "title": "On Identifying Patterns in Code Repositories to Assist the Generation of Hardware Templates.",
+        "booktitle": "FPL",
+        "crossref": "conf/fpl/2010",
+        "url": "db/conf/fpl/fpl2010.html#SanchesC10"
+    },
+    "journals/jsa/GorgonCGI17": {
+        "volume": "79",
+        "ee": "https://doi.org/10.1016/j.sysarc.2017.06.002",
+        "pages": "16-17",
+        "journal": "Journal of Systems Architecture - Embedded Systems Design",
+        "year": "2017",
+        "author": [
+            "Marek Gorgon",
+            "João M. P. Cardoso",
+            "Diana Göhringer",
+            "Leandro Soares Indrusiak"
+        ],
+        "id": "journals/jsa/GorgonCGI17",
+        "type": "article",
+        "title": "Special issue on design of algorithms and architectures for signal and image processing.",
+        "url": "db/journals/jsa/jsa79.html#GorgonCGI17"
+    },
+    "conf/sac/TarratacaSC09": {
+        "ee": "https://doi.org/10.1145/1529282.1529652",
+        "pages": "1642-1649",
+        "year": "2009",
+        "author": [
+            "Luís Tarrataca",
+            "André C. Santos",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/sac/TarratacaSC09",
+        "type": "inproceedings",
+        "title": "The current feasibility of gesture recognition for a smartphone using J2ME.",
+        "booktitle": "SAC",
+        "crossref": "conf/sac/2009",
+        "url": "db/conf/sac/sac2009.html#TarratacaSC09"
+    },
+    "conf/sac/PintoCBC17": {
+        "ee": "https://doi.org/10.1145/3019612.3019749",
+        "pages": "1623-1630",
+        "year": "2017",
+        "author": [
+            "Pedro Pinto",
+            "Tiago Carvalho",
+            "João Bispo",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/sac/PintoCBC17",
+        "type": "inproceedings",
+        "title": "LARA as a language-independent aspect-oriented programming approach.",
+        "booktitle": "SAC",
+        "crossref": "conf/sac/2017",
+        "url": "db/conf/sac/sac2017.html#PintoCBC17"
+    },
+    "journals/concurrency/PlesslCC17": {
+        "volume": "29",
+        "ee": "https://doi.org/10.1002/cpe.4102",
+        "number": "7",
+        "journal": "Concurrency and Computation: Practice and Experience",
+        "year": "2017",
+        "author": [
+            "Christian Plessl",
+            "Guojing Cong",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/concurrency/PlesslCC17",
+        "type": "article",
+        "title": "Foreword to the special issue of the 18th IEEE international conference on computational science and engineering (CSE2015).",
+        "url": "db/journals/concurrency/concurrency29.html#PlesslCC17"
+    },
+    "conf/fpl/FerreiraCN04": {
+        "ee": "https://doi.org/10.1007/978-3-540-30117-2_119",
+        "pages": "1022-1026",
+        "year": "2004",
+        "author": [
+            "Ricardo S. Ferreira",
+            "João M. P. Cardoso",
+            "Horácio C. Neto"
+        ],
+        "id": "conf/fpl/FerreiraCN04",
+        "type": "inproceedings",
+        "title": "An Environment for Exploring Data-Driven Architectures.",
+        "crossref": "conf/fpl/2004",
+        "booktitle": "FPL",
+        "url": "db/conf/fpl/fpl2004.html#FerreiraCN04"
+    },
+    "journals/spe/BispoC17": {
+        "volume": "47",
+        "ee": "https://doi.org/10.1002/spe.2408",
+        "number": "2",
+        "pages": "249-272",
+        "journal": "Softw., Pract. Exper.",
+        "year": "2017",
+        "author": [
+            "João Bispo",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/spe/BispoC17",
+        "type": "article",
+        "title": "A MATLAB subset to C compiler targeting embedded systems.",
+        "url": "db/journals/spe/spe47.html#BispoC17"
+    },
+    "journals/esl/SantosCDFP14": {
+        "volume": "6",
+        "ee": "https://doi.org/10.1109/LES.2014.2321325",
+        "number": "3",
+        "pages": "49-52",
+        "journal": "Embedded Systems Letters",
+        "year": "2014",
+        "author": [
+            "André C. Santos",
+            "João M. P. Cardoso",
+            "Pedro C. Diniz",
+            "Diogo R. Ferreira",
+            "Zlatko Petrov"
+        ],
+        "id": "journals/esl/SantosCDFP14",
+        "type": "article",
+        "title": "Specifying Dynamic Adaptations for Embedded Applications Using a DSL.",
+        "url": "db/journals/esl/esl6.html#SantosCDFP14"
+    },
+    "conf/arc/BispoSCV07": {
+        "ee": "https://doi.org/10.1007/978-3-540-71431-6_17",
+        "pages": "179-190",
+        "year": "2007",
+        "author": [
+            "João Bispo",
+            "Ioannis Sourdis",
+            "João M. P. Cardoso",
+            "Stamatis Vassiliadis"
+        ],
+        "id": "conf/arc/BispoSCV07",
+        "type": "inproceedings",
+        "title": "Synthesis of Regular Expressions Targeting FPGAs: Current Status and Open Issues.",
+        "crossref": "conf/arc/2007",
+        "booktitle": "ARC",
+        "url": "db/conf/arc/arc2007.html#BispoSCV07"
+    },
+    "conf/scopes/NobreMC15": {
+        "ee": "https://doi.org/10.1145/2764967.2764978",
+        "pages": "58-67",
+        "year": "2015",
+        "author": [
+            "Ricardo Nobre",
+            "Luiz G. A. Martins",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/scopes/NobreMC15",
+        "type": "inproceedings",
+        "title": "Use of Previously Acquired Positioning of Optimizations for Phase Ordering Exploration.",
+        "booktitle": "SCOPES",
+        "crossref": "conf/scopes/2015",
+        "url": "db/conf/scopes/scopes2015.html#NobreMC15"
+    },
+    "journals/monet/SantosTC10": {
+        "volume": "15",
+        "ee": "https://doi.org/10.1007/s11036-010-0236-8",
+        "number": "6",
+        "pages": "819-830",
+        "journal": "MONET",
+        "year": "2010",
+        "author": [
+            "André C. Santos",
+            "Luís Tarrataca",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/monet/SantosTC10",
+        "type": "article",
+        "title": "The Feasibility of Navigation Algorithms on Smartphones using J2ME.",
+        "url": "db/journals/monet/monet15.html#SantosTC10"
+    },
+    "conf/sac/GoncalvesMCWFRM03": {
+        "ee": "https://doi.org/10.1145/952532.952665",
+        "pages": "679-683",
+        "year": "2003",
+        "author": [
+            "R. A. Gonçalves",
+            "P. A. Moraes",
+            "João M. P. Cardoso",
+            "Denis F. Wolf",
+            "Marcio Merino Fernandes",
+            "Roseli A. Francelin Romero",
+            "Eduardo Marques"
+        ],
+        "id": "conf/sac/GoncalvesMCWFRM03",
+        "type": "inproceedings",
+        "title": "ARCHITECT-R: A System for Reconfigurable Robots Design.",
+        "crossref": "conf/sac/2003",
+        "booktitle": "SAC",
+        "url": "db/conf/sac/sac2003.html#GoncalvesMCWFRM03"
+    },
+    "conf/sies/BonatoPWHMC07": {
+        "ee": "https://doi.org/10.1109/SIES.2007.4297329",
+        "pages": "148-155",
+        "year": "2007",
+        "author": [
+            "Vanderlei Bonato",
+            "Rafael Peron",
+            "Denis F. Wolf",
+            "José A. M. de Holanda",
+            "Eduardo Marques",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/sies/BonatoPWHMC07",
+        "type": "inproceedings",
+        "title": "An FPGA Implementation for a Kalman Filter with Application to Mobile Robotics.",
+        "crossref": "conf/sies/2007",
+        "booktitle": "SIES",
+        "url": "db/conf/sies/sies2007.html#BonatoPWHMC07"
+    },
+    "conf/euc/2015": {
+        "ee": [
+            "http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber\u003d7363405",
+            "http://www.computer.org/csdl/proceedings/euc/2015/8299/00/index.html"
+        ],
+        "editor": [
+            "Eli Bozorgzadeh",
+            "João M. P. Cardoso",
+            "Rui Abreu",
+            "Seda Ogrenci Memik"
+        ],
+        "year": "2015",
+        "isbn": "978-1-4673-8299-1",
+        "publisher": "IEEE Computer Society",
+        "id": "conf/euc/2015",
+        "type": "proceedings",
+        "title": "13th IEEE International Conference on Embedded and Ubiquitous Computing, EUC 2013, Porto, Portugal, October 21-23, 2015",
+        "booktitle": "EUC",
+        "url": "db/conf/euc/euc2015.html"
+    },
+    "conf/ahs/AzarianFWPCH12": {
+        "ee": "https://doi.org/10.1109/AHS.2012.6268670",
+        "pages": "62-69",
+        "year": "2012",
+        "author": [
+            "Ali Azarian",
+            "João Canas Ferreira",
+            "Stephan Werner 0002",
+            "Zlatko Petrov",
+            "João M. P. Cardoso",
+            "Michael Hübner"
+        ],
+        "id": "conf/ahs/AzarianFWPCH12",
+        "type": "inproceedings",
+        "title": "Analysis of error detection schemes: Toolchain support and hardware/software implications.",
+        "booktitle": "AHS",
+        "crossref": "conf/ahs/2012",
+        "url": "db/conf/ahs/ahs2012.html#AzarianFWPCH12"
+    },
+    "journals/cl/PintoCBRC18": {
+        "volume": "53",
+        "ee": "https://doi.org/10.1016/j.cl.2017.12.003",
+        "pages": "1-26",
+        "journal": "Computer Languages, Systems \u0026 Structures",
+        "year": "2018",
+        "author": [
+            "Pedro Pinto",
+            "Tiago Carvalho",
+            "João Bispo",
+            "Miguel António Ramalho",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/cl/PintoCBRC18",
+        "type": "article",
+        "title": "Aspect composition for multiple target languages using LARA.",
+        "url": "db/journals/cl/cl53.html#PintoCBRC18"
+    },
+    "conf/samos/FerreiraCTN05": {
+        "ee": "https://doi.org/10.1007/11512622_6",
+        "pages": "41-50",
+        "year": "2005",
+        "author": [
+            "Ricardo S. Ferreira",
+            "João M. P. Cardoso",
+            "Andre Toledo",
+            "Horácio C. Neto"
+        ],
+        "id": "conf/samos/FerreiraCTN05",
+        "type": "inproceedings",
+        "title": "Data-Driven Regular Reconfigurable Arrays: Design Space Exploration and Mapping.",
+        "crossref": "conf/samos/2005",
+        "booktitle": "SAMOS",
+        "url": "db/conf/samos/samos2005.html#FerreiraCTN05"
+    },
+    "conf/ispa/PaulinoFC14": {
+        "ee": [
+            "https://doi.org/10.1109/ISPA.2014.29",
+            "http://doi.ieeecomputersociety.org/10.1109/ISPA.2014.29"
+        ],
+        "pages": "158-165",
+        "year": "2014",
+        "author": [
+            "Nuno Miguel Cardanha Paulino",
+            "João Canas Ferreira",
+            "João Manuel Paiva Cardoso"
+        ],
+        "id": "conf/ispa/PaulinoFC14",
+        "type": "inproceedings",
+        "title": "Trace-Based Reconfigurable Acceleration with Data Cache and External Memory Support.",
+        "booktitle": "ISPA",
+        "crossref": "conf/ispa/2014",
+        "url": "db/conf/ispa/ispa2014.html#PaulinoFC14"
+    },
+    "conf/hipeac/ArabnejadBBC18": {
+        "ee": "https://doi.org/10.1145/3183767.3183770",
+        "pages": "13-19",
+        "year": "2018",
+        "author": [
+            "Hamid Arabnejad",
+            "João Bispo",
+            "Jorge G. Barbosa",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/hipeac/ArabnejadBBC18",
+        "type": "inproceedings",
+        "title": "AutoPar-Clava: An Automatic Parallelization source-to-source tool for C code applications.",
+        "booktitle": "PARMA-DITAM@HiPEAC",
+        "crossref": "conf/hipeac/2018parma",
+        "url": "db/conf/hipeac/parma2018.html#ArabnejadBBC18"
+    },
+    "books/daglib/p/CardosoW16": {
+        "ee": "https://doi.org/10.1007/978-3-319-26408-0_2",
+        "pages": "23-47",
+        "year": "2016",
+        "author": [
+            "João M. P. Cardoso",
+            "Markus Weinhardt"
+        ],
+        "id": "books/daglib/p/CardosoW16",
+        "type": "incollection",
+        "title": "High-Level Synthesis.",
+        "booktitle": "FPGAs for Software Programmers",
+        "crossref": "books/daglib/0040430",
+        "url": "db/books/collections/KHZ2016.html#CardosoW16"
+    },
+    "conf/arc/PaulinoFC13": {
+        "ee": "https://doi.org/10.1007/978-3-642-36812-7_12",
+        "pages": "122-133",
+        "year": "2013",
+        "author": [
+            "Nuno Miguel Cardanha Paulino",
+            "João Canas Ferreira",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/arc/PaulinoFC13",
+        "type": "inproceedings",
+        "title": "Architecture for Transparent Binary Acceleration of Loops with Memory Accesses.",
+        "booktitle": "ARC",
+        "crossref": "conf/arc/2013",
+        "url": "db/conf/arc/arc2013.html#PaulinoFC13"
+    },
+    "conf/pldi/ReisBC16": {
+        "ee": "https://doi.org/10.1145/2935323.2935330",
+        "pages": "55-62",
+        "year": "2016",
+        "author": [
+            "Luís Reis",
+            "João Bispo",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/pldi/ReisBC16",
+        "type": "inproceedings",
+        "title": "SSA-based MATLAB-to-C compilation and optimization.",
+        "booktitle": "ARRAY@PLDI",
+        "crossref": "conf/pldi/2016array",
+        "url": "db/conf/pldi/array2016.html#ReisBC16"
+    },
+    "conf/iscas/AzarianC15": {
+        "ee": "https://doi.org/10.1109/ISCAS.2015.7168910",
+        "pages": "1422-1425",
+        "year": "2015",
+        "author": [
+            "Ali Azarian",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/iscas/AzarianC15",
+        "type": "inproceedings",
+        "title": "Reducing misses to external memory accesses in task-level pipelining.",
+        "booktitle": "ISCAS",
+        "crossref": "conf/iscas/2015",
+        "url": "db/conf/iscas/iscas2015.html#AzarianC15"
+    },
+    "conf/arc/2014": {
+        "volume": "8405",
+        "ee": "https://doi.org/10.1007/978-3-319-05960-0",
+        "editor": [
+            "Diana Goehringer",
+            "Marco Domenico Santambrogio",
+            "João M. P. Cardoso",
+            "Koen Bertels"
+        ],
+        "year": "2014",
+        "series": "Lecture Notes in Computer Science",
+        "isbn": "978-3-319-05959-4",
+        "publisher": "Springer",
+        "id": "conf/arc/2014",
+        "type": "proceedings",
+        "title": "Reconfigurable Computing: Architectures, Tools, and Applications - 10th International Symposium, ARC 2014, Vilamoura, Portugal, April 14-16, 2014. Proceedings",
+        "booktitle": "ARC",
+        "url": "db/conf/arc/arc2014.html"
+    },
+    "conf/fpl/MenottiCFM09": {
+        "ee": "https://doi.org/10.1109/FPL.2009.5272485",
+        "pages": "457-461",
+        "year": "2009",
+        "author": [
+            "Ricardo Menotti",
+            "João M. P. Cardoso",
+            "Marcio Merino Fernandes",
+            "Eduardo Marques"
+        ],
+        "id": "conf/fpl/MenottiCFM09",
+        "type": "inproceedings",
+        "title": "Automatic generation of FPGA hardware accelerators using a domain specific language.",
+        "booktitle": "FPL",
+        "crossref": "conf/fpl/2009",
+        "url": "db/conf/fpl/fpl2009.html#MenottiCFM09"
+    },
+    "journals/ijrc/DasuCBB11": {
+        "volume": "2011",
+        "ee": [
+            "https://doi.org/10.1155/2011/574972",
+            "https://www.wikidata.org/entity/Q58688484"
+        ],
+        "journal": "Int. J. Reconfig. Comp.",
+        "pages": "574972:1-574972:2",
+        "year": "2011",
+        "author": [
+            "Aravind Dasu",
+            "João M. P. Cardoso",
+            "Eli Bozorgzadeh",
+            "Jürgen Becker"
+        ],
+        "id": "journals/ijrc/DasuCBB11",
+        "type": "article",
+        "title": "Selected Papers from the 17th Reconfigurable Architectures Workshop (RAW2010).",
+        "url": "db/journals/ijrc/ijrc2011.html#DasuCBB11"
+    },
+    "journals/trets/GoehringerSCB15": {
+        "volume": "9",
+        "ee": "https://doi.org/10.1145/2831431",
+        "number": "1",
+        "pages": "5:1-5:2",
+        "journal": "TRETS",
+        "year": "2015",
+        "author": [
+            "Diana Goehringer",
+            "Marco D. Santambrogio",
+            "João M. P. Cardoso",
+            "Koen Bertels"
+        ],
+        "id": "journals/trets/GoehringerSCB15",
+        "type": "article",
+        "title": "Guest Editorial ARC 2014.",
+        "url": "db/journals/trets/trets9.html#GoehringerSCB15"
+    },
+    "journals/dafes/FarisiHBCS15": {
+        "volume": "19",
+        "ee": "https://doi.org/10.1007/s10617-014-9143-8",
+        "number": "1-2",
+        "pages": "189-221",
+        "journal": "Design Autom. for Emb. Sys.",
+        "year": "2015",
+        "author": [
+            "Brahim Al Farisi",
+            "Karel Heyse",
+            "Karel Bruneel",
+            "João M. P. Cardoso",
+            "Dirk Stroobandt"
+        ],
+        "id": "journals/dafes/FarisiHBCS15",
+        "type": "article",
+        "title": "Enabling FPGA routing configuration sharing in dynamic partial reconfiguration.",
+        "url": "db/journals/dafes/dafes19.html#FarisiHBCS15"
+    },
+    "conf/aosd/CardosoCCLNDP12": {
+        "ee": "https://doi.org/10.1145/2162049.2162071",
+        "pages": "179-190",
+        "year": "2012",
+        "author": [
+            "João M. P. Cardoso",
+            "Tiago Carvalho",
+            "José Gabriel F. Coutinho",
+            "Wayne Luk",
+            "Ricardo Nobre",
+            "Pedro C. Diniz",
+            "Zlatko Petrov"
+        ],
+        "id": "conf/aosd/CardosoCCLNDP12",
+        "type": "inproceedings",
+        "title": "LARA: an aspect-oriented programming language for embedded systems.",
+        "booktitle": "AOSD",
+        "crossref": "conf/aosd/2012",
+        "url": "db/conf/aosd/aosd2012.html#CardosoCCLNDP12"
+    },
+    "conf/ifip5-3/AzevedoSTC06": {
+        "ee": "https://doi.org/10.1007/978-0-387-36594-7_26",
+        "pages": "243-252",
+        "year": "2006",
+        "author": [
+            "Américo Azevedo",
+            "Paula Silva",
+            "Cesar Toscano",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/ifip5-3/AzevedoSTC06",
+        "type": "inproceedings",
+        "title": "An Innovative Maintenance Solution for Complex Machinery: The Kobas Project Case.",
+        "booktitle": "BASYS",
+        "crossref": "conf/ifip5-3/2006",
+        "url": "db/conf/ifip5-3/basys2006.html#AzevedoSTC06"
+    },
+    "conf/aosd/CoutinhoCDCNDL12": {
+        "ee": "https://doi.org/10.1145/2162110.2162129",
+        "pages": "27-30",
+        "year": "2012",
+        "author": [
+            "José Gabriel F. Coutinho",
+            "Tiago Carvalho",
+            "Sérgio Durand",
+            "João M. P. Cardoso",
+            "Ricardo Nobre",
+            "Pedro C. Diniz",
+            "Wayne Luk"
+        ],
+        "id": "conf/aosd/CoutinhoCDCNDL12",
+        "type": "inproceedings",
+        "title": "Experiments with the LARA aspect-oriented approach.",
+        "booktitle": "AOSD (Companion)",
+        "crossref": "conf/aosd/2012c",
+        "url": "db/conf/aosd/aosd2012c.html#CoutinhoCDCNDL12"
+    },
+    "conf/europar/NobreRC17": {
+        "ee": "https://doi.org/10.1007/978-3-319-75178-8_35",
+        "pages": "427-438",
+        "year": "2017",
+        "author": [
+            "Ricardo Nobre",
+            "Luís Reis",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/europar/NobreRC17",
+        "type": "inproceedings",
+        "title": "Impact of Compiler Phase Ordering When Targeting GPUs.",
+        "booktitle": "Euro-Par Workshops",
+        "crossref": "conf/europar/2017w",
+        "url": "db/conf/europar/europar2017w.html#NobreRC17"
+    },
+    "conf/reconfig/SilvaFGC06": {
+        "ee": [
+            "https://doi.org/10.1109/RECONF.2006.307749",
+            "http://doi.ieeecomputersociety.org/10.1109/RECONF.2006.307749"
+        ],
+        "pages": "20-29",
+        "year": "2006",
+        "author": [
+            "Marcos Vinícius da Silva",
+            "Ricardo S. Ferreira",
+            "Alisson Garcia",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/reconfig/SilvaFGC06",
+        "type": "inproceedings",
+        "title": "Mesh Mapping Exploration for Coarse-Grained Reconfigurable Array Architectures.",
+        "booktitle": "ReConFig",
+        "crossref": "conf/reconfig/2006",
+        "url": "db/conf/reconfig/reconfig2006.html#SilvaFGC06"
+    },
+    "conf/fpl/Azarian13": {
+        "ee": "https://doi.org/10.1109/FPL.2013.6645611",
+        "pages": "1-2",
+        "year": "2013",
+        "author": "Ali Azarian",
+        "id": "conf/fpl/Azarian13",
+        "type": "inproceedings",
+        "title": "Pipelining computing stages in configurable multicore architectures.",
+        "booktitle": "FPL",
+        "crossref": "conf/fpl/2013",
+        "url": "db/conf/fpl/fpl2013.html#Azarian13"
+    },
+    "conf/hipeac/2015parma": {
+        "ee": "https://doi.org/10.1145/2701310",
+        "editor": [
+            "Giovanni Agosta",
+            "Cristina Silvano",
+            "João M. P. Cardoso",
+            "Michael Hübner"
+        ],
+        "year": "2015",
+        "isbn": "978-1-4503-3343-6",
+        "publisher": "ACM",
+        "id": "conf/hipeac/2015parma",
+        "type": "proceedings",
+        "title": "Proceedings of the 6th Workshop on Parallel Programming and Run-Time Management Techniques for Many-core Architectures and the 4th Workshop on Design Tools and Architectures for Multicore Embedded Computing Platforms, PARMA-DITAM 2015, Amsterdam, Netherlands, January 21, 2015",
+        "booktitle": "PARMA-DITAM@HiPEAC",
+        "url": "db/conf/hipeac/parma2015.html"
+    },
+    "conf/scopes/CarvalhoPC15": {
+        "ee": "https://doi.org/10.1145/2764967.2764973",
+        "pages": "3-11",
+        "year": "2015",
+        "author": [
+            "Tiago Carvalho",
+            "Pedro Pinto",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/scopes/CarvalhoPC15",
+        "type": "inproceedings",
+        "title": "Programming Strategies for Contextual Runtime Specialization.",
+        "booktitle": "SCOPES",
+        "crossref": "conf/scopes/2015",
+        "url": "db/conf/scopes/scopes2015.html#CarvalhoPC15"
+    },
+    "conf/arc/CabaCRDL18": {
+        "ee": "https://doi.org/10.1007/978-3-319-78890-6_36",
+        "pages": "446-458",
+        "year": "2018",
+        "author": [
+            "Julian Caba",
+            "João M. P. Cardoso",
+            "Fernando Rincón",
+            "Julio Dondo",
+            "Juan Carlos López"
+        ],
+        "id": "conf/arc/CabaCRDL18",
+        "type": "inproceedings",
+        "title": "Rapid Prototyping and Verification of Hardware Modules Generated Using HLS.",
+        "booktitle": "ARC",
+        "crossref": "conf/arc/2018",
+        "url": "db/conf/arc/arc2018.html#CabaCRDL18"
+    },
+    "journals/ijrc/BonatoFCM14": {
+        "volume": "2014",
+        "ee": "https://doi.org/10.1155/2014/287205",
+        "journal": "Int. J. Reconfig. Comp.",
+        "pages": "287205:1-287205:12",
+        "year": "2014",
+        "author": [
+            "Vanderlei Bonato",
+            "Marcio Merino Fernandes",
+            "João M. P. Cardoso",
+            "Eduardo Marques"
+        ],
+        "id": "journals/ijrc/BonatoFCM14",
+        "type": "article",
+        "title": "Practical Education Fostered by Research Projects in an Embedded Systems Course.",
+        "url": "db/journals/ijrc/ijrc2014.html#BonatoFCM14"
+    },
+    "conf/sasp/MorraCBB08": {
+        "ee": [
+            "https://doi.org/10.1109/SASP.2008.4570783",
+            "http://doi.ieeecomputersociety.org/10.1109/SASP.2008.4570783"
+        ],
+        "pages": "34-41",
+        "year": "2008",
+        "author": [
+            "Carlos Morra",
+            "João M. P. Cardoso",
+            "João Bispo",
+            "Jürgen Becker"
+        ],
+        "id": "conf/sasp/MorraCBB08",
+        "type": "inproceedings",
+        "title": "Retargeting, Evaluating, and Generating Reconfigurable Array-Based Architectures.",
+        "booktitle": "SASP",
+        "crossref": "conf/sasp/2008",
+        "url": "db/conf/sasp/sasp2008.html#MorraCBB08"
+    },
+    "journals/vlsisp/DerrienACB17": {
+        "volume": "88",
+        "ee": "https://doi.org/10.1007/s11265-017-1237-7",
+        "number": "2",
+        "pages": "103-105",
+        "journal": "Signal Processing Systems",
+        "year": "2017",
+        "author": [
+            "Steven Derrien",
+            "Kubilay Atasu",
+            "João M. P. Cardoso",
+            "Jürgen Becker"
+        ],
+        "id": "journals/vlsisp/DerrienACB17",
+        "type": "article",
+        "title": "Foreword to the Special Section on Reconfigurable Computing.",
+        "url": "db/journals/vlsisp/vlsisp88.html#DerrienACB17"
+    },
+    "journals/tc/Cardoso03": {
+        "volume": "52",
+        "ee": [
+            "https://doi.org/10.1109/TC.2003.1234532",
+            "http://doi.ieeecomputersociety.org/10.1109/TC.2003.1234532"
+        ],
+        "number": "10",
+        "pages": "1362-1375",
+        "journal": "IEEE Trans. Computers",
+        "year": "2003",
+        "author": "João M. P. Cardoso",
+        "id": "journals/tc/Cardoso03",
+        "type": "article",
+        "title": "On Combining Temporal Partitioning and Sharing of Functional Units in Compilation for Reconfigurable Architectures.",
+        "url": "db/journals/tc/tc52.html#Cardoso03"
+    },
+    "conf/samos/SilvanoABBBBBCC17": {
+        "ee": "https://doi.org/10.1109/SAMOS.2017.8344645",
+        "pages": "308-316",
+        "year": "2017",
+        "author": [
+            "Cristina Silvano",
+            "Giovanni Agosta",
+            "Jorge G. Barbosa",
+            "Andrea Bartolini",
+            "Andrea R. Beccari",
+            "Luca Benini",
+            "João Bispo",
+            "João M. P. Cardoso",
+            "Carlo Cavazzoni",
+            "Stefano Cherubin",
+            "Radim Cmar",
+            "Davide Gadioli",
+            "Candida Manelfi",
+            "Jan Martinovic",
+            "Ricardo Nobre",
+            "Gianluca Palermo",
+            "Martin Palkovic",
+            "Pedro Pinto",
+            "Erven Rohou",
+            "Nico Sanna",
+            "Katerina Slaninová"
+        ],
+        "id": "conf/samos/SilvanoABBBBBCC17",
+        "type": "inproceedings",
+        "title": "The ANTAREX tool flow for monitoring and autotuning energy efficient HPC systems.",
+        "booktitle": "SAMOS",
+        "crossref": "conf/samos/2017",
+        "url": "db/conf/samos/samos2017.html#SilvanoABBBBBCC17"
+    },
+    "journals/corr/abs-1810-10956": {
+        "volume": "abs/1810.10956",
+        "ee": "http://arxiv.org/abs/1810.10956",
+        "journal": "CoRR",
+        "year": "2018",
+        "author": [
+            "Kemilly Dearo Garcia",
+            "Tiago Carvalho",
+            "João Mendes-Moreira",
+            "João M. P. Cardoso",
+            "André C. P. L. F. de Carvalho"
+        ],
+        "id": "journals/corr/abs-1810-10956",
+        "type": "article",
+        "title": "A Preliminary Study on Hyperparameter Configuration for Human Activity Recognition.",
+        "url": "db/journals/corr/corr1810.html#abs-1810-10956"
+    },
+    "conf/fpl/BispoC10": {
+        "ee": [
+            "https://doi.org/10.1109/FPL.2010.61",
+            "http://doi.ieeecomputersociety.org/10.1109/FPL.2010.61"
+        ],
+        "pages": "263-266",
+        "year": "2010",
+        "author": [
+            "João Bispo",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/fpl/BispoC10",
+        "type": "inproceedings",
+        "title": "On Identifying Segments of Traces for Dynamic Compilation.",
+        "booktitle": "FPL",
+        "crossref": "conf/fpl/2010",
+        "url": "db/conf/fpl/fpl2010.html#BispoC10"
+    },
+    "conf/epia/MonteiroMSPC17": {
+        "ee": "https://doi.org/10.1007/978-3-319-65340-2_47",
+        "pages": "573-584",
+        "year": "2017",
+        "author": [
+            "Miguel P. Monteiro 0001",
+            "Nuno C. Marques",
+            "Bruno Silva 0003",
+            "Bruno Palma",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/epia/MonteiroMSPC17",
+        "type": "inproceedings",
+        "title": "Toward a Token-Based Approach to Concern Detection in MATLAB Sources.",
+        "booktitle": "EPIA",
+        "crossref": "conf/epia/2017",
+        "url": "db/conf/epia/epia2017.html#MonteiroMSPC17"
+    },
+    "journals/taco/MartinsNCDM16": {
+        "volume": "13",
+        "ee": "https://doi.org/10.1145/2883614",
+        "number": "1",
+        "pages": "8:1-8:28",
+        "journal": "TACO",
+        "year": "2016",
+        "author": [
+            "Luiz G. A. Martins",
+            "Ricardo Nobre",
+            "João M. P. Cardoso",
+            "Alexandre C. B. Delbem",
+            "Eduardo Marques"
+        ],
+        "id": "journals/taco/MartinsNCDM16",
+        "type": "article",
+        "title": "Clustering-Based Selection for the Exploration of Compiler Optimization Sequences.",
+        "url": "db/journals/taco/taco13.html#MartinsNCDM16"
+    },
+    "conf/cd/SilvanoACGPBBMP16": {
+        "ee": "https://doi.org/10.1145/2903150.2903470",
+        "pages": "288-293",
+        "year": "2016",
+        "author": [
+            "Cristina Silvano",
+            "Giovanni Agosta",
+            "Stefano Cherubin",
+            "Davide Gadioli",
+            "Gianluca Palermo",
+            "Andrea Bartolini",
+            "Luca Benini",
+            "Jan Martinovic",
+            "Martin Palkovic",
+            "Katerina Slaninová",
+            "João Bispo",
+            "João M. P. Cardoso",
+            "Rui Abreu",
+            "Pedro Pinto",
+            "Carlo Cavazzoni",
+            "Nico Sanna",
+            "Andrea R. Beccari",
+            "Radim Cmar",
+            "Erven Rohou"
+        ],
+        "id": "conf/cd/SilvanoACGPBBMP16",
+        "type": "inproceedings",
+        "title": "The ANTAREX approach to autotuning and adaptivity for energy efficient HPC systems.",
+        "booktitle": "Conf. Computing Frontiers",
+        "crossref": "conf/cf/2016",
+        "url": "db/conf/cf/cf2016.html#SilvanoACGPBBMP16"
+    },
+    "journals/ijpp/MenottiCFM12": {
+        "volume": "40",
+        "ee": "https://doi.org/10.1007/s10766-011-0187-0",
+        "number": "3",
+        "pages": "262-289",
+        "journal": "International Journal of Parallel Programming",
+        "year": "2012",
+        "author": [
+            "Ricardo Menotti",
+            "João M. P. Cardoso",
+            "Marcio Merino Fernandes",
+            "Eduardo Marques"
+        ],
+        "id": "journals/ijpp/MenottiCFM12",
+        "type": "article",
+        "title": "LALP: A Language to Program Custom FPGA-Based Acceleration Engines.",
+        "url": "db/journals/ijpp/ijpp40.html#MenottiCFM12"
+    },
+    "journals/corr/abs-0710-4706": {
+        "ee": "http://arxiv.org/abs/0710.4706",
+        "volume": "abs/0710.4706",
+        "journal": "CoRR",
+        "year": "2007",
+        "author": [
+            "Rui Rodrigues 0001",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/corr/abs-0710-4706",
+        "type": "article",
+        "title": "An Infrastructure to Functionally Test Designs Generated by Compilers Targeting FPGAs",
+        "url": "db/journals/corr/corr0710.html#abs-0710-4706"
+    },
+    "journals/corr/PintoAC15": {
+        "volume": "abs/1505.01878",
+        "ee": "http://arxiv.org/abs/1505.01878",
+        "journal": "CoRR",
+        "year": "2015",
+        "author": [
+            "Pedro Pinto",
+            "Rui Abreu",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/corr/PintoAC15",
+        "type": "article",
+        "title": "Fault Detection in C Programs using Monitoring of Range Values: Preliminary Results.",
+        "url": "db/journals/corr/corr1505.html#PintoAC15"
+    },
+    "conf/isvlsi/FerreiraGTC07": {
+        "ee": [
+            "https://doi.org/10.1109/ISVLSI.2007.14",
+            "http://doi.ieeecomputersociety.org/10.1109/ISVLSI.2007.14"
+        ],
+        "pages": "61-66",
+        "year": "2007",
+        "author": [
+            "Ricardo S. Ferreira",
+            "Alisson Garcia",
+            "Tiago Teixeira",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/isvlsi/FerreiraGTC07",
+        "type": "inproceedings",
+        "title": "A Polynomial Placement Algorithm for Data Driven Coarse-Grained Reconfigurable Architectures.",
+        "crossref": "conf/isvlsi/2007",
+        "booktitle": "ISVLSI",
+        "url": "db/conf/isvlsi/isvlsi2007.html#FerreiraGTC07"
+    },
+    "conf/ipps/Cardoso03": {
+        "ee": [
+            "https://doi.org/10.1109/IPDPS.2003.1213335",
+            "http://doi.ieeecomputersociety.org/10.1109/IPDPS.2003.1213335"
+        ],
+        "pages": "181",
+        "year": "2003",
+        "author": "João M. P. Cardoso",
+        "id": "conf/ipps/Cardoso03",
+        "type": "inproceedings",
+        "title": "Loop Dissevering: A Technique for Temporally Partitioning Loops in Dynamically Reconfigurable Computing Platforms.",
+        "crossref": "conf/ipps/2003",
+        "booktitle": "IPDPS",
+        "url": "db/conf/ipps/ipdps2003.html#Cardoso03"
+    },
+    "conf/IEEEpact/2018andare": {
+        "ee": "https://doi.org/10.1145/3295816",
+        "editor": [
+            "Andrea Bartolini",
+            "João M. P. Cardoso",
+            "Cristina Silvano"
+        ],
+        "year": "2018",
+        "isbn": "978-1-4503-6591-8",
+        "publisher": "ACM",
+        "id": "conf/IEEEpact/2018andare",
+        "type": "proceedings",
+        "title": "Proceedings of the 2nd Workshop on AutotuniNg and aDaptivity AppRoaches for Energy efficient HPC Systems, ANDARE@PACT 2018, Limassol, Cyprus, November 4, 2018",
+        "booktitle": "ANDARE@PACT",
+        "url": "db/conf/IEEEpact/andare2018.html"
+    },
+    "conf/samos/CardosoD04": {
+        "ee": "https://doi.org/10.1007/978-3-540-27776-7_24",
+        "pages": "224-233",
+        "year": "2004",
+        "author": [
+            "João M. P. Cardoso",
+            "Pedro C. Diniz"
+        ],
+        "id": "conf/samos/CardosoD04",
+        "type": "inproceedings",
+        "title": "Modeling Loop Unrolling: Approaches and Open Issues.",
+        "crossref": "conf/samos/2004",
+        "booktitle": "SAMOS",
+        "url": "db/conf/samos/samos2004.html#CardosoD04"
+    },
+    "conf/fccm/CardosoW02": {
+        "ee": [
+            "https://doi.org/10.1109/FPGA.2002.1106688",
+            "http://doi.ieeecomputersociety.org/10.1109/FPGA.2002.1106688"
+        ],
+        "pages": "291-292",
+        "year": "2002",
+        "author": [
+            "João M. P. Cardoso",
+            "Markus Weinhardt"
+        ],
+        "id": "conf/fccm/CardosoW02",
+        "type": "inproceedings",
+        "title": "Fast and Guaranteed C Compilation onto the PACT-XPP? Reconfigurable Computing Platform.",
+        "crossref": "conf/fccm/2002",
+        "booktitle": "FCCM",
+        "url": "db/conf/fccm/fccm2002.html#CardosoW02"
+    },
+    "conf/hipeac/2014parma": {
+        "ee": "https://doi.org/10.1145/2556863",
+        "editor": [
+            "Cristina Silvano",
+            "João M. P. Cardoso",
+            "Michael Hübner"
+        ],
+        "year": "2014",
+        "isbn": "978-1-4503-2607-0",
+        "publisher": "ACM",
+        "id": "conf/hipeac/2014parma",
+        "type": "proceedings",
+        "title": "Proceedings of the 5th Workshop on Parallel Programming and Run-Time Management Techniques for Many-core Architectures and the 3rd Workshop on Design Tools and Architectures for Multicore Embedded Computing Platforms, PARMA-DITAM 2014, Vienna, Austria, January 20, 2014",
+        "booktitle": "PARMA-DITAM@HiPEAC",
+        "url": "db/conf/hipeac/parma2014.html"
+    },
+    "journals/corr/PerinaGMCDB14": {
+        "volume": "abs/1412.5384",
+        "ee": "http://arxiv.org/abs/1412.5384",
+        "journal": "CoRR",
+        "year": "2014",
+        "author": [
+            "André Bannwart Perina",
+            "Marcilyanne Moreira Gois",
+            "Paulo Matias",
+            "João M. P. Cardoso",
+            "Alexandre C. B. Delbem",
+            "Vanderlei Bonato"
+        ],
+        "id": "journals/corr/PerinaGMCDB14",
+        "type": "article",
+        "title": "Representation of Evolutionary Algorithms in FPGA Cluster for Project of Large-Scale Networks.",
+        "url": "db/journals/corr/corr1412.html#PerinaGMCDB14"
+    },
+    "conf/fccm/MorraBCB08": {
+        "ee": [
+            "https://doi.org/10.1109/FCCM.2008.37",
+            "http://doi.ieeecomputersociety.org/10.1109/FCCM.2008.37"
+        ],
+        "pages": "320-321",
+        "year": "2008",
+        "author": [
+            "Carlos Morra",
+            "João Bispo",
+            "João M. P. Cardoso",
+            "Jürgen Becker"
+        ],
+        "id": "conf/fccm/MorraBCB08",
+        "type": "inproceedings",
+        "title": "Combining Rewriting-Logic, Architecture Generation, and Simulation to Exploit Coarse-Grained Reconfigurable Architectures.",
+        "booktitle": "FCCM",
+        "crossref": "conf/fccm/2008",
+        "url": "db/conf/fccm/fccm2008.html#MorraBCB08"
+    },
+    "conf/IEEEpact/2017andare": {
+        "ee": "http://dl.acm.org/citation.cfm?id\u003d3152821",
+        "editor": [
+            "Andrea Bartolini",
+            "João M. P. Cardoso",
+            "Cristina Silvano"
+        ],
+        "year": "2017",
+        "isbn": "978-1-4503-5363-2",
+        "publisher": "ACM",
+        "id": "conf/IEEEpact/2017andare",
+        "type": "proceedings",
+        "title": "Proceedings of the 1st Workshop on AutotuniNg and aDaptivity AppRoaches for Energy efficient HPC Systems, ANDARE@PACT 2017, Portland, OR, USA, September 9, 2017",
+        "booktitle": "ANDARE@PACT",
+        "url": "db/conf/IEEEpact/andare2017.html"
+    },
+    "conf/cse/CoutinhoBLCCCDP12": {
+        "ee": [
+            "https://doi.org/10.1109/ICCSE.2012.62",
+            "http://doi.ieeecomputersociety.org/10.1109/ICCSE.2012.62"
+        ],
+        "pages": "399-406",
+        "year": "2012",
+        "author": [
+            "José Gabriel F. Coutinho",
+            "Sujit Bhattacharya",
+            "Wayne Luk",
+            "George A. Constantinides",
+            "João M. P. Cardoso",
+            "Tiago Carvalho",
+            "Pedro C. Diniz",
+            "Zlatko Petrov"
+        ],
+        "id": "conf/cse/CoutinhoBLCCCDP12",
+        "type": "inproceedings",
+        "title": "Resource-Efficient Designs Using an Aspect-Oriented Approach.",
+        "booktitle": "CSE",
+        "crossref": "conf/cse/2012",
+        "url": "db/conf/cse/cse2012.html#CoutinhoBLCCCDP12"
+    },
+    "conf/cec/MartinsNDMC14": {
+        "ee": "https://doi.org/10.1109/CEC.2014.6900634",
+        "pages": "2436-2443",
+        "year": "2014",
+        "author": [
+            "Luiz G. A. Martins",
+            "Ricardo Nobre",
+            "Alexandre C. B. Delbem",
+            "Eduardo Marques",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/cec/MartinsNDMC14",
+        "type": "inproceedings",
+        "title": "A clustering-based approach for exploring sequences of compiler optimizations.",
+        "booktitle": "IEEE Congress on Evolutionary Computation",
+        "crossref": "conf/cec/2014",
+        "url": "db/conf/cec/cec2014.html#MartinsNDMC14"
+    },
+    "conf/sbcci/BispoCM12": {
+        "ee": "https://doi.org/10.1109/SBCCI.2012.6344443",
+        "pages": "1-6",
+        "year": "2012",
+        "author": [
+            "João Bispo",
+            "João M. P. Cardoso",
+            "José Monteiro"
+        ],
+        "id": "conf/sbcci/BispoCM12",
+        "type": "inproceedings",
+        "title": "Hardware pipelining of runtime-detected loops.",
+        "booktitle": "SBCCI",
+        "crossref": "conf/sbcci/2012",
+        "url": "db/conf/sbcci/sbcci2012.html#BispoCM12"
+    },
+    "journals/trets/CardosoS17": {
+        "volume": "10",
+        "ee": "https://doi.org/10.1145/3041224",
+        "number": "2",
+        "pages": "10:1-10:2",
+        "journal": "TRETS",
+        "year": "2017",
+        "author": [
+            "João M. P. Cardoso",
+            "Cristina Silvano"
+        ],
+        "id": "journals/trets/CardosoS17",
+        "type": "article",
+        "title": "Introduction to the Special Section on FPL 2015.",
+        "url": "db/journals/trets/trets10.html#CardosoS17"
+    },
+    "conf/hipeac/NobreRBCCCA18": {
+        "ee": "https://doi.org/10.1145/3183767.3183776",
+        "pages": "26-31",
+        "year": "2018",
+        "author": [
+            "Ricardo Nobre",
+            "Luís Reis",
+            "João Bispo",
+            "Tiago Carvalho",
+            "João M. P. Cardoso",
+            "Stefano Cherubin",
+            "Giovanni Agosta"
+        ],
+        "id": "conf/hipeac/NobreRBCCCA18",
+        "type": "inproceedings",
+        "title": "Aspect-Driven Mixed-Precision Tuning Targeting GPUs.",
+        "booktitle": "PARMA-DITAM@HiPEAC",
+        "crossref": "conf/hipeac/2018parma",
+        "url": "db/conf/hipeac/parma2018.html#NobreRBCCCA18"
+    },
+    "conf/cf/SilvanoPAAGCVBB18": {
+        "ee": "https://doi.org/10.1145/3203217.3205338",
+        "pages": "270-275",
+        "year": "2018",
+        "author": [
+            "Cristina Silvano",
+            "Gianluca Palermo",
+            "Giovanni Agosta",
+            "Amir H. Ashouri",
+            "Davide Gadioli",
+            "Stefano Cherubin",
+            "Emanuele Vitali",
+            "Luca Benini",
+            "Andrea Bartolini",
+            "Daniele Cesarini",
+            "João M. P. Cardoso",
+            "João Bispo",
+            "Pedro Pinto",
+            "Ricardo Nobre",
+            "Erven Rohou",
+            "Loïc Besnard",
+            "Imane Lasri",
+            "Nico Sanna",
+            "Carlo Cavazzoni",
+            "Radim Cmar",
+            "Jan Martinovic",
+            "Katerina Slaninová",
+            "Martin Golasowski",
+            "Andrea R. Beccari",
+            "Candida Manelfi"
+        ],
+        "id": "conf/cf/SilvanoPAAGCVBB18",
+        "type": "inproceedings",
+        "title": "Autotuning and adaptivity in energy efficient HPC systems: the ANTAREX toolbox.",
+        "booktitle": "CF",
+        "crossref": "conf/cf/2018",
+        "url": "db/conf/cf/cf2018.html#SilvanoPAAGCVBB18"
+    },
+    "conf/parco/PaulinoRC17": {
+        "ee": "https://doi.org/10.3233/978-1-61499-843-3-652",
+        "pages": "652-663",
+        "year": "2017",
+        "author": [
+            "Nuno Paulino 0001",
+            "Luís Reis",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/parco/PaulinoRC17",
+        "type": "inproceedings",
+        "title": "On Coding Techniques for Targeting FPGAs via OpenCL.",
+        "booktitle": "PARCO",
+        "crossref": "conf/parco/2017",
+        "url": "db/conf/parco/parco2017.html#PaulinoRC17"
+    },
+    "conf/ifip10-3/MarcelinoNC08": {
+        "ee": "https://doi.org/10.1007/978-0-387-09661-2_2",
+        "pages": "11-22",
+        "year": "2008",
+        "author": [
+            "Rui Marcelino",
+            "Horácio C. Neto",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/ifip10-3/MarcelinoNC08",
+        "type": "inproceedings",
+        "title": "Sorting Units for FPGA-Based Embedded Systems.",
+        "booktitle": "DIPES",
+        "crossref": "conf/ifip10-3/2008dipes",
+        "url": "db/conf/ifip10-3/dipes2008.html#MarcelinoNC08"
+    },
+    "journals/jucs/RodriguesC07": {
+        "volume": "13",
+        "ee": "https://doi.org/10.3217/jucs-013-03-0419",
+        "number": "3",
+        "pages": "419-439",
+        "journal": "J. UCS",
+        "year": "2007",
+        "author": [
+            "Rui Rodrigues 0001",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/jucs/RodriguesC07",
+        "type": "article",
+        "title": "On Pipelining Sequences of Data-Dependent Loops.",
+        "url": "db/journals/jucs/jucs13.html#RodriguesC07"
+    },
+    "journals/csur/CardosoDW10": {
+        "volume": "42",
+        "ee": "https://doi.org/10.1145/1749603.1749604",
+        "number": "4",
+        "journal": "ACM Comput. Surv.",
+        "pages": "13:1-13:65",
+        "year": "2010",
+        "author": [
+            "João M. P. Cardoso",
+            "Pedro C. Diniz",
+            "Markus Weinhardt"
+        ],
+        "id": "journals/csur/CardosoDW10",
+        "type": "article",
+        "title": "Compiling for reconfigurable computing: A survey.",
+        "url": "db/journals/csur/csur42.html#CardosoDW10"
+    },
+    "conf/date/PaulinoFBC15": {
+        "ee": [
+            "http://dl.acm.org/citation.cfm?id\u003d2757061",
+            "http://ieeexplore.ieee.org/document/7092547/"
+        ],
+        "pages": "1066-1071",
+        "year": "2015",
+        "author": [
+            "Nuno Miguel Cardanha Paulino",
+            "João Canas Ferreira",
+            "João Bispo",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/date/PaulinoFBC15",
+        "type": "inproceedings",
+        "title": "Transparent acceleration of program execution using reconfigurable hardware.",
+        "booktitle": "DATE",
+        "crossref": "conf/date/2015",
+        "url": "db/conf/date/date2015.html#PaulinoFBC15"
+    },
+    "journals/jsa/FerreiraCDVT11": {
+        "volume": "57",
+        "ee": "https://doi.org/10.1016/j.sysarc.2011.03.006",
+        "number": "8",
+        "pages": "761-777",
+        "journal": "Journal of Systems Architecture - Embedded Systems Design",
+        "year": "2011",
+        "author": [
+            "Ricardo S. Ferreira",
+            "João M. P. Cardoso",
+            "Alex Damiany",
+            "Julio C. Goldner Vendramini",
+            "Tiago Teixeira"
+        ],
+        "id": "journals/jsa/FerreiraCDVT11",
+        "type": "article",
+        "title": "Fast placement and routing by extending coarse-grained reconfigurable arrays with Omega Networks.",
+        "url": "db/journals/jsa/jsa57.html#FerreiraCDVT11"
+    },
+    "conf/smc/LimaMCM06": {
+        "ee": "https://doi.org/10.1109/ICSMC.2006.385252",
+        "pages": "2577-2583",
+        "year": "2006",
+        "author": [
+            "João Miguel Gago Pontes de Brito Lima",
+            "Ricardo Menotti",
+            "João M. P. Cardoso",
+            "Eduardo Marques"
+        ],
+        "id": "conf/smc/LimaMCM06",
+        "type": "inproceedings",
+        "title": "A Methodology to Design FPGA-based PID Controllers.",
+        "booktitle": "SMC",
+        "crossref": "conf/smc/2006",
+        "url": "db/conf/smc/smc2006.html#LimaMCM06"
+    },
+    "conf/hipeac/ReisNC18": {
+        "ee": "https://doi.org/10.1145/3183767.3183777",
+        "pages": "32-38",
+        "year": "2018",
+        "author": [
+            "Luís Reis",
+            "Ricardo Nobre",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/hipeac/ReisNC18",
+        "type": "inproceedings",
+        "title": "Impact of Vectorization Over 16-bit Data-Types on GPUs.",
+        "booktitle": "PARMA-DITAM@HiPEAC",
+        "crossref": "conf/hipeac/2018parma",
+        "url": "db/conf/hipeac/parma2018.html#ReisNC18"
+    },
+    "conf/mobilware/SantosTC09": {
+        "ee": [
+            "https://doi.org/10.1007/978-3-642-01802-2_20",
+            "http://eudl.eu/doi/10.1007/978-3-642-01802-2_20"
+        ],
+        "pages": "266-279",
+        "year": "2009",
+        "author": [
+            "André C. Santos",
+            "Luís Tarrataca",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/mobilware/SantosTC09",
+        "type": "inproceedings",
+        "title": "An Analysis of Navigation Algorithms for Smartphones Using J2ME.",
+        "booktitle": "MOBILWARE",
+        "crossref": "conf/mobilware/2009",
+        "url": "db/conf/mobilware/mobilware2009.html#SantosTC09"
+    },
+    "conf/cisim/GolasowskiBMSC17": {
+        "ee": "https://doi.org/10.1007/978-3-319-59105-6_26",
+        "pages": "303-314",
+        "year": "2017",
+        "author": [
+            "Martin Golasowski",
+            "João Bispo",
+            "Jan Martinovic",
+            "Katerina Slaninová",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/cisim/GolasowskiBMSC17",
+        "type": "inproceedings",
+        "title": "Expressing and Applying C++ Code Transformations for the HDF5 API Through a DSL.",
+        "booktitle": "CISIM",
+        "crossref": "conf/cisim/2017",
+        "url": "db/conf/cisim/cisim2017.html#GolasowskiBMSC17"
+    },
+    "conf/fpt/BispoSCV06": {
+        "ee": "https://doi.org/10.1109/FPT.2006.270302",
+        "pages": "119-126",
+        "year": "2006",
+        "author": [
+            "João Bispo",
+            "Ioannis Sourdis",
+            "João M. P. Cardoso",
+            "Stamatis Vassiliadis"
+        ],
+        "id": "conf/fpt/BispoSCV06",
+        "type": "inproceedings",
+        "title": "Regular expression matching for reconfigurable packet inspection.",
+        "booktitle": "FPT",
+        "crossref": "conf/fpt/2006",
+        "url": "db/conf/fpt/fpt2006.html#BispoSCV06"
+    },
+    "conf/fpl/MenottiMC07": {
+        "ee": "https://doi.org/10.1109/FPL.2007.4380699",
+        "pages": "501-502",
+        "year": "2007",
+        "author": [
+            "Ricardo Menotti",
+            "Eduardo Marques",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/fpl/MenottiMC07",
+        "type": "inproceedings",
+        "title": "Aggressive Loop Pipelining for Reconfigurable Architectures.",
+        "booktitle": "FPL",
+        "crossref": "conf/fpl/2007",
+        "url": "db/conf/fpl/fpl2007.html#MenottiMC07"
+    },
+    "conf/ic3k/PereiraTBW13": {
+        "ee": "https://doi.org/10.5220/0004548103080317",
+        "pages": "308-317",
+        "year": "2013",
+        "author": [
+            "Luís Pereira",
+            "Alexandra Tenera",
+            "João Bispo",
+            "João Wemans"
+        ],
+        "id": "conf/ic3k/PereiraTBW13",
+        "type": "inproceedings",
+        "title": "A Risk Diagnosing Methodology Web-based Tool for SME\u0027s and Start-up Enterprises.",
+        "booktitle": "KDIR/KMIS",
+        "crossref": "conf/ic3k/2013kdir",
+        "url": "db/conf/ic3k/kdir2013.html#PereiraTBW13"
+    },
+    "conf/sbac-pad/MenottiCFM09": {
+        "ee": [
+            "https://doi.org/10.1109/SBAC-PAD.2009.23",
+            "http://doi.ieeecomputersociety.org/10.1109/SBAC-PAD.2009.23"
+        ],
+        "pages": "3-10",
+        "year": "2009",
+        "author": [
+            "Ricardo Menotti",
+            "João M. P. Cardoso",
+            "Marcio Merino Fernandes",
+            "Eduardo Marques"
+        ],
+        "id": "conf/sbac-pad/MenottiCFM09",
+        "type": "inproceedings",
+        "title": "LALP: A Novel Language to Program Custom FPGA-Based Architectures.",
+        "booktitle": "SBAC-PAD",
+        "crossref": "conf/sbac-pad/2009",
+        "url": "db/conf/sbac-pad/sbac-pad2009.html#MenottiCFM09"
+    },
+    "conf/ipps/MorraCB07": {
+        "ee": [
+            "https://doi.org/10.1109/IPDPS.2007.370369",
+            "http://doi.ieeecomputersociety.org/10.1109/IPDPS.2007.370369"
+        ],
+        "pages": "1-8",
+        "year": "2007",
+        "author": [
+            "Carlos Morra",
+            "João M. P. Cardoso",
+            "Jürgen Becker"
+        ],
+        "id": "conf/ipps/MorraCB07",
+        "type": "inproceedings",
+        "title": "Using Rewriting Logic to Match Patterns of Instructions from a Compiler Intermediate Form to Coarse-Grained Processing Elements.",
+        "crossref": "conf/ipps/2007",
+        "booktitle": "IPDPS",
+        "url": "db/conf/ipps/ipdps2007.html#MorraCB07"
+    },
+    "conf/arc/FerreiraDVTC09": {
+        "ee": "https://doi.org/10.1007/978-3-642-00641-8_16",
+        "pages": "145-156",
+        "year": "2009",
+        "author": [
+            "Ricardo S. Ferreira",
+            "Alex Damiany",
+            "Julio C. Goldner Vendramini",
+            "Tiago Teixeira",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/arc/FerreiraDVTC09",
+        "type": "inproceedings",
+        "title": "On Simplifying Placement and Routing by Extending Coarse-Grained Reconfigurable Arrays with Omega Networks.",
+        "booktitle": "ARC",
+        "crossref": "conf/arc/2009",
+        "url": "db/conf/arc/arc2009.html#FerreiraDVTC09"
+    },
+    "conf/arc/2006": {
+        "volume": "3985",
+        "ee": "https://doi.org/10.1007/11802839",
+        "editor": [
+            "Koen Bertels",
+            "João M. P. Cardoso",
+            "Stamatis Vassiliadis"
+        ],
+        "year": "2006",
+        "series": "Lecture Notes in Computer Science",
+        "publisher": "Springer",
+        "id": "conf/arc/2006",
+        "type": "proceedings",
+        "title": "Reconfigurable Computing: Architectures and Applications, Second International Workshop, ARC 2006, Delft, The Netherlands, March 1-3, 2006, Revised Selected Papers",
+        "booktitle": "ARC",
+        "url": "db/conf/arc/arc2006.html"
+    },
+    "conf/hipeac/NobrePCCD14": {
+        "ee": "https://doi.org/10.1145/2556863.2556870",
+        "pages": "7-12",
+        "year": "2014",
+        "author": [
+            "Ricardo Nobre",
+            "Pedro Pinto",
+            "Tiago Carvalho",
+            "João M. P. Cardoso",
+            "Pedro C. Diniz"
+        ],
+        "id": "conf/hipeac/NobrePCCD14",
+        "type": "inproceedings",
+        "title": "On Expressing Strategies for Directive-Driven Multicore Programing Models.",
+        "booktitle": "PARMA-DITAM@HiPEAC",
+        "crossref": "conf/hipeac/2014parma",
+        "url": "db/conf/hipeac/parma2014.html#NobrePCCD14"
+    },
+    "conf/arc/2007": {
+        "volume": "4419",
+        "ee": [
+            "https://doi.org/10.1007/978-3-540-71431-6",
+            "https://www.wikidata.org/entity/Q54483971"
+        ],
+        "editor": [
+            "Pedro C. Diniz",
+            "Eduardo Marques",
+            "Koen Bertels",
+            "Marcio Merino Fernandes",
+            "João M. P. Cardoso"
+        ],
+        "year": "2007",
+        "series": "Lecture Notes in Computer Science",
+        "isbn": "978-3-540-71430-9",
+        "publisher": "Springer",
+        "id": "conf/arc/2007",
+        "type": "proceedings",
+        "title": "Reconfigurable Computing: Architectures, Tools and Applications, Third International Workshop, ARC 2007, Mangaratiba, Brazil, March 27-29, 2007.",
+        "booktitle": "ARC",
+        "url": "db/conf/arc/arc2007.html"
+    },
+    "conf/lctrts/MartinsNDMC14": {
+        "ee": "https://doi.org/10.1145/2597809.2597821",
+        "pages": "63-72",
+        "year": "2014",
+        "author": [
+            "Luiz G. A. Martins",
+            "Ricardo Nobre",
+            "Alexandre C. B. Delbem",
+            "Eduardo Marques",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/lctrts/MartinsNDMC14",
+        "type": "inproceedings",
+        "title": "Exploration of compiler optimization sequences using clustering-based selection.",
+        "booktitle": "LCTES",
+        "crossref": "conf/lctrts/2014",
+        "url": "db/conf/lctrts/lctes2014.html#MartinsNDMC14"
+    },
+    "conf/hipeac/2016parma": {
+        "ee": "https://doi.org/10.1145/2872421",
+        "editor": [
+            "Cristina Silvano",
+            "João M. P. Cardoso",
+            "Giovanni Agosta",
+            "Michael Hübner"
+        ],
+        "year": "2016",
+        "isbn": "978-1-4503-4052-6",
+        "publisher": "ACM",
+        "id": "conf/hipeac/2016parma",
+        "type": "proceedings",
+        "title": "Proceedings of the 7th Workshop on Parallel Programming and Run-Time Management Techniques for Many-core Architectures and the 5th Workshop on Design Tools and Architectures For Multicore Embedded Computing Platforms, PARMA-DITAM 2016, Prague, Czech Republic, January 18, 2016",
+        "booktitle": "PARMA-DITAM@HiPEAC",
+        "url": "db/conf/hipeac/parma2016.html"
+    },
+    "journals/jocs/VeigaBC17": {
+        "volume": "23",
+        "ee": "https://doi.org/10.1016/j.jocs.2017.09.012",
+        "pages": "118-119",
+        "journal": "J. Comput. Science",
+        "year": "2017",
+        "author": [
+            "Luís Veiga",
+            "Didier El Baz",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/jocs/VeigaBC17",
+        "type": "article",
+        "title": "Recent advances in computational science and engineering research.",
+        "url": "db/journals/jocs/jocs23.html#VeigaBC17"
+    },
+    "conf/sac/CarvalhoC18": {
+        "ee": "https://doi.org/10.1145/3167132.3167263",
+        "pages": "1211-1220",
+        "year": "2018",
+        "author": [
+            "Tiago Carvalho",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/sac/CarvalhoC18",
+        "type": "inproceedings",
+        "title": "An approach based on a DSL + API for programming runtime adaptivity and autotuning concerns.",
+        "booktitle": "SAC",
+        "crossref": "conf/sac/2018",
+        "url": "db/conf/sac/sac2018.html#CarvalhoC18"
+    },
+    "journals/corr/abs-1810-10496": {
+        "volume": "abs/1810.10496",
+        "ee": "http://arxiv.org/abs/1810.10496",
+        "journal": "CoRR",
+        "year": "2018",
+        "author": [
+            "Ricardo Nobre",
+            "Luís Reis",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/corr/abs-1810-10496",
+        "type": "article",
+        "title": "Improving OpenCL Performance by Specializing Compiler Phase Selection and Ordering.",
+        "url": "db/journals/corr/corr1810.html#abs-1810-10496"
+    },
+    "conf/europar/Nobre0C18": {
+        "ee": "https://doi.org/10.1007/978-3-030-10549-5_39",
+        "pages": "494-505",
+        "year": "2018",
+        "author": [
+            "Ricardo Nobre",
+            "Luís Reis",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/europar/Nobre0C18",
+        "type": "inproceedings",
+        "title": "Fast Heuristic-Based GPU Compiler Sequence Specialization.",
+        "booktitle": "Euro-Par Workshops",
+        "crossref": "conf/europar/2018w",
+        "url": "db/conf/europar/europar2018w.html#Nobre0C18"
+    },
+    "conf/fccm/RodriguesCD07": {
+        "ee": [
+            "https://doi.org/10.1109/FCCM.2007.16",
+            "http://doi.ieeecomputersociety.org/10.1109/FCCM.2007.16"
+        ],
+        "pages": "219-228",
+        "year": "2007",
+        "author": [
+            "Rui Rodrigues 0001",
+            "João M. P. Cardoso",
+            "Pedro C. Diniz"
+        ],
+        "id": "conf/fccm/RodriguesCD07",
+        "type": "inproceedings",
+        "title": "A Data-Driven Approach for Pipelining Sequences of Data-Dependent Loops.",
+        "booktitle": "FCCM",
+        "crossref": "conf/fccm/2007",
+        "url": "db/conf/fccm/fccm2007.html#RodriguesCD07"
+    },
+    "conf/indin/HolandaCM16": {
+        "ee": "https://doi.org/10.1109/INDIN.2016.7819144",
+        "pages": "117-122",
+        "year": "2016",
+        "author": [
+            "José Arnaldo Mascagni de Holanda",
+            "João Manuel Paiva Cardoso",
+            "Eduardo Marques"
+        ],
+        "id": "conf/indin/HolandaCM16",
+        "type": "inproceedings",
+        "title": "Towards a multi-softcore FPGA approach for the HOG algorithm.",
+        "booktitle": "INDIN",
+        "crossref": "conf/indin/2016",
+        "url": "db/conf/indin/indin2016.html#HolandaCM16"
+    },
+    "conf/asap/Cardoso05": {
+        "ee": [
+            "https://doi.org/10.1109/ASAP.2005.47",
+            "http://doi.ieeecomputersociety.org/10.1109/ASAP.2005.47"
+        ],
+        "pages": "225-230",
+        "year": "2005",
+        "author": "João M. P. Cardoso",
+        "id": "conf/asap/Cardoso05",
+        "type": "inproceedings",
+        "title": "On Estimations for Compiling Software to FPGA-based Systems.",
+        "crossref": "conf/asap/2005",
+        "booktitle": "ASAP",
+        "url": "db/conf/asap/asap2005.html#Cardoso05"
+    },
+    "conf/iticse/Cardoso05": {
+        "ee": "https://doi.org/10.1145/1067445.1067502",
+        "pages": "203-207",
+        "year": "2005",
+        "author": "João M. P. Cardoso",
+        "id": "conf/iticse/Cardoso05",
+        "type": "inproceedings",
+        "title": "New challenges in computer science education.",
+        "crossref": "conf/iticse/2005",
+        "booktitle": "ITiCSE",
+        "url": "db/conf/iticse/iticse2005.html#Cardoso05"
+    },
+    "conf/sac/AzarianCWB13": {
+        "ee": "https://doi.org/10.1145/2480362.2480647",
+        "pages": "1533-1540",
+        "year": "2013",
+        "author": [
+            "Ali Azarian",
+            "João M. P. Cardoso",
+            "Stephan Werner 0002",
+            "Jürgen Becker"
+        ],
+        "id": "conf/sac/AzarianCWB13",
+        "type": "inproceedings",
+        "title": "An FPGA-based multi-core approach for pipelining computing stages.",
+        "booktitle": "SAC",
+        "crossref": "conf/sac/2013",
+        "url": "db/conf/sac/sac2013.html#AzarianCWB13"
+    },
+    "journals/tjs/SantosCDFP14": {
+        "volume": "70",
+        "ee": "https://doi.org/10.1007/s11227-014-1192-z",
+        "number": "3",
+        "pages": "1218-1248",
+        "journal": "The Journal of Supercomputing",
+        "year": "2014",
+        "author": [
+            "André C. Santos",
+            "João M. P. Cardoso",
+            "Pedro C. Diniz",
+            "Diogo R. Ferreira",
+            "Zlatko Petrov"
+        ],
+        "id": "journals/tjs/SantosCDFP14",
+        "type": "article",
+        "title": "A DSL for specifying run-time adaptations for embedded systems: an application to vehicle stereo navigation.",
+        "url": "db/journals/tjs/tjs70.html#SantosCDFP14"
+    },
+    "journals/corr/abs-1807-00638": {
+        "volume": "abs/1807.00638",
+        "ee": "http://arxiv.org/abs/1807.00638",
+        "journal": "CoRR",
+        "year": "2018",
+        "author": [
+            "Ricardo Nobre",
+            "Luís Reis",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/corr/abs-1807-00638",
+        "type": "article",
+        "title": "Compiler Phase Ordering as an Orthogonal Approach for Reducing Energy Consumption.",
+        "url": "db/journals/corr/corr1807.html#abs-1807-00638"
+    },
+    "journals/trets/CardosoDM15": {
+        "volume": "8",
+        "ee": "https://doi.org/10.1145/2737805",
+        "number": "2",
+        "pages": "8:1-8:2",
+        "journal": "TRETS",
+        "year": "2015",
+        "author": [
+            "João M. P. Cardoso",
+            "Pedro C. Diniz",
+            "Katherine (Compton) Morrow"
+        ],
+        "id": "journals/trets/CardosoDM15",
+        "type": "article",
+        "title": "Guest Editorial FPL 2013.",
+        "url": "db/journals/trets/trets8.html#CardosoDM15"
+    },
+    "conf/reconfig/BispoC11": {
+        "ee": [
+            "https://doi.org/10.1109/ReConFig.2011.86",
+            "http://doi.ieeecomputersociety.org/10.1109/ReConFig.2011.86"
+        ],
+        "pages": "505-508",
+        "year": "2011",
+        "author": [
+            "João Bispo",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/reconfig/BispoC11",
+        "type": "inproceedings",
+        "title": "Techniques for Dynamically Mapping Computations to Coprocessors.",
+        "booktitle": "ReConFig",
+        "crossref": "conf/reconfig/2011",
+        "url": "db/conf/reconfig/reconfig2011.html#BispoC11"
+    },
+    "conf/arc/CoutinhoCCNBDFN13": {
+        "ee": "https://doi.org/10.1007/978-3-642-36812-7_29",
+        "pages": "226-228",
+        "year": "2013",
+        "author": [
+            "José Gabriel F. Coutinho",
+            "João M. P. Cardoso",
+            "Tiago Carvalho",
+            "Ricardo Nobre",
+            "Sujit Bhattacharya",
+            "Pedro C. Diniz",
+            "Liam Fitzpatrick",
+            "Razvan Nane"
+        ],
+        "id": "conf/arc/CoutinhoCCNBDFN13",
+        "type": "inproceedings",
+        "title": "Deriving Resource Efficient Designs Using the REFLECT Aspect-Oriented Approach - (Extended Abstract).",
+        "booktitle": "ARC",
+        "crossref": "conf/arc/2013",
+        "url": "db/conf/arc/arc2013.html#CoutinhoCCNBDFN13"
+    },
+    "conf/fdl/OliveiraMCM15": {
+        "ee": "https://doi.org/10.1109/FDL.2015.7306085",
+        "pages": "74-81",
+        "year": "2015",
+        "author": [
+            "Cristiano Bacelar de Oliveira",
+            "Ricardo Menotti",
+            "João M. P. Cardoso",
+            "Eduardo Marques"
+        ],
+        "id": "conf/fdl/OliveiraMCM15",
+        "type": "inproceedings",
+        "title": "A special-purpose language for implementing pipelined FPGA-based accelerators.",
+        "booktitle": "FDL",
+        "crossref": "conf/fdl/2015",
+        "url": "db/conf/fdl/fdl2015.html#OliveiraMCM15"
+    },
+    "conf/otm/SantosCFD09": {
+        "ee": "https://doi.org/10.1007/978-3-642-05290-3_59",
+        "pages": "464-473",
+        "year": "2009",
+        "author": [
+            "André C. Santos",
+            "João M. P. Cardoso",
+            "Diogo R. Ferreira",
+            "Pedro C. Diniz"
+        ],
+        "id": "conf/otm/SantosCFD09",
+        "type": "inproceedings",
+        "title": "Mobile Context Provider for Social Networking.",
+        "booktitle": "OTM Workshops",
+        "crossref": "conf/otm/2009-w",
+        "url": "db/conf/otm/otm2009-w.html#SantosCFD09"
+    },
+    "conf/sac/BispoRC15": {
+        "ee": "https://doi.org/10.1145/2695664.2695911",
+        "pages": "1315-1320",
+        "year": "2015",
+        "author": [
+            "João Bispo",
+            "Luís Reis",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/sac/BispoRC15",
+        "type": "inproceedings",
+        "title": "C and OpenCL generation from MATLAB.",
+        "booktitle": "SAC",
+        "crossref": "conf/sac/2015",
+        "url": "db/conf/sac/sac2015.html#BispoRC15"
+    },
+    "conf/cf/Cardoso05": {
+        "ee": "https://doi.org/10.1145/1062261.1062283",
+        "pages": "106-115",
+        "year": "2005",
+        "author": "João M. P. Cardoso",
+        "id": "conf/cf/Cardoso05",
+        "type": "inproceedings",
+        "title": "Dynamic loop pipelining in data-driven architectures.",
+        "crossref": "conf/cf/2005",
+        "booktitle": "Conf. Computing Frontiers",
+        "url": "db/conf/cf/cf2005.html#Cardoso05"
+    },
+    "journals/vlsisp/SourdisBCV08": {
+        "volume": "51",
+        "ee": "https://doi.org/10.1007/s11265-007-0131-0",
+        "number": "1",
+        "pages": "99-121",
+        "journal": "Signal Processing Systems",
+        "year": "2008",
+        "author": [
+            "Ioannis Sourdis",
+            "João Bispo",
+            "João M. P. Cardoso",
+            "Stamatis Vassiliadis"
+        ],
+        "id": "journals/vlsisp/SourdisBCV08",
+        "type": "article",
+        "title": "Regular Expression Matching in Reconfigurable Hardware.",
+        "url": "db/journals/vlsisp/vlsisp51.html#SourdisBCV08"
+    },
+    "conf/date/RodriguesC05": {
+        "ee": [
+            "https://doi.org/10.1109/DATE.2005.60",
+            "http://doi.ieeecomputersociety.org/10.1109/DATE.2005.60",
+            "http://dl.acm.org/citation.cfm?id\u003d1049068"
+        ],
+        "pages": "30-31",
+        "year": "2005",
+        "author": [
+            "Rui Rodrigues 0001",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/date/RodriguesC05",
+        "type": "inproceedings",
+        "title": "An Infrastructure to Functionally Test Designs Generated by Compilers Targeting FPGAs.",
+        "crossref": "conf/date/2005",
+        "booktitle": "DATE",
+        "url": "db/conf/date/date2005.html#RodriguesC05"
+    },
+    "conf/lctrts/NobreMC16": {
+        "ee": "https://doi.org/10.1145/2907950.2907959",
+        "pages": "21-30",
+        "year": "2016",
+        "author": [
+            "Ricardo Nobre",
+            "Luiz G. A. Martins",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/lctrts/NobreMC16",
+        "type": "inproceedings",
+        "title": "A graph-based iterative compiler pass selection and phase ordering approach.",
+        "booktitle": "LCTES",
+        "crossref": "conf/lctrts/2016",
+        "url": "db/conf/lctrts/lctes2016.html#NobreMC16"
+    },
+    "conf/fpl/CardosoN01": {
+        "ee": "https://doi.org/10.1007/3-540-44687-7_54",
+        "pages": "523-533",
+        "year": "2001",
+        "author": [
+            "João M. P. Cardoso",
+            "Horácio C. Neto"
+        ],
+        "id": "conf/fpl/CardosoN01",
+        "type": "inproceedings",
+        "title": "Compilation Increasing the Scheduling Scope for Multi-memory-FPGA-Based Custom Computing Machines.",
+        "crossref": "conf/fpl/2001",
+        "booktitle": "FPL",
+        "url": "db/conf/fpl/fpl2001.html#CardosoN01"
+    },
+    "journals/corr/abs-1901-06175": {
+        "volume": "abs/1901.06175",
+        "ee": "http://arxiv.org/abs/1901.06175",
+        "journal": "CoRR",
+        "year": "2019",
+        "author": [
+            "Cristina Silvano",
+            "Giovanni Agosta",
+            "Andrea Bartolini",
+            "Andrea R. Beccari",
+            "Luca Benini",
+            "Loïc Besnard",
+            "João Bispo",
+            "Radim Cmar",
+            "João M. P. Cardoso",
+            "Carlo Cavazzoni",
+            "Daniele Cesarini",
+            "Stefano Cherubin",
+            "Federico Ficarelli",
+            "Davide Gadioli",
+            "Martin Golasowski",
+            "Antonio Libri",
+            "Jan Martinovic",
+            "Gianluca Palermo",
+            "Pedro Pinto",
+            "Erven Rohou",
+            "Katerina Slaninová",
+            "Emanuele Vitali"
+        ],
+        "id": "journals/corr/abs-1901-06175",
+        "type": "article",
+        "title": "The ANTAREX Domain Specific Language for High Performance Computing.",
+        "url": "db/journals/corr/corr1901.html#abs-1901-06175"
+    },
+    "journals/corr/abs-1901-06210": {
+        "volume": "abs/1901.06210",
+        "ee": "http://arxiv.org/abs/1901.06210",
+        "journal": "CoRR",
+        "year": "2019",
+        "author": [
+            "Emanuele Vitali",
+            "Davide Gadioli",
+            "Gianluca Palermo",
+            "Martin Golasowski",
+            "João Bispo",
+            "Pedro Pinto",
+            "Jan Martinovic",
+            "Katerina Slaninová",
+            "João M. P. Cardoso",
+            "Cristina Silvano"
+        ],
+        "id": "journals/corr/abs-1901-06210",
+        "type": "article",
+        "title": "An Efficient Monte Carlo-based Probabilistic Time-Dependent Routing Calculation Targeting a Server-Side Car Navigation System.",
+        "url": "db/journals/corr/corr1901.html#abs-1901-06210"
+    },
+    "conf/samos/Cardoso04": {
+        "ee": "https://doi.org/10.1007/978-3-540-27776-7_25",
+        "pages": "234-243",
+        "year": "2004",
+        "author": "João M. P. Cardoso",
+        "id": "conf/samos/Cardoso04",
+        "type": "inproceedings",
+        "title": "Self-loop Pipelining and Reconfigurable Dataflow Arrays.",
+        "crossref": "conf/samos/2004",
+        "booktitle": "SAMOS",
+        "url": "db/conf/samos/samos2004.html#Cardoso04"
+    },
+    "journals/mam/AzarianC16": {
+        "volume": "42",
+        "ee": "https://doi.org/10.1016/j.micpro.2016.02.008",
+        "pages": "165-179",
+        "journal": "Microprocessors and Microsystems - Embedded Hardware Design",
+        "year": "2016",
+        "author": [
+            "Ali Azarian",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/mam/AzarianC16",
+        "type": "article",
+        "title": "Pipelining data-dependent tasks in FPGA-based multicore architectures.",
+        "url": "db/journals/mam/mam42.html#AzarianC16"
+    },
+    "journals/trets/PaulinoFC15": {
+        "volume": "7",
+        "ee": "https://doi.org/10.1145/2629468",
+        "number": "4",
+        "pages": "29:1-29:20",
+        "journal": "TRETS",
+        "year": "2015",
+        "author": [
+            "Nuno Miguel Cardanha Paulino",
+            "João Canas Ferreira",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/trets/PaulinoFC15",
+        "type": "article",
+        "title": "A Reconfigurable Architecture for Binary Acceleration of Loops with Memory Accesses.",
+        "url": "db/journals/trets/trets7.html#PaulinoFC15"
+    },
+    "journals/puc/FigoDFC10": {
+        "volume": "14",
+        "ee": "https://doi.org/10.1007/s00779-010-0293-9",
+        "number": "7",
+        "pages": "645-662",
+        "journal": "Personal and Ubiquitous Computing",
+        "year": "2010",
+        "author": [
+            "Davide Figo",
+            "Pedro C. Diniz",
+            "Diogo R. Ferreira",
+            "João M. P. Cardoso"
+        ],
+        "id": "journals/puc/FigoDFC10",
+        "type": "article",
+        "title": "Preprocessing techniques for context recognition from accelerometer data.",
+        "url": "db/journals/puc/puc14.html#FigoDFC10"
+    },
+    "journals/jsa/HannigCF17": {
+        "volume": "77",
+        "ee": "https://doi.org/10.1016/j.sysarc.2017.04.003",
+        "pages": "1-2",
+        "journal": "Journal of Systems Architecture - Embedded Systems Design",
+        "year": "2017",
+        "author": [
+            "Frank Hannig",
+            "João M. P. Cardoso",
+            "Dietmar Fey"
+        ],
+        "id": "journals/jsa/HannigCF17",
+        "type": "article",
+        "title": "Introduction to the special issue on architecture of computing systems.",
+        "url": "db/journals/jsa/jsa77.html#HannigCF17"
+    },
+    "journals/tii/BispoPCF13": {
+        "volume": "9",
+        "ee": "https://doi.org/10.1109/TII.2012.2235844",
+        "number": "3",
+        "pages": "1625-1634",
+        "journal": "IEEE Trans. Industrial Informatics",
+        "year": "2013",
+        "author": [
+            "João Bispo",
+            "Nuno Miguel Cardanha Paulino",
+            "João M. P. Cardoso",
+            "João Canas Ferreira"
+        ],
+        "id": "journals/tii/BispoPCF13",
+        "type": "article",
+        "title": "Transparent Trace-Based Binary Acceleration for Reconfigurable HW/SW Systems.",
+        "url": "db/journals/tii/tii9.html#BispoPCF13"
+    },
+    "conf/fccm/Cardoso01": {
+        "ee": [
+            "http://doi.ieeecomputersociety.org/10.1109/FCCM.2001.31",
+            "http://ieeexplore.ieee.org/document/1420899/"
+        ],
+        "pages": "31-40",
+        "year": "2001",
+        "author": "João M. P. Cardoso",
+        "id": "conf/fccm/Cardoso01",
+        "type": "inproceedings",
+        "title": "Novel Algorithm Combining Temporal Partitioning and Sharing of Functional Units.",
+        "booktitle": "FCCM",
+        "crossref": "conf/fccm/2001",
+        "url": "db/conf/fccm/fccm2001.html#Cardoso01"
+    },
+    "conf/indin/BispoPNCCD13": {
+        "ee": "https://doi.org/10.1109/INDIN.2013.6622952",
+        "pages": "602-608",
+        "year": "2013",
+        "author": [
+            "João Bispo",
+            "Pedro Pinto",
+            "Ricardo Nobre",
+            "Tiago Carvalho",
+            "João M. P. Cardoso",
+            "Pedro C. Diniz"
+        ],
+        "id": "conf/indin/BispoPNCCD13",
+        "type": "inproceedings",
+        "title": "The MATISSE MATLAB compiler.",
+        "booktitle": "INDIN",
+        "crossref": "conf/indin/2013",
+        "url": "db/conf/indin/indin2013.html#BispoPNCCD13"
+    },
+    "journals/jsa/CardosoFMCN13": {
+        "volume": "59",
+        "ee": "https://doi.org/10.1016/j.sysarc.2013.04.003",
+        "number": "7",
+        "pages": "412-428",
+        "journal": "Journal of Systems Architecture - Embedded Systems Design",
+        "year": "2013",
+        "author": [
+            "João M. P. Cardoso",
+            "João M. Fernandes",
+            "Miguel P. Monteiro 0001",
+            "Tiago Carvalho",
+            "Ricardo Nobre"
+        ],
+        "id": "journals/jsa/CardosoFMCN13",
+        "type": "article",
+        "title": "Enriching MATLAB with aspect-oriented features for developing embedded systems.",
+        "url": "db/journals/jsa/jsa59.html#CardosoFMCN13"
+    },
+    "conf/nss/RosadoC10": {
+        "ee": [
+            "https://doi.org/10.1109/NSS.2010.85",
+            "http://doi.ieeecomputersociety.org/10.1109/NSS.2010.85"
+        ],
+        "pages": "398-403",
+        "year": "2010",
+        "author": [
+            "António Rosado",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/nss/RosadoC10",
+        "type": "inproceedings",
+        "title": "A Query Processing Strategy for Conceptual Queries Based on Object-Role Modeling.",
+        "booktitle": "NSS",
+        "crossref": "conf/nss/2010",
+        "url": "db/conf/nss/nss2010.html#RosadoC10"
+    },
+    "conf/cse/SilvanoABBBCCCM15": {
+        "ee": [
+            "https://doi.org/10.1109/CSE.2015.58",
+            "http://doi.ieeecomputersociety.org/10.1109/CSE.2015.58"
+        ],
+        "pages": "343-346",
+        "year": "2015",
+        "author": [
+            "Cristina Silvano",
+            "Giovanni Agosta",
+            "Andrea Bartolini",
+            "Andrea Beccari",
+            "Luca Benini",
+            "João M. P. Cardoso",
+            "Carlo Cavazzoni",
+            "Radim Cmar",
+            "Jan Martinovic",
+            "Gianluca Palermo",
+            "Martin Palkovic",
+            "Erven Rohou",
+            "Nico Sanna",
+            "Katerina Slaninová"
+        ],
+        "id": "conf/cse/SilvanoABBBCCCM15",
+        "type": "inproceedings",
+        "title": "ANTAREX - AutoTuning and Adaptivity appRoach for Energy Efficient eXascale HPC Systems.",
+        "booktitle": "CSE",
+        "crossref": "conf/cse/2015",
+        "url": "db/conf/cse/cse2015.html#SilvanoABBBCCCM15"
+    },
+    "conf/pldi/BispoRC15": {
+        "ee": "https://doi.org/10.1145/2774959.2774961",
+        "pages": "7-12",
+        "year": "2015",
+        "author": [
+            "João Bispo",
+            "Luís Reis",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/pldi/BispoRC15",
+        "type": "inproceedings",
+        "title": "Techniques for efficient MATLAB-to-C compilation.",
+        "booktitle": "ARRAY@PLDI",
+        "crossref": "conf/pldi/2015array",
+        "url": "db/conf/pldi/array2015.html#BispoRC15"
+    },
+    
+    "conf/pldi/BispoRC14": {
+        "ee": "https://doi.org/10.1145/2627373.2627389",
+        "pages": "95-100",
+        "year": "2014",
+        "author": [
+            "João Bispo",
+            "Luís Reis",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/pldi/BispoRC14",
+        "type": "inproceedings",
+        "title": "Multi-Target C Code Generation from MATLAB.",
+        "booktitle": "ARRAY@PLDI",
+        "crossref": "conf/pldi/2014array",
+        "url": "db/conf/pldi/array2014.html#BispoRC14"
+    },
+    "conf/date/CardosoW03": {
+        "ee": [
+            "http://doi.ieeecomputersociety.org/10.1109/DATE.2003.10189",
+            "http://dl.acm.org/citation.cfm?id\u003d1022788"
+        ],
+        "pages": "10576-10581",
+        "year": "2003",
+        "author": [
+            "João M. P. Cardoso",
+            "Markus Weinhardt"
+        ],
+        "id": "conf/date/CardosoW03",
+        "type": "inproceedings",
+        "title": "From C Programs to the Configure-Execute Model.",
+        "crossref": "conf/date/2003",
+        "booktitle": "DATE",
+        "url": "db/conf/date/date2003.html#CardosoW03"
+    },
+    "conf/sies/HolandaAWMC07": {
+        "ee": "https://doi.org/10.1109/SIES.2007.4297358",
+        "pages": "345-348",
+        "year": "2007",
+        "author": [
+            "José A. M. de Holanda",
+            "Jecel Assumpcao",
+            "Denis F. Wolf",
+            "Eduardo Marques",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/sies/HolandaAWMC07",
+        "type": "inproceedings",
+        "title": "On Adapting Power Estimation Models for Embedded Soft-Core Processors.",
+        "crossref": "conf/sies/2007",
+        "booktitle": "SIES",
+        "url": "db/conf/sies/sies2007.html#HolandaAWMC07"
+    },
+    "conf/mobilware/SantosTCFDC09": {
+        "ee": [
+            "https://doi.org/10.1007/978-3-642-01802-2_26",
+            "http://eudl.eu/doi/10.1007/978-3-642-01802-2_26"
+        ],
+        "pages": "352-365",
+        "year": "2009",
+        "author": [
+            "André C. Santos",
+            "Luís Tarrataca",
+            "João M. P. Cardoso",
+            "Diogo R. Ferreira",
+            "Pedro C. Diniz",
+            "Paulo Chainho"
+        ],
+        "id": "conf/mobilware/SantosTCFDC09",
+        "type": "inproceedings",
+        "title": "Context Inference for Mobile Applications in the UPCASE Project.",
+        "booktitle": "MOBILWARE",
+        "crossref": "conf/mobilware/2009",
+        "url": "db/conf/mobilware/mobilware2009.html#SantosTCFDC09"
+    },
+    "conf/reconfig/BispoPCF11": {
+        "ee": [
+            "https://doi.org/10.1109/ReConFig.2011.43",
+            "http://doi.ieeecomputersociety.org/10.1109/ReConFig.2011.43"
+        ],
+        "pages": "386-391",
+        "year": "2011",
+        "author": [
+            "João Bispo",
+            "Nuno Miguel Cardanha Paulino",
+            "João M. P. Cardoso",
+            "João Canas Ferreira"
+        ],
+        "id": "conf/reconfig/BispoPCF11",
+        "type": "inproceedings",
+        "title": "From Instruction Traces to Specialized Reconfigurable Arrays.",
+        "booktitle": "ReConFig",
+        "crossref": "conf/reconfig/2011",
+        "url": "db/conf/reconfig/reconfig2011.html#BispoPCF11"
+    },
+    "conf/iwocl/ReisBC17": {
+        "ee": "https://doi.org/10.1145/3078155.3078186",
+        "pages": "29:1-29:2",
+        "year": "2017",
+        "author": [
+            "Luís Reis",
+            "João Bispo",
+            "João M. P. Cardoso"
+        ],
+        "id": "conf/iwocl/ReisBC17",
+        "type": "inproceedings",
+        "title": "Compiler Techniques for Efficient MATLAB to OpenCL Code Generation.",
+        "booktitle": "IWOCL",
+        "crossref": "conf/iwocl/2017",
+        "url": "db/conf/iwocl/iwocl2017.html#ReisBC17"
+    },
+    "conf/recosoc/Cardoso12": {
+        "ee": "https://doi.org/10.1109/ReCoSoC.2012.6322875",
+        "pages": "1-8",
+        "year": "2012",
+        "author": "João M. P. Cardoso",
+        "id": "conf/recosoc/Cardoso12",
+        "type": "inproceedings",
+        "title": "Programming strategies for runtime adaptability.",
+        "booktitle": "ReCoSoC",
+        "crossref": "conf/recosoc/2012",
+        "url": "db/conf/recosoc/ReCoSoC2012.html#Cardoso12"
+    },
+    "journals/ijrc/BispoPCF13": {
+        "volume": "2013",
+        "ee": "https://doi.org/10.1155/2013/340316",
+        "journal": "Int. J. Reconfig. Comp.",
+        "pages": "340316:1-340316:20",
+        "year": "2013",
+        "author": [
+            "João Bispo",
+            "Nuno Miguel Cardanha Paulino",
+            "João M. P. Cardoso",
+            "João Canas Ferreira"
+        ],
+        "id": "journals/ijrc/BispoPCF13",
+        "type": "article",
+        "title": "Transparent Runtime Migration of Loop-Based Traces of Processor Instructions to Reconfigurable Processing Units.",
+        "url": "db/journals/ijrc/ijrc2013.html#BispoPCF13"
+    },
+    "conf/slate/SantosCDF13": {
+        "ee": "https://doi.org/10.4230/OASIcs.SLATE.2013.219",
+        "pages": "219-234",
+        "year": "2013",
+        "author": [
+            "André C. Santos",
+            "João M. P. Cardoso",
+            "Pedro C. Diniz",
+            "Diogo R. Ferreira"
+        ],
+        "id": "conf/slate/SantosCDF13",
+        "type": "inproceedings",
+        "title": "Specifying Adaptations through a DSL with an Application to Mobile Robot Navigation.",
+        "booktitle": "SLATE",
+        "crossref": "conf/slate/2013",
+        "url": "db/conf/slate/slate2013.html#SantosCDF13"
+    },
+    "journals/mam/CardosoCCNNDPLB13": {
+        "volume": "37",
+        "ee": "https://doi.org/10.1016/j.micpro.2013.06.001",
+        "number": "8-C",
+        "pages": "1073-1089",
+        "journal": "Microprocessors and Microsystems - Embedded Hardware Design",
+        "year": "2013",
+        "author": [
+            "João M. P. Cardoso",
+            "Tiago Carvalho",
+            "José Gabriel F. Coutinho",
+            "Ricardo Nobre",
+            "Razvan Nane",
+            "Pedro C. Diniz",
+            "Zlatko Petrov",
+            "Wayne Luk",
+            "Koen Bertels"
+        ],
+        "id": "journals/mam/CardosoCCNNDPLB13",
+        "type": "article",
+        "title": "Controlling a complete hardware synthesis toolchain with LARA aspects.",
+        "url": "db/journals/mam/mam37.html#CardosoCCNNDPLB13"
+    }
+}
