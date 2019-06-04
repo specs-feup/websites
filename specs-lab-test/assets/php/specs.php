@@ -347,18 +347,38 @@ function get_pubs() {
     // Add entries by year, for the last 5 years
     for ($i = 0; $i <= 20; $i++) {
         $year = 2019 - $i;
-        echo '<h2>' . $year . '</h2>';
 
+
+
+        echo '<div class="buttonclick">';
+
+        echo '<h2>' . $year . '⏬' . '</h2>';
+        echo '</div>';
+
+
+
+
+//    for ($i = 0; $i <= 20; $i++) {
+//        $year = 2019 - $i;
+//        $bibliography = '<div  class="row">
+//        <h1   class="members-section centered"> <b> $year</b></h1>';
 // Only print entries of the current year
+
+
+        echo '<div id="publications_year">';
+
         $yearEntries = array();
 
         foreach ($entries as $id => $entry) {
+
             if ($entry['year'] == $year) {
                 // Add entry
+
                 $yearEntries[$id] = $entry;
             }
         }
 
         echo build_bib_section($yearEntries, $members, "build_presentation_entry_pubs");
+        echo '</div>';
     }
 }
