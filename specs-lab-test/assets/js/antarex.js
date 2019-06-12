@@ -13,6 +13,7 @@ function isBreakpoint(alias) {
 //$(document).ready(function () {
 
 /* enable clicking to reveal links in mobile when loading */
+// Currently there are no dropdowns, so this should be disabled
 function adjustToScreenSize() {
 
     if (isBreakpoint('xs')) {
@@ -69,7 +70,8 @@ $('.dropdown').hover(
 // Listen to resize events, adjust properties as needed
 $(window).resize(function () {
 
-    adjustToScreenSize();
+    // Currently disabled since there are no dropdowns
+    //adjustToScreenSize();
 
     /*
      if (isBreakpoint('xs')) {
@@ -97,4 +99,5 @@ $(window).resize(function () {
 
 
 // Adjust after loading page
-adjustToScreenSize();
+// Currently disabled since there are no dropdowns
+//adjustToScreenSize();

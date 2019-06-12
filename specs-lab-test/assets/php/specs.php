@@ -62,7 +62,7 @@ function print_members_row($members) {
                             <h4 class="modal-title">$name</h4>
                         </div>
                         <div class="modal-body">
-                            <img class="img-responsive" src="$image" alt="">
+                            <!--<img class="img-responsive" src="$image" alt="">-->
                             <div class="modal-text">
 
                                 <img class="img-responsive" src="$image_path" alt="">
@@ -252,7 +252,9 @@ function print_members_row($members) {
 
 
             $testeimagem = explode("@", $email_val)[0];
-            $image_path = "assets/img/labmembers/" . $testeimagem . ".png";
+            // TODO: Disabled, for now
+            //$image_path = "assets/img/labmembers/" . $testeimagem . ".png";
+            $image_path = "assets/img/labmembers/generic.png";
         } else {
             $image_path = "assets/img/labmembers/generic.png";
         }
@@ -346,13 +348,31 @@ function get_pubs() {
 
     // Add entries by year, for the last 5 years
     for ($i = 0; $i <= 20; $i++) {
+
+
         $year = 2019 - $i;
 
+        $yearEntries = array();
 
+        foreach ($entries as $id => $entry) {
+
+            if ($entry['year'] == $year) {
+                // Add entry
+
+                $yearEntries[$id] = $entry;
+            }
+        }
+
+
+        // If no entries, skip
+        if (sizeof($yearEntries) < 1) {
+            continue;
+        }
 
         echo '<div class="buttonclick">';
 
-        echo '<h2>' . $year . '⏬' . '</h2>';
+        //echo '<h2>' . $year . '⏬' . '</h2>';
+        echo '<h2>' . $year . '</h2>';
         echo '</div>';
 
 
@@ -367,16 +387,6 @@ function get_pubs() {
 
         echo '<div id="publications_year">';
 
-        $yearEntries = array();
-
-        foreach ($entries as $id => $entry) {
-
-            if ($entry['year'] == $year) {
-                // Add entry
-
-                $yearEntries[$id] = $entry;
-            }
-        }
 
         echo build_bib_section($yearEntries, $members, "build_presentation_entry_pubs");
         echo '</div>';

@@ -7,9 +7,9 @@ require_once 'assets/php/specs.php';
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="ANTAREX H2020 Project">
+        <meta name="description" content="SPeCS Lab">
         <meta name="author" content="SPeCS Lab, FEUP, Porto">
-        <title>ANTAREX: <?php echo get_title() ?></title>
+        <title>SPeCS Lab: <?php echo get_title() ?></title>
 
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
 
@@ -27,6 +27,7 @@ require_once 'assets/php/specs.php';
         <link rel="shortcut icon" type="image/png" href="assets/img/logo/favicon.png"/>
 
         <!--GOOGLE ANALYTICS-->
+        <!--
         <script>
             (function (i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;
@@ -44,7 +45,7 @@ require_once 'assets/php/specs.php';
             ga('send', 'pageview');
 
         </script>
-
+        -->
     </head>
     <body data-spy="scroll" data-target="#navbar-main" data-offset="95">
 
@@ -61,32 +62,34 @@ require_once 'assets/php/specs.php';
 
 
         <!--FOOTER-->
-        <div id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-1 centered">
-                        <img id="eu-flag"  src="assets/img/eu_flag.svg"  alt="EU Emblem">
-                    </div>
-                    <div class="col-md-10 centered">
-                        <span class="footer">
-                            <p>
-                                This project is partially funded by the European Union’s Horizon 2020 research and innovation programme under grant agreement <a href="http://cordis.europa.eu/project/rcn/197938_en.html" rel="nofollow">No 671623</a>.
-                            </p>
-                            <p>
-                                Copyright &copy; 2015 ANTAREX. Original design by <a href="http://www.templategarden.com" rel="nofollow">TemplateGarden</a>.
-                            </p>
-                        </span>
-                    </div>
-                    <div id="social-div" class="col-md-1">
-                        <ul class="list-inline social-buttons">
-                            <li><a href="https://twitter.com/antarex_project"><i class="fa fa-twitter"></i></a> </li>
-                            <li><a href="https://www.facebook.com/Antarex-1660673857550758/timeline/"><i class="fa fa-facebook"></i></a> </li>
-                            <li><a href="https://www.linkedin.com/grp/home?gid=8409003"><i class="fa fa-linkedin"></i></a> </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--
+             <div id="footer">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-md-1 centered">
+                             <img id="eu-flag"  src="assets/img/eu_flag.svg"  alt="EU Emblem">
+                         </div>
+                         <div class="col-md-10 centered">
+                             <span class="footer">
+                                 <p>
+                                     This project is partially funded by the European Union’s Horizon 2020 research and innovation programme under grant agreement <a href="http://cordis.europa.eu/project/rcn/197938_en.html" rel="nofollow">No 671623</a>.
+                                 </p>
+                                 <p>
+                                     Copyright &copy; 2015 ANTAREX. Original design by <a href="http://www.templategarden.com" rel="nofollow">TemplateGarden</a>.
+                                 </p>
+                             </span>
+                         </div>
+                         <div id="social-div" class="col-md-1">
+                             <ul class="list-inline social-buttons">
+                                 <li><a href="https://twitter.com/antarex_project"><i class="fa fa-twitter"></i></a> </li>
+                                 <li><a href="https://www.facebook.com/Antarex-1660673857550758/timeline/"><i class="fa fa-facebook"></i></a> </li>
+                                 <li><a href="https://www.linkedin.com/grp/home?gid=8409003"><i class="fa fa-linkedin"></i></a> </li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        -->
         <!--FOOTER-->
 
         <!-- To be able to detect responsive breakpoits -->

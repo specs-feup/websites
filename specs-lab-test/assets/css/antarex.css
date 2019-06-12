@@ -15,7 +15,7 @@ body {
     color: #3a3c3b;
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
-    margin-top: 95px;
+    padding-top: 95px;
 }
 
 a {
