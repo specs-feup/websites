@@ -6,6 +6,7 @@ require_once 'json.php';
 function get_current_members() {
 
     $all_members = json_decode(file_get_contents('db/specs_members.json'), true);
+//    $all_members = json_decode(file_get_contents('test/db/real_specs_members.json'), true);
     $current = array_filter($all_members, "is_current_member");
     $members = array_filter($current, "is_status_member");
     $visitors = array_filter($current, "is_status_visitor");
@@ -21,6 +22,7 @@ function get_current_members() {
 function get_past_members() {
 
     $all_members = json_decode(file_get_contents('db/specs_members.json'), true);
+//    $all_members = json_decode(file_get_contents('test/db/real_specs_members.json'), true);
     $past = array_filter($all_members, "is_past_member");
     $members = array_filter($past, "is_status_member");
     $visitors = array_filter($past, "is_status_visitor");
@@ -253,8 +255,10 @@ function print_members_row($members) {
 
             $testeimagem = explode("@", $email_val)[0];
             // TODO: Disabled, for now
-            //$image_path = "assets/img/labmembers/" . $testeimagem . ".png";
-            $image_path = "assets/img/labmembers/generic.png";
+            $image_path = "assets/img/labmembers/" . $testeimagem . ".png";
+            if (!file_exists($image_path)) {
+                $image_path = "assets/img/labmembers/generic.png";
+            }
         } else {
             $image_path = "assets/img/labmembers/generic.png";
         }
@@ -343,9 +347,7 @@ function get_pubs() {
     //$bibtexs = array(1 => 'bib/test1.bib', 2 => 'bib/test2.bib');
     $entries = parse_json_bib('db/specs_bib.json');
     $members = json_decode(file_get_contents('db/specs_members2.json'), true);
-
-
-
+    //$members = json_decode(file_get_contents('test/db/specs_members.json'), true);
     // Add entries by year, for the last 5 years
     for ($i = 0; $i <= 20; $i++) {
 
