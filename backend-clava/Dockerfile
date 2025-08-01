@@ -1,4 +1,4 @@
-FROM node:22
+FROM ubuntu:24.04
 
 # FROM sitespeedio/node:ubuntu-24-04-nodejs-20.15.1
 
@@ -9,12 +9,24 @@ ARG TOOL=placeholder
 ENV TOOL=${TOOL}
 
 RUN apt-get update && \
-    apt-get install -y python3 make g++ openjdk-17-jdk && \
+    apt-get install -y git curl python-is-python3 openjdk-21-jdk make g++ && \
     # apt-get install -y python3 make g++ openjdk-21-jdk && \
     apt-get clean
 
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+RUN apt-get install -y bash
+
+ENV NVM_DIR=/root/.nvm
+
+RUN	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash && \
+    . "$NVM_DIR/nvm.sh" && \
+	nvm install v22.18.0 && \
+	nvm use v22.18.0	
+
+ENV PATH=$NVM_DIR/versions/node/v22.18.0/bin:$PATH
+
+ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
 ENV PATH="${JAVA_HOME}/bin:${PATH}"
+
 
 # Copy package.json and package-lock.json first
 COPY package*.json ./
@@ -52,3 +64,5 @@ RUN npm run build
 EXPOSE 4000
 
 ENV PORT=4000
+
+#RUN npm start
