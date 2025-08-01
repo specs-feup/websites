@@ -19,7 +19,7 @@ const tempDir = "temp";
 interface MulterFiles {
   zipfile?: Express.Multer.File[];
   file?: Express.Multer.File[];
-}
+} 
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {

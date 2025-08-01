@@ -79,6 +79,14 @@ async function runWeaver(
 
   // Create the input directory and input files
   const inputPath = path.join(tempDir, sourceFilename);
+
+  try {
+    fs.mkdirSync(inputPath, { recursive: true });
+    console.log("Folder '" + inputPath + "' created successfully!");
+  } catch (err) {
+    console.error("Error creating folder '" + inputPath + "':", err);
+  }
+
   //  await unzipFile(inputFile, inputPath);
   fs.writeFile(inputPath, sourceCode, "utf8", (err) => {
     if (err) {
