@@ -1,0 +1,6 @@
+aspectdef PrintXML
+	select app end
+    apply
+        println($app.xml);
+    end
+end

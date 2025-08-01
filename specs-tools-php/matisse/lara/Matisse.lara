@@ -1,0 +1,129 @@
+// Matisse.lara (library) - Utility aspects for common MATISSE operations 
+//
+// The aspects on this file can be used by adding the line "import Matisse;" at the beginning of an aspect
+
+// 
+// Define types of variables in a MATLAB function
+//
+// INPUTS:
+// - functionName: String with the name of the MATLAB function
+// - typeDef    : Table which maps the name of a variable to the type it should have
+aspectdef defineTypes
+    input functionName, typeDef end
+	
+	// Set that will check if variable was already added
+    var varSet = new Set();
+	
+	// Select input variables
+	select function{name == functionName}.input end
+    apply
+		// Set attribute type for the variable
+    	def type = typeDef[$input.name];
+		// Add variable name to the set
+		varSet.add($input.name);
+	end
+	condition !($input.name in varSet) && ($input.name in typeDef) end
+    
+    // Select output variables
+    select function{name == functionName}.output end
+    apply
+		// Set attribute type for the variable
+    	def type = typeDef[$output.name];
+		// Add variable name to the set
+		varSet.add($output.name);
+	end
+	condition !($output.name in varSet) && ($output.name in typeDef) end
+	
+	// Select variables in the body of the function
+    select function{name == functionName}.var end	
+	apply
+			// Set attribute type for the variable
+            def type = typeDef[$var.name];		
+			// Add variable name to the set
+			varSet.add($var.name);
+	end
+	condition !($var.name in varSet) && ($var.name in typeDef) end   
+    //condition $var.name in typeDef && $function.name == functionName end
+	
+end
+
+// Specialize inputs of MATLAB function
+//
+// INPUTS:
+// - functionName: String with the name of the MATLAB function
+// - inputDef    : Table with maps the name of the input to the value it will specialize to
+aspectdef specializeInputs
+    input functionName, inputDef end
+
+    select function.input end
+	apply
+		// Set attribute Default
+        $input.def Default = inputDef[$input.name];
+	end
+    condition $input.name in inputDef && $function.name == functionName end
+
+end
+
+// Inserts MATLAB code to initialize matrixes to zeros
+//
+// INPUTS:
+// - functionName: String with the name of the MATLAB function
+// - matrixSize  : Table with maps the name of a matrix to its size. E.g., y : "1,64"
+aspectdef initMatrixes
+    input functionName, matrixSizes end
+
+    // Set that will check if variable was already added
+    var varSet = new Set();
+    
+    FUNCTION_START: select function{name==functionName}.body.first  end
+    VARIABLE: select function{name==functionName}.body.var end
+    
+    apply to FUNCTION_START::VARIABLE
+        // Get matrix size
+        var matrixSize = matrixSizes[$var.name];
+
+        // Insert call to zeros. E.g., y = zeros(1, 64);
+        $first.insert before%{[[$var.name]] = zeros([[matrixSize]]);}%;
+        
+        // Add variable name to the set
+        varSet.add($var.name);
+    end
+    condition !($var.name in varSet) && ($var.name in matrixSizes) end
+
+end
+
+aspectdef replace_operator
+    input operatorSymbol, leftOperand, rightOperand, newOperator end
+    
+    select operator end
+    apply
+        call operands : get_operands($operator);
+
+        var leftValue = operands.jp_operands[0].value;
+        var rightValue = operands.jp_operands[1].value;
+        
+        if(leftValue != leftOperand) {
+            continue;
+        }
+
+        if(rightValue != rightOperand) {
+            continue;
+        }
+        
+        $operator.insert around%{[[newOperator]]([[leftValue]], [[rightValue]])}%;
+
+	end
+    condition $operator.symbol == operatorSymbol end
+
+end
+
+aspectdef get_operands
+    input jp_operator end
+    output jp_operands end
+    
+    jp_operands = [];
+    select jp_operator.operand end
+    apply
+		jp_operands[$operand.index] = $operand;
+    end
+end

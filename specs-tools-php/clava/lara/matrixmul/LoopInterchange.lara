@@ -1,0 +1,11 @@
+aspectdef LoopInterchange
+	select function.($li = loop).($lj = loop) end
+	apply
+		$li.exec interchange($lj);
+	end
+	condition
+		$function.name == 'matrix_mult' &&
+		$li.controlVar == 'i' &&
+		$lj.controlVar == 'j'
+	end
+end

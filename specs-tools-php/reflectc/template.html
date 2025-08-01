@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="shortcut icon" href="../../../img/SPeCS-logo.png" >
+  
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39611099-1', 'up.pt');
+  ga('send', 'pageview');
+
+  </script>
+  
+  
+  <title>ReflectC</title>
+
+</head>
+
+<body >
+ <div id="TopBar" style="border-bottom:2px solid #FFA500; position: fixed; top: 0px; left: 0px; height: 50px; width: 100%;z-index: 10000; text-align: left; background:#FFFFFF;">
+	<table class="sponsors" align="center" width="100%" cellpadding="0" cellspacing="0" border="1" style="border:none"> <!-- cellpadding="5" cellspacing="1"-->   
+
+		<tr >
+			<td align="left" style="border:none">
+				<a href="http://specs.fe.up.pt/tools/reflectc/">
+					<img src='../../img/SPeCS-logo.png' height="50px" alt='ReflectC' />
+				</a>
+			</td>
+			<td align="center" style="border:none">
+				<h3 style="color:#0C3A6D">ReflectC*</h3>
+			</td>
+			<td align="center" style="border:none">
+				<a href="http://www.fe.up.pt">
+					<img src='../../img/FEUP-logo.jpg' height="50px" alt='FEUP' />
+				</a>
+			</td>
+			<td align="center" style="border:none">
+				<a href="http://paginas.fe.up.pt/~specs/index.html">
+					<img src='../../img/SPeCS-logo.png' height="50px" alt='SPeCS' />
+				</a>
+			</td>
+		</tr>
+	</table>
+ 
+</div> 
+
+
+
+
+  <!--div id="header" align="center">
+    <div id="header_l">
+      <div id="header_r">
+        <div id="logo">
+          <img align="middle" style="border:2px;border-style:solid;border-color:#000000;background:#FFFFFF;" src="http://www.reflect-project.eu/images/stories/7th%20framework%20programme-sml.png" />
+          <a href="http://www.reflect-project.eu">
+            <img align="middle" border="0" src="../../img/banner-reflect.gif" width="908" height="103" alt="Reflect" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div-->
+  <br/>
+  <table class="tableEditor">
+  <tr align="center">
+    <td><h3>C source code</h3>
+    </td>
+    <td>
+		<font color="#AAAAAA">Font Size</font>
+		<select id="font_size" onChange="fontSizeOnChange(this)">
+			<option value="8px">8</option>
+			<option value="10px">10</option>
+			<option value="12px" selected>12</option>
+			<option value="14px">14</option>
+			<option value="16px">16</option>
+			<option value="18px">18</option>
+			<option value="20px">20</option>
+			<option value="24px">24</option>
+		</select>
+	</td>
+    <td><h3>Lara Aspects</h3>
+    </td>
+  <tr>
+    <td>
+      <div id="cEditor" >int main(){
+	
+	return 0;
+}
+</div>
+    </td>
+    <td align=center>
+      <img src="../../img/plus.png" alt="+" class="arrow"  />
+    </td>
+    <td>
+      <div id="laraEditor">aspectdef insertNameHere
+	
+	/*select*/
+	/*apply*/
+	/*condition*/
+	
+end
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+    <font color="#AAAAAA">
+      <input type=file id="cUpload" onChange="cUploadOnChange(this)">&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;</input>
+      
+	  <select id="cCombo" onChange="cComboOnChange(this)">
+			<option value="" selected>Select an example...</option>
+			%{C_EXAMPLES}%
+		</select>
+    </font>
+    </td>
+    <td>
+     <font color="#AAAAAA">
+                </font>
+    </td>
+    <td width="50%">
+    <font color="#AAAAAA">
+      <input type=file id="laraUpload" onChange="laraUploadOnChange(this)">&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;</input>
+
+	  <select id="laraCombo" onChange="laraComboOnChange(this)">
+			<option value="" selected>Select an example...</option>
+			%{LARA_EXAMPLES}%
+		</select>
+    </font>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="center">
+      <table>
+        <td align="center">
+          <h3>C</h3>
+          <img id="runCImage" src="../../img/arrow-down.png" alt="\/" class="arrow"  usemap="#runc"/>
+          <map name="runc">
+            <area id="runCArea" shape="rect" coords="0,0,100,100"  href="javascript:void(0)" onClick="runC(this)"/>
+          </map>
+        </td>
+		<td align="center">
+          <h3>x86</h3>
+          <img id="runx86Image" src="../../img/arrow-down.png" alt="\/" class="arrow"  usemap="#runx86"/>
+          <map name="runx86">
+            <area id="runx86Area" shape="rect" coords="0,0,100,100"  href="javascript:void(0)" onClick="runx86(this)"/>
+          </map>
+        </td>
+		<td align="center">
+          <h3>VHDL*</h3>
+          <img id="runVHDLImage" src="../../img/arrow-down.png" alt="\/" class="arrow"  usemap="#runVHDL"/>
+          <map name="runVHDL">
+            <area id="runVHDLArea" shape="rect" coords="0,0,100,100"  href="javascript:void(0)" onClick="runVHDL(this)"/>
+          </map>
+        </td>
+        <td align="center">
+		  <h3>Microblaze</h3>
+          <img id="runMicroblazeImage" src="../../img/arrow-down.png" alt="\/" class="arrow"  usemap="#runMicroblaze"/>
+          <map name="runMicroblaze">
+            <area id="runMicroblazeArea" shape="rect" coords="0,0,100,100"  href="javascript:void(0)" onClick="runMicroblaze(this)"/>
+          </map>
+        </td>
+		<!--td align="center">
+		  <h3>PowerPC</h3>
+          <img id="runPowerPCImage" src="../../img/arrow-down.png" alt="\/" class="arrow"  usemap="#runPowerPC"/>
+          <map name="runPowerPC">
+            <area id="runPowerPCArea" shape="rect" coords="0,0,100,100"  href="javascript:void(0)" onClick="runPowerPC(this)"/>
+          </map>
+        </td-->
+    </table>
+    <td/>
+        
+    <td align="center" valign="bottom">
+		<font color="#AAAAAA">
+          <h3>Console Output</h3>
+		</font>
+     </td>
+    
+  <tr>
+    <td>
+		<div id="finalResult"></div>
+    </td>
+    <td/>
+    <td>
+		<div id="console"></div>
+    </td>
+  </tr>
+</table>
+
+<script src="../../scripts/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+
+		<div align="center"> 
+			<p>press F11 on the editors to switch to fullscreen mode <p>
+			<p>* This website presents a demonstration of ReflectC. It does not represent neither the current version of ReflectC nor the full LARA technology.<p/>
+		</div>
+		<hr/>
+	
+	<p>Version: 1.0, &copy Universidade do Porto, Faculdade de Engenharia, Porto, Portugal</p>
+	
+
+	<p>ReflectC is a compiler based on the <a href="http://www.ace.nl/compiler/cosy.html">CoSy</a> compiler system from <a href="http://www.ace.nl/">ACE</a> and it has been developed in the context of the FP7 EU-funded project <a href="http://www.reflect-project.eu/">REFLECT</a>. The VHDL generation provided by ReflectC uses a CoSy version of the DWARV hardware compiler tool (TUDelft).</p>
+
+<p>LARA is an AOP programming language being mainly developed by FEUP members in collaboration with Imperial College London (UK) members.</p>
+
+<p><b>Acknowledgments:</b>  We acknowledge the support of ACE regarding the license of CoSy and of TUDelft regarding the use of DWARV. We also acknowledge the partial support of FCT (Portuguese Science Foundation) through grants SFRH/BD/82606/2011 and [ref da bolsa do Tiago].</p>
+
+<p>Contact: Ricardo Nobre (<a href="mailto:ricardo.nobre@fe.up.pt?Subject=About%20ReflectC">ricardo.nobre@fe.up.pt</a>)</p>
+
+<br/>
+<br/>
+
+%{MAIN_SCRIPT}%
+
+
+<div id="SponsorBottomBar" style="border-top:2px solid #FFA500; position: fixed; bottom: 0px; left: 0px; height: 35px; width: 100%;z-index: 10000; text-align: left; background:#FFFFFF;">
+	<table class="sponsors" align="center" width="100%" cellpadding="0" cellspacing="0" border="1" style="border:none"> <!-- cellpadding="5" cellspacing="1"-->   
+
+		<tr>
+			<td align="center" style="border:none;padding-left:10px" height="35px">
+				ReflectC was developed in the context of 
+				<a href="http://www.reflect-project.eu/">
+					<img src='../../img/REFLECT-logo.png' height="35px" alt='REFLECT Project' align="middle"/>
+				</a>
+			    , a project partially funded by
+				<a href="http://cordis.europa.eu/fp7/home_en.html">
+					<img src='../../img/FP7-logo.png' height="35px" alt='Seventh Framework Programme(FP7)' align="middle"/>
+				</a>
+			</td>
+			
+		</tr>
+	</table>
+ 
+</div>
+
+</body></html>

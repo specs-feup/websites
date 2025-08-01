@@ -1,0 +1,23 @@
+import matisse.Utils;
+
+aspectdef types_griditerate_double
+	
+	var floatType = "double";
+	
+	var typeDef = {
+		obstacle	: "int32[16][16][16]",
+		nx			: "int32",
+       	ny			: "int32",
+        nz			: "int32",
+		iter_max	: "int32",
+		v			: floatType + "[16][16][16]",
+		v_old		: floatType + "[16][16][16]",
+		v_0			: floatType,
+		v_end		: floatType,
+		c			: floatType,
+		temp		: floatType,
+	};
+
+	call defineTypes("grid_iterate", typeDef);
+	
+end

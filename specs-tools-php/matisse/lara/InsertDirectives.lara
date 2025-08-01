@@ -1,0 +1,15 @@
+aspectdef InsertDirectives
+   var SafeFunctions = ["subband"];
+
+   select function end
+   apply
+      insert before "%!assume_indices_in_range";
+      insert before "%!assume_matrix_sizes_match";
+   end
+   condition SafeFunctions.contains($function.name) end
+
+    select function.input end
+    apply
+        def type = "double[][]";
+    end
+end

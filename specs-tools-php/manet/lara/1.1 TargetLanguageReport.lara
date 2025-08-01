@@ -1,0 +1,33 @@
+aspectdef TargetLanguageReport
+
+
+	println("root: "+Weaver.root);
+	println("joinpoints: ");
+	
+	
+	for(var joinpoint of Weaver.joinpoints){
+	
+		println(" " +joinpoint +" {");
+		
+		var attributes = Weaver.attributesOf(joinpoint,false);
+		Utils.printArray(attributes, "attributes");
+		
+		var selects = Weaver.selectsOf(joinpoint,false);
+		Utils.printArray(selects, "selects");
+		
+		var actions = Weaver.actionsOf(joinpoint,false);
+		Utils.printArray(actions, "actions");
+		println(" }\n");
+	}
+end
+
+aspectdef Utils
+	static
+		var printArray = function(array,title){
+			if(array.length > 0){
+				println("  "+title+":");
+				println("    "+array.join('\n'+"    "));
+			}
+		};
+	end
+end

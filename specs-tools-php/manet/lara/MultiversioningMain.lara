@@ -1,0 +1,342 @@
+/**
+ *	Changes an application in order to generate several clones of a target function.
+ * 	Each clone will have a different optimization level and different OpenMP configurations.
+ * 	Finally, this strategy also replaces the call to the target function with a call to a wrapper
+ * which will select the correct clone based on the current configuration (global variables).
+ *
+**/
+
+aspectdef Launcher
+
+	call MultiversioningMain(
+		"opt_level",
+		["O0", "O2", "O3"], 
+		"proc_bind", 
+		["close", "spread"],
+		"num_threads",
+		"foo",
+		"wrapper",
+		true
+	);
+end
+
+aspectdef MultiversioningMain
+
+	input
+		globalNameOpt,
+		optLevels,
+		globalNameBind,
+		procBindOptions,
+		globalNameThreads,
+		targetFunction,
+		wrapperName,
+		doCli 				
+	end
+
+	println("Starting multiversioning main aspect\n");
+
+	if(wrapperName == undefined) {
+		wrapperName = targetFunction + '_wrapper';
+	}
+
+	// get original args and params of the target function
+	call od: GetOriginalData(targetFunction);
+	var originalArgs = od.originalArgs;
+	var originalParams = od.originalParams;
+	var returnType = od.returnType;
+
+	// generate clones according to the optimization levels
+	call gc: GenerateClones(targetFunction, optLevels, procBindOptions);
+	var clonedFunctions = gc.clonedFunctions;
+
+	// insert optimization pragmas in each cloned function
+	call InsertOptPragmas(clonedFunctions);
+
+	// change OpenMP directives in each cloned function
+	call ChangeOmpPragmas(clonedFunctions, globalNameThreads);
+
+	// insert global variables
+	call PrepareData(globalNameThreads, globalNameOpt, globalNameBind, targetFunction);
+
+	// generares and inserts the wrapper function and changes the call to the original function to the wrapper
+	call GenerateWrapper(	targetFunction,
+						returnType,
+						wrapperName,
+						originalArgs,
+						originalParams,
+						globalNameThreads,
+						globalNameOpt,
+						globalNameBind,
+						optLevels,
+						procBindOptions);
+
+	if(doCli) {
+		// inserts CLI code to control the tuning/multiversion variables
+		call InsertCliOptions(globalNameBind, globalNameOpt, globalNameThreads);
+	}
+
+	println("\nMultiversioning main aspect done");
+end
+
+
+aspectdef InsertCliOptions
+	input
+		globalNameBind,
+		globalNameOpt,
+		globalNameThreads
+	end
+
+	println("\t Inserting CLI options code");
+
+	select function{'main'}.first_stmt end
+	apply
+		$function.insert before CliOptions(globalNameBind, globalNameOpt, globalNameThreads);
+		$first_stmt.insert before 'set_init_values(argc, argv);';
+	end
+end
+
+codedef CliOptions(globalNameBind, globalNameOpt, globalNameThreads) %{
+	#include <stdlib.h>
+	#include <errno.h>
+	void set_init_values(int argc, char** argv) {
+	    
+	    const char *errstr;
+	    char* end;
+	    
+	    if(argc == 4) {
+	        
+	        errno = 0;
+	        [[globalNameBind]] = strtol(argv[1], &end, 0);
+	        if(errno != 0) {perror("can't parse [[globalNameBind]] value: "); exit(EXIT_FAILURE);}
+	        if(*end != '\0') {printf("can't parse [[globalNameBind]] value: %s\n", argv[1]); exit(EXIT_FAILURE);}
+	        
+	        errno = 0;
+	        [[globalNameOpt]] = strtol(argv[2], &end, 0);
+	        if(errno != 0) {perror("can't parse [[globalNameOpt]] value: "); exit(EXIT_FAILURE);}
+	        if(*end != '\0') {printf("can't parse [[globalNameOpt]] value: %s\n", argv[2]); exit(EXIT_FAILURE);}
+	        
+	        errno = 0;
+	        [[globalNameThreads]] = strtol(argv[3], &end, 0);
+	        if(errno != 0) {perror("can't parse [[globalNameThreads]] value: "); exit(EXIT_FAILURE);}
+	        if(*end != '\0') {printf("can't parse [[globalNameThreads]] value: %s\n", argv[3]); exit(EXIT_FAILURE);}
+	        
+	        printf("[[globalNameBind]]: %d\n", [[globalNameBind]]);
+	        printf("[[globalNameOpt]]: %d\n", [[globalNameOpt]]);
+	        printf("[[globalNameThreads]]: %d\n", [[globalNameThreads]]);
+	   }
+	}
+}%
+end
+
+aspectdef GenerateClones
+	input
+		targetFunction,
+		optLevels,
+		procBindOptions
+	end
+	output
+		clonedFunctions = {}
+	end
+
+	println("\t Generating clones");
+
+	select function{targetFunction} end
+	apply
+		for (var bind of procBindOptions) {
+			for(var opt of optLevels) {
+				var newName = targetFunction + '_' + bind + '_' + opt;
+				exec Clone(newName);
+				clonedFunctions[newName] = {'opt': opt, 'bind': bind};
+			}
+		}
+	end
+end
+
+aspectdef InsertOptPragmas
+	input
+		clonedFunctions
+	end
+
+	println("\t Inserting opt pragmas");
+
+	select function end
+	apply
+		var clone = clonedFunctions[$function.name];
+		if(clone !== undefined) {
+		
+			insert before %{
+				#pragma GCC push_options
+				#pragma GCC optimize ("[[clone.opt]]")
+			}%;
+			insert after %{
+				#pragma GCC pop_options
+			}%;
+		}
+	end
+end
+
+aspectdef GetOriginalData
+
+	input
+		targetFunction
+	end
+	output
+		originalArgs,
+		originalParams,
+		returnType
+	end
+
+	println("\t Getting original data");
+
+	var foundCall = false;
+	select call{targetFunction} end
+	apply
+		originalArgs = $call.argList.join(',');
+		// find return type of target
+		returnType = $call.return_type;
+
+		foundCall = true;
+	end
+
+	if(!foundCall) {
+
+		throw 'ERROR: Could not find call to function "' + targetFunction + '"';
+	}
+
+	var foundFunction = false;
+	select function{targetFunction} end
+	apply
+		originalParams = $function.fullParamList.join(',');
+
+		foundFunction = true;
+	end
+
+	
+	if(!foundFunction) {
+
+		throw 'ERROR: Could not find function "' + targetFunction + '"';
+	}
+end
+
+aspectdef ChangeOmpPragmas
+
+	input
+		clonedFunctions,
+		globalNameThreads
+	end
+
+	println("\t Changing OpenMP pragmas");
+
+	select function.omp end
+	apply
+		var clone = clonedFunctions[$function.name];
+		if(clone !== undefined) {
+
+			if($omp.isPar) {
+				def bind = clone.bind;
+				def numThreads = globalNameThreads;
+			}
+		}
+	end
+end
+
+aspectdef PrepareData
+
+	input
+		globalNameThreads,
+		globalNameOpt,
+		globalNameBind,
+		targetFunction
+	end
+
+	println("\t Preparing data");
+	
+	var intType = new CTypeBuilder()
+				.base('int')
+				.build();
+
+	// define and declare a global variable to hold the number of OpenMP threads
+	select file end
+	apply						
+		exec AddGlobal([[globalNameThreads]], intType, "4");
+		exec AddGlobal([[globalNameOpt]], intType, "0");
+		exec AddGlobal([[globalNameBind]], intType, "0");
+	end
+end
+
+aspectdef GenerateWrapper
+	input
+		targetFunction,
+		returnType,
+		wrapperName,
+		originalArgs,
+		originalParams,
+		globalNameThreads,
+		globalNameOpt,
+		globalNameBind,
+		optLevels,
+		procBindOptions
+	end
+
+	println("\t Generating wrapper");
+	println("\t\t return type: " + returnType);
+
+	var isVoid = returnType.indexOf('void') !== -1;
+
+	select call{targetFunction} end
+	apply
+		def name = wrapperName;
+	end
+
+	// generate switch code
+	var newArgs = originalArgs.split('&').join('');
+	var newArgs = originalArgs.split('*').join('');
+
+	var bindCode = 'switch(' + globalNameBind + ') {\n';
+	for (var bindId in procBindOptions) {
+
+		var bindStr = procBindOptions[bindId];
+
+		bindCode += 'case ' + bindId + ': //' + bindStr + '\n';
+
+		// build the switch statement for the optimization levels
+		var optCode = 'switch(' + globalNameOpt + ') {\n';
+		for(var optId in optLevels) {
+	
+			var optStr = optLevels[optId];
+			var cloneName = targetFunction + '_' + bindStr + '_' + optStr;
+			
+			optCode += 'case ' + optId + ': //' + optStr + '\n';
+			if(isVoid) {
+				optCode += '\t' + cloneName + '(' + newArgs +');\n\tbreak;\n';
+			} else {
+				optCode += '\treturn ' + cloneName + '(' + newArgs +');\n';
+			}
+		}
+		if(isVoid) {
+		
+			optCode += 'default:\n' + targetFunction + '(' + newArgs + ');\n\tbreak;\n}';
+		} else {
+			optCode += 'default:\nreturn ' + targetFunction + '(' + newArgs + ');\n}';
+		}
+
+		bindCode += optCode;
+		bindCode += '\nbreak;\n';
+	}
+	if(isVoid) {
+		bindCode += 'default:\n' + targetFunction + '(' + newArgs + ');\n\tbreak;\n}';
+	} else {
+		bindCode += 'default:\nreturn ' + targetFunction + '(' + newArgs + ');\n\tbreak;\n}';
+	}
+
+	
+	// generate wrapper
+	var wrapper = returnType + ' ' + wrapperName + '(' + originalParams + ') {\n';
+	wrapper += bindCode;
+	wrapper += '\n}\n';
+
+	select function{'main'} end
+	apply
+		insert before wrapper;
+	end
+end

@@ -1,0 +1,41 @@
+/**
+ *     	Renames the functions present on the replacements mapping.
+ * 	In this specific example, it changes the name of 'scanf', 'printf'
+ * 	and 'fprintf' to add the prefix 'new_'.
+ */
+aspectdef Main
+
+	var replacements = {
+        "fscanf" : "new_fscanf",
+		"printf" : "new_printf",
+		"fprintf" : "new_fprintf"
+	};
+    
+    call RenameFunctions(replacements);
+end
+
+aspectdef RenameFunctions
+
+    input
+        replacements
+    end
+    
+    println('Starting RenameFunctions...\n');
+
+	select call end
+	apply
+		var oldName = $call.name;
+	    var newName = replacements[$call.name];
+	    
+	    println('changing call to "' + oldName + '" in line ' + $call.line + ' to "' + newName + '"');
+	    
+	    insert before '/* [[newName]] was previously known as [[oldName]] */';
+	    
+        def name = replacements[$call.name];
+	end
+    condition
+        replacements.contains($call.name)
+    end
+    
+    println('\nRenameFunctions done!');
+end

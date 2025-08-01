@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<?php
+require_once '../common/specsTools.php';
+?>
+
+<html>
+    <head>
+        <meta charset=utf-8>
+        <title>Clava Tool</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+        <link rel=stylesheet href="css/font-awesome.min.css">
+        <link rel=stylesheet href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Clava Online Demo</h1>
+            <a href="https://sigarra.up.pt/feup"><img src="feup-logo.png" alt="FEUP" /></a>
+            <a href="http://specs.fe.up.pt"><img src="http://specs.fe.up.pt/img/SPeCS-logo.png" alt="SPeCS" /></a>
+        </header>
+        <div class="body">
+            <div class="sidebar">
+                <div class="section">
+                    <li id="menu-try-it" class="active">Try it Online</li>
+					<li id="menu-copyright">About Clava</li>
+                </div>
+
+                <div class="section" id="menu-section-options">
+                    <h3>Compile</h3>
+                    <li id="menu-weave-application"><i class="fa fa-play"></i> Weave Application</li>
+
+                    <h3>Options</h3>
+					<p>
+						Standard
+						<select id="c_standard">
+							<option value="c99">C99</option>
+							<option value="c++11">C++11</option>
+						</select>
+					</p>
+
+                    <!--<p><label>Main Type<input type="text" id="main-class"></label>-->
+                    <!-- <p><label title="Compile with incomplete classpath"><input type="checkbox" id="incomplete-path"> Incomplete Path</label> --> <!--checked-->
+
+                    <h3>Text Editor</h3>
+                    <p>Font size:
+                        <select id="font_size">
+                            <option value="8px">8</option>
+                            <option value="10px">10</option>
+                            <option value="12px" selected>12</option>
+                            <option value="14px">14</option>
+                            <option value="16px">16</option>
+                            <option value="18px">18</option>
+                            <option value="20px">20</option>
+                            <option value="24px">24</option>
+                        </select>
+                    </p>
+                    <p>Press F11 to toggle fullscreen</p>
+                </div>
+
+				<?php echo get_related_tools('clava') ?>
+            </div>
+
+            <div class="content">
+                <div id="try-it">
+                    <div class="try-it-content">
+                        <!-- SOURCE CODE -->
+                        <div class="code-block" id="source-code">
+                            <div class="header">
+                                <span>C/C++ Source Code</span>
+                                <i class="fa fa-bars menu-trigger" id="source-code-menu-trigger"> More</i>
+                                <div class="dropdown-menu-container" id="source-code-menu">
+                                    <ul class="dropdown-menu">
+                                        <li id="upload-source-code-file">Upload File</li>
+                                        
+										
+										<!-- Source Code Examples -->
+                                        <li class="dont-hide expander" data-target="code-examples">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Load Example</span>
+                                        </li>
+                                        <ul class="nested-menu" id="code-examples">
+                                            <li class="load-code-example">Structs.h</li>
+                                        </ul>
+                                        <!-- /Source Code Examples -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="leave-fullscreen"><i class="fa fa-info-circle"></i> Press F11 to leave fullscreen</div>
+                            <div id="codeEditor" class="editor"></div>
+                        </div>
+                        <!-- /SOURCE CODE -->
+
+                        <!-- LARA SOURCE CODE -->
+                        <div class="code-block" id="lara">
+                            <div class="header">
+                                <span>LARA</span>
+                                <i class="fa fa-bars menu-trigger" id="lara-menu-trigger"> More</i>
+                                <div class="dropdown-menu-container" id="lara-menu">
+                                    <ul class="dropdown-menu">
+                                        <li id="toggle-ls">Toggle Language Specification</li>
+                                        <li id="upload-lara-file">Upload File</li>
+                                        <li class="dont-hide expander" data-target="lara-tutorial">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Tutorial</span>
+                                        </li>
+                                        <ul class="nested-menu" id="lara-tutorial">
+                                            <li class="load-lara-example" data-filename="StaticCodeReport.lara">6.1 StaticCodeReport.lara</li>
+                                            <li class="load-lara-example" data-filename="StaticCallGraph.lara" >6.2 StaticCallGraph.lara</li>
+                                            <li class="load-lara-example" data-filename="ExtendedStaticCallGraph.lara" >6.2.1 ExtendedStaticCallGraph.lara</li>
+                                            <li class="load-lara-example" data-filename="DynamicCallGraph.lara">6.3 DynamicCallGraph.lara</li>
+                                            <li class="load-lara-example" data-filename="PrepareCall.lara">6.4 PrepareCall.lara</li>
+                                            <li class="load-lara-example" data-filename="SpecializeWithSwitch.lara">6.4.1 SpecializeWithSwitch.lara</li>
+                                            <li class="load-lara-example" data-filename="SpecializeWithMap.lara">6.4.2 SpecializeWithMap.lara</li>
+                                        </ul>
+                                        <!-- LARA Examples -->
+                                        <li class="dont-hide expander" data-target="lara-examples">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Load Example</span>
+                                        </li>
+                                        <ul class="nested-menu" id="lara-examples">
+                                            <li class="load-lara-example">EmptyAspect.lara</li>
+                                            <li class="load-lara-example">LanguageSpecificationPrinter.lara</li>
+                                            <li class="load-lara-example">CountLoopIterations.lara</li>
+                                            <li class="load-lara-example">StaticCallGraph.lara</li>
+                                            <li class="load-lara-example">DynamicCallGraph.lara</li>
+                                            <li class="load-lara-example">AdaptMedianSmooth.lara</li>
+                                        </ul>
+                                        <!-- /LARA Examples -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="leave-fullscreen"><i class="fa fa-info-circle"></i> Press F11 to leave fullscreen</div>
+                            <div id="laraEditor" class="editor"></div>
+                        </div>
+                        <!-- LARA SOURCE CODE -->
+
+                        <div class="code-block" id="result">
+                            <div class="header">
+                                <span>Result</span>
+                                <i class="fa fa-bars menu-trigger" id="result-menu-trigger"> More</i>
+                                <div class="dropdown-menu-container" id="result-menu">
+                                    <ul class="dropdown-menu">
+                                        <li><a id="download-source-code-file" href="data:text/undefined;charset=utf-8" download="undefined.txt">Download Code</a></li>
+                                        <li class="dont-hide expander" data-target="result-files">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Weaved Files</span>
+                                        </li>
+                                        <ul class="nested-menu" id="result-files">
+                                        </ul>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="leave-fullscreen"><i class="fa fa-info-circle"></i> Press F11 to leave fullscreen</div>
+                            <div id="resultEditor" class="editor">Nothing yet, press "Weave Application".</div>
+                        </div>
+
+                        <div class="code-block" id="output-log">
+                            <div class="header">Output Log</div>
+                            <div id="outputLog" class="editor"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="about">
+
+                    <i>This website presents a demonstration of Clava. It does not represent neither the current version of Clava nor the full LARA technology.</i>
+
+                    <h2>Acknowledgments</h2>
+
+                    <p>
+                        Clava is a C/C++ source-to-source tool for code instrumentation and transformations controlled by the LARA language.
+						<!-- TODO -->
+                        <!-- Clava is currently under development in the context of PhD grant SFRH/BD/90507/2012, funded by the <a href="http://alfa.fct.mctes.pt/">Portuguese Science Foundation - Fundação para a Ciência e Tecnologia (FCT)</a>. -->
+                    </p>
+
+                    <p>
+                        Clava uses <a href="https://clang.llvm.org/">Clang</a>, a a C language family frontend for LLVM.
+                        LARA [1] is a domain-specific, aspect-oriented language proposed during the REFLECT project and currently being maintained and further developed by University of Porto, Porto, Portugal, and Imperial College, London, UK.
+                    </p>
+
+                    <p>
+                        For more information on LARA, please see the LARA <a href="http://www.fe.up.pt/~specs/projects/lara">wiki</a>.
+                    </p>
+
+                    <h2>References</h2>
+                    <p>
+                        [1] João M.P. Cardoso, Tiago Carvalho, José G.F. Coutinho, Wayne Luk, Ricardo Nobre, Pedro Diniz, and Zlatko Petrov. 2012. LARA: an aspect-oriented programming language for embedded systems. In Proceedings of the 11th annual international conference on Aspect-oriented Software Development (AOSD '12). ACM, New York, NY, USA, 179-190. <a href="http://doi.acm.org/10.1145/2162049.2162071">[ACM]</a> <a href="lara_aosd12.bib">[bibtex]</a>
+                    </p>
+
+                    <h2>Contacts</h2>
+                    <p>João M.P. Cardoso (<a href="mailto:jmpc@fe.up.pt?Subject=About%20Clava">jmpc@fe.up.pt</a>)</p>
+					<p>João Bispo (<a href="mailto:jbispo@fe.up.pt?Subject=About%20Clava">jbispo@fe.up.pt</a>)</p>
+
+					<!-- TODO -->
+					<!--
+                    <h2>Funding</h2>
+                    <p>Kadabra is a project that has been funded by:</p>
+                    <div class="funding">
+                        <a href="http://alfa.fct.mctes.pt">
+                            <img src='http://specs.fe.up.pt/img/FCT-logo.png' height="35px" alt='Fundação para a Ciência e Tecnologia (FCT)' />
+                        </a>
+                    </div>
+					-->
+                </div>
+            </div>
+
+            <!-- ////////////////////////////////////////// LS ////////////////////////////////////////// -->
+            <div id="lsView" class="invisible">
+                <div class="header">
+                    <span>Join Points </span>
+                    <select id="joinpoints"></select>
+                    <a id="closeLS" class="closeLS"><i class="fa fa-times-circle" ></i></a>
+                </div>
+                <div class="lsScroll">
+                    <!--</i>        var image = "fa-puzzle-piece";-->
+                    <div id="attrDiv" class="invisible">
+                        <h4><i class="fa fa-puzzle-piece"> </i> Attributes</h4>
+                        <ul id="attributes"><!-- class="fa-ul"-->
+                            <!--Test content-->
+                        </ul>
+                    </div>
+                    <div id="selDiv" class="invisible">
+                        <h4><i class="fa fa-search"></i> Selects</h4>
+                        <ul id="selects">
+                            <!--Test content-->
+                        </ul>
+                    </div>
+                    <div id="actDiv" class="invisible">
+                        <h4><i class="fa fa-cogs"></i> Actions</h4>
+                        <ul id="actions">
+                            <!--Test content-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ////////////////////////////////////////// LS ////////////////////////////////////////// -->
+        </div>
+        <script src="ace/ace.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

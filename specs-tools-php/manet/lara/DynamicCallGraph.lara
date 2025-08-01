@@ -1,0 +1,62 @@
+/**
+ *		This aspect inserts code that will dynamically build a callgraph
+ * 	of the execution. There is an array that stores the number of times
+ * 	a <caller, callee> tuple is executed. Each position corresponds to a
+ * 	single tuple. This position is given by the method getId() from
+ * 	LaraObject.
+ *		At the end of the execution, the graph is printed to the 
+ * 	standard output in dot format.
+ */
+aspectdef DynamicCallGraph
+	
+	println('Starting DynamicCallGraph...\n');
+	
+	var obj = new LaraObject();
+
+	/**
+	 * 		Increment the correct position of the array every time a
+	 * 	function is called (after);
+	 */
+	select function.call end
+	apply
+	
+		var id = obj.getId($function.name, $call.name);
+		$call. insert after 'call_graph[ [[id]] ]++;';
+	end
+	
+	/**
+	 * 		Declare the array in each file.
+	 */
+	var init = '= {0}';
+	select file.first_header end
+	apply
+	
+		var total = obj.getTotal();
+		$first_header. insert before 'int call_graph[ [[total]] ] [[init]];';
+		init = '';
+	end
+	
+	/**
+	 * 		Print the array at the end of the main function.
+	 */
+	select function{"main"}.return end
+	apply
+		
+		$return. insert before 'printf("digraph call_graph {\n\n");';
+		
+		for (f in obj) {
+			for (c in obj[f]) {
+		
+				var id = obj[f][c];
+				$return. insert before %{
+					if (call_graph[ [[id]] ] != 0)
+						printf("\t[[f]] -> [[c]] [label=\"%d\"];\n", call_graph[ [[id]] ]);
+				}%;
+			}
+		}
+		
+		$return. insert before %{printf("}\n");}%;
+	end
+	
+	println('\nDynamicCallGraph done!');
+end

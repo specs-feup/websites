@@ -1,0 +1,19 @@
+aspectdef NamingConventions
+	select function end
+	apply
+	    var name = $function.name;
+	    
+	    if (!(name ~= /^[a-z0]+(_[a-z]+)*$/)) {
+	        println("Function " + name + " does not respect naming conventions");
+	    }
+	end
+	
+	select body.var end
+	apply
+	    var name = $var.name;
+	    
+	    if (!(name ~= /^[a-z][a-zA-Z0-9]*$/)) {
+	        println("Variable " + name + " does not respect naming conventions");
+	    }
+	end
+end

@@ -1,0 +1,13 @@
+import clava.autopar.Parallelize;
+
+aspectdef AutoPar
+
+    var $loops = [];
+    select function{"matrix_mult"}.loop end
+	apply
+        $loops.push($loop);
+	end
+	condition $loop.isOutermost end
+
+    Parallelize.forLoops($loops);
+end

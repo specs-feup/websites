@@ -1,0 +1,12 @@
+aspectdef UsePrimitives
+	select call{"zeros"} end
+    apply
+       var arguments = $call.arguments.join(', ');
+       insert replace "matisse_new_array_from_dims([[arguments]])";
+    end
+    
+    select function.input end
+    apply
+        def type = "double[][]";
+    end
+end

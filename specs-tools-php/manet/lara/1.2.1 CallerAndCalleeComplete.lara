@@ -1,0 +1,32 @@
+aspectdef CallerAndCalleeComplete
+
+	input
+		funcName = 'enqueue'
+	end
+
+    var asCallee = {};
+    var asCaller = {};
+
+
+	println('Functions that call ' + funcName);
+	
+	select function.call end
+	apply
+		asCallee[$function.name] = (asCallee[$function.name] || 0) + 1;
+	end
+	condition $call.name == funcName end
+	
+	for(var f in asCallee)
+	    println('\t' + f + " x" + asCallee[f]);
+
+
+	println('Functions that are called by ' + funcName);
+
+	select function{name == funcName}.call end
+	apply
+		asCaller[$call.name] = (asCaller[$call.name] || 0) + 1;
+	end
+	
+	for(var c in asCaller)
+	    println('\t' + c + " x" + asCaller[c]);
+end

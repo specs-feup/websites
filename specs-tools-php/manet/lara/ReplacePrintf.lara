@@ -1,0 +1,236 @@
+/**
+ *        This aspect replaces all calls to printf with calls to putfsl.
+ *		This is used to send the printf arguments to a FIFO which is then
+ * 	read on another file. The contents of this new file are printed to the
+ * 	console. This example only works for printf calls that use integers as
+ * 	arguments.
+ */
+aspectdef replacePrintf
+
+	/** The name for the new functions. */
+	var putFunc = "putfsl";
+	var getFunc = "getfsl";
+	
+	/** Array that stores information about each printf. */
+	var printfs = [];
+	
+	/** Set that stores the files that needed the instrumentation header. */
+	var files = new Set();
+	
+	/** Printf counter. */
+	var counter = 0;
+	
+	select file.function.call{"printf"} end
+	apply
+
+		/** Add this file. */
+		files.add($file.name);
+	
+		/** Process this printf call. */
+		var process = new ProcessPrintf($call, putFunc, counter++);
+		call process();
+
+		/** Build the new call code and insert it before the printf call. */	
+		var code = process.code;
+		$call.insert before '[[code]]';
+		
+		/** Save the printf information. */
+		printfs.push(process.printfInfo);
+		
+		/** Comment the printf call. */
+		call CommentPrintf($call);
+	end
+	
+	/** Add the headers to the files. */
+	call AddIncludes(files);
+	
+	/** Create the new file based on the printf calls information. */
+	call CreateNewFileCode(printfs, getFunc);
+end
+
+
+
+/**
+ * 		Adds the include directive with the fsl header.
+ */
+aspectdef AddIncludes
+
+	input
+		files
+	end
+
+	select file.first_header end
+	apply
+		insert before '#include "fsl.h"';
+	end
+	
+	condition
+		files.contains($file.name)
+	end
+end
+
+
+
+/** 
+ * 		Builds the code for the new function calls and saves information about
+ * 	the printf call.
+ */
+aspectdef ProcessPrintf
+	
+	input
+		$printf,
+		putFunc,
+		counter
+	end
+	output
+		code,
+		printfInfo
+	end
+	
+	printfInfo = {};
+	var args = [];
+	
+	/** Collect the arguments of the call. */
+	select $printf.arg end
+	apply
+		args.push($arg);
+	end
+	
+	/** Save the string and the number of arguments excluding the string. */
+	printfInfo["id"] = counter;
+	printfInfo["string"] = args[0];
+	printfInfo["numArgs"] = args.length - 1;
+	
+	/** Put the ID of the print in the FSL. */
+	code = putFunc + '(' + counter + ', 1);\n';
+	
+	/** Put every other printf argument in the FSL. */
+	for (var i = 1; i < args.length; i++) {
+		
+		code += putFunc + '(' + args[i] + ', 1);\n';
+	}
+end
+
+
+
+/**
+ * 		Comments the printf function call.
+ */
+aspectdef CommentPrintf
+	
+	input
+		$printf
+	end
+	select $printf end
+	apply
+	    insert before '/*';
+	    insert after '*/';
+	end
+end
+
+
+
+/**
+ * 		Creates the code for the new file based on the printf calls information.
+ */
+aspectdef CreateNewFileCode
+	input
+		printfs,
+		getFunc
+	end
+	
+	var max = -1;
+	
+	/** Calculate the maximum number of arguments needed. */
+	for (var i = 0; i< printfs.length; i++) {
+		
+		if (printfs[i].numArgs > max) {
+			
+			max = printfs[i].numArgs;
+		}
+	}
+	
+    code = '\n\n/*################################ new main.c ################################*/\n\n';
+    
+	/** The start. */
+	code += '\n#include "fsl.h"\n#include <stdio.h>\n\n';
+	code += 'int main() {\n\n';
+	
+		/** The id variable. */
+		code += '\tint id;\n';
+		
+		/** The rest of the argument variables. */
+		for (var i = 0; i < max; i++) {
+		
+			code += '\tint arg' + i + ';\n';
+		}
+		code += '\n';
+		
+		/** The while loop. */
+		code += '\twhile(1) {\n\n';
+		
+			/** Read the id. */
+			code += '\t\t' + getFunc + '(&id, 1);\n';
+			
+			/** Switch based on the id. */
+			code += '\t\tswitch(id) {\n\n';
+			
+				/** Insert the code for all cases. */
+				var createCasesCode = new CreateCasesCode(printfs, getFunc);
+				call createCasesCode();
+				var casesCode = createCasesCode.code;
+			
+				code += casesCode;
+			
+			code += '\t\t}\n\n';
+		
+		code += '\t}\n\n';
+	
+	/** The end. */
+	code += '\treturn 0;\n';
+	code += '}\n';
+	
+	code += '\n\n/*################################ new main.c ################################*/\n\n';
+	
+	println(code);
+end
+
+
+
+/**
+ * 		Creates the code for the cases inside the switch statement.
+ */
+aspectdef CreateCasesCode
+	
+	input
+		printfs,
+		getFunc
+	end
+	output
+		code
+	end
+
+	code = '';
+	
+	for (var i = 0; i < printfs.length; i++) {
+	
+		var argsString = '';
+		
+		/** The start. */
+		code += '\t\t\t' + 'case ' + i + ':\n';
+		
+			/** Loading the arguments and creating the arguments string. */
+			for (var j = 0; j < printfs[i].numArgs; j++) {
+				
+				code += '\t\t\t\t' + getFunc + '(&arg' + j + ', 1);\n';
+				
+				argsString += ', arg' + j;
+			}
+			
+			/** The printf instruction. */
+			code += '\t\t\t\t' + 'printf(' + printfs[i].string + argsString + ');\n';
+			
+			/** The break. */
+			code += '\t\t\t\t' + 'break;\n';
+	}
+end

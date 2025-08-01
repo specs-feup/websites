@@ -1,0 +1,23 @@
+aspectdef StaticCallGraph
+
+
+	var callGraph = new LaraObject();
+
+
+	select function.call end
+	apply
+		callGraph.inc($function.name, $call.name);
+	end
+
+
+	/* Print the gathered information to the console. */
+	println('digraph static_call_graph {\n');
+	for (f in callGraph) {
+	
+		for (c in callGraph[f]) {
+		
+			println('\t' + f + '->' + c + ' [label="' + callGraph[f][c] + '"];');
+		}
+	}
+	println('}');
+end

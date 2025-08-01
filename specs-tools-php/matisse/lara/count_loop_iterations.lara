@@ -1,0 +1,32 @@
+aspectdef count_loop_iterations
+
+    LOOP_START: 	select function.body.loop.($loop_start = first) end
+    FUNCTION_FIRST: select function.body.first end
+    FUNCTION_LAST: 	select function.body.last end
+    
+    println("Aspect: Counting Loops");
+    
+	apply to LOOP_START::FUNCTION_FIRST::FUNCTION_LAST
+        // Execution counters
+    
+        // Init counters at the beginning of the function
+		$first.insert before%{counter_[[$loop.uid]] = 0;}%;
+        
+        // Increment counters when entering the loop
+        $loop_start.insert before%{counter_[[$loop.uid]] = counter_[[$loop.uid]] +1;}%;
+        
+        // Print counter values at the end of the function
+        $last.insert after%{fprintf('loop [[$loop.uid]] has %d executions\n', counter_[[$loop.uid]]);}%;
+        
+        // Iteration counters
+        
+        // Init counters at the beginning of the loop
+    	$loop.insert before%{counter_iter_[[$loop.uid]] = 0;}%;
+        
+        // Increment counters when entering the loop
+        $loop_start.insert before%{counter_iter_[[$loop.uid]] = counter_iter_[[$loop.uid]] +1;}%;
+        
+        // Print counter values at the end of the function
+        $loop.insert after%{fprintf('loop [[$loop.uid]] has %d iterations\n', counter_iter_[[$loop.uid]]);}%;
+    end
+end

@@ -1,0 +1,103 @@
+import antarex.margot.config.MargotConfig;
+import antarex.margot.dse.MargotDseInfo;
+import antarex.margot.codegen.MargotCodeGen;
+import antarex.margot.config.MargotEnergyDomain;
+
+import clava.Clava;
+
+import lara.units.TimeUnit;
+
+aspectdef TopLevel
+
+	// setup
+	var configPath = Clava.getWeavingFolder() + '/../config/adaptation.conf';
+	var opListPath = Clava.getWeavingFolder() + '/../config/oplist.conf';
+	
+	// set the configuration and save the xml file
+	var config = call XmlConfig(configPath);
+
+	// change the original application
+	var codeGenInfo = config.codeGenInfo;
+	call CodeGen(codeGenInfo);
+end
+
+aspectdef XmlConfig
+
+	input
+		configPath
+	end
+
+	output
+		dseInfo,
+		codeGenInfo
+	end
+
+	var config = new MargotConfig();
+	var matmul = config.newBlock('matmul');
+
+	/* monitors */
+	var timeMonitor = matmul.newTimeMonitor('timer');
+	timeMonitor.useMilli();
+	timeMonitor.expose('mean_exec_time', MargotExpose.AVG);
+
+	var energyMonitor = matmul.newEnergyMonitor('energy');
+	energyMonitor.setDomain(MargotEnergyDomain.PACKAGE);
+	energyMonitor.expose('mean_energy', MargotExpose.AVG);
+
+	/* knobs */
+	matmul.addKnob('block_size_1', 'BS1', 'int');
+	matmul.addKnob('block_size_2', 'BS2', 'int');
+
+	/* metrics */
+	matmul.addMetric('exec_time_ms', 'int', true);
+	matmul.addMetric('energy', 'float', true);
+
+	/* data features */
+	matmul.addDataFeature('N', 'int');
+	matmul.addDataFeature('M', 'int');
+	matmul.addDataFeature('K', 'int');
+
+	/* runtime */
+	matmul.addRuntimeProvider('exec_time_ms', 'timer', 1);
+
+	/* goals */
+	matmul.addMetricGoal('exec_time_lower_bound', MargotCFun.LT, 2, 'exec_time_ms');
+	matmul.addMetricGoal('energy_lower_bound', MargotCFun.LT, 100, 'energy');
+
+	/* states */
+	var state = matmul.newState('my_optimization');
+	state.setStarting(true);
+
+	state.setMinimizeCombination(MargotCombination.GEOMETRIC);
+	state.minimizeMetric('exec_time_ms', 1.0);
+	state.minimizeMetric('energy', 1.0);
+	
+	state.subjectTo('exec_time_lower_bound', 3, 30);
+	state.subjectTo('energy_lower_bound', 3, 20);
+
+	config.build(configPath);
+
+	/* generate the information needed for DSE */
+	dseInfo = MargotDseInfo.fromConfig(config, 'matmul');
+
+	/* generate the information needed for the code gen */
+	codeGenInfo = MargotCodeGen.fromConfig(config, 'matmul');
+
+	println('XmlConfig done');
+end
+
+
+aspectdef CodeGen
+
+	input
+		codeGenInfo
+	end
+	
+	select stmt.call{'matrix_mult_tiling'} end
+	apply
+		codeGenInfo.update($call);
+		codeGenInfo.monitorLog($call);
+	end
+
+	println('CodeGen done');
+end

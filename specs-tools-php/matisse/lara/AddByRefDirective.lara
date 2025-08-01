@@ -1,0 +1,45 @@
+aspectdef AddByRefDirective
+	var functionToModify = "aux_func";
+	var varToPassByRef = "aux";
+    var preallocation = null;
+
+	select
+        function{functionToModify}
+    end
+    apply
+        exec prependInput(varToPassByRef);
+        exec prependOutput(varToPassByRef);
+        
+        insert before "%!by_ref [[varToPassByRef]]";
+    end
+    
+    select
+        function{functionToModify}.body.assignment.lhs{joinPointType==='var'}
+    end
+    apply
+        preallocation = $assignment.code;
+	    $assignment.insert around "%[[preallocation]]";
+    end
+    condition $lhs.name === varToPassByRef end
+    
+    var preallocationFunctions = new Set();
+    
+    select
+        function.body.assignment.rhs{joinPointType==='call'}
+    end
+    apply
+      preallocationFunctions.add($function.name);
+      
+      $assignment.exec prependOutput(varToPassByRef);
+      exec prependArgument(varToPassByRef);
+    end
+    condition $rhs.name === functionToModify end
+    
+    select
+        function.header
+    end
+    apply
+       insert after "[[preallocation]]";
+    end
+    condition preallocationFunctions.contains($function.name) end
+end

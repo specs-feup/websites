@@ -1,0 +1,41 @@
+import clava.ClavaJoinPoints;
+
+aspectdef LoopTiling
+	
+    tileVars = {'i': {name: 'BS1', size: 64}, 'l': {name:'BS2', size:32}};
+
+	// find the top-level loop
+	select pragma{'matrix_loop'}.target end
+	apply
+		call LoopTilingHelper($target, tileVars);
+	end
+    condition $target.controlVar == 'i' end
+
+end
+
+aspectdef LoopTilingHelper
+	input
+		$topLevelLoop,
+		tileVars = {},// Maps control vars to tile variable names and sizes
+		ternaryIf = false
+	end
+	
+	// Get function body
+	$fBody = $topLevelLoop.ancestor('function').body;
+
+	// Int type for tile variables
+	var $intType = ClavaJoinPoints.builtinType('int');
+
+	for(var $loop of $topLevelLoop.descendantsAndSelf('loop')) {
+		var tileVar = tileVars[$loop.controlVar];
+		if(tileVar === undefined) {
+			continue;
+		}
+
+		// Create tile variable
+		$fBody.exec addLocal(tileVar.name, $intType, tileVar.size);
+		// Tile loop
+		$loop.exec tile(tileVar.name, $topLevelLoop, ternaryIf);
+	}
+
+end

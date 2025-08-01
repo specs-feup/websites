@@ -1,0 +1,43 @@
+aspectdef DetectMissingPreallocations
+
+  var initializedVars = new Set();
+
+  select function.input end
+  apply
+    initializedVars.add($input.name);
+  end
+
+  select assignment.lhs{joinPointType=="var"} end
+  apply
+    initializedVars.add($lhs.name);
+  end
+
+  var foundVars = 0;
+
+  select loop.body.assignment.lhs end
+  apply
+    call handle : HandleArrayAccess($assignment, $lhs, initializedVars);
+    foundVars += handle.foundVars;
+  end
+  condition $lhs.joinPointType=="arrayAccess" end
+
+  if (foundVars == 0) {
+    println("No missing allocations found");
+  }
+end
+
+aspectdef HandleArrayAccess
+  input $assignment, $arrayAccess, initializedVars end
+  output foundVars = 0 end
+
+  select $arrayAccess.lhs end
+  apply
+    if (initializedVars.contains($lhs.name)) {
+      continue #lhs;
+    }
+
+    println("Found variable growing in loop: " + $assignment.code);
+    ++foundVars;
+  end
+  condition $lhs.joinPointType=="var" end
+end

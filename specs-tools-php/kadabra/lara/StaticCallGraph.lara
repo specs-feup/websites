@@ -1,0 +1,33 @@
+/**
+ * Prints a static call graph based on the structure of the code.
+ * It takes into account all possible function calls. This is
+ * printed to the command line in dot format.
+ */
+aspectdef StaticCallGraph
+
+	/**
+	 * Use a LaraObject to keep track of how many times a 
+	 * <caller, callee> tuple appears on the code.
+	 */
+	var call_graph = new LaraObject();
+	//Select calls inside methods
+	select class.method.call end
+	apply
+		//increment the tuple <method,call>
+		call_graph.inc($method.name, $call.name);
+	end
+	
+	/**
+	 * Print the gathered information to the console in dot format
+	 */
+	println('digraph static_call_graph {\n');
+	//Foreach method 'm'
+	for (var m in call_graph) {
+		//Foreach call 'c'
+		for (var c in call_graph[m]) {
+			// print tuple <m,c>
+			println('\t' + m + '->' + c + ' [label="' + call_graph[m][c] + '"];');
+		}
+	}
+	println('}');
+end

@@ -1,0 +1,38 @@
+import matisse.Utils;
+
+aspectdef types_latnrm_static_specialization
+   
+	// Constant values for input specialization
+	var npoints_value = "100";
+	var order_value = "4";
+   
+   
+	// Floating type
+    var floatType = "single";
+   
+	// Type definition
+    var typeDef = {
+		data			: floatType + "[1][" + npoints_value + "]",
+		coefficient		: floatType + "[1][" + (order_value * 2)  + "]",
+		internal_state	: floatType + "[1][" + order_value + "]",
+		NPOINTS			: "int",
+		ORDER			: "int",
+            
+        bottom			: floatType,
+		outa			: floatType + "[1][" + npoints_value + "]",
+    };
+    
+    // Define types
+    call defineTypes("latnrm", typeDef);
+    
+    
+	// Input specialization
+    var inputDef = {
+		NPOINTS			: npoints_value,
+		ORDER			: order_value,
+    };
+    
+	// Specialize inputs
+    call specializeInputs("latnrm", inputDef);
+
+end

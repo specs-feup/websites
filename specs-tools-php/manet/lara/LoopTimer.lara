@@ -1,0 +1,148 @@
+/**
+ * 		This aspect inserts code that measures the execution time of loops
+ * 	and also the total execution time, using tic() and toc() functions.
+ * 	At the end of execution, it prints a report in JSON format.
+ */
+aspectdef LoopTimer
+
+	println('Starting LoopTimer...\n');
+
+	var obj = new LaraObject();
+	
+	/**
+	 * 		Insert the calls to tic() and toc() before and after each loop.
+	 */
+	select loop end
+	apply
+		var id = obj.getId($loop);
+		println('instrumented: line ' + $loop.line + ', type ' + $loop.type);
+		
+		$loop.insert before '/* loop [[id]] */';
+		$loop.insert before 'tic([[id]]);';
+		$loop.insert after 'toc([[id]]);';
+	end
+
+	/**
+	 * 		Insert the call to the function that will print the execution times.
+	 */
+	select function{"main"}.first_stmt end
+	apply
+		insert before
+		%{
+			unsigned long __seconds, __useconds;
+			struct timeval __start, __end;
+			
+			atexit(print_timers);
+			
+			gettimeofday(&__start, NULL);
+		}%;
+	end
+	
+	/**
+	 * 		Insert the call to the function that will print the execution times.
+	 */
+	select function{"main"}.return end
+	apply
+		insert before
+		%{
+			gettimeofday(&__end, NULL);
+
+			__seconds = __end.tv_sec - __start.tv_sec;
+			__useconds = __end.tv_usec - __start.tv_usec;
+			__total = __seconds * 1000000 + __useconds;
+		}%;
+	end
+	
+	/**
+	 * 		Insert before the first function...
+	 */
+	select function end
+	apply
+		
+		var total = obj.getTotal();
+	
+		/** ... the headers... */
+		insert before '#include <stdio.h>';
+		insert before '#include <sys/time.h>';
+		insert before '#include <stdlib.h>';
+		
+		/** ... the variables that count the time... */
+		insert before 'struct timeval __temp_timers[ [[total]] ];';
+		insert before 'unsigned long  __timers[ [[total]] ] = {0};';
+		insert before 'unsigned long __total;';
+		
+		/** ... the functions that count the execution times... */
+		/** ... the function that prints the execution times... */
+		var code = '';
+		for (l in obj) {
+			
+			var id = obj[l];
+			var idString = 'loop_' + id;
+			code += 'fprintf(file, \"\\t\\"' + idString + '\\":%lu,\\n\", __timers[' + id + ']);\n';
+		}
+		
+		/**
+		 * 		Call the codedef that will build the code to be inserted.
+		 */
+		$function.insert before Functions('report.json', total, code);
+		break;
+	end
+	
+	println('\nLoopTimer done!');
+end
+
+
+
+
+/**
+ * 		The codedef with the functions that will support the instrumentation.
+ */
+codedef Functions(reportName, total, code)
+%{
+	/*Starts the timer for a loop.*/
+	void tic(int loop_id)
+	{
+		gettimeofday(&__temp_timers[loop_id], NULL);
+	}
+
+	/*Stops the timer for a loop.*/
+	void toc(int loop_id)
+	{
+		struct timeval end;
+		unsigned long seconds, useconds;
+
+		gettimeofday(&end, NULL);
+		seconds = end.tv_sec - __temp_timers[loop_id].tv_sec;
+		useconds = end.tv_usec - __temp_timers[loop_id].tv_usec;
+
+		__timers[loop_id] += seconds * 1000000 + useconds;
+	}
+	
+	/*Prints all the timers.*/
+	void print_timers() {
+
+	/* A pointer to the file descriptor. */
+		FILE* file;
+		char file_name[] = "[[reportName]]";
+
+		/* Open the file in WRITE mode. */
+		file = fopen(file_name, "w");
+		if(file == NULL) {
+			
+			printf("Could not open the file: \"%s\".\n", file_name);
+			exit(0);
+		}
+		
+		fprintf(file, "{\n");
+
+		[[code]]
+
+		fprintf(file, "\ttotal:%lu\n", __total);
+		
+		fprintf(file, "}\n");
+		
+		/* Close the connection. */
+		fclose(file);
+	}
+}%
+end

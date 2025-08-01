@@ -1,0 +1,9 @@
+/**
+*	Write your own LARA aspect! :)
+*/
+aspectdef InsertNameHere
+	
+	/*select*/
+	/*apply*/
+	/*condition*/
+end

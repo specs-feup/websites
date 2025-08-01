@@ -1,0 +1,9 @@
+aspectdef grid_iterate_specialization
+	var defaults = {nx: 32, ny: 64, nz: 16};
+
+	select function.input end
+	apply
+		def Default = defaults[$input.name];
+	end
+	condition $input.name in defaults end
+end

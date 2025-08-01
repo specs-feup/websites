@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <!--link rel="shortcut icon" href="../../../img/MATISSE-logo.ico" -->
+
+        <!-- MERGELY-->
+        <script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+        <script type="text/javascript" src="../../scripts/mergely/codemirror.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="../../scripts/mergely/codemirror.css" />
+
+        <script type="text/javascript" src="../../scripts/mergely/mergely.js"></script>
+        <link type="text/css" rel="stylesheet" href="../../scripts/harmonic/mergely.css" />
+        <!------------>
+
+        <!-- Google Analitics -->
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-39611099-1', 'up.pt');
+            ga('send', 'pageview');
+
+        </script>
+        <!---------------------->
+
+        <title>Harmonic Source-To-Source Weaver</title>
+
+    </head>
+
+    <body >
+        <div id="TopBar" style="border-bottom:2px solid #FFA500; position: fixed; top: 0px; left: 0px; height: 50px; width: 100%;z-index: 10000; text-align: left; background:#FFFFFF;">
+            <table class="sponsors" align="center" width="100%" cellpadding="0" cellspacing="0" border="1" style="border:none"> <!-- cellpadding="5" cellspacing="1"-->
+
+                <tr >
+                    <!--td align="left" style="border:none">
+                            <a href="http://specs.fe.up.pt/tools/MANET/">
+                                    <img src='../../img/MATISSE-logo.jpg' height="50px" alt='MATISSE' />
+                            </a>
+                    </td-->
+                    <td align="center" style="border:none">
+                        <h3 style="color:#0C3A6D">Harmonic: LARA Source-To-Source Weaver</h3>
+                    </td>
+                    <td align="center" style="border:none">
+                        <a href="http://www.fe.up.pt">
+                            <img src='../../img/IMP-logo.svg' height="40px" alt='Imperial College London' />
+                        </a>
+                    </td>
+                    <td align="center" style="border:none">
+                        <a href="http://www.fe.up.pt">
+                            <img src='../../img/FEUP-logo.jpg' height="50px" alt='FEUP' />
+                        </a>
+                    </td>
+                    <td align="center" style="border:none">
+                        <a href="http://paginas.fe.up.pt/~specs/index.html">
+                            <img src='../../img/SPeCS-logo.png' height="50px" alt='SPeCS' />
+                        </a>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+
+
+
+        <!--div id="header" align="center">
+          <div id="header_l">
+            <div id="header_r">
+              <div id="logo">
+                <img align="middle" style="border:2px;border-style:solid;border-color:#000000;background:#FFFFFF;" src="http://www.reflect-project.eu/images/stories/7th%20framework%20programme-sml.png" />
+                <a href="http://www.reflect-project.eu">
+                  <img align="middle" border="0" src="../../img/banner-reflect.gif" width="908" height="103" alt="Reflect" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div-->
+        <br/>
+        <table class="tableEditor">
+            <tr align="center">
+                <td><h3>C source code</h3>
+                </td>
+                <td>
+                    <font color="#AAAAAA">Font Size</font>
+                    <select id="font_size" onChange="fontSizeOnChange(this)">
+                        <option value="8px">8</option>
+                        <option value="10px">10</option>
+                        <option value="12px" selected>12</option>
+                        <option value="14px">14</option>
+                        <option value="16px">16</option>
+                        <option value="18px">18</option>
+                        <option value="20px">20</option>
+                        <option value="24px">24</option>
+                    </select>
+                </td>
+                <td><h3>Lara Aspects</h3>
+                </td>
+            <tr>
+                <td>
+                    <div id="cEditor" >
+                        #include &lt;stdio.h&gt;
+
+                        int main(){
+                        printf("Hello World!");
+                        return 0;
+                        }
+                    </div>
+                </td>
+                <td align=center>
+                    <img src="../../img/plus.png" alt="+" class="arrow"  />
+                </td>
+                <td>
+                    <div id="laraEditor">
+                        aspectdef aspect_name
+
+                        /* select */
+                        select function.statement end
+
+                        /* apply */
+                        apply
+                        insert before "/* [[$statement.IR]] */";
+                        end
+
+                        /* condition */
+                        condition $statement.IR != "BasicBlock"  end
+                        end
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <font color="#AAAAAA">
+                    <input type=file id="cUpload" onChange="cUploadOnChange(this)">&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;</input>
+
+                    <select id="cCombo" onChange="cComboOnChange(this)">
+                        <option value="" selected>Select an example...</option>
+                        %{C_EXAMPLES}%
+                    </select>
+                    </font>
+                </td>
+                <td>
+                    <font color="#AAAAAA">
+                    </font>
+                </td>
+                <td width="50%">
+                    <font color="#AAAAAA">
+                    <input type=file id="laraUpload" onChange="laraUploadOnChange(this)">&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;</input>
+
+                    <select id="laraCombo" onChange="laraComboOnChange(this)">
+                        <option value="" selected>Select an example...</option>
+                        %{LARA_EXAMPLES}%
+                    </select>
+                    </font>
+                </td>
+            </tr>
+
+            <tr>
+
+                <td align="center">
+
+                    <img id="runCImage" src="../../img/arrow-down.png" alt="\/" class="arrow"  usemap="#runc"/><br>
+                    <font color="#AAAAAA">(click the arrow to <b>start</b> the weaving process!)</font><br>
+                    <h3>Woven Application</h3>
+                    <map name="runc">
+                        <area id="runCArea" shape="rect" coords="0,0,100,100"  href="javascript:void(0)" onClick="runC(this)"/>
+                    </map>
+
+                <td>
+                </td>
+
+                <td align="center" valign="bottom">
+                    <h3>Weaver Output</h3>
+                </td>
+            <tr>
+                <td>
+                    <div id="finalResult"></div>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <div id="console"></div>
+                </td>
+            </tr>
+            <tr >
+                <td colspan="4" align="center">
+                    <font color="#AAAAAA">
+                    <form action="">
+                        <label>
+                            <input type="checkbox" id="compareButton" value="Diff" onchange='showDiffOnCheck(this);'> Show Original Code vs Woven Code
+                        </label>
+                    </form>
+                    </font>
+                <td>
+            </tr >
+            <tr >
+                <td id="compareTD" colspan="4">
+
+                    <div id="compare"/>
+                <td>
+            </tr >
+        </table>
+
+        <!--div style="clear:both;"></div-->
+        <script src="../../scripts/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+        <div align="center">
+            <p>press F11 on the editors to switch to fullscreen mode <p>
+            <p>* This website presents a demonstration of Harmonic. It does not represent neither the current version of Harmonic nor the full LARA technology.<p/>
+        </div>
+        <hr/>
+
+        <p>Version: 1.0, &copy Imperial College London. Online version hosted at Universidade do Porto, FEUP.</p>
+
+        <p>
+            Harmonic uses the <a href="http://rosecompiler.org/">ROSE</a> compiler infrastructure developed at Lawrence Livermore National Laboratory. LARA [1] is a domain-specific, aspect-oriented language proposed during the <a href="http://reflect-project.eu/">REFLECT</a> project and currently being maintained and further developed by University of Porto, Porto, Portugal, and Imperial College London, UK.
+        </p>
+        <p>
+            For more information on LARA, please check the LARA <a href="http://www.fe.up.pt/lara">wiki</a>.
+        </p>
+        <br>
+        [1] João M.P. Cardoso, Tiago Carvalho, José G.F. Coutinho, Wayne Luk, Ricardo Nobre, Pedro Diniz, and Zlatko Petrov. 2012. LARA: an aspect-oriented programming language for embedded systems. In Proceedings of the 11th annual international conference on Aspect-oriented Software Development (AOSD '12). ACM, New York, NY, USA, 179-190. DOI=10.1145/2162049.2162071 http://doi.acm.org/10.1145/2162049.2162071 [<a href="lara_aosd12.bib" target="_blank">bib</a>]
+
+        <hr>
+
+        <p>Contact: José Gabriel de F. Coutinho (gabriel DOT figueiredo AT imperial DOT ac DOT uk</a>)</p>
+    <br/>
+    <br/>
+
+    %{MAIN_SCRIPT}%
+
+
+    <div id="SponsorBottomBar" style="border-top:2px solid #FFA500; position: fixed; bottom: 0px; left: 0px; height: 35px; width: 100%;z-index: 10000; text-align: left; background:#FFFFFF;">
+        <table class="sponsors" align="center" width="100%" cellpadding="0" cellspacing="0" border="1" style="border:none"> <!-- cellpadding="5" cellspacing="1"-->
+
+            <tr >
+                <td align="center" style="border:none;padding-left:10px" height="35px">
+                    Harmonic was developed in the context of FP7 REFLECT and FP7 HARNESS projects
+                    <!--a href="http://autoseer.fe.up.pt/">
+                            <img src='../../img/autoseer-logo.png' height="35px" alt='AutoSeer' align="middle"/>
+                    </a>
+                    , a project funded by
+                    <a href="http://alfa.fct.mctes.pt"/>
+                            <img src='../../img/FCT-logo.png' height="35px" alt='Fundação para a Ciência e Tecnologia (FCT)' align="middle"/>
+                    </a-->
+                </td>
+                <!--<td align="center" style="border:none">
+                        <a href="http://alfa.fct.mctes.pt"/>
+                                <img src='../../img/FCT-logo.png' height="35px" alt='Fundação para a Ciência e Tecnologia (FCT)' />
+                        </a>
+                </td>-->
+            </tr>
+        </table>
+
+    </div>
+
+</body></html>

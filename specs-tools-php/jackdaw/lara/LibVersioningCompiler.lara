@@ -1,0 +1,117 @@
+aspectdef Launcher
+
+	var flags = ["-funsafe-math-optimizations", 
+	"-fno-guess-branch-probability",
+	"-fno-ivopts -fno-tree-loop-optimize",
+	"-fno-inline-functions",
+	"-funroll-all-loops",
+	"-fomit-frame-pointer"];
+
+	select function{"foo"}.call{"bar"} end
+	apply
+		call LibVersioningCompiler($call, "id", flags);
+	end
+end
+
+aspectdef LibVersioningCompiler
+	input $fcall, id, flags end
+
+	// Add extern C to all declarations of the function
+	var functionDefFile = undefined;
+	select file.function{name === $fcall.name} end
+	apply
+		// Store the path to the definition of the function, for later use
+		if($function.hasDefinition) {
+			functionDefFile = $file.filepath;
+		}
+
+		// Build linkage node
+		var $linkage = AstFactory.externC($function);
+		
+		// Replace original function declaration with new linkage node, if created
+		if($linkage !== null) {
+			$function.exec replaceWith($linkage);
+		}
+	end
+
+	// Check if function definition was found
+	if(functionDefFile === undefined) {
+		println("ERROR: Could not find file were function call " + $fcall.name + " is defined");
+		return;
+	}
+
+
+	// Get joinpoint program
+	var $program = $fcall.root;
+
+	// Code for creating a compiled version of the function
+	var createVersion = "std::shared_ptr<vc::Version> " + id + " = vc::createVersion(";
+	
+	// Add file where function is
+	createVersion += '"' + Format.escape(functionDefFile) + '",\n';
+	createVersion += '"' + $fcall.name + '",\n';
+
+	// Create options
+	createVersion += "{";
+	// Add standard
+	createVersion += newOption($program.stdFlag);
+	// Add default flags
+	for(flag of $program.defaultFlags) {
+		createVersion += '\n,' + newOption(flag);
+	}
+	// Add weaver user flags
+	for(flag of $program.userFlags) {
+		createVersion += '\n,' + newOption(flag);
+	}
+	// Add include folders
+	for(folder of $program.includeFolders) {
+		createVersion += '\n,' + newOption("-I" + Format.escape(folder));
+	}
+	// Add user flags
+	for(flag of flags) {
+		createVersion += '\n,' + newOption(flag);
+	}	
+	createVersion += "}\n);\n";
+
+	var $fcallDeclType = $fcall.decl.functionType;
+	var typedefName = "signature_" + id;
+
+	// Add typedef of function signature
+	createVersion += "typedef " + $fcallDeclType.returnType.code;
+	createVersion += "(*" + typedefName + ")";
+
+	createVersion += "(";
+	createVersion +=  $fcallDeclType.paramTypes.map(function(type){return type.code;}).join(", ");
+	createVersion += ");\n";
+
+	var newFcallName = $fcall.name + "_" + id;
+
+	// Create a function pointer to the new compiled version of the function
+	createVersion += typedefName + " " + newFcallName + " = " + "(" + typedefName + ") vc::compileAndGetSymbol(" + id + " );\n"; 
+
+	// Change the original function call with the new compiled function
+	$fcall.exec setName(newFcallName);
+
+
+	// Insert version creation at the beginning of the function of the function call
+	var $fcallFunction = $fcall.ancestor("function");
+	select $fcallFunction.body end
+	apply
+		$body.insert before createVersion;
+	end
+
+	// Setup on the main function
+	select file{hasMain === true}.function{"main"}.body end
+	apply
+		// Include
+		$file.exec addInclude("versioningCompiler/Utils.hpp", false);
+
+		// Setup
+		$body.insert before "vc::vc_utils_init();";
+	end
+
+end
+
+function newOption(flag) {
+	return 'vc::Option("_", "' + flag + '")';
+}

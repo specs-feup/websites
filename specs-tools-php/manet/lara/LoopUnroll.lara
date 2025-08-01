@@ -1,0 +1,32 @@
+/**
+ *      Selects innermost FOR loops and unrolls them.
+ *      If the number of iterations is less or equal than 32, the loop is fully
+ *  unrolled. Otherwise, a factor of 2 is used. 
+ */
+aspectdef LoopUnroll
+	
+	println('Starting LoopUnroll...\n');
+	
+	select loop end
+	apply
+		
+		println('Analyzing loop at line ' + $loop.line);
+        if($loop.num_iterations <= 32) {
+            
+            /** Fully unroll the loop. */
+            exec Unroll(0);
+            println('\tfull unroll');
+        } else {
+            
+            /** Unroll the loop with a factor of 2. */
+            exec Unroll(2);
+            println('\tunroll x2');
+        }
+	end
+    condition
+		$loop.is_innermost &&
+		$loop.type=="for"
+	end
+	
+	println('\nLoopUnroll done!');
+end

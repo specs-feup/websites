@@ -1,0 +1,23 @@
+aspectdef CallerAndCallee
+
+	input
+		funcName = 'enqueue'
+	end
+
+
+	println('Functions that call ' + funcName);
+	
+	select function.call end
+	apply
+		println('\t'+$function.name);
+	end
+	condition $call.name == funcName end
+
+
+	println('Functions that are called by ' + funcName);
+
+	select function{name == funcName}.call end
+	apply
+		println('\t'+$call.name);
+	end
+end

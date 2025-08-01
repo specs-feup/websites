@@ -1,0 +1,30 @@
+aspectdef WriteJoinpoint
+
+	function writeArray(array,title,html){
+		if(array.length > 0){
+			html.push("<h3>" + title+"</h3>");
+			html.push("<li>" + array.join("</li><li>") + "</li>");
+		}
+	}
+
+	var html = [];
+
+	html.push("<h1>Joinpoints</h1>");
+	html.push("<strong>Root</strong> : "+Weaver.root);
+
+	for(var joinpoint of Weaver.joinpoints){
+		html.push("<h2>" +joinpoint +"</h2>");
+		
+		var attributes = Weaver.attributesOf(joinpoint,false);
+		writeArray(attributes, "attributes", html);
+		
+		var selects = Weaver.selectsOf(joinpoint,false);
+		writeArray(selects, "selects", html);
+		
+		var actions = Weaver.actionsOf(joinpoint,false);
+		writeArray(actions, "actions", html);
+	}
+
+	writeFile("report.html", html.join(""));
+
+end

@@ -1,0 +1,12 @@
+aspectdef numOfBranchExec
+    ifSection: select function.body.section{label=="if"} end //if, elseif, else,...
+    firstStat: select function.body.first end
+    lastStat: select function.body.last end
+    apply to ifSection::firstStat::lastStat
+        $first.insert before 'branch_[[$section.uid]] = 0;';
+        $section.insert after 'branch_[[$section.uid]] = branch_[[$section.uid]] + 1;';
+        $last.insert after%{
+            fprintf('Branch with label [[$section.label]] was executed %d times.\n',branch_[[$section.uid]]);
+        }%;
+    end
+end

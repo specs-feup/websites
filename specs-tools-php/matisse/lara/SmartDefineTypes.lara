@@ -1,0 +1,16 @@
+aspectdef SmartDefineTypes
+	select function.input end
+	apply
+	    var name = $input.name;
+        
+        var isMatrix = name.charAt(0) >= 'A' && name.charAt(0) <= 'Z';
+        
+        var typeName = "double";
+        if (isMatrix) {
+            typeName += "[][]";
+        }
+        
+        def type = typeName;
+	end
+	condition $function.ftype === 'main_function' end
+end

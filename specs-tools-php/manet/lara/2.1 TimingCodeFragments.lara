@@ -1,0 +1,106 @@
+aspectdef TimingCodeFragments
+
+	input
+		functionName = 'square',
+		timerName = 'tim'
+	end
+
+	call timer : GetTimerMonitor(timerName);
+	
+	call PrepareTimer(timer);
+	
+	call InstrumentApplication(functionName, timer);
+
+	call PrintResults(functionName, timer);
+	
+	call Destroy(timer);
+
+	println('\nTimingCodeFragments done!');
+end
+
+aspectdef PrepareTimer
+
+	input timer end
+
+	/* Include the instrumentation header to every file */
+	select file end
+	apply
+		exec AddInclude(timer.header);
+	end
+
+	/* Add a declaration to every file and definition on main */
+	select file.function end
+	apply
+		if($file.hasMain) 
+			insert before '[[timer.defi]]';
+		else
+			insert before '[[timer.decl]]';
+		
+		break; // breaks after first function
+	end
+
+	/* Init the timer */
+	select function{'main'}.last_decl end
+	apply
+		insert after '[[timer.init]]';
+	end
+end
+
+aspectdef Destroy
+
+	input timer end
+	
+	select function{'main'}.return end
+	apply
+		insert before '[[timer.destroy]]';
+	end
+end
+
+aspectdef InstrumentApplication
+
+	input
+		functionName,
+		timer
+	end
+
+	select call{functionName} end
+	apply
+		/* Time the calls to the functions */
+		insert before '[[timer.start]]';
+		insert after '[[timer.pause]]';
+		/* Print the current time */
+		insert after 'printf("current time of [[functionName]]: %.2fus\\n",[[timer.get]]);';
+	end
+end
+
+aspectdef PrintResults
+
+	input
+		functionName,
+		timer
+	end
+
+	select function{'main'}.return end
+	apply
+		insert before 'printf("elapsed time for [[functionName]]: %.2fus\\n", [[timer.get]]);';
+	end
+end
+
+aspectdef GetTimerMonitor
+
+	input
+		name = 'my_timer'
+	end
+	output
+		header = 'timer.h',
+		headerCode = '#include "timer.h"',
+		decl = 'extern Timer * ' + name + ';',
+		defi = 'Timer * ' + name + ' = NULL;',
+		init = name + ' = timer_init();',
+		destroy = 'timer_destroy(' + name + ');',
+		start = 'timer_start(' + name + ');',
+		pause = 'timer_pause(' + name + ');',
+		stop = 'timer_stop(' + name + ');',
+		get = 'timer_get_time(' + name + ')'
+	end
+end

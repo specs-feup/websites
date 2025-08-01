@@ -1,0 +1,172 @@
+aspectdef ComplexDynamicCallGraph
+
+	var obj = new LaraObject();
+	var ownFunctions = new Set();
+
+	call cgm : GetCallGraphMonitor();
+
+
+	/* Find own functions */
+	select function end
+	apply
+		ownFunctions.add($function.name);
+	end
+
+
+	/* Instrument funciton calls */
+	select function.call end
+	apply
+		var id = obj.getId($function.name, $call.name);
+
+		var inc = cgm.inc(id);
+		insert before '[[inc]]';
+
+		var tic = cgm.tic(id);
+		insert before '[[tic]]';
+
+		var toc = cgm.toc(id);
+		insert after '[[toc]]';
+	end
+	condition
+		ownFunctions.contains($call.name)
+	end
+
+
+	/* Add a declaration to every file and definition on main */
+	select file.function end
+	apply
+		var total = obj.getTotal();
+		if($file.hasMain) {
+			var defi = cgm.defi(total);
+			insert before '[[defi]]';
+						
+			insert before '[[cgm.ticDefi]]';
+			insert before '[[cgm.tocDefi]]';
+		} else {
+			var decl = cgm.decl(total);
+			insert before '[[decl]]';
+			
+			insert before '[[cgm.ticDecl]]';
+			insert before '[[cgm.tocDecl]]';
+		}
+		break; // breaks after first function
+	end
+
+
+	/* Include the instrumentation header to every file */
+	select file end
+	apply
+		exec AddInclude(cgm.header);
+	end
+
+
+	/* Register the print function */
+	select function{'main'}.first_stmt end
+	apply
+		var printFunc = cgm.printFunctionName;
+		insert before 'atexit([[printFunc]]);';
+	end
+
+
+	/* Generate the source code to print the report */
+	select function{"main"} end
+	apply
+		var total = obj.getTotal();
+
+		/* Generate the code that will print the report */
+		var firstFunction = true;
+		var firstCall = true;
+		var code = '';
+		var prefix = cgm.prefix;
+		for (f in obj) {
+
+			if(firstFunction) {
+			
+				firstFunction = false;
+			} else {
+				
+				code += 'fprintf(' + prefix + '_report, ",\\n");\n';
+			}
+
+			code += 'fprintf(' + prefix + '_report, "\\t\\"' + f + '\\" : {\\n");\n';
+
+			var comma = '';
+			for (c in obj[f]) {
+
+					var id = obj[f][c];
+					
+					code += 'fprintf(' + prefix + '_report, "' + comma + '\\t\\t\\"' + c + '\\" : {\\"t\\":%lu, \\"c\\":%d}", ' + prefix + '_timers[' + id + '], ' + prefix + '_counters[' + id + ']);\n';
+					comma = ',\\n';
+			}
+			code += 'fprintf(' + prefix + '_report, "\\n\\t}");\n';
+			firstCall = true;
+		}
+
+		/* Insert the code that will print the report. */
+		insert before Functions('call_times.json', code, cgm.printFunctionName, prefix);
+	end
+
+	println('\nComplexDynamicCallGraph done!');
+end
+
+
+/* The codedef with the template for the function that prints the report */
+/* This is essentially C code */
+codedef Functions(reportName, reportCode, print, prefix)
+%{
+	void [[print]]() {
+
+		long unsigned int node_time, children_time, self_time;
+		float color, self_ratio;
+
+		/* The file descriptor */
+		FILE* [[prefix]]_report;
+		char [[prefix]]_report_name[] = "[[reportName]]";
+		
+		/* Open the report in WRITE mode */
+		[[prefix]]_report = fopen([[prefix]]_report_name, "w");
+		if([[prefix]]_report == NULL) {
+			
+			printf("Couldn't open the file:\"%s\".\n", [[prefix]]_report_name);
+			exit(0);
+		}
+		
+		fprintf([[prefix]]_report, "{\n");
+		[[reportCode]]
+		fprintf([[prefix]]_report, "\n}\n");
+
+		/* Close the connection */
+		fclose([[prefix]]_report);
+	}
+}%
+end
+
+
+aspectdef GetCallGraphMonitor
+
+	input
+		prefix = 'cgm'
+	end
+	output
+		header = '<sys/time.h>',
+		headerCode = '#include <sys/time.h>',
+		decl = function(total){
+				return 'struct timeval ' + prefix + '_tmp_timers[' + total + '];\n' +
+						'unsigned long  ' + prefix + '_timers[' + total + '];\n'+
+						'unsigned int ' + prefix + '_counters[' + total + '];';
+		},
+		defi = function(total){
+				return 'struct timeval ' + prefix + '_tmp_timers[' + total + '];\n' +
+						'unsigned long  ' + prefix + '_timers[' + total + '] = {0};\n'+
+						'unsigned int ' + prefix + '_counters[' + total + '] = {0};';
+		},
+		inc  = function (id){return '' + prefix + '_counters[' + id + ']++;';},
+		tic = function (id){return 'tic(' + id + ');';},
+		toc = function (id){return 'toc(' + id + ');';},
+		printFunctionName = prefix + '_print',
+		ticDecl = 'void tic(int id);',
+		ticDefi = 'void tic(int id) {gettimeofday(&' + prefix + '_tmp_timers[id], NULL);}',
+		tocDecl = 'void toc(int id);',
+		tocDefi = 'void toc(int id) {struct timeval end; unsigned long seconds, useconds; gettimeofday(&end, NULL); seconds = end.tv_sec - ' + prefix + '_tmp_timers[id].tv_sec; useconds = end.tv_usec - ' + prefix + '_tmp_timers[id].tv_usec; ' + prefix + '_timers[id] += seconds * 1000000 + useconds;}';
+	end
+end

@@ -1,0 +1,124 @@
+import kadabra.monitor.CounterList;
+import kadabra.Utils;
+
+aspectdef DynamicCallGraph
+	input targetClass = ".*" end
+	var monitor;
+	var qualifiedClassName;
+	var printM = "printCallGraph"; //name for printing method
+
+	
+	call info: GetClasses();
+	var tuple = new LaraObject();
+	
+
+	//Create a counting monitor list for the target class
+	select class{name~=targetClass} end
+	apply
+		call counter: CountingMonitorList($class);
+		monitor = counter;
+		qualifiedClassName= $class.qualifiedName;
+		exec newMethod(["public", "static"], "void",printM,[]); //create the printing method
+	end
+	
+ 	//Create an ID for the method->call tuple
+	select class{name~=targetClass}.method.call end
+	apply
+		var id = 	tuple.getId($class.name +'_'+ $method.name, $call.declarator+"_"+$call.name);
+		var increment = monitor.increment(id);
+		insert before '[[increment]]';
+	end
+	
+	//initialize the monitor list with the total of tuples
+	monitor.init(tuple.getTotal());
+	select class{name~=targetClass}.method{printM}.body end
+	apply
+		//generate and insert printing code inside the DCG printer method
+		call printer:GenerateDCGPrinter(monitor, tuple, info.classes, info.apis);
+		insert replace '[[printer.code]]';
+	end
+
+	//insert call to printer before exiting the application
+	select class.method{"main"} end
+	apply
+		var callCode = qualifiedClassName+'.'+printM+'()';
+		call BeforeExit($method, callCode);
+	end
+end
+
+/**
+ * Gather classes and methods that are part of the application 
+ * and other library classes
+ */
+aspectdef GetClasses
+	output
+		apis = new LaraObject(),
+		classes = new LaraObject()
+	end
+	
+	//Select all methods inside classes
+	select class.method end
+	apply
+		//add it to the 'classes' object
+		classes.push($class.name, $method.name);
+	end
+
+	//Select calls inside methods
+	select class.method.call end
+	apply
+	  //if 'classes' does not contain the class of the called method
+	  if(!($call.declarator in classes)){
+		//then add it as an API
+		apis.set($call.declarator, $call.name, $call.qualifiedDecl);
+	  }
+	end
+end
+
+
+/**
+ * Generate code to print the DCG
+ */
+aspectdef GenerateDCGPrinter
+	input monitor, obj, methods, apis  end
+	output code ='int value;\n' end
+	code += '\tSystem.out.println("digraph DCG {\\n");\n';
+
+	for(var c in methods) {
+
+		code += '\tSystem.out.println("\\tsubgraph cluster_' + c + ' {\\n");\n';
+		code += '\tSystem.out.println("\\t\\tlabel=\\"' + c + '\\";\\n");\n';
+		code += '\tSystem.out.println("\\t\\tcolor=blue;\\n");\n';
+
+		for (var m in methods[c]) {
+			code += '\tSystem.out.println("\\t\\t' + c + '_' + methods[c][m] + ' [label=\\"' + methods[c][m] + '\\"]' + '\\n");\n';
+			
+		}
+		code += '\tSystem.out.println("\\t}\\n");\n';
+		
+	}
+
+	for(var c in apis) {
+
+		code += '\tSystem.out.println("\\tsubgraph cluster_' + c + ' {\\n");\n';
+		code += '\tSystem.out.println("\\t\\tlabel=\\"' + c + '\\";\\n");\n';
+		code += '\tSystem.out.println("\\t\\tcolor=gray;\\n");\n';
+
+		for (var m in apis[c]) {
+			code += '\tSystem.out.println("\\t\\t' + c + '_' + m + ' [label=\\"' + m + '\\"]' + '\\n");\n';
+			
+		}
+		code += '\tSystem.out.println("\\t}\\n");\n';
+		
+		
+	}
+	
+	
+	for( var m in obj){
+		
+		for( var c in obj[m]){
+			code+='\tvalue = '+monitor.get(obj[m][c])+'\n';
+			code+= '\tSystem.out.println("'+m+'->'+c+' [label=\\"\"+value+\"\\"]\\n");\n';
+		}
+	}
+	code += '\tSystem.out.println("}");\n';
+end

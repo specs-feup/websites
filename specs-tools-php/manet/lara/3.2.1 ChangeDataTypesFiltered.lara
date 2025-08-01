@@ -1,0 +1,37 @@
+aspectdef ChangeDataTypesFiltered
+
+	input
+		funcName = 'findDisparity',
+		newT = 'float'
+	end
+
+
+	/* Identify the control variables of loops */
+	var loopControlVars = new Set();
+	select function{funcName}.loop end
+	apply
+		loopControlVars.add($loop.control_var);
+	end
+
+
+	/* Split the declarations */
+	select function{funcName} end
+	apply
+		exec SingleDeclarator();
+	end
+
+
+	/* Change the types of the local variables */
+	select function{funcName}.decl end
+	apply
+		insert before '/* [[$decl.name]] type changed to [[newT]] */';
+
+		def native_type = newT;
+	end
+	condition
+		!loopControlVars.contains($decl.name)
+	end
+
+
+	println('\nChangeDataTypesFiltered done!');
+end

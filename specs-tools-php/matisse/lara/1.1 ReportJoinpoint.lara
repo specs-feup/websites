@@ -1,0 +1,8 @@
+/*
+ *
+ */
+aspectdef ReportJoinpoint
+	
+	println("root: "+Weaver.root);
+	println("joinpoints: \n\t"+Weaver.joinpoints.join('\n\t'));
+end

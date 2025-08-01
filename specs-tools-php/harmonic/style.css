@@ -1,0 +1,70 @@
+    .ace_editor {
+      position: relative !important;
+      border: 1px solid lightgray;
+      margin: auto;
+      height: 300px;
+    }
+    .ace_editor.fullScreen {
+      height: auto;
+      width: auto;
+      border: 0;
+      margin: 0;
+      position: fixed !important;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      background: white;
+    }
+    .fullScreen {
+      overflow: hidden
+    }
+    .scrollmargin {
+      height: 500px;
+      text-align: center;
+    }
+    .leftDiv{
+      position: left;
+      height: 600px;
+      width: 60%;
+    }
+    .rightDiv{
+      position: right;
+      height: 600px;
+      width: 60%;
+    }
+    .tableEditor{
+      position: relative !important;
+	  padding-top: 20px;
+      margin: auto;
+      width: 100%;
+      align: center;
+    }
+    
+    .arrow{
+      width: 60px;
+      height: 60px;
+    }
+
+    .outArea{
+      position: relative !important;
+                        border: 1px solid lightgray;
+                        margin: auto;
+                        height: 300px;
+      overflow: auto;
+      width: auto;
+      resize:horizontal;
+    }
+    
+    body {background-color:#0C3A6D;}
+    p {color: #AAAAAA;}
+    h3 {
+      color: #AAAAAA;
+      padding: 0px;
+      margin: 0px;
+		}
+	a:link {color:#FFFFFF;}      /* unvisited link */
+	a:visited {color:#FFFFFF;}  /* visited link */
+	a:hover {color:#FFFFFF;}  /* mouse over link */
+	a:active {color:#FFFFFF;}  /* selected link */ 

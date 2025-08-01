@@ -1,0 +1,18 @@
+aspectdef subbandSingle
+	var typeDef = {
+		z: "single[1][512]",
+		m: "single[1][2048]",
+		s: "single[1][32]",
+
+		y: "single[1][64]",
+		acc1: "single",
+		acc2: "single"
+	};
+
+	select var end
+	apply
+		def type = typeDef[$var.name];
+	end
+	condition $var.name in typeDef end
+end
+                            

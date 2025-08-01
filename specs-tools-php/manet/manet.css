@@ -1,0 +1,32 @@
+div.sidebar li.active {
+    /*background: #c2c8a4;*/
+    background-color: #99aa77;
+}
+
+div.sidebar li:hover {
+    /*background: #91a96f;*/
+    background-color: #99bb66;
+}
+
+.menu-trigger:hover {
+    /*background-color: #91a96f;*/
+    background-color: #99bb66;
+}
+
+.dropdown-menu li:hover {
+    /*background-color: #91a96f;*/
+    background-color: #99bb66;
+}
+
+div.code-block .header {
+    /*background-color: #ecefda;*/
+    background-color: #ccccaa;
+    padding-left: 5px;
+}
+
+div.lsView .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ecefda;
+    padding-left: 5px;
+}

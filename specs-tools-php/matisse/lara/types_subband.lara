@@ -1,0 +1,25 @@
+import matisse.Utils;
+
+aspectdef types_subband
+	
+	// Program name
+    var functionName = "subband";
+	
+	// Floating type
+	var floatType = "single"; // double
+	
+	// Type definition
+	var typeDef = {
+		z		: floatType + "[1][512]",
+		m		: floatType + "[1][2048]",
+		s		: floatType + "[1][32]",
+	
+		y		: floatType + "[1][64]",
+		acc1	: floatType,
+		acc2	: floatType
+	};
+	
+	// Define types
+	call defineTypes(functionName, typeDef);
+    
+end

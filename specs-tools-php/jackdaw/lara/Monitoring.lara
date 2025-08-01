@@ -1,0 +1,16 @@
+import lara.code.Timer;
+import lara.code.Energy;
+
+aspectdef Monitoring
+	
+	// Measure execution time and energy of the loop
+	var timer = new Timer();
+	var energy = new Energy();
+
+	select function{"foo"}.loop end
+	apply
+		timer.time($loop);
+		energy.measure($loop);
+	end
+
+end

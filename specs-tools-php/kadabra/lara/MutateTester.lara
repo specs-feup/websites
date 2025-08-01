@@ -1,0 +1,34 @@
+import kadabra.mutation.BinaryExpressionMutator;
+import weaver.WeaverJps;
+
+aspectdef MutateTester
+
+	// Array of mutators
+	var mutators = [];
+
+	// BinaryExpression Mutators
+	for(var $op of WeaverJps.search('binaryExpression').get()) {
+		mutators.push(new BinaryExpressionMutator($op, [">", "=="]));
+	}
+
+
+	// Apply each Mutator
+	for(var mutator of mutators) {
+	
+		while(mutator.hasMutations()) {
+			// Mutate
+			mutator.mutate();
+			
+			// Print method where mutation occurred
+			if(mutator.getMutationPoint() !== undefined) {
+				println(mutator.getMutationPoint().ancestor('method').srcCode);
+			}
+	
+	
+			// Restore operator
+			mutator.restore();
+		}	
+	}
+
+end
+

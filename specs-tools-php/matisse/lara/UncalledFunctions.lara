@@ -1,0 +1,15 @@
+aspectdef UncalledFunctions
+
+	var calls = new Set();
+
+	select call end
+	apply calls.add($call.name); end
+
+	
+	select file.function end
+	apply
+		if(!calls.contains($function.name)) {
+			println($file.name + ' : ' + $function.name);
+		}	
+	end
+end

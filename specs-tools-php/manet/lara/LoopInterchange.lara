@@ -1,0 +1,20 @@
+/**
+ *		Interchanges the innermost FOR loop with its parent.
+ */
+aspectdef LoopInterchange
+    
+    println('Starting LoopInterchange...\n');
+    
+    select ($p=loop).($c=loop) end
+    apply
+        $p.exec Interchange($c);
+    end
+    condition
+        $c.is_innermost &&
+        $p.type == "for" &&
+        $c.type == "for" && 
+        $c.is_parent($p)
+    end
+    
+    println('\nLoopInterchange done!');
+end

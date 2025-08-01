@@ -1,0 +1,29 @@
+aspectdef CallerAndCallee
+
+	input
+		funcName = 'correlateSAD_2D'
+	end
+
+	var callee = new LaraObject();
+	var caller = new LaraObject();
+
+	/* who calls this function */
+	select function.call{funcName} end
+	apply
+		callee.inc($function.name);
+	end
+
+	println('Functions that call ' + funcName);
+	for (var c in callee) 
+		println('  ' + c + ' x' + callee[c]);
+	
+	/* who is called by this function */
+	select function{funcName}.call end
+	apply
+		caller.inc($call.name);
+	end
+
+	println('Functions that are called by ' + funcName);
+	for (var c in caller) 
+		println('  ' + c + ' x' + caller[c]);
+end

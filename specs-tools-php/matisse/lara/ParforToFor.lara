@@ -1,0 +1,8 @@
+aspectdef ParForToFor
+  A: select loop{"parfor"}.control end
+  B: select loop{"parfor"}.expr end
+  C: select loop{"parfor"}.header end
+  apply to A :: B :: C
+    $header.insert replace "for [[$control.code]] = [[$expr.code]]";
+  end
+end

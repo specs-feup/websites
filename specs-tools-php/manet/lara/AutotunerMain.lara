@@ -1,0 +1,80 @@
+ /**
+ *	Changes an application in order to add autotuning capabilities using the mARGOt library.
+ *
+**/
+aspectdef Launcher
+
+	call AutotunerMain('foo', ["alpha", "beta"]);
+	
+end
+
+
+aspectdef AutotunerMain
+
+	input
+		targetFunction,
+		variables
+	end
+
+	println("Starting autotuner main aspect\n");
+
+	var variablesCode = '';
+	var first = true;
+	for (var variable of variables) {
+
+		var comma = first? '' : ',';
+		variablesCode += comma + '&' + variable;
+		first = false;
+	}
+	
+	call InsertAutotunerCode(targetFunction, variablesCode);
+
+	println("\nAutotuner main aspect done");
+end
+
+aspectdef InsertAutotunerCode
+	
+	input
+		targetFunction,
+		variablesCode
+	end
+
+	println("\t Inserting autotuner code");
+
+	// add include
+	select file.call{targetFunction} end
+	apply
+		$file.exec AddInclude('<argo.h>');
+	end
+	
+	// init autotuner
+	select function{'main'}.first_stmt end
+	apply
+		insert before %{
+			#pragma argo_init
+			argo_init();
+		}%;
+	end
+	
+	
+	select call{targetFunction} end
+	apply
+		// update
+		insert before %{
+			#pragma update
+			if(argo_elaboration_update([[variablesCode]]) != 0) {
+				argo_elaboration_configuration_applied();
+			}
+		}%;
+		// start monitor
+		insert before %{
+			argo_elaboration_start_monitor();
+		}%;
+		// end monitor and log
+		insert after %{
+			argo_elaboration_stop_monitor();
+			argo_elaboration_log();
+		}%;
+	end
+end
+

@@ -1,0 +1,655 @@
+NVIDIA CUDA Toolkit Release Notes
+---------------------------------
+
+The Release Notes for the CUDA Toolkit.
+
+
+1. CUDA 11.3 Release Notes
+--------------------------
+
+The release notes for the CUDA Toolkit can be found online at
+http://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html.
+
+
+1.1. CUDA Toolkit Major Component Versions
+
+CUDA Components
+
+      Starting with CUDA 11, the various components in the
+      toolkit are versioned independently.
+
+      For CUDA 11.3, the table below indicates the versions:
+
+      Table 1. CUDA 11.3 Component Versions
+
+      Component Name
+
+      Version Information
+
+      Supported Architectures
+
+      CUDA Runtime (cudart)
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      cuobjdump
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      CUPTI
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      CUDA cuxxfilt (demangler)
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      CUDA Demo Suite
+
+      11.3.53
+
+      x86_64
+
+      CUDA GDB
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      CUDA Memcheck
+
+      11.3.53
+
+      x86_64, POWER
+
+      CUDA NVCC
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      CUDA nvdisasm
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      CUDA NVML Headers
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      CUDA nvprof
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      CUDA nvprune
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      CUDA NVRTC
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      CUDA NVTX
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      CUDA NVVP
+
+      11.3.53
+
+      x86_64, POWER
+
+      CUDA Samples
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      CUDA Compute Sanitizer API
+
+      11.3.53
+
+      x86_64, POWER, Arm64
+
+      CUDA cuBLAS
+
+      11.4.2.10059
+
+      x86_64, POWER, Arm64
+
+      CUDA cuFFT
+
+      10.4.2.53
+
+      x86_64, POWER, Arm64
+
+      CUDA cuRAND
+
+      10.2.4.53
+
+      x86_64, POWER, Arm64
+
+      CUDA cuSOLVER
+
+      11.1.1.53
+
+      x86_64, POWER, Arm64
+
+      CUDA cuSPARSE
+
+      11.5.0.53
+
+      x86_64, POWER, Arm64
+
+      CUDA NPP
+
+      11.3.3.39
+
+      x86_64, POWER, Arm64
+
+      CUDA nvJPEG
+
+      11.4.1.53
+
+      x86_64, POWER, Arm64
+
+      Nsight Compute
+
+      2021.1.0.18
+
+      x86_64, POWER, Arm64
+
+      Nsight Windows NVTX
+
+      1.21018621
+
+      x86_64, POWER, Arm64
+
+      Nsight Systems
+
+      2021.1.0.18
+
+      x86_64, POWER, Arm64
+
+      Nsight Visual Studio Edition (VSE)
+
+      2021.1.0.21074
+
+      x86_64 (Windows)
+
+      NVIDIA Linux Driver
+
+      465.18
+
+      x86_64, POWER, Arm64
+
+      NVIDIA Windows Driver
+
+      465.80
+
+      x86_64 (Windows)
+
+CUDA Driver
+
+      Running a CUDA application requires the system with at
+      least one CUDA capable GPU and a driver that is
+      compatible with the CUDA Toolkit. See Table 2. For more
+      information various GPU products that are CUDA capable,
+      visit https://developer.nvidia.com/cuda-gpus.
+
+      Each release of the CUDA Toolkit requires a minimum
+      version of the CUDA driver. The CUDA driver is backward
+      compatible, meaning that applications compiled against a
+      particular version of the CUDA will continue to work on
+      subsequent (later) driver releases.
+
+      More information on compatibility can be found at
+      https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#cuda-runtime-and-driver-api-version.
+
+      Note: Starting with CUDA 11.0, the toolkit components
+      are individually versioned, and the toolkit itself is
+      versioned as shown in the table below.
+
+      Table 2. CUDA Toolkit and Minimum Compatible Driver
+      Versions
+
+      CUDA Toolkit
+
+      Linux x86_64 Driver Version
+
+      Windows x86_64 Driver Version
+
+      CUDA 11.3.0 GA
+
+      >=465.18
+
+      >=465.80
+
+      CUDA 11.2.2 Update 2
+
+      >=460.32.03
+
+      >=461.33
+
+      CUDA 11.2.1 Update 1
+
+      >=460.32.03
+
+      >=461.09
+
+      CUDA 11.2.0 GA
+
+      >=460.27.03
+
+      >=460.82
+
+      CUDA 11.1.1 Update 1
+
+      >=455.32
+
+      >=456.81
+
+      CUDA 11.1 GA
+
+      >=455.23
+
+      >=456.38
+
+      CUDA 11.0.3 Update 1
+
+      >= 450.51.06
+
+      >= 451.82
+
+      CUDA 11.0.2 GA
+
+      >= 450.51.05
+
+      >= 451.48
+
+      CUDA 11.0.1 RC
+
+      >= 450.36.06
+
+      >= 451.22
+
+      CUDA 10.2.89
+
+      >= 440.33
+
+      >= 441.22
+
+      CUDA 10.1 (10.1.105 general release, and updates)
+
+      >= 418.39
+
+      >= 418.96
+
+      CUDA 10.0.130
+
+      >= 410.48
+
+      >= 411.31
+
+      CUDA 9.2 (9.2.148 Update 1)
+
+      >= 396.37
+
+      >= 398.26
+
+      CUDA 9.2 (9.2.88)
+
+      >= 396.26
+
+      >= 397.44
+
+      CUDA 9.1 (9.1.85)
+
+      >= 390.46
+
+      >= 391.29
+
+      CUDA 9.0 (9.0.76)
+
+      >= 384.81
+
+      >= 385.54
+
+      CUDA 8.0 (8.0.61 GA2)
+
+      >= 375.26
+
+      >= 376.51
+
+      CUDA 8.0 (8.0.44)
+
+      >= 367.48
+
+      >= 369.30
+
+      CUDA 7.5 (7.5.16)
+
+      >= 352.31
+
+      >= 353.66
+
+      CUDA 7.0 (7.0.28)
+
+      >= 346.46
+
+      >= 347.62
+
+      For convenience, the NVIDIA driver is installed as part
+      of the CUDA Toolkit installation. Note that this driver
+      is for development purposes and is not recommended for
+      use in production with Tesla GPUs.
+
+      For running CUDA applications in production with Tesla
+      GPUs, it is recommended to download the latest driver
+      for Tesla GPUs from the NVIDIA driver downloads site at
+      http://www.nvidia.com/drivers.
+
+      During the installation of the CUDA Toolkit, the
+      installation of the NVIDIA driver may be skipped on
+      Windows (when using the interactive or silent
+      installation) or on Linux (by using meta packages).
+
+      For more information on customizing the install process
+      on Windows, see
+      http://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html#install-cuda-software.
+
+      For meta packages on Linux, see
+      https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#package-manager-metas
+
+
+1.2. CUDA Tools
+
+
+1.2.1. Nsight Eclipse Plugin
+
+  * Eclipse versions 4.10 to 4.14 are currently supported in
+    CUDA 11.3.
+
+
+1.3. CUDA Libraries
+
+
+1.3.1. cuFFT Library
+
+  * cuFFT shared libraries are now linked statically against
+    libstdc++ on Linux platforms.
+
+  * Improved performance of certain sizes (multiples of large
+    powers of 3, powers of 11) in SM86.
+
+
+1.3.2. cuSPARSE Library
+
+  * Added new routine cusparesSpSV for sparse triangular
+    solver with better performance. The new Generic API
+    supports:
+
+      * CSR storage format
+
+      * Non-transpose, transpose, and transpose-conjugate
+        operations
+
+      * Upper, lower fill mode
+
+      * Unit, non-unit diagonal type
+
+      * 32-bit and 64-bit indices
+
+      * Uniform data type computation
+
+
+1.3.3. NVIDIA Performance Primitives (NPP)
+
+  * Added nppiDistanceTransformPBA functions.
+
+
+1.4. Deprecated Features
+
+The following features are deprecated in the current release
+of the CUDA software. The features still work in the current
+release, but their documentation may have been removed, and
+they will become officially unsupported in a future release.
+We recommend that developers employ alternative solutions to
+these features in their software.
+
+CUDA Libraries
+
+        * cuSPARSE: cusparseScsrsv2_analysis,
+          cusparseScsrsv2_solve, cusparseXcsrsv2_zeroPivot,
+          and cusparseScsrsv2_bufferSize have been deprecated
+          in favor of cusparseSpSV.
+
+Tools   
+
+        * Nsight Eclipse Plugin: Docker support is deprecated
+          in Eclipse 4.14 and earlier versions as of CUDA
+          11.3, and Docker support will be dropped for Eclipse
+          4.14 and earlier in a future CUDA Toolkit release.
+
+
+1.5. Resolved Issues
+
+
+1.5.1. cuRAND Library
+
+  * Fixed inconsistency between random numbers generated by
+    GPU and host generators when CURAND_ORDERING_PSEUDO_LEGACY
+    ordering is selected for certain generator types.
+
+
+1.5.2. CUDA Math API
+
+  * Previous releases of CUDA were potentially delivering
+    incorrect results in some Linux distributions for the
+    following host Math APIs: sinpi, cospi, sincospi, sinpif,
+    cospif, sincospif. If passed huge inputs like
+    7.3748776e+15 or 8258177.5 the results were not equal to 0
+    or 1. These have been corrected with this release.
+
+
+1.6. Known Issues
+
+
+1.6.1. cuBLAS Library
+
+  * The planar complex matrix descriptor for batched matmul
+    has inconsistent interpretation of batch offset.
+
+  * Mixed precision operations with reduction scheme
+    CUBLASLT_REDUCTION_SCHEME_OUTPUT_TYPE (might be
+    automatically selected based on problem size by
+    cublasSgemmEx() or cublasGemmEx() too, unless
+    CUBLAS_MATH_DISALLOW_REDUCED_PRECISION_REDUCTION math mode
+    bit is set) not only stores intermediate results in output
+    type but also accumulates them internally in the same
+    precision, which may result in lower than expected
+    accuracy. Please use
+    CUBLASLT_MATMUL_PREF_REDUCTION_SCHEME_MASK or
+    CUBLAS_MATH_DISALLOW_REDUCED_PRECISION_REDUCTION if this
+    results in numerical precision issues in your application.
+
+
+1.6.2. cuFFT Library
+
+  * cuFFT planning and plan estimation functions may not
+    restore correct context affecting CUDA driver API
+    applications.
+
+  * Plans with strides, primes larger than 127 in FFT size
+    decomposition and total size of transform including
+    strides bigger than 32GB produce incorrect results.
+
+
+1.6.3. cuSOLVER Library
+
+  * For values N<=16, cusolverDn[S|D|C|Z]syevjBatched hits
+    out-of-bound access and may deliver the wrong result. The
+    workaround is to pad the matrix A with a diagonal matrix D
+    such that the dimension of [A 0 ; 0 D] is bigger than 16.
+    The diagonal entry D(j,j) must be bigger than maximum
+    eigenvalue of A, for example, norm(A, ‘fro’). After
+    the syevj, W(0:n-1) contains the eigenvalues and
+    A(0:n-1,0:n-1) contains the eigenvectors.
+
+
+Notices
+-------
+
+
+Notice
+
+This document is provided for information purposes only and
+shall not be regarded as a warranty of a certain
+functionality, condition, or quality of a product. NVIDIA
+Corporation (“NVIDIA”) makes no representations or
+warranties, expressed or implied, as to the accuracy or
+completeness of the information contained in this document and
+assumes no responsibility for any errors contained herein.
+NVIDIA shall have no liability for the consequences or use of
+such information or for any infringement of patents or other
+rights of third parties that may result from its use. This
+document is not a commitment to develop, release, or deliver
+any Material (defined below), code, or functionality.
+
+NVIDIA reserves the right to make corrections, modifications,
+enhancements, improvements, and any other changes to this
+document, at any time without notice.
+
+Customer should obtain the latest relevant information before
+placing orders and should verify that such information is
+current and complete.
+
+NVIDIA products are sold subject to the NVIDIA standard terms
+and conditions of sale supplied at the time of order
+acknowledgement, unless otherwise agreed in an individual
+sales agreement signed by authorized representatives of NVIDIA
+and customer (“Terms of Sale”). NVIDIA hereby expressly
+objects to applying any customer general terms and conditions
+with regards to the purchase of the NVIDIA product referenced
+in this document. No contractual obligations are formed either
+directly or indirectly by this document.
+
+NVIDIA products are not designed, authorized, or warranted to
+be suitable for use in medical, military, aircraft, space, or
+life support equipment, nor in applications where failure or
+malfunction of the NVIDIA product can reasonably be expected
+to result in personal injury, death, or property or
+environmental damage. NVIDIA accepts no liability for
+inclusion and/or use of NVIDIA products in such equipment or
+applications and therefore such inclusion and/or use is at
+customer’s own risk.
+
+NVIDIA makes no representation or warranty that products based
+on this document will be suitable for any specified use.
+Testing of all parameters of each product is not necessarily
+performed by NVIDIA. It is customer’s sole responsibility to
+evaluate and determine the applicability of any information
+contained in this document, ensure the product is suitable and
+fit for the application planned by customer, and perform the
+necessary testing for the application in order to avoid a
+default of the application or the product. Weaknesses in
+customer’s product designs may affect the quality and
+reliability of the NVIDIA product and may result in additional
+or different conditions and/or requirements beyond those
+contained in this document. NVIDIA accepts no liability
+related to any default, damage, costs, or problem which may be
+based on or attributable to: (i) the use of the NVIDIA product
+in any manner that is contrary to this document or (ii)
+customer product designs.
+
+No license, either expressed or implied, is granted under any
+NVIDIA patent right, copyright, or other NVIDIA intellectual
+property right under this document. Information published by
+NVIDIA regarding third-party products or services does not
+constitute a license from NVIDIA to use such products or
+services or a warranty or endorsement thereof. Use of such
+information may require a license from a third party under the
+patents or other intellectual property rights of the third
+party, or a license from NVIDIA under the patents or other
+intellectual property rights of NVIDIA.
+
+Reproduction of information in this document is permissible
+only if approved in advance by NVIDIA in writing, reproduced
+without alteration and in full compliance with all applicable
+export laws and regulations, and accompanied by all associated
+conditions, limitations, and notices.
+
+THIS DOCUMENT AND ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE
+BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER
+DOCUMENTS (TOGETHER AND SEPARATELY, “MATERIALS”) ARE BEING
+PROVIDED “AS IS.” NVIDIA MAKES NO WARRANTIES, EXPRESSED,
+IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE
+MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF
+NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR
+PURPOSE. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT WILL
+NVIDIA BE LIABLE FOR ANY DAMAGES, INCLUDING WITHOUT LIMITATION
+ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, PUNITIVE, OR
+CONSEQUENTIAL DAMAGES, HOWEVER CAUSED AND REGARDLESS OF THE
+THEORY OF LIABILITY, ARISING OUT OF ANY USE OF THIS DOCUMENT,
+EVEN IF NVIDIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGES. Notwithstanding any damages that customer might incur
+for any reason whatsoever, NVIDIA’s aggregate and cumulative
+liability towards customer for the products described herein
+shall be limited in accordance with the Terms of Sale for the
+product.
+
+
+VESA DisplayPort
+
+DisplayPort and DisplayPort Compliance Logo, DisplayPort
+Compliance Logo for Dual-mode Sources, and DisplayPort
+Compliance Logo for Active Cables are trademarks owned by the
+Video Electronics Standards Association in the United States
+and other countries.
+
+
+HDMI
+
+HDMI, the HDMI logo, and High-Definition Multimedia Interface
+are trademarks or registered trademarks of HDMI Licensing LLC.
+
+
+OpenCL
+
+OpenCL is a trademark of Apple Inc. used under license to the
+Khronos Group Inc.
+
+
+Trademarks
+
+NVIDIA and the NVIDIA logo are trademarks or registered
+trademarks of NVIDIA Corporation in the U.S. and other
+countries. Other company and product names may be trademarks
+of the respective companies with which they are associated.
+
+
+Copyright
+
+© 2007-2021 NVIDIA Corporation. All rights reserved.
+
+
+-------------------------------------------------------------

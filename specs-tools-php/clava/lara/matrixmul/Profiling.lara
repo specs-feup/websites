@@ -1,0 +1,34 @@
+import lara.metrics.ExecutionTimeMetric;
+import lara.metrics.EnergyMetric;
+import lara.cmake.CMaker;
+
+aspectdef Profiling
+
+    var metrics = [new ExecutionTimeMetric(), new EnergyMetric()];
+    
+    select pragma{"matrix_loop"}.target end
+    apply 
+        for(var metric of metrics) {
+            metric.instrument($target);
+        }    
+    end
+
+    // Website version does not support the LARA code from this point on
+    
+    var cmaker = new CMaker("test", false);
+    cmaker.addCurrentAst()
+    .addCFlags("-O2")
+    .addLibs("-lm", "-pthread");
+
+    var exe =  cmaker.build();
+    
+    var executor = new ProcessExecutor();
+    executor.setPrintToConsole(false);
+    executor.execute([exe.getAbsolutePath()]);
+
+	for(var metric of metrics) {
+		var metricResult = metric.report(executor);
+	    	println(metricResult.getValue() + metricResult.getUnit());
+	}
+    
+end

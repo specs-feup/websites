@@ -1,0 +1,25 @@
+aspectdef ReportJoinpoint
+
+	function printArray(array,title){
+		if(array.length > 0){
+			println("  "+title+":");
+			println("    "+array.join('\n'+"    "));
+		}
+	}
+	
+	println("root: "+Weaver.root);
+	println("joinpoints: ");
+	for(var joinpoint of Weaver.joinpoints){
+		println(" " +joinpoint +" {");
+		
+		var attributes = Weaver.attributesOf(joinpoint,false);
+		printArray(attributes, "attributes");
+		
+		var selects = Weaver.selectsOf(joinpoint,false);
+		printArray(selects, "selects");
+		
+		var actions = Weaver.actionsOf(joinpoint,false);
+		printArray(actions, "actions");
+		println(" }\n");
+	}
+end

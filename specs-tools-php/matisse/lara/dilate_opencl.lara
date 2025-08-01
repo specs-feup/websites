@@ -1,0 +1,14 @@
+import matisse.Utils;
+
+aspectdef test
+
+	var typeDef = {
+		cim:"single[2048][2048]",
+		halfSize:"int",
+		// Optimization
+		mx: "single[][]",
+	};
+
+	call defineTypes("dilate_opencl", typeDef);
+
+end

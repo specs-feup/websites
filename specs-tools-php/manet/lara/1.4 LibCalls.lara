@@ -1,0 +1,129 @@
+aspectdef LibCalls
+
+	var report = new LaraObject();
+
+	call funcs : GetStdFuncs();
+	var stdFuncs = funcs.stdFuncs;
+
+
+	/* Select function calls and save them on the report if their are part of the set */
+	select file.function.call end
+	apply
+		report.inc($file.name, $call.name, $call.line);
+	end
+	condition
+		stdFuncs.contains($call.name)
+	end
+
+
+	Utils.printReport(report);
+end
+
+aspectdef GetStdFuncs
+
+	output
+		stdFuncs = new Set();
+	end
+
+	/********************** MATH.H **********************/
+	
+	stdFuncs.add('acos');
+	stdFuncs.add('asin');
+	stdFuncs.add('atan');
+	stdFuncs.add('atan2');
+	stdFuncs.add('ceil');
+	stdFuncs.add('cos');
+	stdFuncs.add('cosh');
+	stdFuncs.add('exp');
+	stdFuncs.add('fabs');
+	stdFuncs.add('floor');
+	stdFuncs.add('fmod');
+	stdFuncs.add('frexp');
+	stdFuncs.add('ldexp');
+	stdFuncs.add('log');
+	stdFuncs.add('log10');
+	stdFuncs.add('modf');
+	stdFuncs.add('pow');
+	stdFuncs.add('sin');
+	stdFuncs.add('sinh');
+	stdFuncs.add('sqrt');
+	stdFuncs.add('tan');
+	stdFuncs.add('tanh');
+
+
+	/********************** STDLIB.H **********************/
+	
+	stdFuncs.add('abs');
+
+
+	/********************** STDIO.H **********************/
+	
+	stdFuncs.add('clearerr');
+	stdFuncs.add('fclose');
+	stdFuncs.add('feof');
+	stdFuncs.add('ferror');
+	stdFuncs.add('fflush');
+	stdFuncs.add('fgetpos');
+	stdFuncs.add('fopen');
+	stdFuncs.add('fread');
+	stdFuncs.add('freopen');
+	stdFuncs.add('fseek');
+	stdFuncs.add('fsetpos');
+	stdFuncs.add('ftell');
+	stdFuncs.add('fwrite');
+	stdFuncs.add('remove');
+	stdFuncs.add('rename');
+	stdFuncs.add('rewind');
+	stdFuncs.add('setbuf');
+	stdFuncs.add('setvbuf');
+	stdFuncs.add('tmpfile');
+	stdFuncs.add('tmpnam');
+	stdFuncs.add('fprintf');
+	stdFuncs.add('fscanf');
+	stdFuncs.add('printf');
+	stdFuncs.add('scanf');
+	stdFuncs.add('sprintf');
+	stdFuncs.add('sscanf');
+	stdFuncs.add('vfprintf');
+	stdFuncs.add('vprintf');
+	stdFuncs.add('vsprintf');
+	stdFuncs.add('fgetc');
+	stdFuncs.add('fgets');
+	stdFuncs.add('fputc');
+	stdFuncs.add('fputs');
+	stdFuncs.add('getc');
+	stdFuncs.add('getchar');
+	stdFuncs.add('gets');
+	stdFuncs.add('putc');
+	stdFuncs.add('putchar');
+	stdFuncs.add('puts');
+	stdFuncs.add('ungetc');
+	stdFuncs.add('perror'); 
+
+end
+
+aspectdef Utils
+	static
+	   var printReport = function(report) {
+
+			for (var f in report) {
+
+				println('\n[' + f + ']');
+				for (var c in report[f]) {
+
+					println('  ' + c);
+					print('    lines:');
+					for (var l in report[f][c]) {
+
+						
+						print(' ' + l); 
+						if(report[f][c][l] > 1) {
+							println('(x' + report[f][c][l] + ')');
+						}
+					}
+					println('');
+				}
+			}
+		};
+	end
+end

@@ -1,0 +1,38 @@
+/* Color of text of select element in sidebar */
+div.sidebar li.active {
+    color: #fff;
+    background: #2F414F;
+}
+
+
+div.sidebar li:hover {
+    background: #4DB89F;
+    color: black;
+}
+
+.menu-trigger:hover {
+    background-color: #4DB89F;
+}
+
+.dropdown-menu li:hover {
+    background-color: #4DB89F;
+}
+
+div.code-block .header {
+    background-color: #BABABA;
+    padding-left: 5px;
+}
+
+div.lsView .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4DB89F;
+    padding-left: 5px;
+}
+
+select#target {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,47 @@
+aspectdef CloningAndTransformations
+
+	input
+		funcName = 'computeSAD'
+	end
+
+	/* The names of the new functions */
+	var tiled = funcName + '_tiled';
+
+
+	/* Clone functions */
+	select function{funcName} end
+	apply
+		exec Clone(tiled);
+	end
+
+
+	/* Perform optimizations */
+	select function{tiled}.loop end
+	apply
+		exec Tile(32);
+	end
+	condition
+		$loop.is_outermost
+	end
+
+
+	/* Change calls to the function */
+	select file.call{funcName} end
+	apply
+		var originalCode = $call.code + ';';
+		var tiledCode = originalCode.split(funcName).join(tiled);
+
+		insert before '/*';
+		insert after '*/';
+		
+		insert after %{
+			switch (get_best_version(/*...*/)) {
+				case 0: [[originalCode]] break;
+				case 1: [[tiledCode]] break;
+				default: [[originalCode]] break;
+			}
+		}%;
+	end
+
+	println('\nCloningAndTransformations done!');
+end

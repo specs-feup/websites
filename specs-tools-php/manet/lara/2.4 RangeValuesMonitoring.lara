@@ -1,0 +1,117 @@
+aspectdef RangeValuesMonitoring
+
+	input
+		funcName = 'computeSAD'
+	end
+
+
+	/* Deal with struct assignments */
+	call PrepareStructs(funcName);
+
+
+	/* Instrument the assignments */
+	var vars = new LaraObject();
+	select function{funcName}.var end
+	apply
+		var id = vars.getId($function.name, $var.name);
+
+		insert before '/* monitoring [[$var.name]] */';
+		insert after 'range_update([[id]], [[$var.name]]);';
+	end
+	condition
+		!$var.in_loop_header &&
+		$var.reference == 'write' &&
+		!$var.is_struct
+	end
+
+
+	/* Setup the monitor */
+	call PrepareRangeMonitor(vars);
+	
+	println('\nRangeValuesMonitoring done!');
+end
+
+
+aspectdef PrepareStructs
+
+	input
+		funcName
+	end
+
+	select function{funcName} end
+	apply
+		exec StructAssignmentDecomposition();
+	end
+end
+
+
+aspectdef PrepareRangeMonitor
+
+	input
+		vars
+	end
+
+	var total = vars.getTotal();
+
+	/* Add a declaration to every file and definition on main */
+	select file.function end
+	apply
+		if($file.hasMain) 
+			insert before 'double range_min[ [[total]] ] = {0}; double range_max[ [[total]] ] = {0};';
+		else {
+			insert before 'void range_update( unsigned int id, double value );';
+			insert before 'extern double range_min[ [[total]] ]; extern double range_max[ [[total]] ];';
+		}
+		break; // breaks after first function
+	end
+
+
+	/* The code for the printing function */
+	var print_code = '';
+	for(f in vars) {
+		
+		print_code += 'printf("' + f + '\\n");\n';
+		for(v in vars[f]) {
+
+			id = vars[f][v];
+			print_code += 'printf("\\t' + v + ': {%f, %f}\\n", range_min[' + id + '], range_max[' + id + ']);\n';
+		}
+	}
+
+
+	/* Define the range supporting functions */
+	select function{'main'} end
+	apply
+		insert before %{
+
+			void range_init() {
+
+				unsigned int i;
+				for(i=0; i < [[total]]; i++) {
+
+					range_min[i] = 1.0/0.0;
+					range_max[i] = -1.0/0.0;
+				}
+			}
+
+			void range_update(unsigned int id, double value) {
+
+				if(value < range_min[id]) range_min[id] = value;
+				if(value > range_max[id]) range_max[id] = value;
+			}
+
+			void print_ranges() {
+				[[print_code]]
+			}
+		}%;
+	end
+
+	/* Register the printing function */
+	select function{'main'}.first_stmt end
+	apply
+		insert before 'range_init();';
+		insert before 'atexit(print_ranges);';
+	end
+end
+
+

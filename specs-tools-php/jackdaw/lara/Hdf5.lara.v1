@@ -1,0 +1,40 @@
+import lara.Weaver;
+
+
+aspectdef Driver
+	call hdf5Output : Hdf5Test;
+	println("CODE:\n"+hdf5Output.code);
+end
+
+aspectdef Hdf5Test
+	output code="" end
+	
+	select file.struct end
+	apply
+		var typeName = $struct.name + "_HDF5";
+		call result : StructToHdf5($struct, typeName);
+		code += result.code + "\n";
+		//println("Code for " + typeName + ":\n" + result.code);
+	end
+
+end
+
+aspectdef StructToHdf5
+	input $struct, typeName end
+	output code end
+
+	var structName = $struct.name;
+	code = "H5::CompType "+ typeName +"(sizeof("+structName+"));\n";
+
+	$fields = $struct.fields;
+
+	for($field of $fields) {
+		fieldName = $field.name;
+		var HDF5Type  = toHdf5($field.type);
+
+		var memberCode = %{[[typeName]].insertMember("[[fieldName]]",offsetof([[structName]], [[fieldName]]), [[HDF5Type]]);}%;
+
+		code += memberCode + "\n";
+	}
+
+end

@@ -1,0 +1,13 @@
+import lara.code.Timer;
+
+aspectdef Timing
+	
+	// Measure time spent on matrix multiplication call
+	var timer = new Timer();
+
+	select function.call{"matrix_mult"} end
+	apply
+		timer.time($call);
+	end
+
+end

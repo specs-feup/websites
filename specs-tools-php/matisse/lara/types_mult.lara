@@ -1,0 +1,20 @@
+import matisse.Utils;
+
+aspectdef types_mult
+	
+    // Row vector x Column vector
+    var typeDef = {
+		A: "single[1][1024]",
+		B: "single[1024][1]",
+	};
+
+/*
+    // Square matrix x Square matrix
+    var typeDef = {
+    	A: "single[1024][1024]",
+		B: "single[1024][1024]",
+	};
+  */
+  
+    call defineTypes("mult", typeDef);
+end

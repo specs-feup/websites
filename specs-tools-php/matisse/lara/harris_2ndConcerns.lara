@@ -1,0 +1,37 @@
+aspectdef harris_2ndConcerns
+	select function.first end
+	apply
+		insert before %{
+			error(nargchk(2, 5, nargin));
+			if nargin==4 
+				disp = 0; 
+			end
+			if ~isa(im,  'double') 
+				im = double(im); 
+			end
+			subpixel = nargout==5;
+		}%;
+	end
+
+	select section{label=="second"} end
+	apply
+		insert around %{
+		if nargin > 2 % We should perform nonmaximal suppression and threshold
+ 		    if disp  % Call nonmaxsuppts to so that image is displayed
+        		if subpixel
+        			[r,c,rsubp,csubp] = nonmaxsuppts(cim, radius, thresh, im);
+        		else
+        			[r,c] = nonmaxsuppts(cim, radius, thresh, im);      
+        		end
+    		else     % Just do the nonmaximal suppression
+        		if subpixel
+        			[r,c,rsubp,csubp] = nonmaxsuppts(cim, radius, thresh);
+        		else
+        			[r,c] = nonmaxsuppts(cim, radius, thresh);      
+        		end
+    		end
+    	end
+		}%;
+	end
+	
+end

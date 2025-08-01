@@ -1,0 +1,18 @@
+aspectdef SimpleLoopUnroll
+
+	input
+		funcName = 'dot_prod_kernel',
+		factor = 4
+	end
+
+	/* Call the Unroll action using the exec keyword */
+	select function{funcName}.loop end
+	apply
+		exec Unroll(factor);
+	end
+	condition
+		$loop.is_innermost
+	end
+
+	println('\nSimpleLoopUnroll done!');
+end

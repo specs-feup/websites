@@ -1,0 +1,14 @@
+aspectdef FindTypos
+
+	function isTypo(name) {
+		return name === 'retrun' || name === 'braek';
+	}
+
+	select call{type != 'conventional'} end
+	apply
+		var name = $call.name;
+		if (isTypo(name)) {
+			println("Found typo at: " + $call.code);
+		}
+	end
+end

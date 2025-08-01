@@ -1,0 +1,17 @@
+/**
+ *		This simple aspect annotates LOOPs and IFs with their rank. Its
+ * 	purpose is to illustrate how one can filter loops and conditional
+ * 	instructions during selection.
+ */
+aspectdef rankTest
+	
+	select loop end
+	apply
+		insert before '/*[[$loop.rank]]*/';
+	end
+    
+    select if end
+	apply
+		insert before '/*[[$if.rank]]*/';
+	end
+end

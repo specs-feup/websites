@@ -1,0 +1,18 @@
+aspectdef varMonitor
+	thenSelect: select if.then.first end
+	elseifSelect: select if.elseif.first end
+	elseSelect: select else.first end
+
+	apply to thenSelect, elseifSelect, elseSelect
+		insert after %{
+			monitorization.range_find(v(i,j,k), 'ranges_v');
+		}%;
+	end
+
+	select function.last end
+	apply
+		insert after %{
+			monitorization.report_range_find();
+		}%;
+	end
+end

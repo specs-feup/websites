@@ -1,0 +1,114 @@
+aspectdef BranchCoverage
+
+	input
+		funcNameSet = new Set('getDisparity', 'findDisparity');
+	end
+
+
+	var ifIDs = new LaraObject();
+	var ifInfo = new LaraObject();
+	var files = new Set();
+
+
+	select file.function.if.then.first_stmt end
+	apply
+		var id = ifIDs.getId($function.name, $if.rank);
+
+		ifInfo.set($function.name, $if.rank, {'line': $if.line, 'file':$file.name});
+
+		$if.insert before '__if_counter[ [[id]] ]++;'; /* Counter before IF */
+		$first_stmt.insert before '__if_pos_counter[ [[id]] ]++;'; /* Counter inside THEN */
+
+		/* Collect the files where the variables need to be declared */
+		files.add($file.name);
+	end
+	condition
+		funcNameSet.contains($function.name)
+	end
+
+
+	/* Declare the needed counter arrays */
+	select file.function end
+	apply
+		var total = ifIDs.getTotal();
+
+		if($file.hasMain) {
+			insert before %{
+				int __if_counter[ [[total]] ] = {0};
+				int __if_pos_counter[ [[total]] ] = {0};
+			}%;
+		} else if(files.contains($file.name)) {
+			insert before %{
+				extern int __if_counter[ [[total]] ];
+				extern int __if_pos_counter[ [[total]] ];
+			}%;
+		}
+		break;
+	end
+
+
+	/* Register the print function */
+	select function{'main'}.last_decl end
+	apply
+		insert after 'atexit(print_counters);';
+	end
+
+
+	/* Print the results */
+	select function{'main'} end
+	apply
+		var loopsCode = '';
+		var ifsCode = '';
+		var delim = '';
+
+		ifsCode += 'fprintf(__report, " \\"ifs\\": [");';
+		for(var f in ifIDs) {
+			for(var i in ifIDs[f]) {
+
+				var ifId =ifIDs[f][i];
+				var info = ifInfo[f][i];
+				ifsCode += 'fprintf(__report, "' + delim +' {");\n';
+
+				ifsCode += 'fprintf(__report, "\\"file\\":\\"' + info.file + '\\",");';
+				ifsCode += 'fprintf(__report, "\\"line\\":' + info.line + ',");';
+				ifsCode += 'fprintf(__report, "\\"total\\": %d,", __if_counter[' + ifId + ']);';
+				ifsCode += 'fprintf(__report, "\\"positive\\": %d", __if_pos_counter[' + ifId + ']);';
+
+				ifsCode += 'fprintf(__report, "}");\n';
+				delim = ',';
+			}
+		}
+		ifsCode += 'fprintf(__report, "]");';
+		insert before Functions('branch_coverage.json', ifsCode);
+	end
+
+	println('\nDynamicCallGraph done!');
+end
+
+codedef Functions(reportName, ifsCode)
+%{
+	#include <stdlib.h>
+	#include <stdio.h>
+	void print_counters() {
+
+		/* The file descriptor. */
+		FILE* __report;
+		char __report_name[] = "[[reportName]]";
+		
+		/* Open the report in WRITE mode. */
+		__report = fopen(__report_name, "w");
+		if(__report == NULL) {
+			
+			printf("Couldn't open the file:\"%s\".\n", __report_name);
+			exit(0);
+		}
+		
+		fprintf(__report, "{");
+		[[ifsCode]]
+		fprintf(__report, "}\n");
+
+		/* Close the connection. */
+		fclose(__report);
+	}
+}%
+end

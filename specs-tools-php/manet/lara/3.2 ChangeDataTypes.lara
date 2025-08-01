@@ -1,0 +1,27 @@
+aspectdef ChangeDataTypes
+
+	input
+		funcName = 'findDisparity',
+		newT = 'float'
+	end
+
+
+	/* Split the declarations */
+	select function{funcName} end
+	apply
+		exec SingleDeclarator();
+	end
+
+
+	/* Change the types of the local variables */
+	select function{funcName}.decl end
+	apply
+	
+		insert before '/* [[$decl.name]] type changed to [[newT]] */';
+
+		def native_type = newT;
+	end
+
+
+	println('\nChangeDataTypes done!');
+end

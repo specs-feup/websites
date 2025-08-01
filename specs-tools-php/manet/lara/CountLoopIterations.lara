@@ -1,0 +1,72 @@
+/**
+ * 		Counts the number of iterations that each loop performs.
+ * 		Executions are the total number of times that the loop body is executed.
+ * 	For instance, if there is an outer loop or the function containing the loop
+ * 	is called more than once, the number of executions will be different than
+ * 	the  number of iterations.
+ */
+aspectdef CountLoopIterations
+
+	println('Starting CountLoopIterations...\n');
+
+	/**
+	 * 		Make sure that 'main' has a return statement.
+	 */
+    select program end
+    apply
+        NormalizeReturn();
+    end
+
+    var obj = new LaraObject();
+    var lines = {};
+	
+    select function.loop.first_stmt end
+	apply
+	
+		println('instrumented: line ' + $loop.line + ', type ' + $loop.type);
+	
+		var id = obj.getId($loop);
+		lines[id] = $loop.line;
+	
+		$loop.insert before '/* loop [[id]] */';
+	
+		/**
+		 * 		Iteration counters.
+		 */
+        $loop. insert before 'counter_iter[ [[id]] ] = 0;';
+        $first_stmt. insert before 'counter_iter[ [[id]] ]++;';
+			
+		/**
+		 * 		Execution counters.
+		 */
+		$first_stmt. insert before 'counter_exec[ [[id]] ]++;';
+	end
+	
+	/**
+	 * 		Declare counters.
+	 */
+	select function end
+    apply
+	
+		var total = obj.getTotal();
+		insert before 'int counter_iter[ [[total]] ] = {0};';
+        insert before 'int counter_exec[ [[total]] ] = {0};';
+        
+        break;
+	end
+	
+	/**
+	 * 		Print the counters
+	 */
+	 select function{"main"}.return end
+	 apply
+		for (l in obj) {
+			var id = obj[l];
+			var line = lines[id];
+			
+			insert before 'printf("loop on line [[line]] has %d iterations and %d executions\\n", counter_iter[ [[id]] ], counter_exec[ [[id]] ]);';
+		}
+	 end
+	 
+	 println('\nCountLoopIterations done!');
+end

@@ -1,0 +1,16 @@
+import matisse.Utils;
+
+aspectdef types_fir_single
+
+	var floatType = "single";
+
+    var typeDef = {
+		input	: floatType + "[1][1024]",
+		coef	: floatType + "[1][32]",
+		sum		: floatType,
+		output	: floatType + "[1][1024]" };
+
+    
+    call defineTypes("fir", typeDef);
+
+end

@@ -1,0 +1,12 @@
+import matisse.Utils;
+
+// Replaces division operations in closure function with a MATISSE primitive that performs integer division
+aspectdef closure_idivide
+    select function{"closure"} end
+    apply
+        call replace_operator("/", "N", "2", "matisse_idivide");
+        call replace_operator("/", "ii", "2", "matisse_idivide");
+    end
+    
+    call defineTypes("closure", {B: "double[]"});
+end

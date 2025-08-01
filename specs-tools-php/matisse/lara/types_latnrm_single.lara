@@ -1,0 +1,22 @@
+import matisse.Utils;
+
+aspectdef types_latnrm_single
+   
+	var floatType = "single";
+   
+    var typeDef = {
+
+		data			: floatType + "[1][]",
+		coefficient		: floatType + "[1][]",
+		internal_state	: floatType + "[1][]",
+		NPOINTS			: "int",
+		ORDER			: "int",
+            
+        bottom			: floatType,
+		outa			: floatType + "[1][]",
+    };
+    
+    
+    call defineTypes("latnrm", typeDef);
+    
+end

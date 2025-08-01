@@ -1,0 +1,33 @@
+/**
+ *  	This aspect presents several program transformations. Try them
+ * 	all one by one to understand what they do.
+ */
+aspectdef PrepareProgram
+    
+    println('Starting PrepareProgram...\n');
+    
+	select program end
+	apply
+		
+		// Transforms the code so that all assignments are expanded (i.e., LHS += RHS; becomes LHS = LHS + RHS;).
+		exec AssignmentExpansion();
+		
+		// Transforms the code so that unary increments and decrements are safely expanded.
+		exec UnaryExpansion();
+		
+		// Transforms the code so that every procedure has at least one return statement.
+		exec NormalizeReturn();
+	end
+	
+	select function end
+	apply
+		// Transforms the code so that there is at most one declarator in each declaration.
+		exec SingleDeclarator();
+
+		// Transforms the code so that no declaration has an initialization.
+		// Careful with static initializations and char arrays initialized with string literals.
+		exec RemoveInitialization();
+	end
+	
+	println('\nPrepareProgram done!');
+end
