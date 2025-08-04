@@ -1,0 +1,50 @@
+/**
+ * Instruments code in order to build a runtime call graph.
+ */
+aspectdef DynamicCallGraph
+
+    var obj = new LaraObject();
+
+    /* Instrument function calls and increment the corresponding position */
+    select function.call end
+    apply
+        var id = obj.getId($function.name, $call.name);
+        $call. insert after 'call_graph[ [[id]] ]++;';
+    end
+
+
+    /* Declare the array in each file */
+    var total = obj.getTotal();
+    select file.function end
+    apply
+        if($file.hasMain) {
+            insert before 'int call_graph[ [[total]] ] = {0};';
+        } else {
+            insert before 'extern int call_graph[ [[total]] ];';
+        }
+        break;
+    end
+
+
+    /* Print the array at the end of the main function */
+    select function{"main"} end
+    apply
+        
+        $function.insertReturn('printf("digraph call_graph {\\n\\n");');
+
+        for (f in obj) {
+            for (c in obj[f]) {
+
+                var id = obj[f][c];
+                $function.insertReturn(%{
+                    if (call_graph[ [[id]] ] != 0)
+                        printf("\t[[f]] -> [[c]] [label=\"%d\"];\n", call_graph[ [[id]] ]);
+                }%);
+            }
+        }
+        $function.insertReturn(%{printf("}\n");}%);
+    end
+
+
+    println('\nDynamicCallGraph done!');
+end

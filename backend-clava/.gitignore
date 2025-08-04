@@ -1,0 +1,8 @@
+node_modules/
+.DS_STORE
+temp/
+local_test/
+test_download.sh
+test.sh
+dist/
+coverage/

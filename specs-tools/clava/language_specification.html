@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Clava Language Specification</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+        <link rel=stylesheet href="css/font-awesome.min.css">
+        <link rel=stylesheet href="../css/common-style.css">
+        <link rel=stylesheet href="clava.css">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+
+        <!-- ////////////////////////////////////////// LS ////////////////////////////////////////// -->
+        <h1>Clava Language Specification</h1>
+        <p>
+            The language specification is composed by <em>join points</em>, <em>attributes</em> and <em>actions</em>.
+        </p>
+        <div id="toggle-ls"></div>
+        <div id="lsView">
+            <div class="header">
+                <span>Join Points </span>
+                <select id="joinpoints"></select>
+                <a id="closeLS" class="closeLS"><i class="fa fa-times-circle" ></i></a>
+            </div>
+            <div class="lsScroll">
+
+                <div class="joinpoint-base-info">
+                    <b>joinpoint</b>
+                    <span id="joinpoint-name">NAME</span>
+                    <span id="joinpoint-extends"><b>extends</b> <span id="joinpoint-base">BASE</span></span>
+                    <div id="joinpoint-short-description" class="joinpoint-short-documentation">SHORT DESCRIPTION</div>
+                    <div id="joinpoint-default-attr">DEFAULT ATTRIBUTE</div>
+                </div>
+
+                <!--</i>        var image = "fa-puzzle-piece";-->
+                <div id="attrDiv">
+                    <h4><i class="fa fa-puzzle-piece"> </i> Attributes</h4>
+                    <ul id="attributes"><!-- class="fa-ul"-->
+                        <!--Test content-->
+                    </ul>
+                </div>
+                <div id="selDiv">
+                    <h4><i class="fa fa-search"></i> Selects</h4>
+                    <ul id="selects">
+                        <!--Test content-->
+                    </ul>
+                </div>
+                <div id="actDiv">
+                    <h4><i class="fa fa-cogs"></i> Actions</h4>
+                    <ul id="actions">
+                        <!--Test content-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- ////////////////////////////////////////// LS ////////////////////////////////////////// -->
+        <script src="../scripts/common-script.js"></script>
+        <script src="../scripts/jquery-3.2.1.min.js"></script>
+        <script>
+            var BASE_LS_JSON_URL = 'https://raw.githubusercontent.com/specs-feup/clava/master/ClavaWeaver/src/pt/up/fe/specs/clava/weaver/CxxWeaver.json';
+            loadLsJson(BASE_LS_JSON_URL);
+        </script>
+        <!-- <script src="script.js"></script> -->
+    </body>
+</html>

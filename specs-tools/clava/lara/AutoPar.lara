@@ -1,0 +1,17 @@
+import clava.autopar.Parallelize;
+
+aspectdef AutoPar
+
+    var $loops = [];
+    select function{"foo"}.loop end
+	apply
+        $loops.push($loop);
+	end
+
+    Parallelize.forLoops($loops);
+	
+	// We can also only return the pragmas mapped to the $loop.astId
+	// without modifying the code
+	//var pragmas = Parallelize.getForLoopsPragmas($loops);
+    //printlnObject(pragmas);
+end

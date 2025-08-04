@@ -1,0 +1,13 @@
+import lara.code.Energy;
+
+aspectdef MeasureEnergy
+	
+	// Measure energy of matrix multiplication call
+	var energy = new Energy();
+
+	select function.call{"matrix_mult"} end
+	apply
+		energy.measure($call);
+	end
+
+end
