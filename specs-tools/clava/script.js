@@ -4,7 +4,7 @@
   /*
    * Variables that should not need changing
    */
-  var RUN_COMPILER_PATH = "http://localhost:4000/api/weave"; // For local testing
+  //var RUN_COMPILER_PATH = "http://localhost:4000/api/weave"; // For local testing
   var RUN_COMPILER_PATH = "https://specs.fe.up.pt/api/weave";
 
   /*
@@ -505,7 +505,7 @@
   var fontSize = "12px";
 
   // Create editors for c, lara, final result, type definition and console.
-  var laraEditor = newAceEditor("laraEditor", "lara", "chrome", fontSize);
+  var laraEditor = newAceEditor("laraEditor", "javascript", "chrome", fontSize);
   var finalResult = newAceEditor(
     "resultEditor",
     ACE_EDITOR_LANGUAGE,
