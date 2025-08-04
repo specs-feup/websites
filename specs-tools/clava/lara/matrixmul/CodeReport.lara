@@ -1,0 +1,183 @@
+import weaver.JoinPoints;
+
+
+// Possible attributes 
+var loopTypeAttr = ["type", "kind"];
+var loopIsInnermostAttr = ["is_innermost", "isInnermost"];
+var loopNestedLevelAttr = ["nested_level", "nestedLevel"];
+
+aspectdef StaticCodeReport
+
+	var loops = [];
+	var callInfo = new LaraObject();
+	
+	var num_files = 0;
+	var num_functions = 0;
+	var num_calls = 0;
+	
+	var loopCount = new LaraObject();
+	var num_loops = 0;
+	var num_loops_innermost = 0;
+	var max_nest = -1;
+	var max_nest_location = '';
+	
+	select file end
+	apply
+		num_files++;
+	end
+	
+	select function end
+	apply
+		num_functions++;
+	end
+	
+	select function.call end
+	apply 
+		num_calls++; 
+		
+		callInfo.inc($call.name, 'callee');
+		callInfo.inc($function.name, 'caller');
+	end
+	
+	select file.function.loop end
+	apply
+		var loopType = JoinPoints.getAttributeStrict($loop, loopTypeAttr);
+	
+		loopCount.inc(loopType, "total");
+
+		var isInnermost = JoinPoints.getAttributeStrict($loop, loopIsInnermostAttr);
+		if(isInnermost) {
+			loopCount.inc(loopType, "innermost");
+			num_loops_innermost++;
+		}
+		
+		num_loops++;
+		
+		var loopNestedLevel = JoinPoints.getAttributeStrict($loop, loopNestedLevelAttr);
+
+		if(loopNestedLevel > max_nest) {
+			max_nest = loopNestedLevel;
+			max_nest_location = $file.name + ' : ' + $function.name + ' : ' + $loop.line;
+		}
+	end
+
+	/********************* HELPER FUNCTIONS *********************/
+
+	function withWidth(string, width) {
+
+		var diff = width - string.toString().length;
+		
+		if(diff <= 0) {
+			return string;
+		}
+
+		var result = '';
+		for (var i = 0; i < diff; i++) {
+
+			result += ' ';
+		}
+
+		return string + result;
+	}
+
+	function lineWidth(string, width) {
+
+		var result = '';
+		for (var i = 0; i < width; i++) {
+
+			result += string;
+		}
+
+		return result;
+	}
+
+	/********************* GENERAL INFORMATION *********************/
+
+	println('\n\n\n-== [ General Information ] ==-\n');
+
+	println("No. of Files: "+num_files);
+	println("No. of Functions: "+num_functions);
+	println("No. of Calls: "+num_calls);
+
+
+	/********************* LOOP INFORMATION *********************/
+
+	println('\n\n\n-== [ Loop Information ] ==-\n');
+
+	var firstWidth = 10;
+	var secondWidth = 8;
+	var thirdWidth = 10;
+	var totalWidth = firstWidth + secondWidth + thirdWidth + 2;
+
+
+	println(lineWidth('=', totalWidth));
+	println(withWidth('Type', firstWidth) + ' ' + withWidth('Total', secondWidth) + ' ' + withWidth('Innermost', thirdWidth));
+	
+	println(lineWidth('-', totalWidth));
+	
+	for (var loopType in loopCount) {
+		println(withWidth(loopType, firstWidth) + ' ' + withWidth(loopCount.get(loopType, "total") || 0, secondWidth) + ' ' + withWidth(loopCount.get(loopType, "innermost") || 0, thirdWidth));
+	}
+
+	println(lineWidth('-', totalWidth));
+
+	println(withWidth('Total', firstWidth) + ' ' + withWidth(num_loops, secondWidth) + ' ' + withWidth(num_loops_innermost, thirdWidth));
+
+	println(lineWidth('=', totalWidth));
+
+	println("\nLargest Loop Nest: "+ (max_nest+1) + ' @ ' + max_nest_location);
+	
+	/********************* CALL INFORMATION *********************/
+
+	var mostCalled = '';
+	var mostCalledCounter = -1;
+	var mostCalls = '';
+	var mostCallsCounter = -1;
+	var largestName = 0;
+	
+	for (var funcName in callInfo) {
+
+		if(funcName.length > largestName) largestName = funcName.length;
+
+		var callee = callInfo[funcName]['callee'] || 0;
+		var caller = callInfo[funcName]['caller'] || 0;
+
+		if(callee > mostCalledCounter) {
+			mostCalledCounter = callee;
+			mostCalled = funcName;
+		}
+
+		if(caller > mostCallsCounter) {
+			mostCallsCounter = caller;
+			mostCalls = funcName;
+		}
+	}
+	secondWidth = 10;
+	thirdWidth = 10;
+	totalWidth = largestName + secondWidth + thirdWidth + 2;
+
+	println('\n\n\n-== [ Call Information ] ==-\n');
+
+	println(lineWidth('=', totalWidth));
+	println(withWidth('Name', largestName) + ' ' + withWidth('As Callee', secondWidth) + '  ' + withWidth('As Caller', thirdWidth));
+
+	println(lineWidth('-', totalWidth));
+	
+	for (var funcName in callInfo) {
+
+		var callee = callInfo[funcName]['callee'] || 0;
+		var caller = callInfo[funcName]['caller'] || 0;
+
+		if(funcName == mostCalled) callee += '*';
+		if(funcName == mostCalls) caller += '*';
+
+		println(withWidth(funcName, largestName) + ' ' + withWidth(callee, secondWidth) + '  ' + withWidth(caller, thirdWidth));
+	}
+
+	println(lineWidth('=', totalWidth));
+	
+
+	
+end
+
+

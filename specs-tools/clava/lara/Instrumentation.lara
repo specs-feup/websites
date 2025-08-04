@@ -1,0 +1,19 @@
+import lara.code.Logger;
+
+aspectdef Instrumentation
+
+	var logger = new Logger();
+
+	// Log every time a loop is executed
+	select function.loop end
+	apply
+		logger
+			.text("Starting loop in function ")
+			.text($function.signature)
+			.text(" at line ")
+			.text($loop.line)
+			.ln()
+			.log($loop, true);
+	end
+
+end
