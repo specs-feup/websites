@@ -1,29 +1,33 @@
-(function () {
+/*
+ * Variables that should not need changing
+ */
+//var RUN_COMPILER_PATH = "http://localhost:4000/api/weave"; // For local testing
+var RUN_COMPILER_PATH = "https://specs.fe.up.pt/api/weave";
+
+/*
+ * Variables to configure website
+ */
+var TOOL = "clava";
+var DEFAULT_SOURCE_FILENAME = "input.c";
+
+var BASE_CODE_EXAMPLE_URL = "cpp/";
+var BASE_LARA_EXAMPLE_URL = "larajs/";
+
+var ACE_EDITOR_LANGUAGE = "c_cpp";
+
+var CODE_HOME_EXAMPLE = "CallGraph.cpp";
+var LARA_HOME_EXAMPLE = "CallGraph.js";
+
+/***************************LS***************************/
+var BASE_LS_JSON_URL =
+  "https://raw.githubusercontent.com/specs-feup/clava/master/ClavaWeaver/src/pt/up/fe/specs/clava/weaver/CxxWeaver.json";
+
+/*
+ * END of configuration variables
+ */
+
+function configuration() {
   "use strict";
-
-  /*
-   * Variables that should not need changing
-   */
-  //var RUN_COMPILER_PATH = "http://localhost:4000/api/weave"; // For local testing
-  var RUN_COMPILER_PATH = "https://specs.fe.up.pt/api/weave";
-
-  /*
-   * Variables to configure website
-   */
-  var TOOL = "clava";
-  var DEFAULT_SOURCE_FILENAME = "input.c";
-
-  var BASE_CODE_EXAMPLE_URL = "cpp/";
-  var BASE_LARA_EXAMPLE_URL = "larajs/";
-
-  var ACE_EDITOR_LANGUAGE = "c_cpp";
-
-  var CODE_HOME_EXAMPLE = "CallGraph.cpp";
-  var LARA_HOME_EXAMPLE = "CallGraph.js";
-
-  /*
-   * END of configuration variables
-   */
 
   /*
    * Functions that need to be implemented
@@ -529,13 +533,63 @@
     loadCodeExample(CODE_HOME_EXAMPLE);
   }
 
-  /***************************LS***************************/
-  var BASE_LS_JSON_URL =
-    "https://raw.githubusercontent.com/specs-feup/clava/master/ClavaWeaver/src/pt/up/fe/specs/clava/weaver/CxxWeaver.json";
-
   loadLsJson(BASE_LS_JSON_URL);
   /***************************LS***************************/
-})();
+}
+
+// Execute
+configuration();
+
+/*
+// Populate "Other Tools" section
+function get_related_tools_code($current_tool) {
+
+    $toolsCode = '<div class="section" id="menu-section-related-tools">
+                    <h3>Related Tools:</h3>
+					<li class="with-link"><a href="http://specs.fe.up.pt/tools/lara" target="_blank">LARA</a></li>';
+
+    if ($current_tool != 'kadabra') {
+        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/kadabra/" target="_blank">Kadabra <em>(Java)</em></a></li>';
+    }
+
+    if ($current_tool != 'matisse') {
+        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/matisse/" target="_blank">MATISSE <em>(MATLAB)</em></a></li>';
+    }
+
+    if ($current_tool != 'clava') {
+        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/clava/" target="_blank">Clava <em>(C/C++)</em></a></li>';
+    }
+
+    if ($current_tool != 'jackdaw') {
+        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/jackdaw/" target="_blank">Jackdaw <em>(JavaScript)</em></a></li>';
+    }
+
+
+    $toolsCode = $toolsCode . '<h3>Legacy Tools:</h3>';
+
+    if ($current_tool != 'manet') {
+        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/manet/" target="_blank">MANET <em>(ANSI C)</em></a></li>';
+    }
+
+    if ($current_tool != 'reflectc') {
+        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/reflectc/" target="_blank">ReflectC</a></li>';
+    }
+
+    if ($current_tool != 'harmonic') {
+        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/harmonic/" target="_blank">Harmonic <em>(C/C++)</em></a></li>';
+    }
+
+    $toolsCode = $toolsCode . '</div>';
+
+
+    $toolsCode = $toolsCode . '<a href="http://specs.fe.up.pt" class="aux-link"><img src="https://specs.fe.up.pt/img/SPeCS-logo.png" alt="SPeCS" /></a>';
+    $toolsCode = $toolsCode . '<a href="https://sigarra.up.pt/feup" class="aux-link"><img src="feup-logo.png" alt="FEUP" /></a>';
+
+    return $toolsCode;
+}
+*/
+
 
 // Call before page load
-onScriptTypeChange();
+//onScriptTypeChange();
+

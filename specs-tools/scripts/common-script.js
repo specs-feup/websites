@@ -317,6 +317,7 @@ function getScriptType() {
     return selectValue.options[selectValue.selectedIndex].value;
 }
 
+/*
 function onScriptTypeChange() {
     let scriptType = getScriptType();
 
@@ -332,3 +333,4 @@ function onScriptTypeChange() {
     // Update label on script editor
     document.getElementById("source_script_type").textContent = labelText;
 }
+*/
