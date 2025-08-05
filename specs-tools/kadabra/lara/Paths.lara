@@ -1,0 +1,47 @@
+/**
+	These LARA aspects print the call chain between two functions 
+	(one is a root another is a leaf).
+	It uses a static analysis.
+	
+	©SPECS, University of Porto, Porto, Portugal
+	March 2016
+*/
+aspectdef CallPathMain
+   input rootname = "main", leafname ="medianNeighbor" end
+
+   var stack= [];
+   
+    stack.push(rootname);
+    Call A:CallPath(rootname, leafname, stack, 0); 
+   
+    println("Number of paths: "+A.pathsout);
+end
+
+aspectdef CallPath
+    input froot,fleaf, stack, pathsin end
+    output pathsout end
+    
+    initialize pathsout = pathsin; end
+
+	/*select*/
+    select method{name==froot}.call end
+	/*apply*/
+    apply
+        if($call.name == fleaf) {
+            stack.push($call.name);
+            println("Call chain: "+stack.join("->"));
+            pathsout++;
+        } else {
+            //println($call.name);
+			if(!stack.contains($call.name)) {  
+                stack.push($call.name);
+				Call B:CallPath($call.name, fleaf, stack, pathsout);
+                pathsout = B.pathsout;
+			} else { 
+                stack.push($call.name);   
+			}
+        }
+		stack.pop();
+    end
+	/*condition*/
+end

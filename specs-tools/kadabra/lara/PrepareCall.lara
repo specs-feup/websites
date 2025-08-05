@@ -1,0 +1,23 @@
+import kadabra.adapt.Specializer;
+aspectdef PrepareCall
+	input 
+		methodName = "smooth",
+		callName = "medianNeighbor"
+	end
+
+	select class.method{methodName}.call{callName} end
+	apply
+		//Create functional interface based on called method
+		call extracted: ExtractFunctionalInterface(targetClass:$call.declarator, targetMethod:$call.name, newFile: false);
+
+		//Create new field with the new functional interface as its type
+		var type = extracted.$interface.qualifiedName;
+		//and use 'called function' as initialization
+		var defaultMethod = $call.declarator+'::'+callName;
+		$class.exec $field: newField(["static"], type, callName, defaultMethod);
+		
+		//redefine called function to invoke the field
+		$call.def target = $field.name;
+		$call.def executable = extracted.$function;
+	end
+end

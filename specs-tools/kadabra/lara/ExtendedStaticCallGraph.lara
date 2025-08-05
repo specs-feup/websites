@@ -1,0 +1,110 @@
+/**
+ * Prints a static call graph based on the structure of the code.
+ * It takes into account all possible function calls. This is
+ * printed to the command line in dot format.
+ */
+aspectdef ExtendedStaticCallGraph
+	
+	//Capture how many times a <caller, callee> tuple occurs
+	call graph: GetCallGraph();
+	//Capture class->method information
+	call info: GetClasses();
+	//Print the call graph with classes as clusters
+	call PrintGraph(graph.call_graph, info);
+end
+
+/**
+ * Captures how many times a <caller, callee> tuple 
+ * appears on the code.
+ */
+aspectdef GetCallGraph
+	output
+		//Use a LaraObject to keep track of <caller, callee> tuples
+		call_graph = new LaraObject()
+	end
+	//Select calls inside methods
+	select class.method.call end
+	apply
+		//increment the tuple <method,call>
+		call_graph.inc($class.name+"_"+ $method.name, $call.declarator+"_"+ $call.name);
+	end
+end
+
+/**
+ * Gather classes and methods that are part of the application 
+ * and other library classes
+ */
+aspectdef GetClasses
+	output
+		apis = new LaraObject(),
+		classes = new LaraObject()
+	end
+	
+	//Select all methods inside classes
+	select class.method end
+	apply
+		//add it to the 'classes' object
+		classes.push($class.name, $method.name);
+	end
+
+	//Select calls inside methods
+	select class.method.call end
+	apply
+	  //if 'classes' does not contain the class of the called method
+	  if(!($call.declarator in classes)){
+		//then add it as an API
+		apis.set($call.declarator, $call.name, $call.qualifiedDecl);
+	  }
+	end
+end
+
+/* 
+ * Print the gathered information to the console in dot format.
+ * Takes as input a call graph and an info object containing 
+ * the classes and APIs
+ */
+aspectdef PrintGraph
+	input
+		call_graph, info
+	end
+	var classes = info.classes;
+	var apis = info.apis;
+	
+	println('digraph static_call_graph {\n');
+
+	for(var c in classes) {
+
+		println('\tsubgraph cluster_' + c + ' {\n');
+		println('\t\tlabel = "' + c + '";');
+		println('\t\tcolor=blue;');
+		for (var m in classes[c]) {
+			println('\t\t' +c+'_' +  classes[c][m] + ' [label="'+classes[c][m]+'"];');
+		}
+		println('\t}');
+		
+	}
+
+	for(var c in apis) {
+
+		println('\tsubgraph cluster_' + c + ' {\n');
+		println('\t\tlabel = "' + c + '";');
+		println('\t\tcolor=gray;');
+		println('\t\tnode [style=filled];');
+		println('\t\labelloc = b;');
+		for (var m in apis[c]) {
+			println('\t\t' +c+'_' + m + ' [label="'+m+'"];');
+		}
+		println('\t}');
+		
+	}
+
+
+	for (var f in call_graph) {
+
+		for (var c in call_graph[f]) {
+
+			println('\t' + f + '->' + c + ' [label="' + call_graph[f][c] + '"];');
+		}
+	}
+	println('}');
+end

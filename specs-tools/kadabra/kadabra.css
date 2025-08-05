@@ -1,0 +1,28 @@
+div.sidebar li.active {
+    background: #fff077;
+}
+
+div.sidebar li:hover {
+    background: #fd4;
+}
+
+.menu-trigger:hover {
+    /*border-color: #444;*/
+    background-color: #fd4;
+}
+
+.dropdown-menu li:hover {
+    background-color: #fd4;
+}
+
+div.code-block .header {
+    background-color: #fea;
+    padding-left: 5px;
+}
+
+div.lsView .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fea;
+    padding-left: 5px;
+}

@@ -1,0 +1,36 @@
+import kadabra.adapt.Specializer;
+
+aspectdef SpecializeWithSwitch
+	input 
+		methodName = "smooth",
+		callName = "medianNeighbor"
+	end
+		
+	var fieldName;
+ 	select app.class.method{methodName}.call{callName} end
+	apply
+		//Create functional interface and field
+		call preparedCall: PrepareCall($method,$call, false);
+		fieldName = preparedCall.$field.name;
+	end
+	
+	select app.class.method{methodName}.first_stmt end
+	apply
+		//And insert a method switch before the first statement
+		$first_stmt.insert before SwitchVersion(fieldName,$class.name, callName);
+	end
+end
+
+/**
+ * Generate a switch targeting a [[fieldName]]. The [[className]] is the class
+ * containing the versions and [[defaultMethod]] will be the default version
+ */
+codedef SwitchVersion(fieldName, className, defaultMethod)%{
+		switch(kernelSize){
+			case 3: [[fieldName]] = [[className]]::sortingNetwork; break;
+			case 5: 
+			case 7: 
+				[[fieldName]] = [[className]]::countingSort; break;
+			default: [[fieldName]] = [[className]]::[[defaultMethod]]; break;
+		}}%
+end

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <meta charset=utf-8>
+        <title>Kadabra Tool</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+        <link rel=stylesheet href="css/font-awesome.min.css">
+        <link rel=stylesheet href="../css/common-style.css">
+        <link rel=stylesheet href="kadabra.css">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <header>
+            <img src="logo_300dpi.png" class="header_img" alt="KADABRA"/>
+        </header>
+        <div class="body">
+            <div class="sidebar">
+                <div class="section">
+                    <li id="menu-try-it" class="active">Try it Online</li>
+                    <li id="menu-copyright">About Kadabra</li>
+                </div>
+
+                <div class="section" id="menu-section-options">
+                    <h3>Compile</h3>
+                    <li id="menu-weave-application"><i class="fa fa-play"></i> Weave Application</li>
+
+                    <h3>Options</h3>
+                    <p><label title="Compile with incomplete classpath"><input type="checkbox" id="incomplete-path"> Incomplete Path</label>  <!--checked-->                    
+
+                    <h3>Text Editor</h3>
+                    <p>Font size:
+                        <select id="font_size">
+                            <option value="8px">8</option>
+                            <option value="10px">10</option>
+                            <option value="12px" selected>12</option>
+                            <option value="14px">14</option>
+                            <option value="16px">16</option>
+                            <option value="18px">18</option>
+                            <option value="20px">20</option>
+                            <option value="24px">24</option>
+                        </select>
+                    </p>
+                    <p>Press F11 to toggle fullscreen</p>
+                </div>
+
+
+                <div class="section">
+                    <h3>Resources</h3>
+                    <li><a href="https://www.npmjs.com/package/@specs-feup/kadabra">Use Kadabra (npm)</a></li>
+                    <li><a href="https://specs-feup.github.io/modules/_specs_feup_kadabra.Joinpoints.html">Language Specification</a></li>
+                    <li><a href="https://specs-feup.github.io/modules/_specs_feup_kadabra.html">API Documentation</a></li>
+                    <li><a href="https://github.com/specs-feup/kadabra/">GitHub</a></li>
+                </div>
+
+
+                <div class="section" id="menu-section-related-tools">
+
+                </div>
+
+            </div>
+
+            <div class="content">
+                <div id="try-it">
+                    <div class="try-it-content">
+
+                        <!-- SOURCE CODE -->
+                        <div class="code-block" id="source-code">
+                            <div class="header">
+                                <span>C/C++ Source Code</span>
+                                <i class="fa fa-bars menu-trigger" id="source-code-menu-trigger"> More</i>
+                                <div class="dropdown-menu-container" id="source-code-menu">
+                                    <ul class="dropdown-menu">
+                                        <li id="upload-source-code-file">Upload File</li>
+
+
+                                        <!-- Source Code Examples -->
+                                        <li class="dont-hide expander" data-target="code-examples">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Load Example</span>
+                                        </li>
+                                        <ul class="nested-menu" id="code-examples">
+                                            <li class="load-code-example">HelloWorld.java</li>
+                                            <li class="load-code-example">Fir1D.java</li>
+                                            <li class="load-code-example">MedianSmoother.java</li>
+                                            <li class="load-code-example">Sobel.java</li>
+                                            <li class="load-code-example">WeightedSmoother.java</li>
+                                            <li class="load-code-example">MatrixMultiplier.java</li>
+                                        </ul>
+                                        <!-- /Source Code Examples -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="leave-fullscreen"><i class="fa fa-info-circle"></i> Press F11 to leave fullscreen</div>
+                            <div id="codeEditor" class="editor"></div>
+                        </div>
+                        <!-- /SOURCE CODE -->
+
+                        <!-- LARA SOURCE CODE -->
+                        <div class="code-block" id="lara">
+                            <div class="header">
+                                <span id="source_script_type">JavaScript</span>
+                                <i class="fa fa-bars menu-trigger" id="lara-menu-trigger"> More</i>
+                                <div class="dropdown-menu-container" id="lara-menu">
+                                    <ul class="dropdown-menu">
+                                        <li id="toggle-ls">Toggle Language Specification</li>
+                                        <li id="upload-lara-file">Upload File</li>
+                                        <li class="dont-hide expander" data-target="lara-examples">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Script Examples</span>
+                                        </li>
+                                        <ul class="nested-menu" id="lara-examples">
+                                            <li class="load-lara-example" data-filename="EmptyAspect.js">EmptyAspect.js</li>
+                                            <li class="load-lara-example" data-filename="StaticCallGraph.js">StaticCallGraph.js</li>
+                                        </ul>
+
+                                        <!-- /LARA Examples -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="leave-fullscreen"><i class="fa fa-info-circle"></i> Press F11 to leave fullscreen</div>
+                            <div id="laraEditor" class="editor"></div>
+                        </div>
+                        <!-- LARA SOURCE CODE -->
+
+                        <div class="code-block" id="result">
+                            <div class="header">
+                                <span>Result</span>
+                                <i class="fa fa-bars menu-trigger" id="result-menu-trigger"> More</i>
+                                <div class="dropdown-menu-container" id="result-menu">
+                                    <ul class="dropdown-menu">
+                                        <li><a id="download-source-code-file" href="data:text/undefined;charset=utf-8" download="undefined.txt">Download Code</a></li>
+                                        <li class="dont-hide expander" data-target="result-files">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Weaved Files</span>
+                                        </li>
+                                        <ul class="nested-menu" id="result-files">
+                                        </ul>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="leave-fullscreen"><i class="fa fa-info-circle"></i> Press F11 to leave fullscreen</div>
+                            <div id="resultEditor" class="editor">Nothing yet, press "Weave Application".</div>
+                        </div>
+
+                        <div class="code-block" id="output-log">
+                            <div class="header">Output Log</div>
+                            <div id="outputLog" class="editor"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="about">
+
+                    <i>This website presents a demonstration of Kadabra. It does not represent neither the current version of Kadabra nor the full LARA technology.</i>
+
+                    <h2>Acknowledgments</h2>
+
+                    <p>
+                        Kadabra is a Java-to-Java compilation tool for code instrumentation and transformations controlled by the LARA language.
+                        Kadabra is currently under development in the context of PhD grant SFRH/BD/90507/2012, funded by the <a href="http://alfa.fct.mctes.pt/">Portuguese Science Foundation - Fundação para a Ciência e Tecnologia (FCT)</a>.
+                    </p>
+
+                    <p>
+                        Kadabra uses the <a href="http://spoon.gforge.inria.fr/">Spoon</a>, a Java-to-Java an open-source library developed by the <a href="https://team.inria.fr/spirals/">Spirals research group</a>.
+                        LARA [1] is a domain-specific, aspect-oriented language proposed during the REFLECT project and currently being maintained and further developed by University of Porto, Porto, Portugal, and Imperial College, London, UK.
+                    </p>
+
+                    <p>
+                        For more information on LARA, please see the LARA <a href="http://www.fe.up.pt/~specs/projects/lara">wiki</a>.
+                    </p>
+
+                    <h2>References</h2>
+                    <p>
+                        [1] João M.P. Cardoso, Tiago Carvalho, José G.F. Coutinho, Wayne Luk, Ricardo Nobre, Pedro Diniz, and Zlatko Petrov. 2012. LARA: an aspect-oriented programming language for embedded systems. In Proceedings of the 11th annual international conference on Aspect-oriented Software Development (AOSD '12). ACM, New York, NY, USA, 179-190. <a href="http://doi.acm.org/10.1145/2162049.2162071">[ACM]</a> <a href="lara_aosd12.bib">[bibtex]</a>
+                    </p>
+
+                    <h2>Contacts</h2>
+                    <p>João Bispo (<a href="mailto:jbispo@fe.up.pt?Subject=About%20Kadabra">jbispo@fe.up.pt</a>)</p>
+
+                    <h2>Funding</h2>
+                    <p>Kadabra is a project that has been funded by:</p>
+                    <div class="funding">
+                        <a href="http://alfa.fct.mctes.pt">
+                            <img src='https://specs.fe.up.pt/img/FCT-logo.png' height="35px" alt='Fundação para a Ciência e Tecnologia (FCT)' />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ////////////////////////////////////////// LS ////////////////////////////////////////// -->
+            <div id="lsView" class="invisible">
+                <div class="header">
+                    <span>Join Points </span>
+                    <select id="joinpoints"></select>
+                    <a id="closeLS" class="closeLS"><i class="fa fa-times-circle" ></i></a>
+                </div>
+                <div class="lsScroll">
+                    <!--</i>        var image = "fa-puzzle-piece";-->
+                    <div id="attrDiv" class="invisible">
+                        <h4><i class="fa fa-puzzle-piece"> </i> Attributes</h4>
+                        <ul id="attributes"><!-- class="fa-ul"-->
+                            <!--Test content-->
+                        </ul>
+                    </div>
+                    <div id="selDiv" class="invisible">
+                        <h4><i class="fa fa-search"></i> Selects</h4>
+                        <ul id="selects">
+                            <!--Test content-->
+                        </ul>
+                    </div>
+                    <div id="actDiv" class="invisible">
+                        <h4><i class="fa fa-cogs"></i> Actions</h4>
+                        <ul id="actions">
+                            <!--Test content-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ////////////////////////////////////////// LS ////////////////////////////////////////// -->
+            <div id="lsView" class="invisible">
+                <div class="header">
+                    <span>Join Points </span>
+                    <select id="joinpoints"></select>
+                    <a id="closeLS" class="closeLS"><i class="fa fa-times-circle" ></i></a>
+                </div>
+                <div class="lsScroll">
+
+                    <div class="joinpoint-base-info">
+                        <b>joinpoint</b>
+                        <span id="joinpoint-name">NAME</span>
+                        <span id="joinpoint-extends"><b>extends</b> <span id="joinpoint-base">BASE</span></span>
+                        <div id="joinpoint-short-description" class="joinpoint-short-documentation">SHORT DESCRIPTION</div>
+                        <div id="joinpoint-default-attr">DEFAULT ATTRIBUTE</div>
+                    </div>
+
+                    <!--</i>        var image = "fa-puzzle-piece";-->
+                    <div id="attrDiv" class="invisible">
+                        <h4><i class="fa fa-puzzle-piece"> </i> Attributes</h4>
+                        <ul id="attributes"><!-- class="fa-ul"-->
+                            <!--Test content-->
+                        </ul>
+                    </div>
+                    <div id="selDiv" class="invisible">
+                        <h4><i class="fa fa-search"></i> Selects</h4>
+                        <ul id="selects">
+                            <!--Test content-->
+                        </ul>
+                    </div>
+                    <div id="actDiv" class="invisible">
+                        <h4><i class="fa fa-cogs"></i> Actions</h4>
+                        <ul id="actions">
+                            <!--Test content-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ////////////////////////////////////////// LS ////////////////////////////////////////// -->
+        </div>
+        <script src="../ace/ace.js"></script>
+        <script src="../scripts/common-script.js"></script>
+        <script src="../scripts/jquery-3.2.1.min.js"></script>
+        <script src="../scripts/preserve_code.js"></script>
+        <script src="configuration.js"></script>
+        <script src="../common/framework.js"></script>        
+        <script src="../common/specsTools.js"></script>        
+    </body>
+</html>

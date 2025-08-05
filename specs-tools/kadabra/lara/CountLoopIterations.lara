@@ -1,0 +1,16 @@
+aspectdef CountLoopIterationsSimple
+	var id = 0;
+	
+	LOOP_START: select class.method.loop.($lf =firstStmt) end
+    FUNCTION_LAST: select class.method.lastStmt end
+    FUNCTION_FIRST: select class.method.firstStmt end
+	JOINED : select LOOP_START::FUNCTION_LAST::FUNCTION_FIRST end
+
+	apply to JOINED
+		// *** Iteration counters ***	
+        $firstStmt.insert before %{int counterIter[[id]] = 0}%;
+        $lf.insert before %{counterIter[[id]]++}%;
+        $lastStmt.insert before %{System.out.println("loop [[$loop.rank]] has "+counterIter[[id]]+" iterations" )}%;
+        id++;
+	end
+end

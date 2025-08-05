@@ -1,0 +1,34 @@
+import weaver.Weaver;
+import weaver.WeaverJps;
+import lara.Io;
+
+aspectdef Test
+
+	//var counter = 0;
+
+	// Select binary operators in each file
+	for($op of WeaverJps.search('binaryExpression').get()) {
+	
+		if($op.operator === '<') {
+		
+			// Store current operator
+			var previousOp = $op.operator;
+
+			// Set new operator
+			$op.operator = '>';
+			
+			println($op.ancestor('app').srcCode);
+			// Create output folder for this code version
+			//var outputFolder = Io.getPath("output_" + counter);
+			//counter++;
+
+			// Write modified code
+			//Weaver.writeCode(outputFolder);
+
+			// Restore operator
+			$op.operator = previousOp;
+		}
+	}
+	
+
+end

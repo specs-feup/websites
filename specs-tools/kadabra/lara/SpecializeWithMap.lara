@@ -1,0 +1,40 @@
+import kadabra.adapt.Specializer;
+
+aspectdef SpecializeWithMap
+	input 
+		methodName = "smooth",
+		callName = "medianNeighbor"
+	end
+	
+	var fieldName;
+	var getBestVersionCode;
+	
+ 	select app.class.method{methodName}.call{callName} end
+	apply
+		call preparedCall: PrepareCall($method,$call, true);
+		var fieldName = preparedCall.$field.name;
+
+		//Create class that will map the kernelSize with the best 'getMedian' algorithm
+		call methodCaller: NewMappingClass(preparedCall.$interface, callName, 'int');
+
+
+		var $mapClass = methodCaller.$mapClass;
+		var className = $class.qualifiedName;
+
+		//Add some default versions
+		var versionsCode = 'put(3, '+className +'::sortingNetwork);';
+		versionsCode += '\n\tput(5, '+className +'::countingSort);';
+		versionsCode += '\n\tput(7, '+className +'::countingSort)';
+		$mapClass.exec insertStatic(versionsCode);
+
+		fieldName = preparedCall.$field.name;
+		getBestVersionCode = methodCaller.get("kernelSize", preparedCall.defaultMethod);		
+	end
+	
+	select app.class.method{methodName}.first_stmt end
+	apply
+		//at the beginning of smooth assign the best version
+		$first_stmt.insert before '[[fieldName]] = [[getBestVersionCode]]';
+	end
+	
+end
