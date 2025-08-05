@@ -1,100 +1,5 @@
-/*
- * Variables that should not need changing
- */
-//var RUN_COMPILER_PATH = "http://localhost:4000/api/weave"; // For local testing
-var RUN_COMPILER_PATH = "https://specs.fe.up.pt/api/weave";
-
-/*
- * Variables to configure website
- */
-var TOOL = "clava";
-var DEFAULT_SOURCE_FILENAME = "input.c";
-
-var BASE_CODE_EXAMPLE_URL = "cpp/";
-var BASE_LARA_EXAMPLE_URL = "larajs/";
-
-var ACE_EDITOR_LANGUAGE = "c_cpp";
-
-var CODE_HOME_EXAMPLE = "CallGraph.cpp";
-var LARA_HOME_EXAMPLE = "CallGraph.js";
-
-/***************************LS***************************/
-var BASE_LS_JSON_URL =
-  "https://raw.githubusercontent.com/specs-feup/clava/master/ClavaWeaver/src/pt/up/fe/specs/clava/weaver/CxxWeaver.json";
-
-/*
- * END of configuration variables
- */
-
-function configuration() {
+(() => {
   "use strict";
-
-  /*
-   * Functions that need to be implemented
-   */
-
-  function buildWeaverArgs() {
-    var args = [];
-
-    args.push("-std");
-    args.push(getStandard());
-
-    return args;
-  }
-
-  /*
-   * END of functions that need to be implemented
-   */
-
-  /*
-   * Functions related with C/C++ compilation
-   */
-
-  var CXX_STANDARDS = new Set(["c++11"]);
-
-  function getStandard() {
-    var standardSelect = document.getElementById("c_standard");
-    return standardSelect.options[standardSelect.selectedIndex].value;
-  }
-
-  function isCxx() {
-    return CXX_STANDARDS.has(getStandard());
-  }
-
-  function getImplementationExtension() {
-    if (isCxx()) {
-      return "cpp";
-    }
-
-    return "c";
-  }
-
-  /*
-      lara: laraEditor.getValue(), // script
-      sourceCode: codeEditor.getValue(), // sourceCode
-      standard: getStandard(),//
-      scriptType: getScriptType(),//
-      tool: TOOL,
-      sourceFilename: DEFAULT_SOURCE_FILENAME,
-      args: buildArgs()
-
-*/
-
-  function createInputData() {
-    var args = {
-      script: laraEditor.getValue(),
-      sourceCode: codeEditor.getValue(),
-      tool: TOOL,
-      sourceFilename: DEFAULT_SOURCE_FILENAME,
-      args: buildWeaverArgs(),
-    };
-
-    return args;
-  }
-
-  /*
-   * END of C/C++ functions
-   */
 
   var ACTIVE_ICON = "fa-cog";
   var ACTIVE_ROTATION_MODE = "fa-spin";
@@ -165,7 +70,6 @@ function configuration() {
   }
 
   var runCommand = function (path, outputMode, args) {
-    //var jsonArgs = encodeURIComponent(JSON.stringify(args));
     var jsonArgs = JSON.stringify(args);
 
     var runRequest = new XMLHttpRequest();
@@ -199,7 +103,7 @@ function configuration() {
           }
         } else {
           consoleOut.setValue(
-            "Could not run Clava.\n" +
+            "Could not run compiler.\n" +
               runRequest.status +
               ": " +
               runRequest.statusText
@@ -209,19 +113,13 @@ function configuration() {
       }
     };
 
-    //var params = "args=" + jsonArgs;
     try {
       runRequest.open("POST", path, true);
 
       runRequest.setRequestHeader("Content-type", "application/json");
-
       runRequest.send(jsonArgs);
-
-      //runRequest.send(params);
-      //runRequest.setRequestHeader("Content-length", params.length);
-      //runRequest.setRequestHeader("Connection", "close");
     } catch (e) {
-      consoleOut.setValue("Could not run Clava. Got exception: " + e.name);
+      consoleOut.setValue("Could not run compiler. Got exception: " + e.name);
       endWaitForResults();
     }
   };
@@ -418,9 +316,19 @@ function configuration() {
   menuWeaveApplication.addEventListener("click", function () {
     if (!canRun) return;
 
-    startWaitForResults(menuWeaveApplication);
-
     var args = createInputData();
+
+    if (args.sourceCode.trim() === "") {
+      consoleOut.setValue("No source code to send, stopping");
+      return;
+    }
+
+    if (args.script.trim() === "") {
+      consoleOut.setValue("No JS script code to send, stopping");
+      return;
+    }
+
+    startWaitForResults(menuWeaveApplication);
 
     runCommand(RUN_COMPILER_PATH, ACE_EDITOR_LANGUAGE, args);
   });
@@ -516,6 +424,7 @@ function configuration() {
     "chrome",
     fontSize
   );
+
   var consoleOut = newAceEditor("outputLog", "text", "twilight", fontSize);
   consoleOut.renderer.setShowGutter(false);
   consoleOut.setReadOnly(true);
@@ -526,70 +435,24 @@ function configuration() {
     fontSize
   );
 
-  //Save changes in browser for clava
-  var clavaCodeCache = new PreserveCode("clava");
-  if (!clavaCodeCache.hasSavedContent()) {
+  function createInputData() {
+    var args = {
+      script: laraEditor.getValue(),
+      sourceCode: codeEditor.getValue(),
+      tool: TOOL,
+      sourceFilename: DEFAULT_SOURCE_FILENAME,
+      args: buildWeaverArgs(),
+    };
+
+    return args;
+  }
+
+  //Save changes in browser for source code an script code
+  var codeCache = new PreserveCode(TOOL);
+  if (!codeCache.hasSavedContent()) {
     loadLaraExample(LARA_HOME_EXAMPLE);
     loadCodeExample(CODE_HOME_EXAMPLE);
   }
 
   loadLsJson(BASE_LS_JSON_URL);
-  /***************************LS***************************/
-}
-
-// Execute
-configuration();
-
-/*
-// Populate "Other Tools" section
-function get_related_tools_code($current_tool) {
-
-    $toolsCode = '<div class="section" id="menu-section-related-tools">
-                    <h3>Related Tools:</h3>
-					<li class="with-link"><a href="http://specs.fe.up.pt/tools/lara" target="_blank">LARA</a></li>';
-
-    if ($current_tool != 'kadabra') {
-        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/kadabra/" target="_blank">Kadabra <em>(Java)</em></a></li>';
-    }
-
-    if ($current_tool != 'matisse') {
-        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/matisse/" target="_blank">MATISSE <em>(MATLAB)</em></a></li>';
-    }
-
-    if ($current_tool != 'clava') {
-        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/clava/" target="_blank">Clava <em>(C/C++)</em></a></li>';
-    }
-
-    if ($current_tool != 'jackdaw') {
-        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/jackdaw/" target="_blank">Jackdaw <em>(JavaScript)</em></a></li>';
-    }
-
-
-    $toolsCode = $toolsCode . '<h3>Legacy Tools:</h3>';
-
-    if ($current_tool != 'manet') {
-        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/manet/" target="_blank">MANET <em>(ANSI C)</em></a></li>';
-    }
-
-    if ($current_tool != 'reflectc') {
-        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/reflectc/" target="_blank">ReflectC</a></li>';
-    }
-
-    if ($current_tool != 'harmonic') {
-        $toolsCode = $toolsCode . '<li class="with-link"><a href="http://specs.fe.up.pt/tools/harmonic/" target="_blank">Harmonic <em>(C/C++)</em></a></li>';
-    }
-
-    $toolsCode = $toolsCode . '</div>';
-
-
-    $toolsCode = $toolsCode . '<a href="http://specs.fe.up.pt" class="aux-link"><img src="https://specs.fe.up.pt/img/SPeCS-logo.png" alt="SPeCS" /></a>';
-    $toolsCode = $toolsCode . '<a href="https://sigarra.up.pt/feup" class="aux-link"><img src="feup-logo.png" alt="FEUP" /></a>';
-
-    return $toolsCode;
-}
-*/
-
-
-// Call before page load
-//onScriptTypeChange();
-
+})();

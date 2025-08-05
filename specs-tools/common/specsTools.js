@@ -29,27 +29,6 @@ function build_related_tools_code() {
       $toolsCode +
       '<li class="with-link"><a href="http://specs.fe.up.pt/tools/jackdaw/" target="_blank">Jackdaw <em>(JavaScript)</em></a></li>';
   }
-  /*
-  $toolsCode = $toolsCode + "<h3>Legacy Tools:</h3>";
-
-  if ($current_tool != "manet") {
-    $toolsCode =
-      $toolsCode +
-      '<li class="with-link"><a href="http://specs.fe.up.pt/tools/manet/" target="_blank">MANET <em>(ANSI C)</em></a></li>';
-  }
-
-  if ($current_tool != "reflectc") {
-    $toolsCode =
-      $toolsCode +
-      '<li class="with-link"><a href="http://specs.fe.up.pt/tools/reflectc/" target="_blank">ReflectC</a></li>';
-  }
-
-  if ($current_tool != "harmonic") {
-    $toolsCode =
-      $toolsCode +
-      '<li class="with-link"><a href="http://specs.fe.up.pt/tools/harmonic/" target="_blank">Harmonic <em>(C/C++)</em></a></li>';
-  }
-*/
 
   $toolsCode = $toolsCode + "</div>";
 
