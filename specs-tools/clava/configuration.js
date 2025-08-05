@@ -1,8 +1,8 @@
 /*
  * Variables that should not need changing
  */
-var RUN_COMPILER_PATH = "http://localhost:4000/api/weave"; // For local testing
-//var RUN_COMPILER_PATH = "https://specs.fe.up.pt/api/weave";
+//var RUN_COMPILER_PATH = "http://localhost:4000/api/weave"; // For local testing
+var RUN_COMPILER_PATH = "https://specs.fe.up.pt/api/weave";
 
 /*
  * Variables to configure website
