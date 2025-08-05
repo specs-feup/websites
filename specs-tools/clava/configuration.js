@@ -30,6 +30,10 @@ var BASE_LS_JSON_URL =
  * Functions that need to be implemented
  */
 
+function getSourceFilename() {
+  return DEFAULT_SOURCE_FILENAME;
+}
+
 function getImplementationExtension() {
   if (isCxx()) {
     return "cpp";
