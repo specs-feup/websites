@@ -15,7 +15,7 @@ var BASE_LARA_EXAMPLE_URL = "lara/";
 var ACE_EDITOR_LANGUAGE = "java";
 
 var CODE_HOME_EXAMPLE = "HelloWorld.java";
-var LARA_HOME_EXAMPLE = "EmptyAspect.lara";
+var LARA_HOME_EXAMPLE = "StaticCallGraph.js";
 
 /***************************LS***************************/
 var BASE_LS_JSON_URL =

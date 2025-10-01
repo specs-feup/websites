@@ -17,17 +17,17 @@ for (const $function of Query.search("method")) {
     //    const $call = functionCall["call"];
 
     // Test 1st key
-    if (!($function..name in callGraph)) {
-      callGraph[$function..name] = {};
+    if (!($function.name in callGraph)) {
+      callGraph[$function.name] = {};
     }
 
     // Test 2nd key
-    if (!($call..name in callGraph[$function..name])) {
-      callGraph[$function..name][$call..name] = 0;
+    if (!($call.name in callGraph[$function.name])) {
+      callGraph[$function.name][$call.name] = 0;
     }
 
     // Increment
-    callGraph[$function..name][$call..name]++;
+    callGraph[$function.name][$call.name]++;
   }
 }
 
