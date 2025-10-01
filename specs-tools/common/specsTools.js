@@ -12,24 +12,26 @@ function build_related_tools_code() {
       '<li class="with-link"><a href="http://specs.fe.up.pt/tools/kadabra/" target="_blank">Kadabra <em>(Java)</em></a></li>';
   }
 
+  /*  
   if ($current_tool != "matisse") {
     $toolsCode =
       $toolsCode +
       '<li class="with-link"><a href="http://specs.fe.up.pt/tools/matisse/" target="_blank">MATISSE <em>(MATLAB)</em></a></li>';
   }
+*/
 
   if ($current_tool != "clava") {
     $toolsCode =
       $toolsCode +
       '<li class="with-link"><a href="http://specs.fe.up.pt/tools/clava/" target="_blank">Clava <em>(C/C++)</em></a></li>';
   }
-
+  /*
   if ($current_tool != "jackdaw") {
     $toolsCode =
       $toolsCode +
       '<li class="with-link"><a href="http://specs.fe.up.pt/tools/jackdaw/" target="_blank">Jackdaw <em>(JavaScript)</em></a></li>';
   }
-
+*/
   $toolsCode = $toolsCode + "</div>";
 
   $toolsCode =
