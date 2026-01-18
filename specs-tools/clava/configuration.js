@@ -20,7 +20,7 @@ var LARA_HOME_EXAMPLE = "CallGraph.js";
 
 /***************************LS***************************/
 var BASE_LS_JSON_URL =
-  "https://raw.githubusercontent.com/specs-feup/clava/master/ClavaWeaver/src/pt/up/fe/specs/clava/weaver/CxxWeaver.json";
+    "https://specs-feup.github.io/weavers_backend/CxxWeaver.json";
 
 /*
  * END of configuration variables

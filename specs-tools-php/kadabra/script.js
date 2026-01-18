@@ -430,7 +430,8 @@
     }
 
     /***************************LS***************************/
-    var BASE_LS_JSON_URL = 'https://raw.githubusercontent.com/specs-feup/kadabra/master/JavaWeaver/src/weaver/kadabra/JavaWeaver.json';
+    var BASE_LS_JSON_URL =
+        "https://specs-feup.github.io/weavers_backend/JavaWeaver.json";
 
     loadLsJson(BASE_LS_JSON_URL);
     /***************************LS***************************/

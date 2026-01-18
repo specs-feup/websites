@@ -480,7 +480,8 @@
     }
 
     /***************************LS***************************/
-    var BASE_LS_JSON_URL = 'https://raw.githubusercontent.com/specs-feup/clava/master/ClavaWeaver/src/pt/up/fe/specs/clava/weaver/CxxWeaver.json';
+    var BASE_LS_JSON_URL =
+        "https://specs-feup.github.io/weavers_backend/CxxWeaver.json";
 
     loadLsJson(BASE_LS_JSON_URL);
     /***************************LS***************************/

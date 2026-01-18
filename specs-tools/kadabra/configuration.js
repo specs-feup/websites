@@ -19,7 +19,7 @@ var LARA_HOME_EXAMPLE = "StaticCallGraph.js";
 
 /***************************LS***************************/
 var BASE_LS_JSON_URL =
-  "https://raw.githubusercontent.com/specs-feup/kadabra/refs/heads/master/JavaWeaver/src/weaver/kadabra/JavaWeaver.json";
+  "https://specs-feup.github.io/weavers_backend/JavaWeaver.json";
 
 var REGEX_CLASSNAME = /(class|interface|enum)(\n|\s)+(\w+)/;
 

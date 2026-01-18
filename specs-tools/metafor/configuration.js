@@ -20,7 +20,7 @@ var LARA_HOME_EXAMPLE = "Hello.js";
 
 /***************************LS***************************/
 var BASE_LS_JSON_URL =
-  "https://raw.githubusercontent.com/specs-feup/fortran-transpiler/refs/heads/main/FortranWeaver/src/pt/up/fe/specs/fortran/weaver/FortranWeaver.json";
+  "https://specs-feup.github.io/weavers_backend/FortranWeaver.json";
 
 /*
  * END of configuration variables
