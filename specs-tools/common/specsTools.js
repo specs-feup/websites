@@ -32,6 +32,12 @@ function build_related_tools_code() {
       '<li class="with-link"><a href="http://specs.fe.up.pt/tools/jackdaw/" target="_blank">Jackdaw <em>(JavaScript)</em></a></li>';
   }
 */
+
+  if ($current_tool != "metafor") {
+    $toolsCode =
+      $toolsCode +
+      '<li class="with-link"><a href="http://specs.fe.up.pt/tools/metafor/" target="_blank">Metafor <em>(Fortran)</em></a></li>';
+  }
   $toolsCode = $toolsCode + "</div>";
 
   $toolsCode =
