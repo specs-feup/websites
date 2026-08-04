@@ -38,6 +38,13 @@ function build_related_tools_code() {
       $toolsCode +
       '<li class="with-link"><a href="http://specs.fe.up.pt/tools/metafor/" target="_blank">Metafor <em>(Fortran)</em></a></li>';
   }
+
+  if ($current_tool != "alpakka") {
+    $toolsCode =
+      $toolsCode +
+      '<li class="with-link"><a href="http://specs.fe.up.pt/tools/alpakka/" target="_blank">Alpakka <em>(Android)</em></a></li>';
+  }
+
   $toolsCode = $toolsCode + "</div>";
 
   $toolsCode =
